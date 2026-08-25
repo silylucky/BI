@@ -1,0 +1,6 @@
+fastapi==0.115.0
+uvicorn==0.30.6
+openai==1.51.0
+python-dotenv==1.0.1
+# OpenAI 1.51 通过 proxies 参数初始化 httpx；需使用 0.28 以下版本。
+httpx>=0.27,<0.28

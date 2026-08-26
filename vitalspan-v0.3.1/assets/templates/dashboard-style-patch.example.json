@@ -1,0 +1,78 @@
+{
+  "name": "政务驾驶舱（样式补丁示例）",
+  "layoutJson": {
+    "version": 2,
+    "canvas": { "width": 1920, "height": 1080 },
+    "styleConfig": {
+      "surfaceKind": "data-screen",
+      "colorScheme": "dark",
+      "canvasBackground": "#041016",
+      "widgetStyle": {
+        "borderRadius": 12,
+        "borderColor": "#22d3ee80",
+        "borderWidth": 1,
+        "borderEnabled": true,
+        "background": "rgba(15, 23, 42, 0.85)"
+      },
+      "titleStyle": {
+        "color": "#e2e8f0",
+        "fontSize": 15,
+        "fontWeight": 600
+      }
+    },
+    "widgets": [
+      {
+        "id": "11111111-1111-4111-8111-111111111101",
+        "type": "chart",
+        "title": "趋势分析",
+        "x": 48,
+        "y": 160,
+        "width": 900,
+        "height": 360,
+        "order": 0,
+        "chartConfig": {
+          "chartType": "line",
+          "styleVariant": "default",
+          "chartId": "11111111-1111-4111-8111-111111111101",
+          "mode": "dataset",
+          "dataSourceId": "__demo:sample_db__",
+          "datasetId": "demo-sales-wide",
+          "nativeBody": {
+            "deStyle": {
+              "paletteColors": ["#22d3ee", "#818cf8"],
+              "cartesian": { "lineSmooth": true, "pointSize": 6 },
+              "title": { "show": true, "color": "#e2e8f0", "fontSize": 16 },
+              "legend": { "show": true, "position": "bottom" }
+            }
+          },
+          "axes": {
+            "xAxis": [{ "field": "sale_date" }],
+            "yAxis": [{ "field": "amount" }]
+          }
+        }
+      },
+      {
+        "id": "22222222-2222-4222-8222-222222222202",
+        "type": "customViz",
+        "title": "动态滚动条",
+        "x": 972,
+        "y": 160,
+        "width": 900,
+        "height": 360,
+        "order": 1,
+        "customVizConfig": {
+          "artifactId": "REPLACE_WITH_ARTIFACT_UUID",
+          "dataBinding": { "status": "manual" },
+          "widgetStyle": { "borderRadius": 14 },
+          "displayStyle": { "titleColor": "#e2e8f0" },
+          "style": {
+            "barColor": "#22d3ee",
+            "scrollSpeed": 2,
+            "visibleRows": 8
+          }
+        }
+      }
+    ],
+    "globalFilters": []
+  }
+}

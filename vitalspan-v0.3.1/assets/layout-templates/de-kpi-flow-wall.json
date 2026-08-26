@@ -1,0 +1,131 @@
+{
+  "id": "de-kpi-flow-wall",
+  "name": "DE KPI 流向墙",
+  "description": "四 KPI + 全宽 sankey + 四象限；流向/链路场景",
+  "surfaceKind": "data-screen",
+  "tags": [
+    "de-recommended",
+    "de-style",
+    "flow"
+  ],
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "styleConfig": {
+    "surfaceKind": "data-screen",
+    "colorScheme": "dark",
+    "scaleMode": "canvas",
+    "gapPreset": "md",
+    "widgetGap": 16,
+    "pixelGutter": 24,
+    "canvasBackground": "#0f172a",
+    "canvasBackgroundCustom": true,
+    "canvasDecorPresetId": "gradient-radial",
+    "refreshIntervalSec": 60,
+    "widgetStyle": {
+      "background": "rgba(15, 23, 42, 0.78)",
+      "borderColor": "#fbbf2459",
+      "borderWidth": 1,
+      "borderEnabled": true,
+      "borderStyle": "solid",
+      "borderRadius": 10
+    },
+    "titleStyle": {
+      "color": "#e2e8f0",
+      "fontSize": 14,
+      "fontWeight": 600
+    },
+    "chartLabelStyle": {
+      "color": "#cbd5e1"
+    }
+  },
+  "shell": {
+    "title": "业务流向大屏",
+    "accent": "#fbbf24",
+    "clock": true
+  },
+  "slots": [
+    {
+      "type": "chart",
+      "title": "GMV",
+      "x": 48,
+      "y": 144,
+      "width": 438,
+      "height": 100,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "订单",
+      "x": 510,
+      "y": 144,
+      "width": 438,
+      "height": 100,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "访客",
+      "x": 972,
+      "y": 144,
+      "width": 438,
+      "height": 100,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "转化",
+      "x": 1434,
+      "y": 144,
+      "width": 438,
+      "height": 100,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "省区物流关系",
+      "x": 48,
+      "y": 268,
+      "width": 1824,
+      "height": 240,
+      "defaultChartType": "sankey"
+    },
+    {
+      "type": "chart",
+      "title": "品类占比",
+      "x": 48,
+      "y": 532,
+      "width": 900,
+      "height": 260,
+      "defaultChartType": "pie-donut"
+    },
+    {
+      "type": "chart",
+      "title": "区域地图",
+      "x": 972,
+      "y": 532,
+      "width": 900,
+      "height": 260,
+      "defaultChartType": "map"
+    },
+    {
+      "type": "chart",
+      "title": "转化漏斗",
+      "x": 48,
+      "y": 816,
+      "width": 900,
+      "height": 232,
+      "defaultChartType": "funnel"
+    },
+    {
+      "type": "chart",
+      "title": "关系网络",
+      "x": 972,
+      "y": 816,
+      "width": 900,
+      "height": 232,
+      "defaultChartType": "graph"
+    }
+  ]
+}

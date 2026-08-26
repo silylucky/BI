@@ -1,0 +1,826 @@
+{
+  "version": 1,
+  "dataSourceRef": "__demo:sample_db__",
+  "note": "Legacy SQL snippets for reference; compose v0.2.11+ uses Dataset encoding (demoDatasetBinding.ts). Requires sample_db (:3307) + seed-demo-package.",
+  "queries": {
+    "area": {
+      "chartType": "area",
+      "title": "面积图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT sale_date AS 日期, SUM(amount) AS 销售额\nFROM de_sales_wide\nGROUP BY sale_date\nORDER BY 日期",
+      "dimensions": [
+        {
+          "field": "日期"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "area-stack": {
+      "chartType": "area-stack",
+      "title": "堆叠面积图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT sale_date AS 日期, category_name AS 类别, SUM(amount) AS 销售额\nFROM de_sales_wide\nGROUP BY sale_date, category_name\nORDER BY 日期",
+      "dimensions": [
+        {
+          "field": "日期"
+        },
+        {
+          "field": "类别"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "bar": {
+      "chartType": "bar",
+      "title": "柱状图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT province AS 省份, SUM(amount) AS 销售额\nFROM de_sales_wide\nGROUP BY province",
+      "dimensions": [
+        {
+          "field": "省份"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "bar-group": {
+      "chartType": "bar-group",
+      "title": "分组柱状图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT sale_date AS 日期, channel AS 渠道, SUM(amount) AS 销售额\nFROM de_sales_wide\nGROUP BY sale_date, channel\nORDER BY 日期",
+      "dimensions": [
+        {
+          "field": "日期"
+        },
+        {
+          "field": "渠道"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "bar-group-stack": {
+      "chartType": "bar-group-stack",
+      "title": "分组堆叠柱状图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT sale_date AS 日期, category_name AS 类别, SUM(amount) AS 销售额\nFROM de_sales_wide\nGROUP BY sale_date, category_name\nORDER BY 日期",
+      "dimensions": [
+        {
+          "field": "日期"
+        },
+        {
+          "field": "类别"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "bar-horizontal": {
+      "chartType": "bar-horizontal",
+      "title": "条形图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT channel AS 渠道, SUM(amount) AS 销售额\nFROM de_sales_wide\nGROUP BY channel",
+      "dimensions": [
+        {
+          "field": "渠道"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "bar-range": {
+      "chartType": "bar-range",
+      "title": "区间条形图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT range_region AS 地区, range_min AS 下限, range_max AS 上限\nFROM vs_official_bar_range",
+      "dimensions": [
+        {
+          "field": "地区"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "下限"
+        },
+        {
+          "field": "上限"
+        }
+      ]
+    },
+    "bar-stack": {
+      "chartType": "bar-stack",
+      "title": "堆叠柱状图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT province AS 省份, channel AS 渠道, SUM(amount) AS 销售额\nFROM de_sales_wide\nGROUP BY province, channel",
+      "dimensions": [
+        {
+          "field": "省份"
+        },
+        {
+          "field": "渠道"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "bar-stack-horizontal": {
+      "chartType": "bar-stack-horizontal",
+      "title": "堆叠条形图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT province AS 省份, channel AS 渠道, SUM(amount) AS 销售额\nFROM de_sales_wide\nGROUP BY province, channel",
+      "dimensions": [
+        {
+          "field": "省份"
+        },
+        {
+          "field": "渠道"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "bidirectional-bar": {
+      "chartType": "bidirectional-bar",
+      "title": "对称条形图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT dept_name AS 部门, positive_value AS 正向, negative_value AS 负向\nFROM vs_official_bidirectional",
+      "dimensions": [
+        {
+          "field": "部门"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "正向"
+        },
+        {
+          "field": "负向"
+        }
+      ]
+    },
+    "bullet-graph": {
+      "chartType": "bullet-graph",
+      "title": "子弹图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT bullet_category AS 类别, actual_value AS 实际, target_value AS 目标\nFROM vs_official_bullet",
+      "dimensions": [
+        {
+          "field": "类别"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "实际"
+        },
+        {
+          "field": "目标"
+        }
+      ]
+    },
+    "chart-mix": {
+      "chartType": "chart-mix",
+      "title": "柱线组合图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT sale_date AS 日期, SUM(amount) AS 销售额, SUM(quantity) AS 销量\nFROM de_sales_wide\nGROUP BY sale_date\nORDER BY 日期",
+      "dimensions": [
+        {
+          "field": "日期"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        },
+        {
+          "field": "销量"
+        }
+      ]
+    },
+    "chart-mix-dual-line": {
+      "chartType": "chart-mix-dual-line",
+      "title": "双线组合图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT sale_date AS 日期, SUM(amount) AS 销售额, SUM(quantity) AS 销量\nFROM de_sales_wide\nGROUP BY sale_date\nORDER BY 日期",
+      "dimensions": [
+        {
+          "field": "日期"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        },
+        {
+          "field": "销量"
+        }
+      ]
+    },
+    "chart-mix-group": {
+      "chartType": "chart-mix-group",
+      "title": "分组柱线组合图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT sale_date AS 日期, channel AS 渠道, SUM(amount) AS 销售额, SUM(quantity) AS 销量\nFROM de_sales_wide\nGROUP BY sale_date, channel\nORDER BY 日期",
+      "dimensions": [
+        {
+          "field": "日期"
+        },
+        {
+          "field": "渠道"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        },
+        {
+          "field": "销量"
+        }
+      ]
+    },
+    "chart-mix-stack": {
+      "chartType": "chart-mix-stack",
+      "title": "堆叠柱线组合图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT sale_date AS 日期, category_name AS 类别, SUM(amount) AS 销售额\nFROM de_sales_wide\nGROUP BY sale_date, category_name\nORDER BY 日期",
+      "dimensions": [
+        {
+          "field": "日期"
+        },
+        {
+          "field": "类别"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "circle-packing": {
+      "chartType": "circle-packing",
+      "title": "圆形填充图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT parent_category AS 一级类别, child_name AS 二级名称, tree_amount AS 销售额\nFROM vs_official_category_tree",
+      "dimensions": [
+        {
+          "field": "一级类别"
+        },
+        {
+          "field": "二级名称"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "funnel": {
+      "chartType": "funnel",
+      "title": "漏斗图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT funnel_stage AS 阶段, stage_count AS 数量 FROM vs_official_funnel",
+      "dimensions": [
+        {
+          "field": "阶段"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "数量"
+        }
+      ]
+    },
+    "gauge": {
+      "chartType": "gauge",
+      "title": "仪表盘",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT gauge_value AS 达成率 FROM vs_official_gauge",
+      "metrics": [
+        {
+          "field": "达成率"
+        }
+      ]
+    },
+    "graph": {
+      "chartType": "graph",
+      "title": "关系图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT graph_source AS 源节点, graph_target AS 目标节点, edge_weight AS 权重\nFROM vs_official_graph_edges",
+      "dimensions": [
+        {
+          "field": "源节点"
+        },
+        {
+          "field": "目标节点"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "权重"
+        }
+      ]
+    },
+    "kpi": {
+      "chartType": "kpi",
+      "title": "指标卡",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT ROUND(AVG(value), 0) AS 成交额\nFROM daily_kpi WHERE metric_code = 'gmv'",
+      "metrics": [
+        {
+          "field": "成交额"
+        }
+      ]
+    },
+    "line": {
+      "chartType": "line",
+      "title": "折线图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT sale_date AS 日期, SUM(amount) AS 销售额\nFROM de_sales_wide\nGROUP BY sale_date\nORDER BY 日期",
+      "dimensions": [
+        {
+          "field": "日期"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "liquid": {
+      "chartType": "liquid",
+      "title": "水波图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT gauge_value AS 达成率 FROM vs_official_gauge",
+      "metrics": [
+        {
+          "field": "达成率"
+        }
+      ]
+    },
+    "map": {
+      "chartType": "map",
+      "title": "区域地图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT region_map AS 省份, amount AS 销售额\nFROM de_map_province",
+      "dimensions": [
+        {
+          "field": "省份"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "map-3d": {
+      "chartType": "map-3d",
+      "title": "3D 区域地图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT region_map AS 省份, amount AS 销售额\nFROM de_map_province",
+      "dimensions": [
+        {
+          "field": "省份"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "multi-scatter": {
+      "chartType": "multi-scatter",
+      "title": "多维散点图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT product_name AS 产品, category_name AS 类别, unit_price AS 单价, sale_qty AS 销量\nFROM vs_official_scatter",
+      "dimensions": [
+        {
+          "field": "产品"
+        },
+        {
+          "field": "类别"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "单价"
+        },
+        {
+          "field": "销量"
+        }
+      ]
+    },
+    "percentage-bar-stack": {
+      "chartType": "percentage-bar-stack",
+      "title": "百分比柱状图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT province AS 省份, channel AS 渠道, SUM(amount) AS 销售额\nFROM de_sales_wide\nGROUP BY province, channel",
+      "dimensions": [
+        {
+          "field": "省份"
+        },
+        {
+          "field": "渠道"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "percentage-bar-stack-horizontal": {
+      "chartType": "percentage-bar-stack-horizontal",
+      "title": "百分比条形图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT province AS 省份, channel AS 渠道, SUM(amount) AS 销售额\nFROM de_sales_wide\nGROUP BY province, channel",
+      "dimensions": [
+        {
+          "field": "省份"
+        },
+        {
+          "field": "渠道"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "pie": {
+      "chartType": "pie",
+      "title": "饼图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT region_name AS 地区, total_amount AS 销售额\nFROM vs_official_region_share",
+      "dimensions": [
+        {
+          "field": "地区"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "pie-donut": {
+      "chartType": "pie-donut",
+      "title": "环形图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT region_name AS 地区, total_amount AS 销售额\nFROM vs_official_region_share",
+      "dimensions": [
+        {
+          "field": "地区"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "pie-donut-rose": {
+      "chartType": "pie-donut-rose",
+      "title": "玫瑰环形图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT region_name AS 地区, total_amount AS 销售额\nFROM vs_official_region_share",
+      "dimensions": [
+        {
+          "field": "地区"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "pie-rose": {
+      "chartType": "pie-rose",
+      "title": "玫瑰图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT region_name AS 地区, total_amount AS 销售额\nFROM vs_official_region_share",
+      "dimensions": [
+        {
+          "field": "地区"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "progress-bar": {
+      "chartType": "progress-bar",
+      "title": "进度条",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT progress_name AS 项目, actual_value AS 实际, target_value AS 目标\nFROM vs_official_progress",
+      "dimensions": [
+        {
+          "field": "项目"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "实际"
+        },
+        {
+          "field": "目标"
+        }
+      ]
+    },
+    "quadrant": {
+      "chartType": "quadrant",
+      "title": "象限图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT product_name AS 产品, unit_price AS 单价, sale_qty AS 销量\nFROM vs_official_scatter",
+      "dimensions": [
+        {
+          "field": "产品"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "单价"
+        },
+        {
+          "field": "销量"
+        }
+      ]
+    },
+    "radar": {
+      "chartType": "radar",
+      "title": "雷达图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT province AS 地区,\n  SUM(CASE WHEN channel = '电商平台' THEN amount ELSE 0 END) AS 电商,\n  SUM(CASE WHEN channel = '线下门店' THEN amount ELSE 0 END) AS 线下,\n  SUM(CASE WHEN channel = '企业直销' THEN amount ELSE 0 END) AS 直销\nFROM de_sales_wide\nGROUP BY province",
+      "dimensions": [
+        {
+          "field": "地区"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "电商"
+        },
+        {
+          "field": "线下"
+        },
+        {
+          "field": "直销"
+        }
+      ]
+    },
+    "sankey": {
+      "chartType": "sankey",
+      "title": "桑基图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT flow_source AS 起始, flow_target AS 终点, flow_weight AS 权重\nFROM vs_official_flow",
+      "dimensions": [
+        {
+          "field": "起始"
+        },
+        {
+          "field": "终点"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "权重"
+        }
+      ]
+    },
+    "scatter": {
+      "chartType": "scatter",
+      "title": "散点图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT product_name AS 产品, unit_price AS 单价, sale_qty AS 销量\nFROM vs_official_scatter",
+      "dimensions": [
+        {
+          "field": "产品"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "单价"
+        },
+        {
+          "field": "销量"
+        }
+      ]
+    },
+    "stock-line": {
+      "chartType": "stock-line",
+      "title": "K 线图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT trade_date AS 日期, open_price AS 开盘, close_price AS 收盘,\n       low_price AS 最低, high_price AS 最高\nFROM vs_official_stock_ohlc",
+      "dimensions": [
+        {
+          "field": "日期"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "开盘"
+        },
+        {
+          "field": "收盘"
+        },
+        {
+          "field": "最低"
+        },
+        {
+          "field": "最高"
+        }
+      ]
+    },
+    "t-heatmap": {
+      "chartType": "t-heatmap",
+      "title": "矩阵热力图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT x_dim AS 横轴, y_dim AS 纵轴, heat_value AS 数值\nFROM vs_official_matrix_heat",
+      "dimensions": [
+        {
+          "field": "横轴"
+        },
+        {
+          "field": "纵轴"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "数值"
+        }
+      ]
+    },
+    "table-info": {
+      "chartType": "table-info",
+      "title": "明细表",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT order_no AS 订单号, customer_name AS 客户, order_date AS 日期,\n       order_status AS 状态, order_amount AS 金额, province_name AS 省份\nFROM vs_official_order_detail\nORDER BY 日期 DESC\nLIMIT 20"
+    },
+    "table-normal": {
+      "chartType": "table-normal",
+      "title": "汇总表",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT province AS 省份, channel AS 渠道, SUM(amount) AS 销售额\nFROM de_sales_wide\nGROUP BY province, channel",
+      "dimensions": [
+        {
+          "field": "省份"
+        },
+        {
+          "field": "渠道"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "table-pivot": {
+      "chartType": "table-pivot",
+      "title": "透视表",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT province AS 行维度, channel AS 列维度, SUM(amount) AS 销售额\nFROM de_sales_wide\nGROUP BY province, channel",
+      "dimensions": [
+        {
+          "field": "行维度"
+        },
+        {
+          "field": "列维度"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "treemap": {
+      "chartType": "treemap",
+      "title": "矩形树图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT parent_category AS 一级类别, child_name AS 二级名称, tree_amount AS 销售额\nFROM vs_official_category_tree",
+      "dimensions": [
+        {
+          "field": "一级类别"
+        },
+        {
+          "field": "二级名称"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "销售额"
+        }
+      ]
+    },
+    "waterfall": {
+      "chartType": "waterfall",
+      "title": "瀑布图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT step_name AS 步骤, step_value AS 数值 FROM vs_official_waterfall",
+      "dimensions": [
+        {
+          "field": "步骤"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "数值"
+        }
+      ]
+    },
+    "word-cloud": {
+      "chartType": "word-cloud",
+      "title": "词云图",
+      "mode": "sql",
+      "dataSourceId": "__demo:sample_db__",
+      "sql": "SELECT word_text AS 热词, word_weight AS 权重 FROM vs_official_word",
+      "dimensions": [
+        {
+          "field": "热词"
+        }
+      ],
+      "metrics": [
+        {
+          "field": "权重"
+        }
+      ]
+    }
+  }
+}

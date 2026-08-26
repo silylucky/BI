@@ -1,0 +1,81 @@
+{
+  "manifest": {
+    "id": "alert-scroll-feed-v1",
+    "displayName": "实时告警滚动条",
+    "version": "1.0.0",
+    "entry": "index.html",
+    "fieldSlots": {
+      "dimensions": {
+        "min": 1,
+        "max": 1,
+        "label": "告警内容"
+      },
+      "metrics": {
+        "min": 1,
+        "max": 1,
+        "label": "严重等级"
+      }
+    },
+    "styleSchema": {
+      "type": "object",
+      "x-styleSections": [
+        {
+          "title": "滚动",
+          "properties": [
+            "scrollSpeed",
+            "maxVisible"
+          ]
+        },
+        {
+          "title": "颜色",
+          "properties": [
+            "accentColor",
+            "warnColor",
+            "dangerColor"
+          ]
+        }
+      ],
+      "properties": {
+        "scrollSpeed": {
+          "type": "number",
+          "minimum": 20,
+          "maximum": 120,
+          "title": "滚动速度（秒/轮）"
+        },
+        "maxVisible": {
+          "type": "number",
+          "minimum": 3,
+          "maximum": 12,
+          "title": "可见行数"
+        },
+        "accentColor": {
+          "type": "string",
+          "format": "color",
+          "title": "信息色"
+        },
+        "warnColor": {
+          "type": "string",
+          "format": "color",
+          "title": "警告色"
+        },
+        "dangerColor": {
+          "type": "string",
+          "format": "color",
+          "title": "危险色"
+        }
+      }
+    },
+    "defaultStyle": {
+      "scrollSpeed": 48,
+      "maxVisible": 6,
+      "accentColor": "#38bdf8",
+      "warnColor": "#f59e0b",
+      "dangerColor": "#ef4444"
+    },
+    "rendererHint": "vanilla",
+    "runtime": "html"
+  },
+  "files": {
+    "index.html": "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><style>html,body{margin:0;height:100%;background:transparent;color:var(--dashboard-text-primary,#e2e8f0);font-family:system-ui,sans-serif}#vs-cv-feed{height:100%;padding:10px 12px;box-sizing:border-box;display:flex;flex-direction:column;gap:6px}.hdr{font-size:13px;font-weight:600;color:var(--dashboard-title-color,#f2f4f7);padding-bottom:6px;border-bottom:1px solid var(--dashboard-widget-border,#344054)}.viewport{flex:1;overflow:hidden;position:relative}.track{position:absolute;left:0;right:0;animation:vsScroll var(--vs-style-scroll-speed,48s) linear infinite}@keyframes vsScroll{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}.row{display:flex;align-items:center;gap:10px;padding:8px 10px;margin-bottom:6px;background:var(--dashboard-widget-surface,#1e293b);border-radius:6px;border-left:3px solid var(--vs-style-accent-color,#38bdf8)}.row.warn{border-left-color:var(--vs-style-warn-color,#f59e0b)}.row.danger{border-left-color:var(--vs-style-danger-color,#ef4444)}.badge{font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(255,255,255,0.08);color:var(--dashboard-text-muted,#98a2b3);flex-shrink:0}.msg{font-size:12px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}</style></head><body><div id=\"vs-cv-feed\"><div class=\"hdr\">实时告警</div><div class=\"viewport\"><div class=\"track\" id=\"vs-cv-track\"></div></div></div><script>(function(){var host=document.currentScript&&document.currentScript.parentElement;function readPayload(){if(host&&host.vsCv&&host.vsCv.getPayload)return host.vsCv.getPayload();var n=(host||document).querySelector('.vs-cv-payload');if(!n||!n.textContent)return null;try{return JSON.parse(n.textContent)}catch(e){return null}}function bindingStatusOf(p){if(!p)return 'unbound';return p.bindingStatus||((p.rows&&p.rows.length)?'bound':'unbound')}function statusHint(p){var st=bindingStatusOf(p);if(st==='error')return(p&&p.error)||'数据加载失败';if(st==='empty')return'暂无数据';if(st==='unbound')return'请在右侧绑定数据集与字段';return null}function attachPayloadListener(render){render();if(host&&host.vsCv&&host.vsCv.onPayload){host.vsCv.onPayload(function(p){render(p)});return}if(host&&host.classList.contains('vs-custom-viz-host')){host.addEventListener('vs-cv-payload-update',function(e){render(e.detail||readPayload())})}}function attachLayoutListener(render){if(host&&host.vsCv&&host.vsCv.onLayout){host.vsCv.onLayout(function(){render(readPayload())});return}if(typeof ResizeObserver!=='undefined'&&host){new ResizeObserver(function(){render(readPayload())}).observe(host)}}function boot(render){if(host&&host.vsCv&&host.vsCv.mount){host.vsCv.mount(function(p){render(p)});return}attachPayloadListener(function(p){render(p||readPayload())});attachLayoutListener(function(){render(readPayload())})}function rowsFromPayload(p){var st=bindingStatusOf(p);if(st!=='bound'||!p||!p.rows||!p.rows.length)return null;var cols=p.columns||[];var di=cols.findIndex(function(c){return c!=='sum'&&c!=='count'});var mi=cols.findIndex(function(c,i){return i!==di});if(di<0)di=0;if(mi<0)mi=1;return p.rows.map(function(r){return{n:String(r[di]),v:Number(r[mi])||0}})}function levelClass(v){if(v>=3)return'danger';if(v>=2)return'warn';return''}function levelLabel(v){if(v>=3)return'严重';if(v>=2)return'警告';if(v>=1)return'提示';return'信息'}function render(){var track=(host||document).querySelector('#vs-cv-track');if(!track)return;var p=readPayload();var hint=statusHint(p);var st=(p&&p.style)||{};var speed=Number(st.scrollSpeed)||48;track.style.setProperty('--vs-style-scroll-speed',speed+'s');track.innerHTML='';if(hint){var msg=document.createElement('div');msg.style.cssText='padding:12px;font-size:12px;color:var(--dashboard-text-muted,#98a2b3);text-align:center';msg.textContent=hint;track.style.animation='none';track.appendChild(msg);return}track.style.animation='';var data=rowsFromPayload(p);if(!data){var empty=document.createElement('div');empty.style.cssText='padding:12px;font-size:12px;color:var(--dashboard-text-muted,#98a2b3);text-align:center';empty.textContent='暂无数据';track.appendChild(empty);return}var maxVis=Number(st.maxVisible)||6;var slice=data.slice(0,maxVis*2);slice.concat(slice).forEach(function(d){var row=document.createElement('div');row.className='row '+levelClass(d.v);var badge=document.createElement('span');badge.className='badge';badge.textContent=levelLabel(d.v);row.appendChild(badge);var msg=document.createElement('span');msg.className='msg';msg.textContent=d.n;row.appendChild(msg);track.appendChild(row)})}boot(render)})();</script></body></html>"
+  }
+}

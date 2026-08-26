@@ -1,0 +1,74 @@
+{
+  "id": "dash-map-panel",
+  "name": "区域地图侧栏",
+  "description": "中国省界地图 + 侧栏指标（1440）",
+  "surfaceKind": "dashboard",
+  "canvas": {
+    "width": 1440,
+    "height": 1080
+  },
+  "styleConfig": {
+    "surfaceKind": "dashboard",
+    "colorScheme": "light",
+    "scaleMode": "canvas",
+    "gapPreset": "md",
+    "widgetGap": 16,
+    "pixelGutter": 24,
+    "paletteId": "default",
+    "widgetStyle": {
+      "background": "#ffffff",
+      "borderColor": "#e4e7ec",
+      "borderWidth": 1,
+      "borderEnabled": true,
+      "borderStyle": "solid",
+      "borderRadius": 12
+    },
+    "titleStyle": {
+      "color": "#1d2939",
+      "fontSize": 14,
+      "fontWeight": 600
+    },
+    "chartLabelStyle": {
+      "color": "#667085"
+    }
+  },
+  "slots": [
+    {
+      "type": "chart",
+      "title": "区域地图",
+      "x": 48,
+      "y": 48,
+      "width": 900,
+      "height": 984,
+      "defaultChartType": "map"
+    },
+    {
+      "type": "chart",
+      "title": "KPI",
+      "x": 972,
+      "y": 48,
+      "width": 420,
+      "height": 200,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "排名",
+      "x": 972,
+      "y": 272,
+      "width": 420,
+      "height": 360,
+      "defaultChartType": "bar-horizontal"
+    },
+    {
+      "type": "chart",
+      "title": "占比",
+      "x": 972,
+      "y": 656,
+      "width": 420,
+      "height": 376,
+      "defaultChartType": "pie-donut"
+    }
+  ],
+  "tags": []
+}

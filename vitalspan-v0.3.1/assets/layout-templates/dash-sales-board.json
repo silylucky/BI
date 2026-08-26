@@ -1,0 +1,101 @@
+{
+  "id": "dash-sales-board",
+  "name": "销售看板",
+  "description": "KPI 行 + 柱/线/饼 经典组合",
+  "surfaceKind": "dashboard",
+  "canvas": {
+    "width": 1440,
+    "height": 1080
+  },
+  "styleConfig": {
+    "surfaceKind": "dashboard",
+    "colorScheme": "light",
+    "scaleMode": "canvas",
+    "gapPreset": "md",
+    "widgetGap": 16,
+    "pixelGutter": 24,
+    "paletteId": "default",
+    "widgetStyle": {
+      "background": "#ffffff",
+      "borderColor": "#e4e7ec",
+      "borderWidth": 1,
+      "borderEnabled": true,
+      "borderStyle": "solid",
+      "borderRadius": 12
+    },
+    "titleStyle": {
+      "color": "#1d2939",
+      "fontSize": 14,
+      "fontWeight": 600
+    },
+    "chartLabelStyle": {
+      "color": "#667085"
+    }
+  },
+  "slots": [
+    {
+      "type": "chart",
+      "title": "销售额",
+      "x": 48,
+      "y": 48,
+      "width": 318,
+      "height": 110,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "订单量",
+      "x": 390,
+      "y": 48,
+      "width": 318,
+      "height": 110,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "客单价",
+      "x": 732,
+      "y": 48,
+      "width": 318,
+      "height": 110,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "转化率",
+      "x": 1074,
+      "y": 48,
+      "width": 318,
+      "height": 110,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "柱状图",
+      "x": 48,
+      "y": 182,
+      "width": 432,
+      "height": 850,
+      "defaultChartType": "bar"
+    },
+    {
+      "type": "chart",
+      "title": "折线图",
+      "x": 504,
+      "y": 182,
+      "width": 432,
+      "height": 850,
+      "defaultChartType": "line"
+    },
+    {
+      "type": "chart",
+      "title": "饼图",
+      "x": 960,
+      "y": 182,
+      "width": 432,
+      "height": 850,
+      "defaultChartType": "pie"
+    }
+  ],
+  "tags": []
+}

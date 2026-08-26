@@ -1,0 +1,1282 @@
+{
+  "version": 1,
+  "widgetTypes": [
+    "chart",
+    "filter",
+    "text",
+    "media",
+    "tabs",
+    "customViz"
+  ],
+  "chartTypes": [
+    {
+      "type": "gauge",
+      "displayName": "仪表盘",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default",
+        "progress"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "quota",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 0,
+        "maxDimensions": 0,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "liquid",
+      "displayName": "水波图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "quota",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 0,
+        "maxDimensions": 0,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "kpi",
+      "displayName": "指标卡",
+      "category": "indicator",
+      "renderer": "kpi",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "react",
+      "paletteCategory": "quota",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 0,
+        "maxDimensions": 1,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "table",
+      "displayName": "表格（已弃用）",
+      "category": "basic",
+      "renderer": "table",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "react",
+      "paletteCategory": "table",
+      "deprecated": true,
+      "migratesTo": "table-info",
+      "fieldRule": {
+        "minDimensions": 0,
+        "maxDimensions": 8,
+        "minMetrics": 0,
+        "maxMetrics": 8,
+        "note": ""
+      }
+    },
+    {
+      "type": "table-info",
+      "displayName": "明细表",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "s2",
+      "paletteCategory": "table",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 0,
+        "maxDimensions": 8,
+        "minMetrics": 0,
+        "maxMetrics": 8,
+        "note": ""
+      }
+    },
+    {
+      "type": "table-normal",
+      "displayName": "汇总表",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "s2",
+      "paletteCategory": "table",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": ""
+      }
+    },
+    {
+      "type": "table-pivot",
+      "displayName": "透视表",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "s2",
+      "paletteCategory": "table",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": ""
+      }
+    },
+    {
+      "type": "t-heatmap",
+      "displayName": "热力图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "table",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 2,
+        "maxDimensions": 2,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "line",
+      "displayName": "基础折线图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default",
+        "smooth"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "trend",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": ""
+      }
+    },
+    {
+      "type": "area",
+      "displayName": "面积图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "trend",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": ""
+      }
+    },
+    {
+      "type": "area-stack",
+      "displayName": "堆叠折线图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "trend",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": ""
+      }
+    },
+    {
+      "type": "timeline",
+      "displayName": "时间轴（已弃用）",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "trend",
+      "deprecated": true,
+      "migratesTo": "line",
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": ""
+      }
+    },
+    {
+      "type": "bar",
+      "displayName": "基础柱状图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "compare",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": ""
+      }
+    },
+    {
+      "type": "bar-stack",
+      "displayName": "堆叠柱状图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "compare",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": ""
+      }
+    },
+    {
+      "type": "percentage-bar-stack",
+      "displayName": "百分比柱状图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "compare",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": ""
+      }
+    },
+    {
+      "type": "bar-group",
+      "displayName": "分组柱状图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "compare",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": ""
+      }
+    },
+    {
+      "type": "bar-group-stack",
+      "displayName": "分组堆叠柱状图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "compare",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": ""
+      }
+    },
+    {
+      "type": "waterfall",
+      "displayName": "瀑布图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "compare",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 1,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "bar-horizontal",
+      "displayName": "基础条形图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "compare",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": ""
+      }
+    },
+    {
+      "type": "bar-stack-horizontal",
+      "displayName": "堆叠条形图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "compare",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": ""
+      }
+    },
+    {
+      "type": "percentage-bar-stack-horizontal",
+      "displayName": "百分比条形图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "compare",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": ""
+      }
+    },
+    {
+      "type": "bar-range",
+      "displayName": "区间条形图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "compare",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 1,
+        "minMetrics": 2,
+        "maxMetrics": 2,
+        "note": ""
+      }
+    },
+    {
+      "type": "bidirectional-bar",
+      "displayName": "对称条形图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "compare",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 1,
+        "minMetrics": 2,
+        "maxMetrics": 2,
+        "note": ""
+      }
+    },
+    {
+      "type": "progress-bar",
+      "displayName": "进度条",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "compare",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 1,
+        "minMetrics": 2,
+        "maxMetrics": 2,
+        "note": ""
+      }
+    },
+    {
+      "type": "stock-line",
+      "displayName": "K 线图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "compare",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 1,
+        "minMetrics": 4,
+        "maxMetrics": 4,
+        "note": ""
+      }
+    },
+    {
+      "type": "bullet-graph",
+      "displayName": "子弹图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "compare",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 1,
+        "minMetrics": 2,
+        "maxMetrics": 3,
+        "note": ""
+      }
+    },
+    {
+      "type": "pie",
+      "displayName": "饼图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "distribute",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 1,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "pie-donut",
+      "displayName": "环形图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "distribute",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 1,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "pie-rose",
+      "displayName": "玫瑰图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "distribute",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 1,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "pie-donut-rose",
+      "displayName": "玫瑰环形图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "distribute",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 1,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "radar",
+      "displayName": "雷达图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "distribute",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 1,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "treemap",
+      "displayName": "矩形树图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "distribute",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 1,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "word-cloud",
+      "displayName": "词云图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "distribute",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 1,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "wordCloud",
+      "displayName": "词云（旧 ID）",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "distribute",
+      "deprecated": true,
+      "migratesTo": "word-cloud",
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 1,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "map",
+      "displayName": "区域地图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2",
+      "paletteCategory": "map",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 3,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "map-3d",
+      "displayName": "3D 区域地图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "d3",
+      "paletteCategory": "map",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 3,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "gis-map",
+      "displayName": "GIS 地图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "maplibre",
+      "paletteCategory": "map",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 0,
+        "maxDimensions": 5,
+        "minMetrics": 0,
+        "maxMetrics": 1,
+        "note": "底图无需字段；可选散点或 OD 飞线叠加"
+      }
+    },
+    {
+      "type": "heatmap",
+      "displayName": "热力图（已弃用）",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "map",
+      "deprecated": true,
+      "migratesTo": "t-heatmap",
+      "fieldRule": {
+        "minDimensions": 2,
+        "maxDimensions": 2,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "scatter",
+      "displayName": "散点图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "relation",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 2,
+        "minMetrics": 1,
+        "maxMetrics": 2,
+        "note": ""
+      }
+    },
+    {
+      "type": "quadrant",
+      "displayName": "象限图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "relation",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 2,
+        "minMetrics": 2,
+        "maxMetrics": 2,
+        "note": ""
+      }
+    },
+    {
+      "type": "funnel",
+      "displayName": "漏斗图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "relation",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 1,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "sankey",
+      "displayName": "桑基图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "relation",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 2,
+        "maxDimensions": 2,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": "桑基图需 2 个维度与 1 个度量"
+      }
+    },
+    {
+      "type": "circle-packing",
+      "displayName": "圆形填充图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "relation",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 1,
+        "minMetrics": 1,
+        "maxMetrics": 1,
+        "note": ""
+      }
+    },
+    {
+      "type": "multi-scatter",
+      "displayName": "多维散点图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "relation",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 2,
+        "minMetrics": 2,
+        "maxMetrics": 4,
+        "note": ""
+      }
+    },
+    {
+      "type": "graph",
+      "displayName": "关系图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default",
+        "force",
+        "dagre"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g6",
+      "paletteCategory": "relation",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 2,
+        "maxDimensions": 2,
+        "minMetrics": 0,
+        "maxMetrics": 1,
+        "note": "关系图需 2 个维度（source,target）"
+      }
+    },
+    {
+      "type": "combo",
+      "displayName": "折柱组合（已弃用）",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "dual_axes",
+      "deprecated": true,
+      "migratesTo": "chart-mix",
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": "左柱或右线至少 1 个指标"
+      }
+    },
+    {
+      "type": "chart-mix",
+      "displayName": "柱线组合图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "dual_axes",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": "左柱或右线至少 1 个指标"
+      }
+    },
+    {
+      "type": "chart-mix-group",
+      "displayName": "分组柱线组合图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "dual_axes",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": "左柱或右线至少 1 个指标"
+      }
+    },
+    {
+      "type": "chart-mix-stack",
+      "displayName": "堆叠柱线组合图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "dual_axes",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": "左柱或右线至少 1 个指标"
+      }
+    },
+    {
+      "type": "chart-mix-dual-line",
+      "displayName": "双线组合图",
+      "category": "basic",
+      "renderer": "antv",
+      "styleVariants": [
+        "default"
+      ],
+      "capabilities": [
+        "style_variant",
+        "field_config",
+        "render_spec"
+      ],
+      "library": "g2plot",
+      "paletteCategory": "dual_axes",
+      "deprecated": false,
+      "migratesTo": null,
+      "fieldRule": {
+        "minDimensions": 1,
+        "maxDimensions": 8,
+        "minMetrics": 1,
+        "maxMetrics": 8,
+        "note": ""
+      }
+    }
+  ],
+  "customVizProtocol": "docs/api/vs-ai-spec/PROTOCOL.md",
+  "customVizGuides": {
+    "platformSla": "docs/api/vs-ai-spec/guides/PLATFORM-SLA.md",
+    "htmlRuntime": "docs/api/vs-ai-spec/guides/HTML-RUNTIME.md",
+    "renderers": "docs/api/vs-ai-spec/guides/RENDERERS.md",
+    "d3Optional": "docs/api/vs-ai-spec/guides/D3-OPTIONAL.md",
+    "themeTokens": "docs/api/vs-ai-spec/theme-tokens.json",
+    "schemas": {
+      "layout": "docs/api/vs-ai-spec/schemas/layout.schema.json",
+      "layoutV2Alias": "docs/api/vs-ai-spec/schemas/layout-v2.schema.json",
+      "customVizPlugin": "docs/api/vs-ai-spec/schemas/custom-viz-plugin.schema.json",
+      "styles": "docs/api/vs-ai-spec/schemas/styles.schema.json",
+      "tokens": "docs/api/vs-ai-spec/schemas/tokens.schema.json"
+    }
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "version": 2,
+  "description": "DeepTalk compose：5 套 DE 大屏 + 10 套仪表板（旧大屏 id 已移除）",
+  "recommendedDataScreen": [
+    "de-classic-cockpit",
+    "de-sales-command",
+    "de-balanced-four",
+    "de-map-command",
+    "de-kpi-flow-wall"
+  ],
+  "removedDataScreenIds": [
+    "gov-cockpit",
+    "sparse-three-tier",
+    "map-hero",
+    "quad-spacious",
+    "asymmetric-editorial",
+    "kpi-flow-banner",
+    "customviz-stage",
+    "industrial-monitor",
+    "finance-light",
+    "minimal-demo"
+  ],
+  "templates": [
+    {
+      "id": "de-classic-cockpit",
+      "name": "DE 经典驾驶舱",
+      "description": "对标 DataEase：顶栏+时钟+四 KPI+双行图+地图+洞察带；推荐默认",
+      "surfaceKind": "data-screen",
+      "tags": [
+        "de-recommended",
+        "de-style"
+      ],
+      "chartSlots": 8,
+      "customVizSlots": 1
+    },
+    {
+      "id": "de-sales-command",
+      "name": "DE 销售指挥墙",
+      "description": "四 KPI + 宽趋势 + 饼图/地图 + 明细表；政企销售场景",
+      "surfaceKind": "data-screen",
+      "tags": [
+        "de-recommended",
+        "de-style",
+        "sales"
+      ],
+      "chartSlots": 8,
+      "customVizSlots": 0
+    },
+    {
+      "id": "de-balanced-four",
+      "name": "DE 四象限均衡",
+      "description": "2×2 等分 + 固定柱/线/饼/雷达；最工整的通用样例",
+      "surfaceKind": "data-screen",
+      "tags": [
+        "de-recommended",
+        "de-style",
+        "balanced"
+      ],
+      "chartSlots": 4,
+      "customVizSlots": 0
+    },
+    {
+      "id": "de-map-command",
+      "name": "DE 地图指挥",
+      "description": "居中大地图 + 侧栏 KPI/排名/占比；地理分析场景",
+      "surfaceKind": "data-screen",
+      "tags": [
+        "de-recommended",
+        "de-style",
+        "map"
+      ],
+      "chartSlots": 5,
+      "customVizSlots": 1
+    },
+    {
+      "id": "de-kpi-flow-wall",
+      "name": "DE KPI 流向墙",
+      "description": "四 KPI + 全宽 sankey + 四象限；流向/链路场景",
+      "surfaceKind": "data-screen",
+      "tags": [
+        "de-recommended",
+        "de-style",
+        "flow"
+      ],
+      "chartSlots": 9,
+      "customVizSlots": 0
+    },
+    {
+      "id": "dash-kpi-grid",
+      "name": "KPI 四宫 + 双行图表",
+      "description": "1440 仪表板：四 KPI + 2×2 图表，浅色疏朗",
+      "surfaceKind": "dashboard",
+      "tags": [],
+      "chartSlots": 8,
+      "customVizSlots": 0
+    },
+    {
+      "id": "dash-analytics-3col",
+      "name": "三栏分析",
+      "description": "1440 三等分栏，适合运营日报",
+      "surfaceKind": "dashboard",
+      "tags": [],
+      "chartSlots": 5,
+      "customVizSlots": 1
+    },
+    {
+      "id": "dash-trend-hero",
+      "name": "趋势主图",
+      "description": "左侧大折线 + 右侧 KPI/占比栈",
+      "surfaceKind": "dashboard",
+      "tags": [],
+      "chartSlots": 4,
+      "customVizSlots": 1
+    },
+    {
+      "id": "dash-report-light",
+      "name": "浅色汇报",
+      "description": "汇报场景：KPI + 宽表 + 双图",
+      "surfaceKind": "dashboard",
+      "tags": [],
+      "chartSlots": 6,
+      "customVizSlots": 0
+    },
+    {
+      "id": "dash-map-panel",
+      "name": "区域地图侧栏",
+      "description": "中国省界地图 + 侧栏指标（1440）",
+      "surfaceKind": "dashboard",
+      "tags": [],
+      "chartSlots": 4,
+      "customVizSlots": 0
+    },
+    {
+      "id": "dash-table-focus",
+      "name": "明细表主导",
+      "description": "宽明细表 + 上角双图",
+      "surfaceKind": "dashboard",
+      "tags": [],
+      "chartSlots": 5,
+      "customVizSlots": 0
+    },
+    {
+      "id": "dash-dark-ops",
+      "name": "深色运维看板",
+      "description": "1440 深色仪表板，六面板",
+      "surfaceKind": "dashboard",
+      "tags": [],
+      "chartSlots": 6,
+      "customVizSlots": 0
+    },
+    {
+      "id": "dash-mixed-cv",
+      "name": "CustomViz 混排",
+      "description": "双 customViz + 三内置图",
+      "surfaceKind": "dashboard",
+      "tags": [],
+      "chartSlots": 3,
+      "customVizSlots": 2
+    },
+    {
+      "id": "dash-minimal",
+      "name": "极简三区块",
+      "description": "仅 3 块 + 大留白",
+      "surfaceKind": "dashboard",
+      "tags": [],
+      "chartSlots": 2,
+      "customVizSlots": 1
+    },
+    {
+      "id": "dash-sales-board",
+      "name": "销售看板",
+      "description": "KPI 行 + 柱/线/饼 经典组合",
+      "surfaceKind": "dashboard",
+      "tags": [],
+      "chartSlots": 7,
+      "customVizSlots": 0
+    }
+  ]
+}

@@ -25,8 +25,9 @@ class BiAgent:
 - 生成图表时，data 参数应传入查询结果的 rows 数组
 - 回答要简洁专业，重点突出数据洞察"""
 
-    def __init__(self, registry: PluginRegistry):
+    def __init__(self, registry: PluginRegistry, create_confirmation=None):
         self.registry = registry
+        self.create_confirmation = create_confirmation
 
     def chat(self, user_input: str, history: list) -> Generator[str, None]:
         """
@@ -41,7 +42,20 @@ class BiAgent:
             }, ensure_ascii=False)
             return
 
-        messages = [{"role": "system", "content": self.SYSTEM_PROMPT}] + history
+        tool_definitions = self.registry.get_definitions()
+        tool_catalog = "\n".join(
+            f"- {item['function']['name']}：{item['function']['description']}"
+            for item in tool_definitions
+        ) or "（当前没有可用工具）"
+        system_prompt = (
+            f"{self.SYSTEM_PROMPT}\n\n"
+            "当前会话已注册的工具如下（包括用户已启用的外部插件工具）：\n"
+            f"{tool_catalog}\n\n"
+            "必须以本次请求提供的 tools 列表为准。只要用户需求与某个已注册工具匹配，"
+            "就应调用该工具；不要声称无法调用插件、不要要求用户改用浏览器或手工操作。"
+            "工具名称带有插件前缀是正常的，调用时使用完整名称。"
+        )
+        messages = [{"role": "system", "content": system_prompt}] + history
         messages.append({"role": "user", "content": user_input})
 
         max_iterations = 10  # 防止无限循环
@@ -99,6 +113,24 @@ class BiAgent:
                         "tool": func_name,
                         "args": func_args
                     }, ensure_ascii=False)
+
+                    # 高风险外部工具必须由用户在聊天中确认后再执行。
+                    plugin = self.registry.get(func_name)
+                    requires_confirmation = bool(getattr(plugin, "tool", {}).get("requires_confirmation", False))
+                    if requires_confirmation and self.create_confirmation:
+                        confirmation_id = self.create_confirmation(func_name, func_args)
+                        yield json.dumps({
+                            "type": "confirmation_required",
+                            "confirmation_id": confirmation_id,
+                            "tool": func_name,
+                            "args": func_args,
+                            "message": f"工具 {func_name} 可能产生外部副作用，请确认后执行。"
+                        }, ensure_ascii=False)
+                        yield json.dumps({
+                            "type": "answer",
+                            "content": "已生成操作计划，等待您的确认。"
+                        }, ensure_ascii=False)
+                        return
 
                     # 执行插件
                     result = self.registry.execute(func_name, func_args)

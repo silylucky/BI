@@ -1,0 +1,53 @@
+{
+  "id": "vitalspan.bi.default",
+  "version": "1.0.0",
+  "displayName": "VitalSpan BI",
+  "description": "连接 VitalSpan 平台：Agent 拼组件与大屏，5173 管理面验收",
+  "scene": {
+    "id": "vitalspan",
+    "name": "VitalSpan BI",
+    "industry": "数据分析 / BI",
+    "description": "DeepTalk Agent + VitalSpan 一体 BI 工作区"
+  },
+  "ui": {
+    "home": "workspace.home",
+    "navigation": [
+      {
+        "id": "new-chat",
+        "label": "新智能体",
+        "type": "builtin",
+        "target": "chat.new",
+        "icon": "plus"
+      },
+      {
+        "id": "workspace-home",
+        "label": "工作区首页",
+        "type": "builtin",
+        "target": "workspace.home",
+        "icon": "layout-dashboard"
+      },
+      {
+        "id": "home",
+        "label": "VitalSpan",
+        "type": "builtinOrPlugin",
+        "pluginView": "vitalspan:home",
+        "fallbackBuiltin": "workspace.placeholder",
+        "icon": "bar-chart"
+      },
+      {
+        "id": "resources",
+        "label": "资源目录",
+        "type": "builtinOrPlugin",
+        "pluginView": "vitalspan:resources",
+        "fallbackBuiltin": "workspace.placeholder",
+        "icon": "folder"
+      }
+    ]
+  },
+  "capabilities": {
+    "plugins": ["vitalspan"],
+    "views": ["vitalspan:home", "vitalspan:resources"]
+  },
+  "suggestedDirectories": ["examples", "产物"],
+  "wizardView": "vitalspan:workspace-setup"
+}

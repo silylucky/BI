@@ -1,0 +1,95 @@
+{
+  "id": "dash-dark-ops",
+  "name": "深色运维看板",
+  "description": "1440 深色仪表板，六面板",
+  "surfaceKind": "dashboard",
+  "canvas": {
+    "width": 1440,
+    "height": 1080
+  },
+  "styleConfig": {
+    "surfaceKind": "dashboard",
+    "colorScheme": "dark",
+    "scaleMode": "canvas",
+    "gapPreset": "md",
+    "widgetGap": 16,
+    "pixelGutter": 24,
+    "paletteId": "default",
+    "widgetStyle": {
+      "background": "#1e293b",
+      "borderColor": "#22d3ee59",
+      "borderWidth": 1,
+      "borderEnabled": true,
+      "borderStyle": "solid",
+      "borderRadius": 12
+    },
+    "titleStyle": {
+      "color": "#f2f4f7",
+      "fontSize": 14,
+      "fontWeight": 600
+    },
+    "chartLabelStyle": {
+      "color": "#98a2b3"
+    },
+    "canvasBackground": "#0f172a",
+    "canvasBackgroundCustom": true,
+    "canvasDecorPresetId": "gradient-radial"
+  },
+  "slots": [
+    {
+      "type": "chart",
+      "title": "面板 1",
+      "x": 48,
+      "y": 48,
+      "width": 432,
+      "height": 480,
+      "defaultChartType": "bar"
+    },
+    {
+      "type": "chart",
+      "title": "面板 2",
+      "x": 504,
+      "y": 48,
+      "width": 432,
+      "height": 480,
+      "defaultChartType": "bar"
+    },
+    {
+      "type": "chart",
+      "title": "面板 3",
+      "x": 960,
+      "y": 48,
+      "width": 432,
+      "height": 480,
+      "defaultChartType": "bar"
+    },
+    {
+      "type": "chart",
+      "title": "面板 4",
+      "x": 48,
+      "y": 552,
+      "width": 432,
+      "height": 480,
+      "defaultChartType": "bar"
+    },
+    {
+      "type": "chart",
+      "title": "面板 5",
+      "x": 504,
+      "y": 552,
+      "width": 432,
+      "height": 480,
+      "defaultChartType": "bar"
+    },
+    {
+      "type": "chart",
+      "title": "面板 6",
+      "x": 960,
+      "y": 552,
+      "width": 432,
+      "height": 480,
+      "defaultChartType": "bar"
+    }
+  ],
+  "tags": []
+}

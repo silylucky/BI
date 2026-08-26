@@ -1,0 +1,81 @@
+{
+  "id": "dash-mixed-cv",
+  "name": "CustomViz 混排",
+  "description": "双 customViz + 三内置图",
+  "surfaceKind": "dashboard",
+  "canvas": {
+    "width": 1440,
+    "height": 1080
+  },
+  "styleConfig": {
+    "surfaceKind": "dashboard",
+    "colorScheme": "light",
+    "scaleMode": "canvas",
+    "gapPreset": "md",
+    "widgetGap": 16,
+    "pixelGutter": 24,
+    "paletteId": "default",
+    "widgetStyle": {
+      "background": "#ffffff",
+      "borderColor": "#e4e7ec",
+      "borderWidth": 1,
+      "borderEnabled": true,
+      "borderStyle": "solid",
+      "borderRadius": 12
+    },
+    "titleStyle": {
+      "color": "#1d2939",
+      "fontSize": 14,
+      "fontWeight": 600
+    },
+    "chartLabelStyle": {
+      "color": "#667085"
+    }
+  },
+  "slots": [
+    {
+      "type": "customViz",
+      "title": "AI 趋势",
+      "x": 48,
+      "y": 48,
+      "width": 660,
+      "height": 320
+    },
+    {
+      "type": "customViz",
+      "title": "AI 排名",
+      "x": 732,
+      "y": 48,
+      "width": 660,
+      "height": 320
+    },
+    {
+      "type": "chart",
+      "title": "柱状图",
+      "x": 48,
+      "y": 392,
+      "width": 432,
+      "height": 640,
+      "defaultChartType": "bar"
+    },
+    {
+      "type": "chart",
+      "title": "折线图",
+      "x": 504,
+      "y": 392,
+      "width": 432,
+      "height": 640,
+      "defaultChartType": "line"
+    },
+    {
+      "type": "chart",
+      "title": "环形图",
+      "x": 960,
+      "y": 392,
+      "width": 432,
+      "height": 640,
+      "defaultChartType": "pie-donut"
+    }
+  ],
+  "tags": []
+}

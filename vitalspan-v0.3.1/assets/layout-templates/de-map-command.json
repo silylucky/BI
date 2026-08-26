@@ -1,0 +1,103 @@
+{
+  "id": "de-map-command",
+  "name": "DE 地图指挥",
+  "description": "居中大地图 + 侧栏 KPI/排名/占比；地理分析场景",
+  "surfaceKind": "data-screen",
+  "tags": [
+    "de-recommended",
+    "de-style",
+    "map"
+  ],
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "styleConfig": {
+    "surfaceKind": "data-screen",
+    "colorScheme": "dark",
+    "scaleMode": "canvas",
+    "gapPreset": "md",
+    "widgetGap": 16,
+    "pixelGutter": 24,
+    "canvasBackground": "#020617",
+    "canvasBackgroundCustom": true,
+    "canvasDecorPresetId": "gradient-radial",
+    "refreshIntervalSec": 60,
+    "widgetStyle": {
+      "background": "rgba(15, 23, 42, 0.78)",
+      "borderColor": "#34d39959",
+      "borderWidth": 1,
+      "borderEnabled": true,
+      "borderStyle": "solid",
+      "borderRadius": 10
+    },
+    "titleStyle": {
+      "color": "#e2e8f0",
+      "fontSize": 14,
+      "fontWeight": 600
+    },
+    "chartLabelStyle": {
+      "color": "#cbd5e1"
+    }
+  },
+  "shell": {
+    "title": "区域指挥地图",
+    "accent": "#34d399",
+    "clock": true
+  },
+  "slots": [
+    {
+      "type": "chart",
+      "title": "总览 KPI",
+      "x": 48,
+      "y": 144,
+      "width": 360,
+      "height": 120,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "城市排名",
+      "x": 48,
+      "y": 288,
+      "width": 360,
+      "height": 360,
+      "defaultChartType": "bar-horizontal"
+    },
+    {
+      "type": "chart",
+      "title": "区域地图",
+      "x": 432,
+      "y": 144,
+      "width": 1056,
+      "height": 864,
+      "defaultChartType": "map"
+    },
+    {
+      "type": "chart",
+      "title": "品类占比",
+      "x": 1512,
+      "y": 144,
+      "width": 360,
+      "height": 360,
+      "defaultChartType": "pie-donut"
+    },
+    {
+      "type": "chart",
+      "title": "趋势迷你",
+      "x": 1512,
+      "y": 528,
+      "width": 360,
+      "height": 240,
+      "defaultChartType": "line"
+    },
+    {
+      "type": "customViz",
+      "title": "AI 洞察",
+      "x": 1512,
+      "y": 792,
+      "width": 360,
+      "height": 216
+    }
+  ]
+}

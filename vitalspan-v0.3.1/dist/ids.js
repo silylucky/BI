@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EXEC_TOOL_LOAD_INSTANCE = exports.EXEC_TOOL_HEALTH = exports.VIEW_WORKSPACE_SETUP = exports.VIEW_RESOURCES = exports.VIEW_HOME = exports.DOMAIN_KEY = exports.TEMPLATE_VERSION = exports.TEMPLATE_ID = exports.PLUGIN_VERSION = exports.PLUGIN_ID = void 0;
+exports.PLUGIN_ID = "vitalspan";
+exports.PLUGIN_VERSION = "0.3.1";
+exports.TEMPLATE_ID = "vitalspan.bi.default";
+exports.TEMPLATE_VERSION = "1.0.0";
+exports.DOMAIN_KEY = "vitalspan";
+exports.VIEW_HOME = "home";
+exports.VIEW_RESOURCES = "resources";
+exports.VIEW_WORKSPACE_SETUP = "workspace-setup";
+exports.EXEC_TOOL_HEALTH = "vitalspan_health";
+exports.EXEC_TOOL_LOAD_INSTANCE = "loadInstance";

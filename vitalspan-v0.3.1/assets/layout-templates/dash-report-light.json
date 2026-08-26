@@ -1,0 +1,92 @@
+{
+  "id": "dash-report-light",
+  "name": "浅色汇报",
+  "description": "汇报场景：KPI + 宽表 + 双图",
+  "surfaceKind": "dashboard",
+  "canvas": {
+    "width": 1440,
+    "height": 1080
+  },
+  "styleConfig": {
+    "surfaceKind": "dashboard",
+    "colorScheme": "light",
+    "scaleMode": "canvas",
+    "gapPreset": "md",
+    "widgetGap": 16,
+    "pixelGutter": 24,
+    "paletteId": "default",
+    "widgetStyle": {
+      "background": "#ffffff",
+      "borderColor": "#e4e7ec",
+      "borderWidth": 1,
+      "borderEnabled": true,
+      "borderStyle": "solid",
+      "borderRadius": 12
+    },
+    "titleStyle": {
+      "color": "#1d2939",
+      "fontSize": 14,
+      "fontWeight": 600
+    },
+    "chartLabelStyle": {
+      "color": "#667085"
+    }
+  },
+  "slots": [
+    {
+      "type": "chart",
+      "title": "总览 KPI",
+      "x": 48,
+      "y": 48,
+      "width": 420,
+      "height": 120,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "次级 KPI",
+      "x": 492,
+      "y": 48,
+      "width": 420,
+      "height": 120,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "辅助 KPI",
+      "x": 936,
+      "y": 48,
+      "width": 456,
+      "height": 120,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "明细表",
+      "x": 48,
+      "y": 192,
+      "width": 1344,
+      "height": 320,
+      "defaultChartType": "table-info"
+    },
+    {
+      "type": "chart",
+      "title": "趋势",
+      "x": 48,
+      "y": 536,
+      "width": 660,
+      "height": 496,
+      "defaultChartType": "line"
+    },
+    {
+      "type": "chart",
+      "title": "结构",
+      "x": 732,
+      "y": 536,
+      "width": 660,
+      "height": 496,
+      "defaultChartType": "pie-donut"
+    }
+  ],
+  "tags": []
+}

@@ -1,0 +1,122 @@
+{
+  "manifest": {
+    "id": "ranking-bar-chart",
+    "displayName": "排名条形图",
+    "version": "1.0.1",
+    "entry": "index.html",
+    "runtime": "html",
+    "rendererHint": "vanilla",
+    "fieldSlots": {
+      "dimensions": {
+        "min": 1,
+        "max": 1,
+        "label": "名称"
+      },
+      "metrics": {
+        "min": 1,
+        "max": 1,
+        "label": "数值"
+      }
+    },
+    "styleSchema": {
+      "type": "object",
+      "x-styleSections": [
+        {
+          "title": "条形颜色",
+          "properties": [
+            "barColor",
+            "top1Color",
+            "top2Color",
+            "top3Color"
+          ]
+        },
+        {
+          "title": "显示与尺寸",
+          "properties": [
+            "showValues",
+            "showRankBadge",
+            "barHeight",
+            "barGap",
+            "animationDuration"
+          ]
+        }
+      ],
+      "properties": {
+        "barColor": {
+          "type": "string",
+          "format": "color",
+          "title": "默认条颜色"
+        },
+        "top1Color": {
+          "type": "string",
+          "format": "color",
+          "title": "第1名颜色"
+        },
+        "top2Color": {
+          "type": "string",
+          "format": "color",
+          "title": "第2名颜色"
+        },
+        "top3Color": {
+          "type": "string",
+          "format": "color",
+          "title": "第3名颜色"
+        },
+        "showValues": {
+          "type": "boolean",
+          "title": "显示数值"
+        },
+        "showRankBadge": {
+          "type": "boolean",
+          "title": "显示排名徽章"
+        },
+        "barHeight": {
+          "type": "number",
+          "minimum": 20,
+          "maximum": 60,
+          "title": "条高度"
+        },
+        "barGap": {
+          "type": "number",
+          "minimum": 8,
+          "maximum": 30,
+          "title": "条间距"
+        },
+        "animationDuration": {
+          "type": "number",
+          "minimum": 500,
+          "maximum": 3000,
+          "title": "动画时长(ms)"
+        }
+      }
+    },
+    "styleHooks": {
+      "showRankBadge": {
+        "hideWhenFalse": true,
+        "hideSelectors": [
+          ".rank-badge"
+        ]
+      },
+      "showValues": {
+        "hideWhenFalse": true,
+        "hideSelectors": [
+          ".bar-value"
+        ]
+      }
+    },
+    "defaultStyle": {
+      "barColor": "#3b82f6",
+      "top1Color": "#f59e0b",
+      "top2Color": "#94a3b8",
+      "top3Color": "#d97706",
+      "showValues": true,
+      "showRankBadge": true,
+      "barHeight": 32,
+      "barGap": 16,
+      "animationDuration": 1000
+    }
+  },
+  "files": {
+    "index.html": "<!DOCTYPE html><html lang=\"zh-CN\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><style>*{margin:0;padding:0;box-sizing:border-box}html,body{height:100%;font-family:system-ui,-apple-system,sans-serif;background:transparent;overflow:hidden}#ranking-container{width:100%;height:100%;padding:20px;overflow-y:auto}#ranking-list{width:100%}.ranking-item{display:flex;align-items:center;margin-bottom:var(--bar-gap,16px)}.rank-badge{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-weight:700;font-size:14px;margin-right:12px;flex-shrink:0}.bar-wrapper{flex:1;display:flex;align-items:center;min-width:0}.bar-label{font-size:14px;color:var(--dashboard-text-primary,#1e293b);margin-right:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:120px;flex-shrink:0}.bar-track{flex:1;height:var(--bar-height,32px);background:rgba(0,0,0,.05);border-radius:999px;overflow:hidden;min-width:60px}.bar-fill{height:100%;border-radius:999px;display:flex;align-items:center;justify-content:flex-end;padding-right:12px;transition:width var(--animation-duration,1000ms) ease-out}.bar-value{font-size:13px;font-weight:600;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.2)}.empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#94a3b8;font-size:14px}</style></head><body><div id=\"ranking-container\"><div id=\"ranking-list\"></div></div><script>(function(){var host=document.currentScript&&document.currentScript.parentElement;function num(st,key,def){var v=Number(st[key]);return isFinite(v)?v:def}function bool(st,key,def){return typeof st[key]===\"boolean\"?st[key]:def}function barColor(st,rank){if(rank===1)return String(st.top1Color||\"#f59e0b\");if(rank===2)return String(st.top2Color||\"#94a3b8\");if(rank===3)return String(st.top3Color||\"#d97706\");return String(st.barColor||\"#3b82f6\")}function badgeBg(st,rank){return barColor(st,rank)}function parseRows(p){if(!p||p.bindingStatus!==\"bound\"||!p.rows||!p.rows.length)return[];var cols=p.columns||[];var ni=0,vi=cols.length>1?1:0;var out=[];for(var i=0;i<p.rows.length;i++){var row=p.rows[i];var v=Number(row[vi]);if(!isNaN(v))out.push({name:String(row[ni]),value:v})}return out.sort(function(a,b){return b.value-a.value})}function formatValue(v){if(v>=1e8)return(v/1e8).toFixed(1)+\"亿\";if(v>=1e4)return(v/1e4).toFixed(1)+\"万\";if(v>=1e3)return(v/1e3).toFixed(1)+\"K\";return v.toLocaleString()}function render(p){p=p||{};var st=(p&&p.style)||{};var list=document.getElementById(\"ranking-list\");if(!list)return;if(p.bindingStatus!==\"bound\"){list.innerHTML='<div class=\"empty-state\">请在右侧绑定数据集</div>';return}var data=parseRows(p);if(!data.length){list.innerHTML='<div class=\"empty-state\">暂无数据</div>';return}var barHeight=num(st,\"barHeight\",32);var barGap=num(st,\"barGap\",16);var showValues=bool(st,\"showValues\",true);var showRankBadge=bool(st,\"showRankBadge\",true);var anim=num(st,\"animationDuration\",1000);var container=document.getElementById(\"ranking-container\");container.style.setProperty(\"--bar-height\",barHeight+\"px\");container.style.setProperty(\"--bar-gap\",barGap+\"px\");container.style.setProperty(\"--animation-duration\",anim+\"ms\");var max=Math.max.apply(null,data.map(function(d){return d.value}).concat([1]));list.innerHTML=\"\";data.forEach(function(item,i){var rank=i+1;var row=document.createElement(\"div\");row.className=\"ranking-item\";if(showRankBadge){var badge=document.createElement(\"div\");badge.className=\"rank-badge\";badge.textContent=String(rank);badge.style.background=badgeBg(st,rank);badge.style.color=\"#fff\";row.appendChild(badge)}var wrap=document.createElement(\"div\");wrap.className=\"bar-wrapper\";var lbl=document.createElement(\"span\");lbl.className=\"bar-label\";lbl.title=item.name;lbl.textContent=item.name;wrap.appendChild(lbl);var track=document.createElement(\"div\");track.className=\"bar-track\";var fill=document.createElement(\"div\");fill.className=\"bar-fill\";fill.style.background=barColor(st,rank);fill.style.width=\"0%\";if(showValues){var val=document.createElement(\"span\");val.className=\"bar-value\";val.textContent=formatValue(item.value);fill.appendChild(val)}track.appendChild(fill);wrap.appendChild(track);row.appendChild(wrap);list.appendChild(row);setTimeout(function(){fill.style.width=(item.value/max*100)+\"%\"},80+i*40)})}function boot(){if(host&&host.vsCv&&host.vsCv.mount){host.vsCv.mount(function(p){render(p)});return}var n=host&&host.querySelector(\".vs-cv-payload\");var p=null;if(n&&n.textContent){try{p=JSON.parse(n.textContent)}catch(e){}}render(p||{})}boot()})();</script></body></html>"
+  }
+}

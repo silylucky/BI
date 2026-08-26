@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "description": "customViz scaffold 范式真源：Agent 先判范式，再选 template；fieldSlots 须与范式一致。",
+  "paradigms": [
+    {
+      "id": "P1-cartesian",
+      "label": "笛卡尔图",
+      "when": "类别轴 + 数值；排名、对比、趋势",
+      "templates": ["ranking-bar", "trend-line"],
+      "runtime": ["html", "d3"],
+      "fieldSlots": {
+        "dimensions": { "min": 1, "max": 1, "note": "通常单列类别/时间" },
+        "metrics": { "min": 1, "max": 1, "note": "须可绑数值" }
+      }
+    },
+    {
+      "id": "P2-multi-column-detail",
+      "label": "多维明细",
+      "when": "多列平铺展示，不做聚合；滚动或静态表",
+      "templates": ["scrolling-table"],
+      "runtime": ["html"],
+      "fieldSlots": {
+        "dimensions": { "min": 1, "max": 6, "note": "max 须 >1" },
+        "metrics": { "min": 0, "max": 0, "note": "必须为 0" }
+      }
+    },
+    {
+      "id": "P3-scroll-feed",
+      "label": "滚动条",
+      "when": "单列文案 + 可选等级/数值",
+      "templates": ["alert-feed"],
+      "runtime": ["html"],
+      "fieldSlots": {
+        "dimensions": { "min": 1, "max": 1 },
+        "metrics": { "min": 1, "max": 1 }
+      }
+    },
+    {
+      "id": "P4-generic-dom",
+      "label": "通用 DOM",
+      "when": "KPI 卡、简单双列、未定形态；勿用于 P2",
+      "templates": ["html-minimal"],
+      "runtime": ["html"],
+      "fieldSlots": {
+        "dimensions": { "min": 1, "max": 8 },
+        "metrics": { "min": 1, "max": 8 }
+      }
+    }
+  ],
+  "templateFiles": {
+    "html-minimal": "html-minimal.json",
+    "scrolling-table": "scrolling-table.json",
+    "alert-feed": "custom-viz-alert-feed.json",
+    "ranking-bar": "custom-viz-ranking-bar-chart-fixed.json",
+    "trend-line": "custom-viz-trend-line.json"
+  },
+  "warnCodes": {
+    "AIVIZ_WARN_DETAIL_TABLE_METRICS": "fieldSlots 不符合 P2 多维明细范式：dimensions.max>1 时 metrics 须 min=0,max=0"
+  }
+}

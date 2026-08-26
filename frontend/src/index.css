@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background: #f5f6fa;
@@ -13,12 +21,14 @@ body {
 
 /* ===== 应用容器 ===== */
 .app {
-  max-width: 960px;
+  width: min(960px, 100%);
+  height: 100vh;
+  height: 100dvh;
   margin: 0 auto;
   padding: 20px;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .app-header {
@@ -42,7 +52,9 @@ body {
 /* ===== 对话区域 ===== */
 .chat-container {
   flex: 1;
+  min-height: 0;
   overflow-y: auto;
+  overscroll-behavior: contain;
   margin-bottom: 16px;
   padding: 8px 0;
 }
@@ -146,6 +158,69 @@ body {
   margin-bottom: 8px;
 }
 
+.chart-render-area {
+  position: relative;
+  min-height: 350px;
+}
+
+.chart-svg-host {
+  width: 100%;
+}
+
+.chart-svg-host svg {
+  display: block;
+}
+
+.chart-grid line {
+  stroke: #e8eef7;
+}
+
+.chart-axis {
+  color: #7a8699;
+  font-size: 12px;
+}
+
+.chart-axis .domain {
+  stroke: #c9d3e1;
+}
+
+.chart-line {
+  fill: none;
+  stroke: #1a73e8;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chart-point {
+  fill: #fff;
+  stroke: #1a73e8;
+  stroke-width: 3;
+}
+
+.chart-bar {
+  fill: #1a73e8;
+  transition: fill 0.2s ease;
+}
+
+.chart-bar:hover {
+  fill: #1557b0;
+}
+
+.chart-legend-text {
+  fill: #5f6b7a;
+  font-size: 12px;
+}
+
+.chart-empty {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #999;
+  font-size: 14px;
+}
+
 /* ===== 表格卡片 ===== */
 .table-card {
   background: white;
@@ -191,6 +266,7 @@ body {
 
 /* ===== 输入区域 ===== */
 .input-area {
+  flex-shrink: 0;
   display: flex;
   gap: 8px;
   padding: 12px 0;
@@ -280,4 +356,102 @@ body {
 .clear-btn:hover {
   border-color: #1a73e8;
   color: #1a73e8;
+}
+
+.add-plugin-btn {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 2;
+  padding: 7px 14px;
+  border: 1px solid #1a73e8;
+  border-radius: 7px;
+  background: #fff;
+  color: #1a73e8;
+  cursor: pointer;
+}
+
+.add-plugin-btn:hover { background: #eef5ff; }
+
+.confirmation-card {
+  margin: 12px 0;
+  padding: 14px;
+  border: 1px solid #f0b429;
+  border-radius: 10px;
+  background: #fffaf0;
+  color: #634b10;
+}
+
+.confirmation-card p { margin: 6px 0; font-size: 13px; }
+.confirmation-card pre { max-height: 120px; overflow: auto; padding: 8px; background: #fff; border-radius: 6px; font-size: 12px; }
+.confirmation-card button { margin-right: 8px; padding: 7px 12px; border: 1px solid #c9a84d; border-radius: 6px; background: #fff; cursor: pointer; }
+.confirmation-card .confirm-btn { border-color: #c88700; background: #e99b00; color: #fff; }
+
+.plugin-modal-overlay { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 20px; background: rgba(20, 30, 45, .48); }
+.plugin-manager { width: min(1040px, 100%); max-height: min(820px, 92dvh); overflow: hidden; border-radius: 14px; background: #fff; box-shadow: 0 20px 60px rgba(0,0,0,.25); display: flex; flex-direction: column; }
+.plugin-manager-header { display: flex; justify-content: space-between; align-items: flex-start; padding: 18px 22px; border-bottom: 1px solid #e8e8e8; }
+.plugin-manager-header h2 { font-size: 20px; color: #1a73e8; }
+.plugin-manager-header p { margin-top: 4px; color: #778; font-size: 13px; }
+.plugin-icon-btn { border: 0; background: transparent; font-size: 28px; line-height: 1; color: #778; cursor: pointer; }
+.plugin-install-form { padding: 14px 22px; border-bottom: 1px solid #e8e8e8; }
+.plugin-install-form label { display: block; color: #667; font-size: 13px; margin-bottom: 5px; }
+.plugin-install-row { display: flex; gap: 8px; }
+.plugin-install-row input { flex: 1; min-width: 0; padding: 9px 10px; border: 1px solid #d8dde6; border-radius: 6px; }
+.plugin-install-row button, .plugin-detail button { padding: 8px 12px; border: 0; border-radius: 6px; background: #1a73e8; color: #fff; cursor: pointer; }
+.plugin-detail button:disabled, .plugin-install-row button:disabled { background: #bac2cc; cursor: not-allowed; }
+.plugin-checkbox { display: inline-flex !important; gap: 5px; align-items: center; margin: 8px 0 0 !important; }
+.plugin-upload-label { margin-top: 8px; color: #1a73e8 !important; cursor: pointer; }
+.plugin-upload-label input { margin-left: 8px; }
+.plugin-message { margin: 8px 22px 0; padding: 8px 10px; border-radius: 6px; background: #edf7ee; color: #276b32; font-size: 13px; }
+.plugin-manager-content { display: grid; grid-template-columns: 260px minmax(0, 1fr); min-height: 0; flex: 1; }
+.plugin-list { overflow-y: auto; border-right: 1px solid #e8e8e8; padding: 8px; }
+.plugin-list-item { display: block; width: 100%; padding: 11px; text-align: left; border: 0; border-radius: 7px; background: transparent; cursor: pointer; }
+.plugin-list-item.selected { background: #eaf3ff; }
+.plugin-list-item strong, .plugin-list-item span { display: block; }
+.plugin-list-item span { margin-top: 3px; color: #899; font-size: 12px; }
+.plugin-detail { overflow-y: auto; padding: 18px 22px; }
+.plugin-detail-title { display: flex; justify-content: space-between; gap: 15px; }
+.plugin-detail-title h3 { color: #344; font-size: 17px; }
+.plugin-detail-title small { color: #899; font-weight: normal; }
+.plugin-detail-title p, .plugin-health { margin-top: 5px; color: #667; font-size: 13px; }
+.plugin-status { flex-shrink: 0; height: fit-content; padding: 4px 8px; border-radius: 12px; background: #eaf3ff; color: #1765bd; font-size: 12px; }
+.plugin-status.unhealthy { background: #fff0f0; color: #b42727; }
+.plugin-actions { display: flex; gap: 8px; margin: 14px 0; }
+.plugin-actions .danger { background: #d84343; }
+.plugin-detail h4 { margin: 18px 0 7px; color: #445; font-size: 14px; }
+.plugin-config-editor { display: block; width: 100%; min-height: 130px; margin-bottom: 8px; padding: 10px; border: 1px solid #d8dde6; border-radius: 6px; font-family: Consolas, monospace; font-size: 12px; resize: vertical; }
+.plugin-tools { display: grid; gap: 8px; }
+.plugin-tool { display: flex; justify-content: space-between; gap: 15px; padding: 10px; border: 1px solid #e5eaf0; border-radius: 7px; }
+.plugin-tool p, .plugin-tool em { display: block; margin-top: 4px; color: #778; font-size: 12px; }
+.plugin-tool em { color: #bf4a4a; }
+.plugin-tool > span { height: fit-content; white-space: nowrap; color: #667; font-size: 12px; }
+.plugin-empty { padding: 30px 12px; color: #999; text-align: center; font-size: 13px; }
+
+@media (max-width: 640px) {
+  .app {
+    padding: 12px;
+  }
+
+  .app-header {
+    padding: 14px 0;
+  }
+
+  .clear-btn {
+    top: 12px;
+    right: 12px;
+  }
+
+  .add-plugin-btn {
+    left: 12px;
+    bottom: 12px;
+  }
+
+  .plugin-manager-content { grid-template-columns: 1fr; }
+  .plugin-list { max-height: 150px; border-right: 0; border-bottom: 1px solid #e8e8e8; }
+  .plugin-manager { max-height: 94dvh; }
+  .plugin-install-row { flex-direction: column; }
+
+  .chart-card {
+    padding: 12px;
+  }
 }

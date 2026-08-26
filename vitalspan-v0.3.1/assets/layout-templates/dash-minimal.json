@@ -1,0 +1,64 @@
+{
+  "id": "dash-minimal",
+  "name": "极简三区块",
+  "description": "仅 3 块 + 大留白",
+  "surfaceKind": "dashboard",
+  "canvas": {
+    "width": 1440,
+    "height": 1080
+  },
+  "styleConfig": {
+    "surfaceKind": "dashboard",
+    "colorScheme": "light",
+    "scaleMode": "canvas",
+    "gapPreset": "md",
+    "widgetGap": 16,
+    "pixelGutter": 24,
+    "paletteId": "default",
+    "widgetStyle": {
+      "background": "#ffffff",
+      "borderColor": "#e4e7ec",
+      "borderWidth": 1,
+      "borderEnabled": true,
+      "borderStyle": "solid",
+      "borderRadius": 12
+    },
+    "titleStyle": {
+      "color": "#1d2939",
+      "fontSize": 14,
+      "fontWeight": 600
+    },
+    "chartLabelStyle": {
+      "color": "#667085"
+    }
+  },
+  "slots": [
+    {
+      "type": "chart",
+      "title": "主 KPI",
+      "x": 420,
+      "y": 80,
+      "width": 600,
+      "height": 140,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "主图表",
+      "x": 120,
+      "y": 260,
+      "width": 1200,
+      "height": 400,
+      "defaultChartType": "line"
+    },
+    {
+      "type": "customViz",
+      "title": "AI 组件",
+      "x": 320,
+      "y": 700,
+      "width": 800,
+      "height": 280
+    }
+  ],
+  "tags": []
+}

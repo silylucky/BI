@@ -22,10 +22,18 @@ export interface TableData {
   row_count: number
 }
 
+export interface ConfirmationRequest {
+  confirmation_id: string
+  tool: string
+  args: Record<string, unknown>
+  message: string
+}
+
 // SSE 事件类型
 export type SSEEvent =
   | { type: 'tool_call'; tool: string; args: Record<string, unknown> }
   | { type: 'chart'; data: ChartData }
   | { type: 'table'; data: TableData }
+  | { type: 'confirmation_required' } & ConfirmationRequest
   | { type: 'answer'; content: string }
   | { type: 'history'; messages: ChatMessage[] }

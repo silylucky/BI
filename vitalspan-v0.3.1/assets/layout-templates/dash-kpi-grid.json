@@ -1,0 +1,110 @@
+{
+  "id": "dash-kpi-grid",
+  "name": "KPI 四宫 + 双行图表",
+  "description": "1440 仪表板：四 KPI + 2×2 图表，浅色疏朗",
+  "surfaceKind": "dashboard",
+  "canvas": {
+    "width": 1440,
+    "height": 1080
+  },
+  "styleConfig": {
+    "surfaceKind": "dashboard",
+    "colorScheme": "light",
+    "scaleMode": "canvas",
+    "gapPreset": "md",
+    "widgetGap": 16,
+    "pixelGutter": 24,
+    "paletteId": "default",
+    "widgetStyle": {
+      "background": "#ffffff",
+      "borderColor": "#e4e7ec",
+      "borderWidth": 1,
+      "borderEnabled": true,
+      "borderStyle": "solid",
+      "borderRadius": 12
+    },
+    "titleStyle": {
+      "color": "#1d2939",
+      "fontSize": 14,
+      "fontWeight": 600
+    },
+    "chartLabelStyle": {
+      "color": "#667085"
+    }
+  },
+  "slots": [
+    {
+      "type": "chart",
+      "title": "指标 A",
+      "x": 48,
+      "y": 48,
+      "width": 318,
+      "height": 100,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "指标 B",
+      "x": 390,
+      "y": 48,
+      "width": 318,
+      "height": 100,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "指标 C",
+      "x": 732,
+      "y": 48,
+      "width": 318,
+      "height": 100,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "指标 D",
+      "x": 1074,
+      "y": 48,
+      "width": 318,
+      "height": 100,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "趋势图",
+      "x": 48,
+      "y": 172,
+      "width": 660,
+      "height": 320,
+      "defaultChartType": "line"
+    },
+    {
+      "type": "chart",
+      "title": "对比图",
+      "x": 732,
+      "y": 172,
+      "width": 660,
+      "height": 320,
+      "defaultChartType": "bar"
+    },
+    {
+      "type": "chart",
+      "title": "结构图",
+      "x": 48,
+      "y": 516,
+      "width": 660,
+      "height": 516,
+      "defaultChartType": "pie-donut"
+    },
+    {
+      "type": "chart",
+      "title": "明细",
+      "x": 732,
+      "y": 516,
+      "width": 660,
+      "height": 516,
+      "defaultChartType": "table-info"
+    }
+  ],
+  "tags": []
+}

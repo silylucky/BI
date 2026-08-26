@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:transparent;color:var(--dashboard-text-primary,#e2e8f0);font-family:system-ui,-apple-system,sans-serif}
+#vs-cv-root{box-sizing:border-box;height:100%;padding:10px 12px;display:flex;flex-direction:column;gap:8px;overflow:auto}
+#vs-cv-title{font-size:13px;font-weight:600;color:var(--dashboard-title-color,#f2f4f7)}
+#vs-cv-body{flex:1;min-height:0;overflow:auto}
+.vs-cv-hint{padding:20px 8px;text-align:center;font-size:12px;color:var(--dashboard-text-muted,#64748b)}
+.vs-cv-table{width:100%;border-collapse:collapse;font-size:var(--vs-fs,13px)}
+.vs-cv-table th,.vs-cv-table td{padding:6px 10px;border-bottom:1px solid var(--dashboard-widget-border,#334155);text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:240px}
+.vs-cv-table th{font-weight:600;color:var(--dashboard-text-secondary,#94a3b8);background:var(--dashboard-widget-surface,#1e293b);position:sticky;top:0}
+.vs-cv-table td.num{text-align:right;font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<div id="vs-cv-root">
+  <div id="vs-cv-title"></div>
+  <div id="vs-cv-body"></div>
+</div>
+<script>
+(function(){
+  var host=document.currentScript&&document.currentScript.parentElement;
+  function $(id){return (host||document).getElementById(id)}
+  function clearEl(el){while(el&&el.firstChild)el.removeChild(el.firstChild)}
+  function bindingStatus(p){
+    if(!p)return'unbound';
+    return p.bindingStatus||((p.rows&&p.rows.length)?'bound':'unbound');
+  }
+  function statusHint(p){
+    var st=bindingStatus(p);
+    if(st==='error')return(p&&p.error)||'数据加载失败';
+    if(st==='empty')return'暂无数据';
+    if(st==='unbound')return'请在右侧绑定数据集与字段';
+    return null;
+  }
+  function resolveStyle(p){
+    var st=(p&&p.style)||{};
+    return{
+      title:String(st.title||'').trim(),
+      fontSize:Number(st.fontSize)||13,
+      accentColor:st.accentColor||'var(--dashboard-accent,#38bdf8)',
+      showHeader:st.showHeader!==false
+    };
+  }
+  function fmtCell(v){
+    if(v==null||v==='')return'';
+    if(typeof v==='number'&&!isNaN(v))return Number.isInteger(v)?v.toLocaleString():v.toFixed(2);
+    return String(v);
+  }
+  function renderTable(body,cols,rows,style){
+    var table=document.createElement('table');
+    table.className='vs-cv-table';
+    table.style.setProperty('--vs-fs',style.fontSize+'px');
+    if(style.showHeader&&cols.length){
+      var thead=document.createElement('thead');
+      var hr=document.createElement('tr');
+      for(var c=0;c<cols.length;c++){
+        var th=document.createElement('th');
+        th.textContent=cols[c];
+        hr.appendChild(th);
+      }
+      thead.appendChild(hr);
+      table.appendChild(thead);
+    }
+    var tbody=document.createElement('tbody');
+    var limit=Math.min(rows.length,200);
+    for(var r=0;r<limit;r++){
+      var tr=document.createElement('tr');
+      var row=rows[r];
+      for(var i=0;i<cols.length;i++){
+        var td=document.createElement('td');
+        var val=row[i];
+        if(typeof val==='number')td.className='num';
+        td.textContent=fmtCell(val);
+        tr.appendChild(td);
+      }
+      tbody.appendChild(tr);
+    }
+    table.appendChild(tbody);
+    body.appendChild(table);
+  }
+  function render(p){
+    p=p||{};
+    var style=resolveStyle(p);
+    var titleEl=$('vs-cv-title');
+    var bodyEl=$('vs-cv-body');
+    if(!bodyEl)return;
+    clearEl(bodyEl);
+    if(titleEl){
+      if(style.title){titleEl.textContent=style.title;titleEl.style.display=''}
+      else{titleEl.style.display='none'}
+    }
+    var hint=statusHint(p);
+    if(hint){
+      var msg=document.createElement('div');
+      msg.className='vs-cv-hint';
+      msg.textContent=hint;
+      bodyEl.appendChild(msg);
+      return;
+    }
+    var cols=p.columns||[];
+    var rows=p.rows||[];
+    if(!cols.length||!rows.length){
+      var empty=document.createElement('div');
+      empty.className='vs-cv-hint';
+      empty.textContent='暂无数据';
+      bodyEl.appendChild(empty);
+      return;
+    }
+    renderTable(bodyEl,cols,rows,style);
+  }
+  if(host&&host.vsCv&&host.vsCv.mount){
+    host.vsCv.mount(render);
+  }else{
+    render({});
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+export declare const PLUGIN_ID: "vitalspan";
+export declare const PLUGIN_VERSION: "0.3.1";
+export declare const TEMPLATE_ID: "vitalspan.bi.default";
+export declare const TEMPLATE_VERSION: "1.0.0";
+export declare const DOMAIN_KEY: "vitalspan";
+export declare const VIEW_HOME: "home";
+export declare const VIEW_RESOURCES: "resources";
+export declare const VIEW_WORKSPACE_SETUP: "workspace-setup";
+export declare const EXEC_TOOL_HEALTH: "vitalspan_health";
+export declare const EXEC_TOOL_LOAD_INSTANCE: "loadInstance";

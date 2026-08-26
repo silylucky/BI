@@ -1,0 +1,57 @@
+{
+  "name": "vitalspan",
+  "version": "0.3.1",
+  "description": "VitalSpan BI：Agent 工具 + VitalSpan BI 特殊工作区（连接、跳转 5173、wf2/wf3）",
+  "displayName": "VitalSpan BI",
+  "author": "VitalSpan",
+  "permissions": [],
+  "components": {
+    "tools": [
+      "dist/health.js",
+      "dist/scaffoldArtifact.js",
+      "dist/validateArtifact.js",
+      "dist/composeDashboard.js",
+      "dist/createDashboard.js",
+      "dist/uploadDashboard.js",
+      "dist/getDashboardLayout.js",
+      "dist/listDashboards.js",
+      "dist/listChartTypes.js",
+      "dist/listLayoutTemplates.js",
+      "dist/publish.js",
+      "dist/list.js",
+      "dist/delete.js",
+      "dist/completionGate.js"
+    ],
+    "skills": ["skills/vitalspan-bi"],
+    "workspaceTemplates": ["workspace-templates/vitalspan.bi.default.workspace.json"],
+    "views": ["views/home.js", "views/resources.js", "views/workspace-setup.js"],
+    "execTools": [
+      {
+        "name": "vitalspan_health",
+        "runtime": "js-worker",
+        "module": "exec-tools/vitalspan-health.cjs",
+        "export": "run",
+        "load": "lazy",
+        "keepAlive": "plugin",
+        "concurrency": "serial"
+      },
+      {
+        "name": "loadInstance",
+        "runtime": "js-worker",
+        "module": "exec-tools/load-instance.cjs",
+        "export": "run",
+        "load": "lazy",
+        "keepAlive": "plugin",
+        "concurrency": "serial"
+      }
+    ]
+  },
+  "viewOptions": {
+    "height": {
+      "mode": "fill"
+    }
+  },
+  "deeptalk": {
+    "minVersion": "0.1.0"
+  }
+}

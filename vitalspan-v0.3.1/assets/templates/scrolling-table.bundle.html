@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:transparent;color:var(--dashboard-text-primary,#e2e8f0);font-family:system-ui,-apple-system,sans-serif}
+#vs-cv-scroll-table{height:100%;display:flex;flex-direction:column;overflow:hidden;box-sizing:border-box}
+#vs-cv-header{display:flex;flex-shrink:0;background:var(--dashboard-widget-surface,#1e293b);border-bottom:1px solid var(--dashboard-widget-border,#334155);font-weight:600;color:var(--dashboard-text-secondary,#94a3b8)}
+#vs-cv-viewport{flex:1;overflow:hidden;position:relative}
+#vs-cv-track{position:absolute;left:0;right:0;top:0;animation:vsCvTableScroll var(--vs-scroll-dur,36s) linear infinite}
+#vs-cv-viewport.pause-hover:hover #vs-cv-track{animation-play-state:paused}
+@keyframes vsCvTableScroll{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
+.vs-cv-row{display:flex;align-items:center;border-bottom:1px solid rgba(148,163,184,.12)}
+.vs-cv-row.stripe{background:rgba(148,163,184,.06)}
+.vs-cv-cell{flex:1;min-width:0;padding:0 10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;box-sizing:border-box}
+.vs-cv-cell.num{text-align:right;font-variant-numeric:tabular-nums}
+.vs-cv-hint{padding:24px 12px;text-align:center;font-size:12px;color:var(--dashboard-text-muted,#64748b)}
+</style>
+</head>
+<body>
+<div id="vs-cv-scroll-table">
+  <div id="vs-cv-header"></div>
+  <div id="vs-cv-viewport">
+    <div id="vs-cv-track"></div>
+  </div>
+</div>
+<script>
+(function(){
+  var host=document.currentScript&&document.currentScript.parentElement;
+  function q(id){return (host||document).getElementById(id)}
+  function clearEl(el){while(el&&el.firstChild)el.removeChild(el.firstChild)}
+  function bindingStatus(p){if(!p)return'unbound';return p.bindingStatus||((p.rows&&p.rows.length)?'bound':'unbound')}
+  function statusHint(p){
+    var st=bindingStatus(p);
+    if(st==='error')return(p&&p.error)||'数据加载失败';
+    if(st==='empty')return'暂无数据';
+    if(st==='unbound')return'请在右侧绑定数据集与字段';
+    return null;
+  }
+  function isNum(v){return typeof v==='number'&&!isNaN(v)}
+  function fmtCell(v){
+    if(v==null||v==='')return'';
+    if(isNum(v))return Number.isInteger(v)?v.toLocaleString():v.toFixed(2);
+    return String(v);
+  }
+  function render(p){
+    p=p||{};
+    var st=(p&&p.style)||{};
+    var speed=Number(st.scrollSpeed)||36;
+    var rowH=Number(st.rowHeight)||36;
+    var fs=Number(st.fontSize)||13;
+    var showHeader=st.showHeader!==false;
+    var stripe=st.stripeRows!==false;
+    var pauseHover=st.pauseOnHover!==false;
+    var hdr=q('vs-cv-header');
+    var vp=q('vs-cv-viewport');
+    var track=q('vs-cv-track');
+    if(!track||!vp||!hdr)return;
+    vp.classList.toggle('pause-hover',pauseHover);
+    track.style.setProperty('--vs-scroll-dur',speed+'s');
+    hdr.style.display=showHeader?'flex':'none';
+    hdr.style.height=rowH+'px';
+    hdr.style.lineHeight=rowH+'px';
+    hdr.style.fontSize=fs+'px';
+    clearEl(track);
+    clearEl(hdr);
+    var hint=statusHint(p);
+    if(hint){
+      track.style.animation='none';
+      var msg=document.createElement('div');
+      msg.className='vs-cv-hint';
+      msg.textContent=hint;
+      track.appendChild(msg);
+      return;
+    }
+    var cols=p.columns||[];
+    var rows=p.rows||[];
+    if(!cols.length||!rows.length){
+      track.style.animation='none';
+      var empty=document.createElement('div');
+      empty.className='vs-cv-hint';
+      empty.textContent='暂无数据';
+      track.appendChild(empty);
+      return;
+    }
+    track.style.animation='';
+    if(showHeader){
+      for(var c=0;c<cols.length;c++){
+        var hc=document.createElement('div');
+        hc.className='vs-cv-cell';
+        hc.textContent=cols[c];
+        hdr.appendChild(hc);
+      }
+    }
+    var slice=rows.slice(0,Math.min(rows.length,120));
+    var doubled=slice.concat(slice);
+    for(var r=0;r<doubled.length;r++){
+      var rowEl=document.createElement('div');
+      rowEl.className='vs-cv-row';
+      if(stripe&&r%2===1)rowEl.classList.add('stripe');
+      rowEl.style.height=rowH+'px';
+      rowEl.style.lineHeight=rowH+'px';
+      rowEl.style.fontSize=fs+'px';
+      var row=doubled[r];
+      for(var i=0;i<cols.length;i++){
+        var cell=document.createElement('div');
+        cell.className='vs-cv-cell';
+        var val=row[i];
+        if(isNum(val))cell.classList.add('num');
+        cell.textContent=fmtCell(val);
+        rowEl.appendChild(cell);
+      }
+      track.appendChild(rowEl);
+    }
+  }
+  if(host&&host.vsCv&&host.vsCv.mount){
+    host.vsCv.mount(render);
+  }else{
+    render({});
+  }
+})();
+</script>
+</body>
+</html>

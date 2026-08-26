@@ -30,6 +30,10 @@ class PluginRegistry:
         except Exception as e:
             return {"error": f"插件执行异常: {str(e)}"}
 
+    def get(self, name: str) -> BasePlugin | None:
+        """获取插件实例，供运行策略判断使用。"""
+        return self._plugins.get(name)
+
     def list_plugins(self) -> List[str]:
         """列出所有已注册插件名"""
         return list(self._plugins.keys())

@@ -1,0 +1,83 @@
+{
+  "id": "dash-table-focus",
+  "name": "明细表主导",
+  "description": "宽明细表 + 上角双图",
+  "surfaceKind": "dashboard",
+  "canvas": {
+    "width": 1440,
+    "height": 1080
+  },
+  "styleConfig": {
+    "surfaceKind": "dashboard",
+    "colorScheme": "light",
+    "scaleMode": "canvas",
+    "gapPreset": "md",
+    "widgetGap": 16,
+    "pixelGutter": 24,
+    "paletteId": "default",
+    "widgetStyle": {
+      "background": "#ffffff",
+      "borderColor": "#e4e7ec",
+      "borderWidth": 1,
+      "borderEnabled": true,
+      "borderStyle": "solid",
+      "borderRadius": 12
+    },
+    "titleStyle": {
+      "color": "#1d2939",
+      "fontSize": 14,
+      "fontWeight": 600
+    },
+    "chartLabelStyle": {
+      "color": "#667085"
+    }
+  },
+  "slots": [
+    {
+      "type": "chart",
+      "title": "指标卡",
+      "x": 48,
+      "y": 48,
+      "width": 660,
+      "height": 140,
+      "defaultChartType": "kpi"
+    },
+    {
+      "type": "chart",
+      "title": "迷你趋势",
+      "x": 732,
+      "y": 48,
+      "width": 660,
+      "height": 140,
+      "defaultChartType": "line"
+    },
+    {
+      "type": "chart",
+      "title": "明细表",
+      "x": 48,
+      "y": 212,
+      "width": 1344,
+      "height": 520,
+      "defaultChartType": "table-info"
+    },
+    {
+      "type": "chart",
+      "title": "分布",
+      "x": 48,
+      "y": 756,
+      "width": 660,
+      "height": 276,
+      "defaultChartType": "pie-donut"
+    },
+    {
+      "type": "chart",
+      "title": "对比",
+      "x": 732,
+      "y": 756,
+      "width": 660,
+      "height": 276,
+      "defaultChartType": "bar"
+    }
+  ],
+  "tags": []
+}

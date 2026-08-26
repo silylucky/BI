@@ -1,0 +1,91 @@
+{
+  "id": "dash-analytics-3col",
+  "name": "三栏分析",
+  "description": "1440 三等分栏，适合运营日报",
+  "surfaceKind": "dashboard",
+  "canvas": {
+    "width": 1440,
+    "height": 1080
+  },
+  "styleConfig": {
+    "surfaceKind": "dashboard",
+    "colorScheme": "light",
+    "scaleMode": "canvas",
+    "gapPreset": "md",
+    "widgetGap": 16,
+    "pixelGutter": 24,
+    "paletteId": "default",
+    "widgetStyle": {
+      "background": "#ffffff",
+      "borderColor": "#e4e7ec",
+      "borderWidth": 1,
+      "borderEnabled": true,
+      "borderStyle": "solid",
+      "borderRadius": 12
+    },
+    "titleStyle": {
+      "color": "#1d2939",
+      "fontSize": 14,
+      "fontWeight": 600
+    },
+    "chartLabelStyle": {
+      "color": "#667085"
+    }
+  },
+  "slots": [
+    {
+      "type": "chart",
+      "title": "左栏",
+      "x": 48,
+      "y": 48,
+      "width": 432,
+      "height": 480,
+      "defaultChartType": "bar"
+    },
+    {
+      "type": "chart",
+      "title": "中栏",
+      "x": 504,
+      "y": 48,
+      "width": 432,
+      "height": 480,
+      "defaultChartType": "bar"
+    },
+    {
+      "type": "chart",
+      "title": "右栏",
+      "x": 960,
+      "y": 48,
+      "width": 432,
+      "height": 480,
+      "defaultChartType": "bar"
+    },
+    {
+      "type": "chart",
+      "title": "左下",
+      "x": 48,
+      "y": 552,
+      "width": 432,
+      "height": 480,
+      "defaultChartType": "bar"
+    },
+    {
+      "type": "chart",
+      "title": "中下",
+      "x": 504,
+      "y": 552,
+      "width": 432,
+      "height": 480,
+      "defaultChartType": "bar"
+    },
+    {
+      "type": "customViz",
+      "title": "AI 组件",
+      "x": 960,
+      "y": 552,
+      "width": 432,
+      "height": 480
+    }
+  ],
+  "tags": []
+}

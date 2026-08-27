@@ -1,181 +1,152 @@
 import json
-from typing import Generator
+from collections.abc import Callable, Generator
+from typing import Any
+
+from agent.llm_client import MODEL, llm_client
 from plugins.registry import PluginRegistry
-from agent.llm_client import llm_client, MODEL
 
 
-class BiAgent:
-    """BI 问数智能体核心 - 支持工具调用循环"""
+ToolResultEventAdapter = Callable[[str, dict[str, Any]], list[dict[str, Any]]]
 
-    SYSTEM_PROMPT = """你是一个专业的 BI 数据分析智能体。你的任务是帮助用户查询和分析业务数据。
 
-你可以使用以下工具：
-1. query_database - 查询业务数据库（仅支持 SELECT）
-2. analyze_data - 对数据进行分析统计（求和、平均值、最大/最小值、分组统计等）
-3. generate_chart - 生成可视化图表（柱状图、折线图、饼图）
+class GenericAgent:
+    """通用工具智能体：通过注册表编排任意内置或外部插件工具。"""
 
-工作流程：
-- 当用户提出数据问题时，先用 query_database 查询数据
-- 如果需要统计分析，用 analyze_data 处理查询结果
-- 如果适合可视化，用 generate_chart 生成图表
-- 最后用自然语言总结分析结论，给出业务洞察
+    DEFAULT_SYSTEM_PROMPT = """你是一个可扩展的通用智能体。
 
-注意事项：
-- SQL 查询只支持 SELECT 语句
-- 生成图表时，data 参数应传入查询结果的 rows 数组
-- 回答要简洁专业，重点突出数据洞察"""
+你可以使用系统为当前会话注册的工具完成用户任务。请根据工具的名称、描述和 JSON Schema 判断何时调用工具：
+- 当已注册工具能够完成用户请求时，优先调用该工具，不要声称无法调用插件；
+- 调用工具时必须使用完整的工具名称和符合 Schema 的参数；
+- 工具可能来自外部插件，名称带前缀是正常的；
+- 工具执行结果是可信的上下文，请基于结果给出清晰、诚实的最终回复；
+- 若工具返回错误，请说明失败原因并在必要时建议用户检查插件配置或服务状态；
+- 不要编造工具、工具结果或未注册的能力。"""
 
-    def __init__(self, registry: PluginRegistry, create_confirmation=None):
+    def __init__(
+        self,
+        registry: PluginRegistry,
+        create_confirmation: Callable[[str, dict[str, Any]], str] | None = None,
+        system_prompt: str | None = None,
+        result_event_adapter: ToolResultEventAdapter | None = None,
+        max_iterations: int = 10,
+    ):
         self.registry = registry
         self.create_confirmation = create_confirmation
+        self.system_prompt = system_prompt or self.DEFAULT_SYSTEM_PROMPT
+        self.result_event_adapter = result_event_adapter
+        self.max_iterations = max_iterations
 
-    def chat(self, user_input: str, history: list) -> Generator[str, None]:
-        """
-        Agent 主循环：调用 LLM → 判断是否需要工具 → 执行工具 → 结果送回 LLM → 最终回答
+    @staticmethod
+    def _event(event_type: str, **payload: Any) -> str:
+        return json.dumps({"type": event_type, **payload}, ensure_ascii=False, default=str)
 
-        通过 Generator 以 SSE 流式返回中间过程和最终结果。
-        """
-        if not user_input.strip():
-            yield json.dumps({
-                "type": "answer",
-                "content": "请输入需要分析的数据问题。"
-            }, ensure_ascii=False)
-            return
-
-        tool_definitions = self.registry.get_definitions()
+    def _build_system_prompt(self, tool_definitions: list[dict[str, Any]]) -> str:
         tool_catalog = "\n".join(
             f"- {item['function']['name']}：{item['function']['description']}"
             for item in tool_definitions
         ) or "（当前没有可用工具）"
-        system_prompt = (
-            f"{self.SYSTEM_PROMPT}\n\n"
-            "当前会话已注册的工具如下（包括用户已启用的外部插件工具）：\n"
+        return (
+            f"{self.system_prompt}\n\n"
+            "当前会话已注册的工具如下：\n"
             f"{tool_catalog}\n\n"
-            "必须以本次请求提供的 tools 列表为准。只要用户需求与某个已注册工具匹配，"
-            "就应调用该工具；不要声称无法调用插件、不要要求用户改用浏览器或手工操作。"
-            "工具名称带有插件前缀是正常的，调用时使用完整名称。"
+            "必须以本次请求提供的 tools 列表为准。"
         )
-        messages = [{"role": "system", "content": system_prompt}] + history
-        messages.append({"role": "user", "content": user_input})
 
-        max_iterations = 10  # 防止无限循环
-        iteration = 0
+    def chat(self, user_input: str, history: list[dict[str, Any]]) -> Generator[str, None, None]:
+        """执行 LLM 与工具之间的通用 Function Calling 循环，并以 SSE 事件返回过程。"""
+        if not user_input.strip():
+            yield self._event("answer", content="请输入您的问题或需要执行的任务。")
+            return
 
-        while iteration < max_iterations:
-            iteration += 1
+        tool_definitions = self.registry.get_definitions()
+        messages: list[dict[str, Any]] = [
+            {"role": "system", "content": self._build_system_prompt(tool_definitions)},
+            *history,
+            {"role": "user", "content": user_input},
+        ]
 
+        for _ in range(self.max_iterations):
             try:
                 response = llm_client.chat.completions.create(
                     model=MODEL,
                     messages=messages,
-                    tools=self.registry.get_definitions(),
+                    tools=tool_definitions,
                 )
             except Exception as exc:
-                # 让前端获得明确错误，而不是 SSE 流意外中断后持续加载。
                 message = str(exc).strip() or exc.__class__.__name__
-                yield json.dumps({
-                    "type": "answer",
-                    "content": f"调用 DeepSeek 失败：{message}"
-                }, ensure_ascii=False)
+                yield self._event("answer", content=f"模型调用失败：{message}")
                 return
 
-            choice = response.choices[0]
-            msg = choice.message
-
-            # 将 assistant 消息加入上下文
-            assistant_msg = {"role": "assistant", "content": msg.content or ""}
-            if msg.tool_calls:
-                assistant_msg["tool_calls"] = [
+            message = response.choices[0].message
+            assistant_message: dict[str, Any] = {"role": "assistant", "content": message.content or ""}
+            if message.tool_calls:
+                assistant_message["tool_calls"] = [
                     {
-                        "id": tc.id,
+                        "id": tool_call.id,
                         "type": "function",
                         "function": {
-                            "name": tc.function.name,
-                            "arguments": tc.function.arguments,
-                        }
+                            "name": tool_call.function.name,
+                            "arguments": tool_call.function.arguments,
+                        },
                     }
-                    for tc in msg.tool_calls
+                    for tool_call in message.tool_calls
                 ]
-            messages.append(assistant_msg)
+            messages.append(assistant_message)
 
-            # 如果 LLM 决定调用工具
-            if msg.tool_calls:
-                for tool_call in msg.tool_calls:
-                    func_name = tool_call.function.name
-                    try:
-                        func_args = json.loads(tool_call.function.arguments)
-                    except json.JSONDecodeError:
-                        func_args = {}
+            if not message.tool_calls:
+                yield self._event("answer", content=message.content or "")
+                yield self._event(
+                    "history",
+                    messages=[
+                        {"role": item["role"], "content": item.get("content", "")}
+                        for item in messages
+                        if item["role"] in ("user", "assistant") and item.get("content")
+                    ],
+                )
+                return
 
-                    # 流式返回工具调用信息
-                    yield json.dumps({
-                        "type": "tool_call",
-                        "tool": func_name,
-                        "args": func_args
-                    }, ensure_ascii=False)
+            for tool_call in message.tool_calls:
+                tool_name = tool_call.function.name
+                try:
+                    arguments = json.loads(tool_call.function.arguments)
+                    if not isinstance(arguments, dict):
+                        raise ValueError("工具参数必须是 JSON 对象")
+                except (json.JSONDecodeError, ValueError):
+                    arguments = {}
 
-                    # 高风险外部工具必须由用户在聊天中确认后再执行。
-                    plugin = self.registry.get(func_name)
-                    requires_confirmation = bool(getattr(plugin, "tool", {}).get("requires_confirmation", False))
-                    if requires_confirmation and self.create_confirmation:
-                        confirmation_id = self.create_confirmation(func_name, func_args)
-                        yield json.dumps({
-                            "type": "confirmation_required",
-                            "confirmation_id": confirmation_id,
-                            "tool": func_name,
-                            "args": func_args,
-                            "message": f"工具 {func_name} 可能产生外部副作用，请确认后执行。"
-                        }, ensure_ascii=False)
-                        yield json.dumps({
-                            "type": "answer",
-                            "content": "已生成操作计划，等待您的确认。"
-                        }, ensure_ascii=False)
-                        return
+                yield self._event("tool_call", tool=tool_name, args=arguments)
+                plugin = self.registry.get(tool_name)
+                requires_confirmation = bool(getattr(plugin, "tool", {}).get("requires_confirmation", False))
+                if requires_confirmation and self.create_confirmation:
+                    confirmation_id = self.create_confirmation(tool_name, arguments)
+                    yield self._event(
+                        "confirmation_required",
+                        confirmation_id=confirmation_id,
+                        tool=tool_name,
+                        args=arguments,
+                        message=f"工具 {tool_name} 可能产生外部副作用，请确认后执行。",
+                    )
+                    yield self._event("answer", content="已生成操作计划，等待您的确认。")
+                    return
 
-                    # 执行插件
-                    result = self.registry.execute(func_name, func_args)
+                result = self.registry.execute(tool_name, arguments)
+                if self.result_event_adapter:
+                    for event in self.result_event_adapter(tool_name, result):
+                        yield json.dumps(event, ensure_ascii=False, default=str)
 
-                    # 如果生成了图表，流式返回图表配置
-                    if func_name == "generate_chart" and "echarts_option" in result:
-                        yield json.dumps({
-                            "type": "chart",
-                            "data": result
-                        }, ensure_ascii=False)
-
-                    # 如果是 SQL 查询，返回表格数据
-                    if func_name == "query_database" and "rows" in result:
-                        yield json.dumps({
-                            "type": "table",
-                            "data": result
-                        }, ensure_ascii=False)
-
-                    # 工具结果送回 LLM
-                    messages.append({
+                messages.append(
+                    {
                         "role": "tool",
                         "tool_call_id": tool_call.id,
-                        "content": json.dumps(result, ensure_ascii=False),
-                    })
-                # 继续循环让 LLM 处理工具结果
-            else:
-                # LLM 返回最终自然语言回答
-                yield json.dumps({
-                    "type": "answer",
-                    "content": msg.content or ""
-                }, ensure_ascii=False)
+                        "content": json.dumps(result, ensure_ascii=False, default=str),
+                    }
+                )
 
-                # 返回精简的对话历史供前端保存
-                yield json.dumps({
-                    "type": "history",
-                    "messages": [
-                        {"role": m["role"], "content": m.get("content", "")}
-                        for m in messages
-                        if m["role"] in ("user", "assistant") and m.get("content")
-                    ]
-                }, ensure_ascii=False)
-                break
+        yield self._event(
+            "answer",
+            content="抱歉，任务已达到最大工具调用次数限制。请尝试拆分或简化请求。",
+        )
 
-        if iteration >= max_iterations:
-            yield json.dumps({
-                "type": "answer",
-                "content": "抱歉，分析过程过于复杂，已达到最大工具调用次数限制。请尝试简化您的问题。"
-            }, ensure_ascii=False)
+
+# 兼容已有导入；新代码应使用 GenericAgent。
+BiAgent = GenericAgent

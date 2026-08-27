@@ -4,6 +4,7 @@ import shutil
 import sys
 import uuid
 from pathlib import Path
+from starlette.concurrency import run_in_threadpool
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -13,7 +14,7 @@ from fastapi.responses import StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
-from agent.core import BiAgent
+from agent.core import GenericAgent
 from agent.session_manager import session_manager
 from config import Config
 from plugins.chart_generator import ChartGeneratorPlugin
@@ -48,7 +49,22 @@ def create_confirmation(tool_name: str, arguments: dict) -> str:
 
 
 refresh_external_plugins()
-agent = BiAgent(registry, create_confirmation)
+def adapt_builtin_tool_result(tool_name: str, result: dict) -> list[dict]:
+    """将内置 BI 工具的结构化结果转换为前端展示事件；外部插件保持通用处理。"""
+    if tool_name == "generate_chart" and "echarts_option" in result:
+        return [{"type": "chart", "data": result}]
+    if tool_name == "query_database" and "rows" in result:
+        return [{"type": "table", "data": result}]
+    return []
+
+
+agent = GenericAgent(
+    registry,
+    create_confirmation,
+    system_prompt=Config.AGENT_SYSTEM_PROMPT or None,
+    result_event_adapter=adapt_builtin_tool_result,
+    max_iterations=Config.AGENT_MAX_TOOL_ITERATIONS,
+)
 
 
 class PathInstallRequest(BaseModel):
@@ -105,7 +121,7 @@ async def get_plugin(plugin_id: str):
 @app.post("/plugins/install/path")
 async def install_plugin_from_path(request: PathInstallRequest):
     try:
-        plugin = plugin_installer.install_from_path(request.path, request.copy_to_managed)
+        plugin = await run_in_threadpool(plugin_installer.install_from_path, request.path, request.copy_to_managed)
         refresh_external_plugins()
         return plugin
     except ValueError as exc:
@@ -128,7 +144,7 @@ async def install_plugin_upload(file: UploadFile = File(...)):
         candidates = list(upload_root.rglob("plugin.json"))
         if len(candidates) != 1:
             raise ValueError("ZIP 中必须且只能包含一个 plugin.json")
-        plugin = plugin_installer.install_from_path(str(candidates[0].parent), copy_to_managed=True)
+        plugin = await run_in_threadpool(plugin_installer.install_from_path, str(candidates[0].parent), True)
         refresh_external_plugins()
         return plugin
     except ValueError as exc:
@@ -183,7 +199,7 @@ async def health_check(plugin_id: str):
     plugin = plugin_store.get_plugin(plugin_id)
     if not plugin:
         raise HTTPException(404, "插件不存在")
-    result = plugin_installer.health_check(Path(plugin["install_path"]), plugin["tools"], plugin["config"])
+    result = await run_in_threadpool(plugin_installer.health_check, Path(plugin["install_path"]), plugin["tools"], plugin["config"])
     plugin_store.set_health(plugin_id, result["ok"], result.get("message", ""))
     refresh_external_plugins()
     return result

@@ -88,10 +88,9 @@ export default function App() {
 
   return <div className="app" style={{ position: 'relative' }}>
     <button className="clear-btn" onClick={clearSession}>清空对话</button>
-    <button className="add-plugin-btn" onClick={() => setShowPluginManager(true)}>添加插件</button>
-    <div className="app-header"><h1>📊 BI 问数系统</h1><div className="subtitle">输入您的数据分析问题，AI 会自动查询数据、分析数据并生成图表</div></div>
+    <div className="app-header"><h1>📊 BI 问数系统</h1><div className="subtitle">输入您的数据分析问题，AI 会自动查询数据、分析数据</div></div>
     <div className="chat-container">
-      {rounds.length === 0 && <div style={{ textAlign: 'center', padding: '40px 20px', color: '#bbb' }}><p style={{ fontSize: 16, marginBottom: 12 }}>试试这些问题：</p><ul style={{ listStyle: 'none', fontSize: 14, lineHeight: 2 }}><li>📊 查询各城市的订单总金额，画个饼图</li><li>📈 查询每月的订单数量趋势，用折线图展示</li><li>🏆 查询销售额最高的5个商品，用柱状图展示</li><li>📉 查询各商品分类的平均订单金额</li></ul></div>}
+      {rounds.length === 0 && <div style={{ textAlign: 'center', padding: '40px 20px', color: '#bbb' }}><p style={{ fontSize: 16, marginBottom: 12 }}>试试这些问题：</p><ul style={{ listStyle: 'none', fontSize: 14, lineHeight: 2 }}><li>📊 查询数据，画个饼图</li><li>📈 查询每月的数量趋势，用折线图展示</li></ul></div>}
       {rounds.map((round) => <div key={round.id}>
         <div className="message user"><div className="message-bubble">{round.userMessage}</div></div>
         {round.toolCalls.length > 0 && <ToolCallPanel calls={round.toolCalls} />}
@@ -102,7 +101,7 @@ export default function App() {
       </div>)}
       <div ref={chatEndRef} />
     </div>
-    <div className="input-area"><input value={input} onChange={(event) => setInput(event.target.value)} onKeyDown={handleKeyDown} placeholder="例如：查询本月销售额最高的5个商品，并生成柱状图" disabled={streaming} /><button onClick={sendMessage} disabled={streaming}>{streaming ? '分析中...' : '发送'}</button></div>
+    <div className="input-area"><button className="add-plugin-btn" onClick={() => setShowPluginManager(true)}>添加插件</button><input value={input} onChange={(event) => setInput(event.target.value)} onKeyDown={handleKeyDown}  disabled={streaming} /><button onClick={sendMessage} disabled={streaming}>{streaming ? '分析中...' : '发送'}</button></div>
     {showPluginManager && <PluginManager onClose={() => setShowPluginManager(false)} />}
   </div>
 }

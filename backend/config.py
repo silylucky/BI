@@ -15,6 +15,8 @@ class Config:
     DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
     DEEPSEEK_BASE_URL = "https://api.deepseek.com"
     MODEL = os.getenv("DEEPSEEK_MODEL", "deepseek-chat")  # 官方 API 支持工具调用的模型
+    AGENT_SYSTEM_PROMPT = os.getenv("AGENT_SYSTEM_PROMPT", "")
+    AGENT_MAX_TOOL_ITERATIONS = int(os.getenv("AGENT_MAX_TOOL_ITERATIONS", "10"))
 
     # 数据库
     DB_PATH = str(BASE_DIR / "data" / "business.db")

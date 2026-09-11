@@ -1,0 +1,39 @@
+wip: [fe,backend,docs,.cursor,+1] 61f (+2557/-314) @ 2026-07-31 16:58...
+
+Areas:
+  fe/          37 files (+1441/-290)
+  backend/     14 files (+230/-23)
+  docs/        5 files (+743/-0)
+  .cursor/     3 files (+54/-1)
+  tests/       2 files (+89/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T162833-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T162833.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/reports/__init__.py
+M  backend/app/api/v1/views.py
+M  backend/app/dashboard/export_layout.py
+M  backend/app/reports/dev_seed.py
+M  backend/app/reports/engine/service.py
+M  backend/app/reports/extension/schemas.py
+M  backend/app/reports/extension/service.py
+M  backend/app/reports/scheduler/delivery.py
+M  backend/app/reports/scheduler/delivery_adapter.py
+M  backend/app/reports/scheduler/executor.py
+M  backend/app/reports/scheduler/schemas.py
+M  backend/app/views/onboarding.py
+M  backend/app/views/store.py
+M  backend/app/views/user_override.py
+A  docs/material/product-reviewer/2026-07-31-account-center-r2.md
+A  docs/material/product-reviewer/2026-07-31-account-center.md
+A  docs/material/product-reviewer/2026-07-31-report-center.md
+A  docs/material/product-reviewer/2026-07-31-system-admin.md
+M  docs/user-guide/report-center-how-to.md
+M  fe/src/components/dashboard/templates/templateLabels.ts
+M  fe/src/lib/defaultViewResolve.test.ts
+M  fe/src/lib/defaultViewResolve.ts
+... and 36 more
+
+stat: 61 files changed, 2557 insertions(+), 314 deletions(-)
+branch: dev | scheduled-auto-commit

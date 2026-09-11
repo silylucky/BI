@@ -1,0 +1,5 @@
+interface:
+  display_name: "生成项目 Rules"
+  short_description: "生成/体检 .cursor/rules 与 AGENTS.md"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,22 @@
+wip: [f] 13f (+620/-233) @ 2026-08-06 10:49 +0800
+
+Areas:
+  fe/          13 files (+620/-233)
+
+Changed (up to 25):
+M  fe/scripts/generate-gov-template-assets.mjs
+M  fe/src/components/charts/engine/d3/hierarchy/renderTreemap.ts
+M  fe/src/components/charts/engine/d3/radial/pieLabels.test.ts
+M  fe/src/components/charts/engine/d3/radial/pieLabels.ts
+M  fe/src/components/charts/engine/d3/radial/radarLayout.test.ts
+M  fe/src/components/charts/engine/d3/radial/radarLayout.ts
+M  fe/src/components/charts/engine/d3/radial/renderRadar.ts
+M  fe/src/components/dashboard/chartStyleSections/ChartTypeStyleSections.tsx
+M  fe/src/components/dashboard/layoutUtils.ts
+M  fe/src/lib/applyChartDeStyleBlocks.ts
+M  fe/src/lib/chartDeStyleBlocks.ts
+A  fe/src/lib/defaultRadarChartDeStyle.ts
+A  fe/src/lib/defaultTreemapChartDeStyle.test.ts
+
+stat: 13 files changed, 620 insertions(+), 233 deletions(-)
+branch: dev | scheduled-auto-commit

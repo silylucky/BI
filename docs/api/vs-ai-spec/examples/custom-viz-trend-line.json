@@ -1,0 +1,71 @@
+{
+  "manifest": {
+    "id": "custom-viz-trend-line-v1",
+    "displayName": "动态趋势图",
+    "version": "1.1.1",
+    "entry": "index.html",
+    "fieldSlots": {
+      "dimensions": {
+        "min": 1,
+        "max": 1,
+        "label": "时间"
+      },
+      "metrics": {
+        "min": 1,
+        "max": 1,
+        "label": "数值"
+      }
+    },
+    "styleSchema": {
+      "type": "object",
+      "properties": {
+        "accentColor": {
+          "type": "string",
+          "format": "color",
+          "default": "#10b981"
+        },
+        "lineWidth": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 8,
+          "default": 3
+        },
+        "showDots": {
+          "type": "boolean",
+          "default": true
+        },
+        "showArea": {
+          "type": "boolean",
+          "default": true
+        },
+        "animationDuration": {
+          "type": "number",
+          "minimum": 500,
+          "maximum": 3000,
+          "default": 1500
+        },
+        "curveType": {
+          "type": "string",
+          "enum": [
+            "linear",
+            "smooth"
+          ],
+          "default": "smooth"
+        }
+      }
+    },
+    "defaultStyle": {
+      "accentColor": "#10b981",
+      "lineWidth": 3,
+      "showDots": true,
+      "showArea": true,
+      "animationDuration": 1500,
+      "curveType": "smooth"
+    },
+    "runtime": "d3",
+    "rendererHint": "d3"
+  },
+  "files": {
+    "index.html": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<style>\n:root {\n  --dashboard-artboard-bg: #0f172a;\n  --dashboard-text-primary: #e2e8f0;\n  --dashboard-text-secondary: #94a3b8;\n  --dashboard-text-muted: #64748b;\n  --dashboard-chart-grid: #334155;\n  --dashboard-widget-border: #475569;\n  --vs-trend-accent: var(--vs-style-accent-color, #10b981);\n}\nhtml, body {\n  margin: 0;\n  height: 100%;\n  background: var(--dashboard-artboard-bg);\n  color: var(--dashboard-text-primary);\n  font-family: system-ui, sans-serif;\n  overflow: hidden;\n}\n#vs-cv-chart {\n  width: 100%;\n  height: 100%;\n  position: relative;\n}\n.hint {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  color: var(--dashboard-text-muted);\n  font-size: 12px;\n  text-align: center;\n}\n.axis text {\n  fill: var(--dashboard-text-secondary);\n  font-size: 11px;\n}\n.axis line, .axis path {\n  stroke: var(--dashboard-chart-grid);\n}\n.grid line {\n  stroke: var(--dashboard-chart-grid);\n  stroke-opacity: 0.3;\n}\n.grid path {\n  display: none;\n}\n.trend-line {\n  fill: none;\n  stroke: var(--vs-trend-accent);\n  stroke-linecap: round;\n  stroke-linejoin: round;\n}\n.trend-area {\n  opacity: 0.4;\n  fill: var(--vs-trend-accent);\n}\n.data-point {\n  fill: var(--dashboard-artboard-bg);\n  stroke: var(--vs-trend-accent);\n  stroke-width: 2;\n  cursor: pointer;\n  transition: all 0.2s ease;\n}\n.data-point:hover {\n  fill: var(--vs-trend-accent);\n  transform: scale(1.5);\n}\n.tooltip {\n  position: absolute;\n  padding: 8px 12px;\n  background: var(--vs-tt-bg, rgba(15, 23, 42, 0.95));\n  border: 1px solid var(--dashboard-widget-border);\n  border-radius: 6px;\n  font-size: calc(var(--vs-tt-fs, 12) * 1px);\n  color: var(--vs-tt-color, var(--dashboard-text-primary));\n  pointer-events: none;\n  opacity: 0;\n  transition: opacity 0.2s;\n  z-index: 100;\n}\n.tooltip.show {\n  opacity: 1;\n}\n.value-label {\n  font-size: calc(var(--vs-label-fs, 11) * 1px);\n  font-weight: 600;\n  fill: var(--vs-label-color, var(--dashboard-text-primary));\n}\n.latest-dot {\n  fill: var(--vs-trend-accent);\n  filter: drop-shadow(0 0 4px var(--vs-trend-accent));\n  animation: pulse 2s infinite;\n}\n@keyframes pulse {\n  0%, 100% { opacity: 1; }\n  50% { opacity: 0.5; }\n}\n</style>\n</head>\n<body>\n<svg id=\"vs-cv-chart\"></svg>\n<div id=\"tooltip\" class=\"tooltip\"></div>\n<script>\n(function() {\n  var host = document.currentScript && document.currentScript.parentElement;\n  \n  function readPayload() {\n    if (host && host.vsCv && host.vsCv.getPayload) return host.vsCv.getPayload();\n    var n = (host || document).querySelector('.vs-cv-payload');\n    if (!n || !n.textContent) return null;\n    try { return JSON.parse(n.textContent); } catch (e) { return null; }\n  }\n  \n  function readStyleFromPayload(p) {\n    return (p && p.style) || {};\n  }\n  function hostVar(name, fallback) {\n    if (!host) return fallback;\n    var v = getComputedStyle(host).getPropertyValue(name).trim();\n    return v || fallback;\n  }\n\n  function resolveStyle(p) {\n    var st = readStyleFromPayload(p);\n    var out = {\n      accentColor: st.accentColor || hostVar('--vs-palette-0', '') || hostVar('--vs-style-accent-color', '#10b981'),\n      lineWidth: st.lineWidth || 3,\n      showDots: st.showDots !== false,\n      showArea: st.showArea !== false,\n      animDuration: st.animationDuration || 1500,\n      isSmooth: st.curveType !== 'linear',\n      labelShow: st.labelShow !== false,\n      tooltipShow: st.tooltipShow !== false,\n      labelColor: st.labelColor || hostVar('--dashboard-text-primary', '#e2e8f0'),\n      tooltipColor: st.tooltipColor || hostVar('--dashboard-text-primary', '#e2e8f0'),\n      tooltipBg: st.tooltipBackground || 'rgba(15, 23, 42, 0.95)',\n      tooltipFontSize: st.tooltipFontSize || 12,\n      seriesGradient: st.seriesGradient === true\n    };\n    var palette = [];\n    if (Array.isArray(st.paletteColors)) palette = st.paletteColors.slice();\n    else {\n      for (var i = 0; i < 8; i++) {\n        var c = hostVar('--vs-palette-' + i, '');\n        if (c) palette.push(c);\n      }\n    }\n    if (palette[0] && !st.accentColor) out.accentColor = palette[0];\n    return out;\n  }\n\n  \n  function bindingStatusOf(p) {\n    if (!p) return 'unbound';\n    return p.bindingStatus || ((p.rows && p.rows.length) ? 'bound' : 'unbound');\n  }\n  \n  function statusHint(p) {\n    var st = bindingStatusOf(p);\n    if (st === 'error') return (p && p.error) || 'Data error';\n    if (st === 'empty') return 'No data';\n    if (st === 'unbound') return 'Bind time and value fields';\n    return null;\n  }\n  \n\n  \n  function resolveBoundColumns(p){var cols=p.columns||[];var enc=(p&&p.encoding)||{};var dims=enc.dimensions||[];var metrics=enc.metrics||[];var di=dims[0]?cols.indexOf(dims[0]):-1;var mi=metrics[0]?cols.indexOf(metrics[0]):-1;if(di<0){di=cols.findIndex(function(c,i){return p.rows[0]&&typeof p.rows[0][i]==='string';});if(di<0)di=0;}if(mi<0){mi=cols.findIndex(function(c,i){return i!==di&&p.rows[0]&&typeof p.rows[0][i]==='number';});if(mi<0)mi=di===0?1:0;}return{dimIdx:di,metricIdx:mi};}  function dataFromPayload(p) {    var st = bindingStatusOf(p);    if (st !== 'bound' || !p || !p.rows || !p.rows.length) return null;    var bc = resolveBoundColumns(p);    var points = p.rows.map(function(r, i) {      return { time: String(r[bc.dimIdx]), value: Number(r[bc.metricIdx]) || 0, index: i };    }).filter(function(d) { return !isNaN(d.value); });    points.sort(function(a, b) {      return a.time.localeCompare(b.time, undefined, { numeric: true });    });    return points;  }\n  \n  function formatValue(v) {\n    if (v >= 1e6) return (v / 1e6).toFixed(1) + 'M';\n    if (v >= 1e3) return (v / 1e3).toFixed(1) + 'K';\n    if (v % 1 === 0) return String(v);\n    return v.toFixed(1);\n  }\n  \n  function render(payload) {\n    var vsCv = host && host.vsCv;\n    var d3 = vsCv && vsCv.d3;\n    if (!d3) return;\n    \n    var svgEl = host&&host.querySelector('#vs-cv-chart');\n    var tooltip = host&&host.querySelector('#tooltip');\n    if (!svgEl) return;\n    \n    var p = payload || readPayload();\n    var rs = resolveStyle(p);\n    var hint = statusHint(p);\n    var data = dataFromPayload(p);\n    var svg = d3.select(svgEl);\n    svg.interrupt();\n    svg.selectAll('*').remove();\n\n    if (tooltip) {\n      if (rs.tooltipShow) {\n        tooltip.style.display = '';\n        tooltip.style.setProperty('--vs-tt-bg', rs.tooltipBg);\n        tooltip.style.setProperty('--vs-tt-color', rs.tooltipColor);\n        tooltip.style.setProperty('--vs-tt-fs', String(rs.tooltipFontSize));\n      } else {\n        tooltip.style.display = 'none';\n      }\n    }\n    \n    if (hint || !data || !data.length) {\n      svg.append('text').attr('class', 'hint')\n        .attr('x', '50%').attr('y', '50%')\n        .attr('text-anchor', 'middle')\n        .text(hint || 'No data');\n      return;\n    }\n    \n    var accentColor = rs.accentColor;\n    var lineWidth = rs.lineWidth;\n    var showDots = rs.showDots;\n    var showArea = rs.showArea;\n    var animDuration = rs.animDuration;\n    var isSmooth = rs.isSmooth;\n    \n    svg.style('--vs-trend-accent', accentColor);\n    svg.style('--vs-label-color', rs.labelColor);\n    \n    var layout = (p && p.layout) || {};\n    var w = layout.width || svgEl.clientWidth || 400;\n    var h = layout.height || svgEl.clientHeight || 300;\n    svg.attr('width', w).attr('height', h);\n    var margin = { top: 20, right: 50, bottom: 40, left: 50 };\n    var width = w - margin.left - margin.right;\n    var height = h - margin.top - margin.bottom;\n    if (width < 50 || height < 50) return;\n    \n    var g = svg.append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');\n    \n    var xScale = d3.scalePoint()\n      .domain(data.map(function(d) { return d.time; }))\n      .range([0, width])\n      .padding(0.1);\n    \n    var yMin = d3.min(data, function(d) { return d.value; });\n    var yMax = d3.max(data, function(d) { return d.value; });\n    var yPadding = (yMax - yMin) * 0.1 || yMax * 0.1;\n    var yScale = d3.scaleLinear()\n      .domain([Math.max(0, yMin - yPadding), yMax + yPadding])\n      .range([height, 0]).nice();\n    \n    var yAxis = d3.axisLeft(yScale).tickSize(-width).tickPadding(8);\n    g.append('g').attr('class', 'axis grid').call(yAxis)\n      .selectAll('line').attr('stroke', 'var(--dashboard-chart-grid)');\n    \n    var xAxis = d3.axisBottom(xScale).tickSize(0).tickPadding(10);\n    if (data.length > 10) {\n      var step = Math.ceil(data.length / 8);\n      xAxis.tickValues(data.filter(function(d, i) { return i % step === 0; }).map(function(d) { return d.time; }));\n    }\n    var xAxisG = g.append('g').attr('class', 'axis').attr('transform', 'translate(0,' + height + ')').call(xAxis);\n    xAxisG.selectAll('text').attr('transform', 'rotate(-30)').style('text-anchor', 'end');\n    \n    var lineGen = d3.line()\n      .x(function(d) { return xScale(d.time); })\n      .y(function(d) { return yScale(d.value); });\n    if (isSmooth) lineGen.curve(d3.curveCatmullRom.alpha(0.5));\n    \n    var areaGen = d3.area()\n      .x(function(d) { return xScale(d.time); })\n      .y0(height).y1(function(d) { return yScale(d.value); });\n    if (isSmooth) areaGen.curve(d3.curveCatmullRom.alpha(0.5));\n    \n    var clipPath = g.append('defs').append('clipPath').attr('id', 'clip-line')\n      .append('rect').attr('width', 0).attr('height', height);\n    \n    if (showArea) {\n      var areaPath = g.append('path').datum(data).attr('class', 'trend-area')\n        .attr('d', areaGen).attr('clip-path', 'url(#clip-line)');\n      if (rs.seriesGradient) {\n        var gradId = 'vs-trend-area-grad';\n        var areaDefs = g.select('defs').empty() ? g.append('defs') : g.select('defs');\n        areaDefs.select('#' + gradId).remove();\n        var grad = areaDefs.append('linearGradient').attr('id', gradId)\n          .attr('x1', '0%').attr('y1', '0%').attr('x2', '0%').attr('y2', '100%');\n        grad.append('stop').attr('offset', '0%').attr('stop-color', accentColor).attr('stop-opacity', 0.95);\n        grad.append('stop').attr('offset', '100%').attr('stop-color', accentColor).attr('stop-opacity', 0.55);\n        areaPath.attr('fill', 'url(#' + gradId + ')').attr('fill-opacity', 1);\n      }\n    }\n    \n    g.append('path').datum(data).attr('class', 'trend-line')\n      .attr('d', lineGen).attr('stroke-width', lineWidth)\n      .attr('clip-path', 'url(#clip-line)');\n    \n    clipPath.transition().duration(animDuration).ease(d3.easeCubicOut).attr('width', width);\n    \n    var last = data[data.length - 1];\n    var latestDot = g.append('circle').attr('class', 'latest-dot')\n      .attr('cx', xScale(last.time)).attr('cy', yScale(last.value)).attr('r', 0);\n    latestDot.transition().delay(animDuration * 0.8).duration(300).attr('r', 6);\n    \n    if (rs.labelShow) {\n      var label = g.append('text').attr('class', 'value-label')\n        .attr('x', xScale(last.time) + 12).attr('y', yScale(last.value) + 4)\n        .text(formatValue(last.value)).style('opacity', 0);\n      label.transition().delay(animDuration * 0.9).duration(300).style('opacity', 1);\n    }\n    \n    if (showDots) {\n      var dots = g.selectAll('.data-point').data(data).enter().append('circle')\n        .attr('class', 'data-point')\n        .attr('cx', function(d) { return xScale(d.time); })\n        .attr('cy', function(d) { return yScale(d.value); })\n        .attr('r', 0).style('opacity', 0);\n      \n      dots.transition()\n        .delay(function(d, i) { return (animDuration * 0.5) + (i / data.length * animDuration * 0.4); })\n        .duration(200).attr('r', 4).style('opacity', 1);\n      \n      if (rs.tooltipShow && tooltip) {\n        dots.on('mouseenter', function(event, d) {\n          tooltip.innerHTML = '<strong>' + d.time + '</strong><br>' + formatValue(d.value);\n          tooltip.classList.add('show');\n          if (vsCv && vsCv.helpers && vsCv.helpers.placeTooltipNearPointer && host) {\n            vsCv.helpers.placeTooltipNearPointer(host, tooltip, event.clientX, event.clientY);\n          } else {\n            tooltip.style.left = (event.pageX + 10) + 'px';\n            tooltip.style.top = (event.pageY - 40) + 'px';\n          }\n        }).on('mouseleave', function() {\n          tooltip.classList.remove('show');\n        });\n      }\n    }\n  }\n  \n  if (host && host.vsCv && host.vsCv.mount) {\n    host.vsCv.mount(render);\n  } else {\n    render();\n  }\n})();\n</script>\n</body>\n</html>"
+  }
+}

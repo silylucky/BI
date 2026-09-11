@@ -1,0 +1,247 @@
+{
+  "id": "gov-eco-monitor",
+  "name": "生态环境监测大屏",
+  "description": "薄荷丝带浅色底图 · 顶色条卡片 · AQI 趋势 · 官方示例数据",
+  "surfaceKind": "data-screen",
+  "tags": [
+    "gov-recommended",
+    "gov-style",
+    "government",
+    "eco"
+  ],
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "styleConfig": {
+    "widgetGap": 8,
+    "canvasBackground": "#ffffff",
+    "colorScheme": "light",
+    "themeAccent": null,
+    "fontFamily": null,
+    "gapPreset": "md",
+    "pixelGutter": 5,
+    "scaleMode": null,
+    "canvasBackgroundImage": "/template-assets/packs/gov-enterprise-v1/backgrounds/light/canvas-light-royal-gradient-mesh.svg",
+    "canvasBackgroundImageFit": null,
+    "canvasBackgroundImagePosition": null,
+    "canvasBackgroundCustom": true,
+    "canvasDecorPresetId": "custom",
+    "refreshIntervalSec": null,
+    "defaultQueryLimit": null,
+    "widgetStyle": {
+      "background": "#ffffff",
+      "backgroundImage": null,
+      "backgroundShow": true,
+      "backgroundMode": null,
+      "framePresetId": null,
+      "frameColor": null,
+      "frameOpacity": null,
+      "opacity": 0.0,
+      "backgroundImageOpacity": null,
+      "backgroundImageFit": null,
+      "backgroundImagePosition": null,
+      "backdropBlur": null,
+      "borderRadius": 10,
+      "borderRadiusTopLeft": null,
+      "borderRadiusTopRight": null,
+      "borderRadiusBottomLeft": null,
+      "borderRadiusBottomRight": null,
+      "radiusMode": null,
+      "padding": 12,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "paddingMode": null,
+      "borderColor": "#e2e8f0",
+      "borderWidth": 1,
+      "borderStyle": "solid",
+      "borderEnabled": true
+    },
+    "paletteId": "clarity",
+    "paletteColors": [
+      "#0ba5ec",
+      "#36bffa",
+      "#53b1fd",
+      "#2e90fa",
+      "#465fff",
+      "#12b76a",
+      "#4ade80",
+      "#667085",
+      "#98a2b3"
+    ],
+    "paletteOpacity": null,
+    "seriesGradient": false,
+    "depthVisual": null,
+    "chartLabelShow": null,
+    "chartLabelStyle": {
+      "fontSize": null,
+      "color": "#64748b"
+    },
+    "tooltipShow": null,
+    "chartTooltipStyle": null,
+    "tableColorStyle": null,
+    "titleStyle": {
+      "show": null,
+      "fontSize": 14,
+      "color": "#1e293b",
+      "fontWeight": 600,
+      "fontStyle": null,
+      "align": null,
+      "letterSpacing": null,
+      "shadow": false
+    },
+    "filterChromeStyle": {
+      "titlePosition": null,
+      "titleColor": "#64748b"
+    },
+    "filterControlStyle": null,
+    "numberFormat": null,
+    "actionIconColor": null,
+    "drillLevelColors": null,
+    "dialogStyle": {
+      "background": "#ffffff",
+      "fontColor": "#344054"
+    },
+    "chrome": null,
+    "themeVariants": {
+      "light": {
+        "canvasBackground": "#ffffff",
+        "canvasBackgroundImageFit": null,
+        "canvasBackgroundImagePosition": null,
+        "canvasBackgroundImage": "/template-assets/packs/gov-enterprise-v1/backgrounds/light/canvas-light-royal-gradient-mesh.svg",
+        "canvasBackgroundCustom": true,
+        "canvasDecorPresetId": "custom",
+        "themeAccent": null,
+        "widgetStyle": {
+          "background": "#ffffff",
+          "borderColor": "#e2e8f0",
+          "borderWidth": 1,
+          "borderStyle": "solid",
+          "borderEnabled": true,
+          "opacity": 0.0
+        },
+        "titleStyle": {
+          "color": "#1e293b"
+        },
+        "dialogStyle": {
+          "background": "#ffffff",
+          "fontColor": "#344054"
+        },
+        "filterChromeStyle": {
+          "titlePosition": null,
+          "titleColor": "#64748b"
+        }
+      },
+      "dark": {
+        "canvasBackground": "#0f172a",
+        "canvasBackgroundImageFit": null,
+        "canvasBackgroundImagePosition": null,
+        "canvasBackgroundImage": null,
+        "canvasBackgroundCustom": null,
+        "canvasDecorPresetId": null,
+        "themeAccent": null,
+        "widgetStyle": {
+          "background": "#1e293b",
+          "borderColor": "#344054",
+          "borderWidth": null,
+          "borderStyle": null,
+          "borderEnabled": null,
+          "opacity": null
+        },
+        "titleStyle": {
+          "color": "#f2f4f7"
+        },
+        "dialogStyle": {
+          "background": "#1d2939",
+          "fontColor": "#ececed"
+        },
+        "filterChromeStyle": {
+          "titlePosition": null,
+          "titleColor": "#98a2b3"
+        }
+      }
+    },
+    "surfaceKind": "data-screen",
+    "screenPlaylist": null
+  },
+  "shell": {
+    "title": "生态环境监测大屏",
+    "clock": true,
+    "accent": "#64748b",
+    "mode": "platform"
+  },
+  "platformTemplateKey": "builtin-gov-eco-monitor",
+  "sourceLayoutFile": "workspace-eco.json",
+  "composeHints": {
+    "shellMode": "platform",
+    "preserveCoordinates": true,
+    "note": "槽位坐标来自 5173 内置模板；compose 勿再叠加 de-shell 偏移"
+  },
+  "slots": [
+    {
+      "type": "chart",
+      "title": "3D 区域地图",
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1079,
+      "defaultChartType": "map-3d"
+    },
+    {
+      "type": "chart",
+      "title": "水质达标率",
+      "x": 21,
+      "y": 112,
+      "width": 470,
+      "height": 296,
+      "defaultChartType": "gauge"
+    },
+    {
+      "type": "chart",
+      "title": "监测站点",
+      "x": 21,
+      "y": 425,
+      "width": 470,
+      "height": 617,
+      "defaultChartType": "bar"
+    },
+    {
+      "type": "chart",
+      "title": "支出结构",
+      "x": 1428,
+      "y": 112,
+      "width": 452,
+      "height": 296,
+      "defaultChartType": "word-cloud"
+    },
+    {
+      "type": "chart",
+      "title": "玫瑰环形图",
+      "x": 514,
+      "y": 699,
+      "width": 879,
+      "height": 343,
+      "defaultChartType": "pie-donut-rose"
+    },
+    {
+      "type": "chart",
+      "title": "散点图",
+      "x": 1428,
+      "y": 425,
+      "width": 452,
+      "height": 274,
+      "defaultChartType": "scatter"
+    },
+    {
+      "type": "chart",
+      "title": "圆形填充图",
+      "x": 1428,
+      "y": 721,
+      "width": 452,
+      "height": 321,
+      "defaultChartType": "circle-packing"
+    }
+  ]
+}

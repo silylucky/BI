@@ -1,0 +1,35 @@
+wip: [backend,fe,docs,tests,+2] 21f (+425/-183) @ 2026-08-07 02:52 +0800
+
+Areas:
+  backend/     7 files (+109/-13)
+  fe/          5 files (+185/-33)
+  docs/        4 files (+6/-3)
+  tests/       3 files (+121/-126)
+  .cursor/     1 files (+3/-7)
+  .github/     1 files (+1/-1)
+
+Changed (up to 25):
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  .github/workflows/ci.yml
+M  backend/app/datasources/service.py
+M  backend/app/integration/reports_export.py
+M  backend/app/reports/catalog/acl.py
+A  backend/app/reports/persistence/artifact_repo.py
+M  backend/app/reports/persistence/models.py
+M  backend/app/reports/scheduler/executor.py
+A  backend/migrations/versions/0040_report_artifact_owners.py
+M  docs/automate/prd/F07-DASH.md
+M  docs/automate/prd/F08-RPT.md
+M  docs/services/integration.md
+M  docs/services/reports.md
+M  fe/src/pages/admin/dashboard/DashboardEditPage.tsx
+M  fe/src/pages/admin/reports/components/ReportMetricExtensionForm.tsx
+M  fe/src/pages/admin/reports/components/TemplateBlockEditor.tsx
+M  fe/src/pages/admin/themes/ThemeAnalysisPage.tsx
+M  fe/src/pages/admin/themes/useThemeAnalysis.ts
+M  tests/test_entity_physical_persistence.py
+M  tests/test_persistence_contract.py
+M  tests/test_persistence_roundtrip.py
+
+stat: 21 files changed, 425 insertions(+), 183 deletions(-)
+branch: dev | scheduled-auto-commit

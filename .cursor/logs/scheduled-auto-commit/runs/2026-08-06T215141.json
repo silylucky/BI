@@ -1,0 +1,33 @@
+﻿{
+    "messageSubject":  "wip: [fe,tests,docs,.cursor,+1] 22f (+678/-120) @ 2026-08-06 21:52 +0800",
+    "branch":  "dev",
+    "finishedAt":  "2026-08-06T21:52:02+08:00",
+    "topDirs":  {
+                    "backend":  1,
+                    ".cursor":  1,
+                    "tests":  4,
+                    "fe":  15,
+                    "docs":  1
+                },
+    "sampleFiles":  [
+                        ".cursor/logs/scheduled-auto-commit/state.json",
+                        "backend/app/dashboard/export_render.py",
+                        "docs/feature-truth/2026-08-06-dashboard-scheduled-report-truth-audit.md",
+                        "fe/src/components/charts/engine/d3/cartesian/renderDualAxes.test.ts",
+                        "fe/src/components/charts/engine/d3/cartesian/renderDualAxes.ts",
+                        "fe/src/components/charts/engine/d3/cartesian/renderDualAxesColumn.ts",
+                        "fe/src/components/charts/engine/d3/types.ts",
+                        "fe/src/components/charts/engine/d3/views/buildRenderConfig.ts",
+                        "fe/src/components/charts/engine/plugins/plans/buildPlan.dualAxes.test.ts",
+                        "fe/src/components/charts/engine/plugins/plans/buildPlan.ts"
+                    ],
+    "startedAt":  "2026-08-06T21:51:18+08:00",
+    "insertions":  678,
+    "deletions":  120,
+    "filesChanged":  22,
+    "runId":  "2026-08-06T215141",
+    "outcome":  "success",
+    "commit":  "fa638a39",
+    "messageBodyPreview":  "Areas:\r\n  fe/          15 files (+399/-83)\r\n  tests/       4 files (+68/-23)\r\n  docs/        1 files (+123/-0)\r\n  .cursor/     1 files (+3/-7)\r\n  backend/     1 files (+85/-7)\r\n\r\nChanged (up to 25):\r\nM  .cursor/logs/scheduled-auto-commit/state.json\r\nM  backend/app/dashboard/export_render.py\r\nA  docs/feature-truth/2026-08-06-dashboard-scheduled-report-truth-audit.md\r\nM  fe/src/components/charts/engine/d3/cartesian/renderDualAxes.test.ts\r\nM  fe/src/components/charts/engine/d3/cartesian/renderDualA",
+    "push":  false
+}

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="f0162a72-base" x1="0" y1="0" x2="1920" y2="1080">
+      <stop stop-color="#e8e7ea"/>
+      <stop offset="0.32" stop-color="#bdb3cb"/>
+      <stop offset="0.68" stop-color="#d5c9e8"/>
+      <stop offset="1" stop-color="#b7a3db"/>
+    </linearGradient>
+    <radialGradient id="f0162a72-glowL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(345.59999999999997 237.6) scale(729.6)">
+      <stop stop-color="#8b5cf6" stop-opacity="0.32"/>
+      <stop offset="0.55" stop-color="#554084" stop-opacity="0.20800000000000002"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="f0162a72-glowR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1574.3999999999999 777.6) scale(614.4)">
+      <stop stop-color="#a78bfa" stop-opacity="0.272"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#f0162a72-base)"/>
+  <rect width="1920" height="1080" fill="url(#f0162a72-glowL)"/>
+  <rect width="1920" height="1080" fill="url(#f0162a72-glowR)"/>
+  <circle cx="960" cy="518.4" r="160" fill="none" stroke="#a78bfa" stroke-width="0.8" opacity="0.32"/>
+  <circle cx="960" cy="518.4" r="104" fill="none" stroke="#a78bfa" stroke-width="0.5" opacity="0.28" stroke-dasharray="4 6"/>
+  <line x1="800" y1="518.4" x2="1120" y2="518.4" stroke="#a78bfa" stroke-width="0.4" opacity="0.25"/>
+  <line x1="960" y1="358.4" x2="960" y2="678.4" stroke="#a78bfa" stroke-width="0.4" opacity="0.25"/>
+  <circle cx="960" cy="518.4" r="260" fill="none" stroke="#a78bfa" stroke-width="0.8" opacity="0.32"/>
+  <circle cx="960" cy="518.4" r="169" fill="none" stroke="#a78bfa" stroke-width="0.5" opacity="0.28" stroke-dasharray="4 6"/>
+  <line x1="700" y1="518.4" x2="1220" y2="518.4" stroke="#a78bfa" stroke-width="0.4" opacity="0.25"/>
+  <line x1="960" y1="258.4" x2="960" y2="778.4" stroke="#a78bfa" stroke-width="0.4" opacity="0.25"/>
+  <circle cx="960" cy="518.4" r="360" fill="none" stroke="#a78bfa" stroke-width="0.8" opacity="0.32"/>
+  <circle cx="960" cy="518.4" r="234" fill="none" stroke="#a78bfa" stroke-width="0.5" opacity="0.28" stroke-dasharray="4 6"/>
+  <line x1="600" y1="518.4" x2="1320" y2="518.4" stroke="#a78bfa" stroke-width="0.4" opacity="0.25"/>
+  <line x1="960" y1="158.39999999999998" x2="960" y2="878.4" stroke="#a78bfa" stroke-width="0.4" opacity="0.25"/>
+  <g opacity="0.62" stroke="#a78bfa" stroke-width="1.5" fill="none">
+  <path d="M20 60 V20 H60"/>
+  <path d="M1860 20 H1900 V60"/>
+  <path d="M1900 1020 V1060 H1860"/>
+  <path d="M60 1060 H20 V1020"/>
+</g>
+  <path d="M945.6 518.4 L888 483.84 L888 552.96 Z" fill="#a78bfa" fill-opacity="0.22" stroke="#a78bfa" stroke-width="0.8" opacity="0.28"/><path d="M974.4 518.4 L1032 483.84 L1032 552.96 Z" fill="#a78bfa" fill-opacity="0.22" stroke="#a78bfa" stroke-width="0.8" opacity="0.28"/>
+</svg>

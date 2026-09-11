@@ -1,0 +1,38 @@
+wip: [fe,backend,.cursor,tests] 33f (+610/-90) @ 2026-08-04 18:50 +0800
+
+Areas:
+  fe/          22 files (+404/-71)
+  backend/     6 files (+60/-18)
+  .cursor/     3 files (+60/-1)
+  tests/       2 files (+86/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T181755-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T181755.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/ingestion/sync.py
+M  backend/app/datasources/dialects/rest_api.py
+M  backend/app/ingestion/source_resolver.py
+M  backend/app/ingestion/sync_fetch.py
+M  backend/app/ingestion/sync_fetch_native.py
+A  backend/app/ingestion/sync_source_table.py
+A  fe/src/components/charts/adapters/TablePaginationBar.test.tsx
+M  fe/src/components/charts/adapters/TablePaginationBar.tsx
+M  fe/src/components/dashboard/ChartTableColorPanel.test.tsx
+M  fe/src/components/dashboard/ChartTableColorPanel.tsx
+M  fe/src/components/dashboard/chartPaletteLabelTooltipFields.tsx
+M  fe/src/components/dashboard/chartPaletteShared.tsx
+M  fe/src/components/dashboard/dashboardWidgetTypography.ts
+M  fe/src/lib/apiError.ts
+M  fe/src/lib/resolveChartEncoding.ts
+M  fe/src/lib/suggestSyncTargetTable.ts
+M  fe/src/pages/admin/datasources/DatasourceDetailPage.tsx
+M  fe/src/pages/admin/datasources/DatasourceFormPage.tsx
+M  fe/src/pages/admin/datasources/components/DatasourceDetailPanel.tsx
+M  fe/src/pages/admin/datasources/components/DatasourceTestStatus.test.tsx
+M  fe/src/pages/admin/datasources/components/DatasourceTestStatus.tsx
+M  fe/src/pages/admin/datasources/components/RestApiConnectionFields.tsx
+... and 8 more
+
+stat: 33 files changed, 610 insertions(+), 90 deletions(-)
+branch: dev | scheduled-auto-commit

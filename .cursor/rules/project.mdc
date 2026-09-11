@@ -1,0 +1,66 @@
+---
+description: VitalSpan 总约束（目录 · 任务路由 · 必读真理源）
+alwaysApply: true
+---
+
+# VitalSpan 项目总约束
+
+> 架构：`docs/arch.md` · 产品：`docs/automate/goal.md` · 功能验收：`docs/automate/prd.md`
+
+## 会话启动（硬约束）
+
+开发前**先读** `docs/arch.md` 与 `docs/automate/goal.md`，再扫顶层目录；禁止臆造进程、路由或模块边界。
+
+## 定位
+
+**VitalSpan** — 自研 BI 平台（对标 DataEase/Superset 能力），**零第三方 BI 运行时依赖**；面向政企与行业 IT / 数据团队。
+
+当前里程碑：**M1 工程基线**（M1B queued）→ `docs/automate/plan.md`。
+
+## 技术栈
+
+| 层 | 选型 |
+|----|------|
+| 后端 | **FastAPI** · Pydantic v2 · SQLAlchemy 2 · Alembic |
+| 前端 | **React 19** · Vite · shadcn/ui · Radix · Tailwind v4 · **`fe/`** |
+| 平台库 | PostgreSQL / MySQL 8+ / SQLite（ADR-07） |
+| 认证 | M1：Bearer JWT；LDAP / OAuth/OIDC 按 PRD 分期 |
+| 密码学 | **SM4** 凭证 · **SM3** 登录哈希（ADR-06/16）；见 production |
+| 地图 | 仅离线中国 GeoJSON（GEO-IRON-01） |
+| 交付 | 打包上传 → **release-package**；演示 → **deploy-dev** |
+
+## 任务路由
+
+| 改什么 | 去哪 |
+|--------|------|
+| 架构/边界/环境变量 | `docs/arch.md` |
+| 产品范围/里程碑 | `docs/automate/goal.md` · `plan.md` |
+| 功能验收 | `docs/automate/prd.md` + `prd/F*.md` |
+| 体量/信封/分层 | @.cursor/rules/engineering.mdc |
+| 国密/弹性/观测/RBAC/测试/备份 | @.cursor/rules/production.mdc |
+| 打包/部署/环境选源 | @.cursor/rules/delivery.mdc |
+| 后端 FastAPI | @.cursor/rules/backend-fastapi.mdc |
+| 前端 fe/ | @.cursor/rules/fe-ui.mdc · `docs/ui/` |
+| DeepTalk × VitalSpan 一体集成 | @.cursor/rules/deeptalk-vitalspan-integration.mdc · `docs/api/vs-ai-spec/IRON-RULES.md` |
+| 文档同步 | @.cursor/rules/prd-sync.mdc · @.cursor/rules/docs-layer.mdc |
+| 项目身份摘要 | @.cursor/rules/vitalspan-project.mdc |
+
+## 目录铁律
+
+| 项 | 约定 |
+|----|------|
+| 前端 | **`fe/`**（禁止 `frontend/`） |
+| 后端域 | `backend/app/{core,auth,api/v1,datasources,query,ingestion,…}` |
+| 鉴权 | `app/auth/`；**`main.py` 注册** `AuthMiddleware` |
+| API | 前缀 **`/api/v1/`**；健康 **`/health`**（无 v1） |
+| 公开路径 | `/health`、`/docs`、`/redoc`、`/openapi.json` |
+| 技能 | `.agents/skills/` · 演化只读 `.cursor/automate/skills/` |
+
+## 规则索引
+
+| 场景 | 规则 |
+|------|------|
+| 生产红线 | @.cursor/rules/production.mdc |
+| 工程公共 | @.cursor/rules/engineering.mdc · @.cursor/rules/common.mdc |
+| 交付门禁 | @.cursor/rules/delivery.mdc |
+| 文档同步 | @.cursor/rules/prd-sync.mdc |

@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-04T17:18:24+08:00",
+  "finishedAt": "2026-08-04T17:19:15+08:00",
+  "branch": "dev",
+  "commit": "a724420b",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [backend,tests,docs,fe,+1] 64f (+2756/-578) @ 2026-08-04 17:19 +...",
+  "filesChanged": 64,
+  "insertions": 2756,
+  "deletions": 578,
+  "topDirs": { "backend": 36, "tests": 11, "docs": 7, "fe": 7, ".cursor": 3 },
+  "sampleFiles": [
+    "backend/app/reports/persistence/store.py",
+    "backend/migrations/versions/0034_report_metadata_persistence.py",
+    "backend/app/ingestion/sync_fetch_sql.py",
+    "docs/feature-truth/2026-08-04-report-center-p3-truth-audit.md"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/", "data/artifacts/", "fe/.env.production.local"]
+}

@@ -1,0 +1,42 @@
+wip: [backend,tests,fe,scripts,+4] 71f (+1850/-1289) @ 2026-07-31 18:...
+
+Areas:
+  backend/     20 files (+953/-665)
+  tests/       18 files (+324/-297)
+  fe/          17 files (+303/-297)
+  scripts/     5 files (+183/-3)
+  .cursor/     4 files (+57/-5)
+  docs/        4 files (+25/-15)
+  _root/       2 files (+3/-5)
+  .github/     1 files (+2/-2)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T175833-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T175833.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  .cursor/rules/production.mdc
+M  .github/workflows/ci.yml
+M  AGENTS.md
+M  README.md
+M  backend/.env.example
+M  backend/app/auth/jwt.py
+M  backend/app/auth/password/service.py
+M  backend/app/core/config.py
+M  backend/app/core/crypto/__init__.py
+M  backend/app/core/crypto/credentials.py
+D  backend/app/core/crypto/fernet.py
+M  backend/app/core/crypto/password.py
+A  backend/app/core/crypto/sm2.py
+M  backend/app/core/nfr/xinchuang.py
+M  backend/app/dashboard/templates/presets.py
+M  backend/app/dashboard/templates/presets_gov.py
+M  backend/app/dashboard/templates/presets_gov_assets.py
+M  backend/app/dashboard/templates/presets_gov_screens.py
+A  backend/app/dashboard/templates/presets_gov_theme.py
+M  backend/app/dashboard/templates/seed.py
+M  backend/app/main.py
+A  backend/app/metadata/dataset/demo_bindings.py
+... and 46 more
+
+stat: 71 files changed, 1850 insertions(+), 1289 deletions(-)
+branch: dev | scheduled-auto-commit

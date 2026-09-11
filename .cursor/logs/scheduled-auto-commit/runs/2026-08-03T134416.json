@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-03T13:44:16+08:00",
+  "finishedAt": "2026-08-03T13:44:26+08:00",
+  "branch": "dev",
+  "commit": "dbe3102e",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,backend,tests,.cursor] 38f (+1783/-423) @ 2026-08-03 13:44 +...",
+  "filesChanged": 38,
+  "insertions": 1783,
+  "deletions": 423,
+  "topDirs": { "fe": 23, "backend": 8, "tests": 4, ".cursor": 3 },
+  "sampleFiles": [
+    "backend/app/ingestion/sync_fetch.py",
+    "backend/migrations/versions/0031_sync_job_incremental.py",
+    "fe/src/pages/admin/ingestion/SyncJobsPage.tsx",
+    "fe/src/hooks/use-form-dirty-state.ts"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/"]
+}

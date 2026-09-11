@@ -1,0 +1,13 @@
+interface:
+  display_name: "穷追追问"
+  short_description: "一次一问压力测试思路；可选边烤边写术语与 ADR"
+  keywords:
+    - grill
+    - grill me
+    - grill with docs
+    - 烤我
+    - 烤一烤
+    - 追问
+    - 追问方案
+    - 压力测试设计
+    - 边烤边写文档

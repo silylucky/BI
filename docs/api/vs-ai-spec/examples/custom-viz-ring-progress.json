@@ -1,0 +1,80 @@
+{
+  "manifest": {
+    "id": "ring-progress-panel-v1",
+    "displayName": "环形进度面板",
+    "version": "1.0.0",
+    "entry": "index.html",
+    "fieldSlots": {
+      "dimensions": {
+        "min": 1,
+        "max": 1,
+        "label": "项目名称"
+      },
+      "metrics": {
+        "min": 1,
+        "max": 1,
+        "label": "完成率"
+      }
+    },
+    "styleSchema": {
+      "type": "object",
+      "x-styleSections": [
+        {
+          "title": "环形",
+          "properties": [
+            "accentColor",
+            "trackColor",
+            "ringThickness"
+          ]
+        },
+        {
+          "title": "标签",
+          "properties": [
+            "showPercent",
+            "labelSize"
+          ]
+        }
+      ],
+      "properties": {
+        "accentColor": {
+          "type": "string",
+          "format": "color",
+          "title": "进度色"
+        },
+        "trackColor": {
+          "type": "string",
+          "format": "color",
+          "title": "轨道色"
+        },
+        "ringThickness": {
+          "type": "number",
+          "minimum": 4,
+          "maximum": 16,
+          "title": "环宽度"
+        },
+        "showPercent": {
+          "type": "boolean",
+          "title": "显示百分比"
+        },
+        "labelSize": {
+          "type": "number",
+          "minimum": 10,
+          "maximum": 16,
+          "title": "标签字号"
+        }
+      }
+    },
+    "defaultStyle": {
+      "accentColor": "#818cf8",
+      "trackColor": "#334155",
+      "ringThickness": 8,
+      "showPercent": true,
+      "labelSize": 12
+    },
+    "rendererHint": "svg",
+    "runtime": "html"
+  },
+  "files": {
+    "index.html": "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><style>html,body{margin:0;height:100%;background:transparent;color:var(--dashboard-text-primary,#e2e8f0);font-family:system-ui,sans-serif}#vs-cv-rings{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:12px;padding:12px;height:100%;box-sizing:border-box;align-content:center;justify-items:center}.item{display:flex;flex-direction:column;align-items:center;gap:6px}.lbl{font-size:calc(var(--vs-style-label-size,12)*1px);color:var(--dashboard-text-muted,#98a2b3);text-align:center;max-width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}svg{display:block}</style></head><body><div id=\"vs-cv-rings\"></div><script>(function(){var host=document.currentScript&&document.currentScript.parentElement;function readPayload(){if(host&&host.vsCv&&host.vsCv.getPayload)return host.vsCv.getPayload();var n=(host||document).querySelector('.vs-cv-payload');if(!n||!n.textContent)return null;try{return JSON.parse(n.textContent)}catch(e){return null}}function bindingStatusOf(p){if(!p)return 'unbound';return p.bindingStatus||((p.rows&&p.rows.length)?'bound':'unbound')}function statusHint(p){var st=bindingStatusOf(p);if(st==='error')return(p&&p.error)||'数据加载失败';if(st==='empty')return'暂无数据';if(st==='unbound')return'请在右侧绑定数据集与字段';return null}function attachPayloadListener(render){render();if(host&&host.vsCv&&host.vsCv.onPayload){host.vsCv.onPayload(function(p){render(p)});return}if(host&&host.classList.contains('vs-custom-viz-host')){host.addEventListener('vs-cv-payload-update',function(e){render(e.detail||readPayload())})}}function attachLayoutListener(render){if(host&&host.vsCv&&host.vsCv.onLayout){host.vsCv.onLayout(function(){render(readPayload())});return}if(typeof ResizeObserver!=='undefined'&&host){new ResizeObserver(function(){render(readPayload())}).observe(host)}}function boot(render){if(host&&host.vsCv&&host.vsCv.mount){host.vsCv.mount(function(p){render(p)});return}attachPayloadListener(function(p){render(p||readPayload())});attachLayoutListener(function(){render(readPayload())})}var NS='http://www.w3.org/2000/svg';function rowsFromPayload(p){var st=bindingStatusOf(p);if(st!=='bound'||!p||!p.rows||!p.rows.length)return null;var cols=p.columns||[];var di=cols.findIndex(function(c){return c!=='sum'&&c!=='count'});var mi=cols.findIndex(function(c,i){return i!==di});if(di<0)di=0;if(mi<0)mi=1;return p.rows.map(function(r){return{n:String(r[di]),v:Math.min(100,Math.max(0,Number(r[mi])||0))}})}function ringSvg(pct,th){var size=72,r=(size-th)/2,c=2*Math.PI*r,off=c*(1-pct/100);var svg=document.createElementNS(NS,'svg');svg.setAttribute('width',String(size));svg.setAttribute('height',String(size));svg.setAttribute('viewBox','0 0 '+size+' '+size);var track=document.createElementNS(NS,'circle');track.setAttribute('cx',String(size/2));track.setAttribute('cy',String(size/2));track.setAttribute('r',String(r));track.setAttribute('fill','none');track.setAttribute('stroke','var(--vs-style-track-color,#334155)');track.setAttribute('stroke-width',String(th));svg.appendChild(track);var arc=document.createElementNS(NS,'circle');arc.setAttribute('cx',String(size/2));arc.setAttribute('cy',String(size/2));arc.setAttribute('r',String(r));arc.setAttribute('fill','none');arc.setAttribute('stroke','var(--vs-palette-0,var(--vs-style-accent-color,#818cf8))');arc.setAttribute('stroke-width',String(th));arc.setAttribute('stroke-linecap','round');arc.setAttribute('stroke-dasharray',String(c));arc.setAttribute('stroke-dashoffset',String(off));arc.setAttribute('transform','rotate(-90 '+size/2+' '+size/2+')');svg.appendChild(arc);if(pct>=0){var txt=document.createElementNS(NS,'text');txt.setAttribute('x',String(size/2));txt.setAttribute('y',String(size/2+4));txt.setAttribute('text-anchor','middle');txt.setAttribute('fill','var(--dashboard-text-primary,#e2e8f0)');txt.setAttribute('font-size','13');txt.setAttribute('font-weight','600');txt.textContent=Math.round(pct)+'%';svg.appendChild(txt)}return svg}function render(){var root=(host||document).querySelector('#vs-cv-rings');if(!root)return;var p=readPayload();var hint=statusHint(p);var st=(p&&p.style)||{};var th=Number(st.ringThickness)||8;var show=st.showPercent!==false;var data=rowsFromPayload(p);root.innerHTML='';if(hint||!data){var msg=document.createElement('div');msg.style.cssText='padding:12px;font-size:12px;color:var(--dashboard-text-muted,#98a2b3);text-align:center;width:100%';msg.textContent=hint||'暂无数据';root.appendChild(msg);return}data.slice(0,8).forEach(function(d){var wrap=document.createElement('div');wrap.className='item';var svg=ringSvg(d.v,th);if(!show){var t=svg.querySelector('text');if(t)t.remove()}wrap.appendChild(svg);var lbl=document.createElement('div');lbl.className='lbl';lbl.textContent=d.n;wrap.appendChild(lbl);root.appendChild(wrap)})}boot(render)})();</script></body></html>"
+  }
+}

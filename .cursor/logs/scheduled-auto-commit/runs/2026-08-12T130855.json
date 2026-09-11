@@ -1,0 +1,15 @@
+{
+  "startedAt": "2026-08-12T13:08:55+08:00",
+  "finishedAt": "2026-08-12T13:09:25+08:00",
+  "branch": "dev",
+  "outcome": "success",
+  "push": false,
+  "commit": "d13264af",
+  "messageSubject": "wip: [backend,fe,.cursor,scripts,+1] 29f (+675/-609) @ 2026-08-12 13:...",
+  "messageBodyPreview": "Template SQL→dataset migration: workspace layouts, standard dataset_binding/theme_aggregate, remove ChartSqlBindingForm, migrate script",
+  "filesChanged": 29,
+  "insertions": 675,
+  "deletions": 609,
+  "topDirs": { "backend": 17, "fe": 6, ".cursor": 4, "scripts": 1, "tests": 1 },
+  "tick": 408
+}

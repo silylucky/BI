@@ -1,0 +1,31 @@
+﻿{
+    "messageSubject":  "wip: [fe,docs,.cursor] 27f (+943/-394) @ 2026-08-06 22:21 +0800",
+    "branch":  "dev",
+    "finishedAt":  "2026-08-06T22:22:01+08:00",
+    "topDirs":  {
+                    "docs":  1,
+                    ".cursor":  1,
+                    "fe":  25
+                },
+    "sampleFiles":  [
+                        ".cursor/logs/scheduled-auto-commit/state.json",
+                        "docs/feature-truth/2026-08-06-dashboard-scheduled-report-truth-audit.md",
+                        "fe/src/components/charts/engine/d3/cartesian/renderDualAxes.test.ts",
+                        "fe/src/components/charts/engine/d3/cartesian/renderDualAxes.ts",
+                        "fe/src/components/dashboard/DashboardShareDialog.tsx",
+                        "fe/src/lib/formatDateTime.ts",
+                        "fe/src/lib/scheduleSourceMeta.ts",
+                        "fe/src/pages/admin/dashboard/DashboardListPage.tsx",
+                        "fe/src/pages/admin/reports/PrefabReportsPage.tsx",
+                        "fe/src/pages/admin/reports/ReportCenterPage.tsx"
+                    ],
+    "startedAt":  "2026-08-06T22:21:22+08:00",
+    "insertions":  943,
+    "deletions":  394,
+    "filesChanged":  27,
+    "runId":  "2026-08-06T222145",
+    "outcome":  "success",
+    "commit":  "b5842d98",
+    "messageBodyPreview":  "Areas:\r\n  fe/          25 files (+884/-350)\r\n  docs/        1 files (+56/-37)\r\n  .cursor/     1 files (+3/-7)\r\n\r\nChanged (up to 25):\r\nM  .cursor/logs/scheduled-auto-commit/state.json\r\nM  docs/feature-truth/2026-08-06-dashboard-scheduled-report-truth-audit.md\r\nM  fe/src/components/charts/engine/d3/cartesian/renderDualAxes.test.ts\r\nM  fe/src/components/charts/engine/d3/cartesian/renderDualAxes.ts\r\nM  fe/src/components/dashboard/DashboardShareDialog.tsx\r\nA  fe/src/lib/formatDateTime.ts\r\nM  fe/src/l",
+    "push":  false
+}

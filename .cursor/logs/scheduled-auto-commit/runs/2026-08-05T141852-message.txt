@@ -1,0 +1,39 @@
+wip: [fe,backend,docs,tests,+1] 59f (+9857/-947) @ 2026-08-05 14:19 +...
+
+Areas:
+  fe/          50 files (+9750/-895)
+  backend/     6 files (+57/-49)
+  docs/        1 files (+4/-2)
+  tests/       1 files (+42/-0)
+  .agents/     1 files (+4/-1)
+
+Changed (up to 25):
+M  .agents/skills/bug-case-library/cases/fe-cartesian-multi-dim-axis-labels.md
+M  backend/app/dashboard/templates/presets.py
+M  backend/app/dashboard/templates/presets_gov_assets.py
+M  backend/app/dashboard/templates/presets_gov_screens.py
+M  backend/app/dashboard/templates/presets_gov_theme.py
+M  backend/app/dashboard/templates/seed.py
+M  backend/app/query/config_store/schemas.py
+M  docs/user-guide/ingestion-sync-jobs-how-to.md
+M  fe/public/template-assets/catalog.html
+M  fe/scripts/generate-template-assets-catalog.mjs
+M  fe/src/components/charts/engine/buildDatasetEncoding.test.ts
+M  fe/src/components/charts/engine/buildDatasetEncoding.ts
+M  fe/src/components/charts/engine/d3/core/axes.test.ts
+M  fe/src/components/charts/engine/d3/core/axes.ts
+M  fe/src/components/charts/engine/d3/core/hierarchicalAxis.test.ts
+M  fe/src/components/charts/engine/d3/core/hierarchicalAxis.ts
+M  fe/src/components/charts/engine/d3/core/sceneGraph.ts
+M  fe/src/components/dashboard/CanvasEditToolbar.test.tsx
+M  fe/src/components/dashboard/ChartEditRail.tsx
+M  fe/src/components/dashboard/DatasetFieldGroups.tsx
+M  fe/src/components/dashboard/DatasetPickerPanel.tsx
+A  fe/src/components/dashboard/TemplateAssetImageGallery.tsx
+M  fe/src/components/dashboard/TextEditRail.tsx
+M  fe/src/components/dashboard/TextWidget.tsx
+M  fe/src/components/dashboard/chartStyleFields.tsx
+... and 34 more
+
+stat: 59 files changed, 9857 insertions(+), 947 deletions(-)
+branch: dev | scheduled-auto-commit

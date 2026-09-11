@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-04T18:17:55+08:00",
+  "finishedAt": "2026-08-04T18:18:28+08:00",
+  "branch": "dev",
+  "commit": "82c95a4b",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,backend,tests,docs,+1] 68f (+1693/-441) @ 2026-08-04 18:18 +...",
+  "filesChanged": 68,
+  "insertions": 1693,
+  "deletions": 441,
+  "topDirs": { "fe": 26, "backend": 23, "tests": 12, "docs": 4, ".cursor": 3 },
+  "sampleFiles": [
+    "backend/app/query/dialects/trino.py",
+    "backend/app/ingestion/sync_sql_builder.py",
+    "fe/src/lib/resolveChartEncoding.multi.test.ts",
+    "docs/feature-truth/2026-08-04-connectors-full-capability-truth-audit.md"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/", "data/artifacts/", "fe/.env.production.local"]
+}

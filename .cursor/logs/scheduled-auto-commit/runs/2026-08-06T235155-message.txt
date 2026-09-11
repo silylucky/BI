@@ -1,0 +1,31 @@
+wip: [fe,.agents,docs,.cursor] 19f (+193/-35) @ 2026-08-06 23:52 +0800
+
+Areas:
+  fe/          14 files (+146/-27)
+  .agents/     2 files (+42/-0)
+  docs/        2 files (+2/-1)
+  .cursor/     1 files (+3/-7)
+
+Changed (up to 25):
+M  .agents/skills/bug-case-library/SKILL.md
+A  .agents/skills/bug-case-library/cases/fe-table-style-tests-unwired.md
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  docs/automate/prd.md
+M  docs/automate/prd/F06-VIZ.md
+M  fe/src/components/charts/ChartRenderer.tsx
+M  fe/src/components/charts/adapters/TablePaginationBar.test.tsx
+M  fe/src/components/charts/adapters/TablePaginationBar.tsx
+M  fe/src/components/charts/engine/d3/table/D3TableView.tsx
+M  fe/src/components/charts/engine/d3/table/SortableHeaderCell.tsx
+M  fe/src/components/charts/engine/d3/table/VitalSpanTable.tsx
+M  fe/src/components/dashboard/ChartTableColorPanel.test.tsx
+M  fe/src/components/dashboard/ChartTableColorPanel.tsx
+M  fe/src/components/dashboard/chartPaletteLabelTooltipFields.tsx
+M  fe/src/components/dashboard/chartStyleSections/ChartCommonStyleSections.tsx
+M  fe/src/components/dashboard/dashboardWidgetTypography.ts
+M  fe/src/index.css
+M  fe/src/lib/chartDeTableStyle.ts
+M  fe/src/lib/chartSurfaceTheme.ts
+
+stat: 19 files changed, 193 insertions(+), 35 deletions(-)
+branch: dev | scheduled-auto-commit

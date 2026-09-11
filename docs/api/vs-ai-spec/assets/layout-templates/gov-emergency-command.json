@@ -1,0 +1,235 @@
+{
+  "id": "gov-emergency-command",
+  "name": "应急指挥调度中心",
+  "description": "深色绯红指挥底图 · 毛玻璃告警带 · 区域态势 · 官方示例数据",
+  "surfaceKind": "data-screen",
+  "tags": [
+    "gov-recommended",
+    "gov-style",
+    "government",
+    "emergency"
+  ],
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "styleConfig": {
+    "widgetGap": 8,
+    "canvasBackground": "#1a0509",
+    "colorScheme": "dark",
+    "themeAccent": null,
+    "fontFamily": null,
+    "gapPreset": "md",
+    "pixelGutter": 5,
+    "scaleMode": null,
+    "canvasBackgroundImage": "/template-assets/packs/gov-enterprise-v1/panels/panel-de-frame-cyan.svg",
+    "canvasBackgroundImageFit": null,
+    "canvasBackgroundImagePosition": null,
+    "canvasBackgroundCustom": true,
+    "canvasDecorPresetId": "custom",
+    "refreshIntervalSec": null,
+    "defaultQueryLimit": null,
+    "widgetStyle": {
+      "background": "rgba(15, 23, 42, 0.52)",
+      "backgroundImage": null,
+      "backgroundShow": true,
+      "backgroundMode": null,
+      "framePresetId": null,
+      "frameColor": null,
+      "frameOpacity": null,
+      "opacity": 0.8,
+      "backgroundImageOpacity": null,
+      "backgroundImageFit": null,
+      "backgroundImagePosition": null,
+      "backdropBlur": 6.0,
+      "borderRadius": 10,
+      "borderRadiusTopLeft": null,
+      "borderRadiusTopRight": null,
+      "borderRadiusBottomLeft": null,
+      "borderRadiusBottomRight": null,
+      "radiusMode": null,
+      "padding": 12,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "paddingMode": null,
+      "borderColor": "#fb718566",
+      "borderWidth": 1,
+      "borderStyle": "solid",
+      "borderEnabled": false
+    },
+    "paletteId": "custom",
+    "paletteColors": [
+      "#fb7185",
+      "#f43f5e",
+      "#fda4af",
+      "#fbbf24",
+      "#94a3b8",
+      "#64748b"
+    ],
+    "paletteOpacity": null,
+    "seriesGradient": true,
+    "depthVisual": null,
+    "chartLabelShow": null,
+    "chartLabelStyle": {
+      "fontSize": null,
+      "color": "#94a3b8"
+    },
+    "tooltipShow": null,
+    "chartTooltipStyle": null,
+    "tableColorStyle": null,
+    "titleStyle": {
+      "show": null,
+      "fontSize": 14,
+      "color": "#f1f5f9",
+      "fontWeight": 600,
+      "fontStyle": null,
+      "align": null,
+      "letterSpacing": null,
+      "shadow": true
+    },
+    "filterChromeStyle": {
+      "titlePosition": null,
+      "titleColor": "#94a3b8"
+    },
+    "filterControlStyle": null,
+    "numberFormat": null,
+    "actionIconColor": null,
+    "drillLevelColors": null,
+    "dialogStyle": {
+      "background": "#1d2939",
+      "fontColor": "#ececed"
+    },
+    "chrome": null,
+    "themeVariants": {
+      "light": {
+        "canvasBackground": "#ffffff",
+        "canvasBackgroundImageFit": null,
+        "canvasBackgroundImagePosition": null,
+        "canvasBackgroundImage": null,
+        "canvasBackgroundCustom": null,
+        "canvasDecorPresetId": null,
+        "themeAccent": null,
+        "widgetStyle": {
+          "background": "#ffffff",
+          "borderColor": "#e4e7ec",
+          "borderWidth": null,
+          "borderStyle": null,
+          "borderEnabled": null,
+          "opacity": null
+        },
+        "titleStyle": {
+          "color": "#1d2939"
+        },
+        "dialogStyle": {
+          "background": "#ffffff",
+          "fontColor": "#344054"
+        },
+        "filterChromeStyle": {
+          "titlePosition": null,
+          "titleColor": "#475467"
+        }
+      },
+      "dark": {
+        "canvasBackground": "#1a0509",
+        "canvasBackgroundImageFit": null,
+        "canvasBackgroundImagePosition": null,
+        "canvasBackgroundImage": "/template-assets/packs/gov-enterprise-v1/panels/panel-de-frame-cyan.svg",
+        "canvasBackgroundCustom": true,
+        "canvasDecorPresetId": "custom",
+        "themeAccent": null,
+        "widgetStyle": {
+          "background": "rgba(15, 23, 42, 0.52)",
+          "borderColor": "#fb718566",
+          "borderWidth": 1,
+          "borderStyle": "solid",
+          "borderEnabled": false,
+          "opacity": 0.8
+        },
+        "titleStyle": {
+          "color": "#f1f5f9"
+        },
+        "dialogStyle": {
+          "background": "#1d2939",
+          "fontColor": "#ececed"
+        },
+        "filterChromeStyle": {
+          "titlePosition": null,
+          "titleColor": "#94a3b8"
+        }
+      }
+    },
+    "surfaceKind": "data-screen",
+    "screenPlaylist": null
+  },
+  "shell": {
+    "title": "应急指挥调度中心",
+    "clock": true,
+    "accent": "#ffffff",
+    "mode": "platform"
+  },
+  "platformTemplateKey": "builtin-gov-emergency-command",
+  "sourceLayoutFile": "workspace-emergency.json",
+  "composeHints": {
+    "shellMode": "platform",
+    "preserveCoordinates": true,
+    "note": "槽位坐标来自 5173 内置模板；compose 勿再叠加 de-shell 偏移"
+  },
+  "slots": [
+    {
+      "type": "chart",
+      "title": "事件分类",
+      "x": 52,
+      "y": 119,
+      "width": 545,
+      "height": 327,
+      "defaultChartType": "bar"
+    },
+    {
+      "type": "chart",
+      "title": "区域态势",
+      "x": 613,
+      "y": 119,
+      "width": 806,
+      "height": 629,
+      "defaultChartType": "map"
+    },
+    {
+      "type": "chart",
+      "title": "满意度监测",
+      "x": 1444,
+      "y": 119,
+      "width": 436,
+      "height": 446,
+      "defaultChartType": "line"
+    },
+    {
+      "type": "chart",
+      "title": "支出结构",
+      "x": 1444,
+      "y": 584,
+      "width": 436,
+      "height": 418,
+      "defaultChartType": "pie"
+    },
+    {
+      "type": "chart",
+      "title": "网格待办",
+      "x": 52,
+      "y": 446,
+      "width": 545,
+      "height": 556,
+      "defaultChartType": "table-info"
+    },
+    {
+      "type": "chart",
+      "title": "趋势",
+      "x": 613,
+      "y": 748,
+      "width": 787,
+      "height": 254,
+      "defaultChartType": "area"
+    }
+  ]
+}

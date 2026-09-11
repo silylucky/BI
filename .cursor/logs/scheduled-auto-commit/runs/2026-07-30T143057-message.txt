@@ -1,0 +1,38 @@
+wip: [fe,docs,.cursor,backend,+1] 42f (+1204/-346) @ 2026-07-30 14:30...
+Areas:
+  fe/          30 files (+651/-147)
+  docs/        8 files (+524/-195)
+  .cursor/     2 files (+10/-1)
+  backend/     1 files (+11/-0)
+  tests/       1 files (+8/-3)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T140449.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/integration/embed_token.py
+M  docs/automate/plans/2026-07-22-chart-style-tab-de-parity.md
+A  docs/doc-drift/2026-07-30-component-style-per-type-drift.md
+M  docs/feature-design/2026-07-30-component-style-per-type-land-design.md
+A  docs/feature-design/2026-07-30-component-style-pilot-chain.md
+A  docs/feature-design/_receipts/2026-07-30-component-style-per-type-receipt.md
+A  docs/feature-truth/2026-07-30-component-style-per-type-reverify.md
+A  docs/feature-truth/2026-07-30-component-style-per-type-truth-audit.md
+M  docs/feature-truth/2026-07-30-share-embed-truth-audit.md
+M  fe/src/components/charts/charts.advanced.smoke.test.tsx
+M  fe/src/components/charts/engine/d3/hierarchy/renderCirclePacking.test.ts
+M  fe/src/components/charts/engine/d3/hierarchy/renderCirclePacking.ts
+M  fe/src/components/charts/engine/plugins/catalogParity.test.ts
+M  fe/src/components/charts/engine/plugins/index.ts
+M  fe/src/components/charts/engine/plugins/metadata.ts
+A  fe/src/components/charts/engine/plugins/pluginStore.ts
+A  fe/src/components/charts/engine/plugins/register.ts
+M  fe/src/components/charts/engine/plugins/registry.ts
+M  fe/src/components/charts/engine/registry.ts
+M  fe/src/components/dashboard/screen/ScreenVisualEditRail.test.tsx
+M  fe/src/embed/EmbedChartPage.tsx
+M  fe/src/embed/embedAccess.test.ts
+M  fe/src/embed/embedAccess.ts
+... and 17 more
+
+stat: 42 files changed, 1204 insertions(+), 346 deletions(-)
+branch: dev | scheduled-auto-commit

@@ -1,0 +1,29 @@
+{
+  "startedAt": "2026-07-30T14:30:15+08:00",
+  "finishedAt": "2026-07-30T14:30:21+08:00",
+  "branch": "dev",
+  "commit": "c40591e4",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,docs,.cursor,backend,+1] 42f (+1204/-346) @ 2026-07-30 14:30 +0800",
+  "messageBodyPreview": "Areas:\n  fe/          30 files (+651/-147)\n  docs/        8 files (+524/-195)\n  .cursor/     2 files (+10/-1)\n  backend/     1 files (+11/-0)\n  tests/       1 files (+8/-3)",
+  "filesChanged": 42,
+  "insertions": 1204,
+  "deletions": 346,
+  "topDirs": {
+    "fe": 30,
+    "docs": 8,
+    ".cursor": 2,
+    "backend": 1,
+    "tests": 1
+  },
+  "sampleFiles": [
+    "fe/src/components/charts/engine/plugins/register.ts",
+    "fe/src/embed/embedShareLoop.test.tsx",
+    "docs/doc-drift/2026-07-30-component-style-per-type-drift.md",
+    "docs/feature-design/_receipts/2026-07-30-component-style-per-type-receipt.md",
+    "backend/app/integration/embed_token.py"
+  ],
+  "prefix": "skill-verify",
+  "note": "verify-run for scheduled-auto-commit skill optimization"
+}

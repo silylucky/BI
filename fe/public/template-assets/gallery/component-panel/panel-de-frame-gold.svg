@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice">
+  <g transform="scale(0.4 0.375)">
+  
+  <defs>
+    <linearGradient id="20ec2fe6-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#713f12" stop-opacity="0.25"/>
+      <stop offset="1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="#1a1408" fill-opacity="0.88"/>
+  <path d="M16 8 H784 L792 16 V464 L784 472 H16 L8 464 V16 Z" fill="none" stroke="#fbbf24" stroke-width="1.5" opacity="0.7"/>
+  <path d="M32 20 H752 V32 H48 V432 H752 V448 H32 V20 Z" fill="none" stroke="#fbbf24" stroke-width="0.6" opacity="0.25"/>
+  <g opacity="0.8" stroke="#fbbf24" stroke-width="2" fill="none">
+  <path d="M8 36 V8 H36"/>
+  <path d="M764 8 H792 V36"/>
+  <path d="M792 444 V472 H764"/>
+  <path d="M36 472 H8 V444"/>
+</g>
+  <polygon points="44,16 46.82136921100387,24.11671842700025 55.412678195541844,24.29179606750063 48.565071278216735,29.483281572999747 51.05342302750968,37.70820393249937 44,32.8 36.94657697249032,37.70820393249937 39.434928721783265,29.483281572999747 32.587321804458156,24.291796067500634 41.17863078899613,24.11671842700025" fill="none" stroke="#fbbf24" stroke-width="1" opacity="0.5"/>
+  <rect x="68" y="16" width="120" height="24" fill="#fbbf24" fill-opacity="0.08" rx="2"/>
+  <rect width="800" height="480" fill="url(#20ec2fe6-fade)" pointer-events="none"/>
+
+  </g>
+</svg>

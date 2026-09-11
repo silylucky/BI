@@ -1,0 +1,39 @@
+wip: [fe,.cursor,backend,docs,+1] 27f (+1306/-354) @ 2026-08-03 14:44...
+
+Areas:
+  fe/          20 files (+778/-353)
+  .cursor/     3 files (+60/-1)
+  backend/     2 files (+8/-0)
+  docs/        1 files (+410/-0)
+  tests/       1 files (+50/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T141424-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T141424.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/viz_components.py
+M  backend/app/viz/components/service.py
+A  docs/user-guide/ingestion-sync-jobs-how-to.md
+M  fe/src/components/dashboard/DashboardListCard.test.tsx
+M  fe/src/components/dashboard/DashboardListCard.tsx
+A  fe/src/components/dashboard/viz-components/componentLabels.test.ts
+M  fe/src/components/dashboard/viz-components/componentLabels.ts
+M  fe/src/components/layout/admin-page-shell.test.tsx
+M  fe/src/components/layout/admin-page-shell.tsx
+M  fe/src/lib/apiError.test.ts
+M  fe/src/lib/apiError.ts
+M  fe/src/lib/demoPackage.test.ts
+M  fe/src/lib/demoPackage.ts
+M  fe/src/lib/queryKeys.ts
+M  fe/src/lib/vizComponents.ts
+M  fe/src/pages/admin/datasources/DatasourceFormPage.tsx
+M  fe/src/pages/admin/datasources/components/DatasourceConnectionForm.tsx
+M  fe/src/pages/admin/ingestion/SyncJobFormPage.tsx
+A  fe/src/pages/admin/ingestion/components/SyncJobForm.tsx
+M  fe/src/pages/admin/ingestion/ingestion.smoke.test.tsx
+M  fe/src/pages/admin/viz-components/VizComponentsHubFilters.tsx
+M  fe/src/pages/admin/viz-components/VizComponentsHubPage.tsx
+... and 2 more
+
+stat: 27 files changed, 1306 insertions(+), 354 deletions(-)
+branch: dev | scheduled-auto-commit

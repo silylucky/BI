@@ -1,0 +1,1784 @@
+{
+  "title": "VitalSpan 产品白皮书",
+  "goal": "VitalSpan 自研可配置 BI 平台产品白皮书",
+  "audience": "政企/行业客户 IT 与数据团队、技术决策者",
+  "randomSeed": "vitalspan-whitepaper-20260714-b2",
+  "pageCount": 36,
+  "themePack": "theme07",
+  "slides": [
+    {
+      "layout": "theme07_page003",
+      "props": {
+        "logo": "VitalSpan",
+        "phase": "产品白皮书",
+        "crumbs": [
+          "BI",
+          "白皮书",
+          "VitalSpan"
+        ],
+        "titleL1": "VitalSpan",
+        "titleL2": "自研可配置 BI 平台",
+        "sub": "面向政企与行业 IT、数据团队的可配置分析平台",
+        "slogan": "数据留在内网，分析触手可及",
+        "showCrumbs": true,
+        "showSlogan": true,
+        "showBase": true,
+        "accentColor": "#8FD400"
+      }
+    },
+    {
+      "layout": "theme07_page015",
+      "props": {
+        "eyebrow": "痛点与使命",
+        "kicker": "痛点与使命",
+        "quoteLead": "政企数据团队需要",
+        "quoteEm1": "自研可控",
+        "quoteMid": "的 BI",
+        "quoteEm2": "分析平台",
+        "quoteTail": "。",
+        "conclusions": [
+          {
+            "idx": "01",
+            "title": "生产依赖第三方 BI，难以深度定制…",
+            "note": "全链路自研，交付与演进完全可控"
+          },
+          {
+            "idx": "02",
+            "title": "多类数据源缺乏统一接入与分析入口",
+            "note": "插件化连接器 + 可选同步入托管分析库"
+          },
+          {
+            "idx": "03",
+            "title": "查询服务发布与总线对接缺乏平台化闭环",
+            "note": "工单审批 → 设计发布 → 总线注册一体化"
+          }
+        ],
+        "source": "依据：产品目标与 PRD",
+        "align": "center",
+        "showConclusions": true,
+        "conclusionCount": 3,
+        "showQuoteMark": true,
+        "showSource": true,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page007",
+      "props": {
+        "eyebrow": "阅读导航",
+        "title": "本材料目录",
+        "sub": "定位与价值 — 谁在用、边界在哪、与替代方案差异",
+        "lead": "核心亮点 — 五大价值主张与深挖案例",
+        "closing": "落地与收束 — 实施建议、演进方向、下一步",
+        "chapters": [
+          {
+            "no": "01",
+            "zh": "定位与价值",
+            "en": "Methodology"
+          },
+          {
+            "no": "02",
+            "zh": "核心亮点",
+            "en": "Market Panorama"
+          },
+          {
+            "no": "03",
+            "zh": "技术架构",
+            "en": "Cross Section"
+          },
+          {
+            "no": "04",
+            "zh": "业务场景",
+            "en": "Value Chain"
+          },
+          {
+            "no": "05",
+            "zh": "落地与收束",
+            "en": "Case Studies"
+          },
+          {
+            "no": "06",
+            "zh": "风险展望",
+            "en": "Risk & Outlook"
+          },
+          {
+            "no": "07",
+            "zh": "结论判断",
+            "en": "Conclusion"
+          },
+          {
+            "no": "08",
+            "zh": "数据来源",
+            "en": "Data Sources"
+          }
+        ],
+        "cardCount": 8,
+        "focusEnabled": true,
+        "focusIndex": 1,
+        "columns": 4,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page048",
+      "props": {
+        "eyebrow": "材料说明",
+        "title": "如何阅读本白皮书",
+        "titleTail": "未披露巨额轮次",
+        "sub": "面向读者：客户决策层、售前、技术选型委员会",
+        "lead": "阅读目标：理解产品能解决什么、如何组成、典型业务如何跑通",
+        "closing": "事实依据：内容来自产品目标、PRD 与已实…",
+        "panelTitle": "单笔交易结构拆解 · 构成占比",
+        "stats": [
+          {
+            "value": "22",
+            "unit": "笔",
+            "label": "未披露巨额轮次"
+          },
+          {
+            "value": "18.6",
+            "unit": "亿美元",
+            "label": "平均单笔规模"
+          }
+        ],
+        "components": [
+          {
+            "name": "云资源置换",
+            "en": "Cloud Credits",
+            "pct": 39,
+            "note": "以算力额度换取股权或优先供给"
+          },
+          {
+            "name": "战略投资",
+            "en": "Strategic",
+            "pct": 31,
+            "note": "产业方与大厂的战略持股"
+          },
+          {
+            "name": "债务组合",
+            "en": "Debt / Convertible",
+            "pct": 18,
+            "note": "债务与可转债等结构化数据"
+          },
+          {
+            "name": "纯股权",
+            "en": "Pure Equity",
+            "pct": 12,
+            "note": "传统现金对价的股权部分"
+          }
+        ],
+        "componentCount": 4,
+        "chartType": "stack",
+        "showStats": true,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page059",
+      "props": {
+        "eyebrow": "谁在用",
+        "index": "05",
+        "title": "目标用户与典型场景",
+        "sub": "目标用户与典型场景",
+        "lead": "目标用户与典型场景",
+        "closing": "详见正文",
+        "keywords": [
+          "能力泡沫",
+          "收入验证",
+          "合规",
+          "算力成本",
+          "垂直应用筛选"
+        ],
+        "backgroundVariant": "dark",
+        "layout": "left",
+        "showIndex": true,
+        "showKeywords": true,
+        "keywordCount": 5,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page016",
+      "props": {
+        "eyebrow": "定位句",
+        "index": "06",
+        "title": "平台定位与能力边界",
+        "sub": "*VitalSpan 是面向政企与行业客户的自研可配置 BI 分析平台…",
+        "lead": "*In Scope（平台负责）",
+        "closing": "一至三期 Dataset 语义层（四期交付）",
+        "keywords": [
+          "*VitalSpan 是面向政企与…",
+          "*In Scope（平台负责）",
+          "多类别数据源接入与查询执行",
+          "仪表板、主题分析、报表与即席查询"
+        ],
+        "backgroundVariant": "dark",
+        "layout": "left",
+        "showIndex": true,
+        "showKeywords": true,
+        "keywordCount": 4,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page026",
+      "props": {
+        "eyebrow": "选型对比",
+        "title": "与常见替代方案的差异",
+        "titleTail": "头部投资机构",
+        "lead": "与常见替代方案的差异",
+        "anchorLead": "48",
+        "anchorUnit": "家",
+        "anchorNote": "全年参与大额轮次的活跃机构",
+        "closing": "详见正文",
+        "slots": [
+          {
+            "name": "Aperture Ventures",
+            "role": "领投 9 笔 · 偏好通用大模型"
+          },
+          {
+            "name": "Northgate Capital",
+            "role": "参投 14 笔 · 全赛道布局"
+          },
+          {
+            "name": "Vertex Growth",
+            "role": "领投 7 笔 · 押注基础设施"
+          },
+          {
+            "name": "Lumen Partners",
+            "role": "参投 11 笔 · 应用层为主"
+          }
+        ],
+        "images": [],
+        "imageCount": 0,
+        "imageRatio": "portrait",
+        "showLabels": true,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showAnchor": true,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page008",
+      "props": {
+        "eyebrow": "能力覆盖",
+        "title": "已交付能力全景",
+        "sub": "*展现层：仪表板编辑与消费、主题分析、预制报表与模板、图表探索、嵌入分享",
+        "lead": "*数据层：数据源管理、二十余类连接器、同步作业与 ETL 规则、SQL/原生查询",
+        "closing": "*平台层：组织与用户、角色权限、行级策略、…",
+        "layers": [
+          {
+            "no": "H",
+            "zh": "横向分析",
+            "en": "Horizontal",
+            "desc": "同一时间截面下，对比公司、赛道、轮次与地区的资本分布。",
+            "q": "钱流向了哪里？"
+          },
+          {
+            "no": "V",
+            "zh": "纵向分析",
+            "en": "Vertical",
+            "desc": "沿时间轴观察数据额、事件数与市场节奏的演化。",
+            "q": "热度如何变化？"
+          },
+          {
+            "no": "X",
+            "zh": "交叉判断",
+            "en": "Cross",
+            "desc": "横纵交叉、产业分层，判断哪些方向真正能够兑现。",
+            "q": "哪些方向能兑现？"
+          }
+        ],
+        "steps": [
+          {
+            "label": "空间对比",
+            "detail": "横向"
+          },
+          {
+            "label": "时间演化",
+            "detail": "纵向"
+          },
+          {
+            "label": "产业分层",
+            "detail": "交叉"
+          },
+          {
+            "label": "资本流向",
+            "detail": "目标"
+          }
+        ],
+        "cardCount": 3,
+        "focusEnabled": true,
+        "focusIndex": 2,
+        "layout": "stack",
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page068",
+      "props": {
+        "eyebrow": "章节",
+        "index": "09",
+        "title": "核心亮点",
+        "sub": "核心亮点",
+        "lead": "核心亮点",
+        "closing": "详见正文",
+        "keywords": [
+          "研究口径",
+          "数据来源",
+          "前瞻指标",
+          "关于团队"
+        ],
+        "backgroundVariant": "dark",
+        "layout": "left",
+        "showIndex": true,
+        "showKeywords": true,
+        "keywordCount": 4,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page009",
+      "props": {
+        "eyebrow": "亮点总览",
+        "title": "五大价值主张一览",
+        "titleTail": "深度剖析",
+        "sub": "自研可控 — 生产环境无第三方 BI 运行时绑定，满足政企交付与长期演进",
+        "lead": "多源统一 — 关系型、OLAP、时序、文档、搜索、API、文件等插件接入",
+        "closing": "治理差异化 — 查询服务申请、审批、发布与…",
+        "cases": [
+          {
+            "logic": "安全模型逻辑",
+            "en": "Anthropic",
+            "zh": "安全可靠模型",
+            "chips": [
+              "安全对齐",
+              "Claude"
+            ],
+            "lead": "650",
+            "plus": true,
+            "unit": "亿美元",
+            "metricLabel": "累计数据"
+          },
+          {
+            "logic": "实时数据逻辑",
+            "en": "xAI",
+            "zh": "实时数据生态",
+            "chips": [
+              "实时数据",
+              "多模态"
+            ],
+            "lead": "50",
+            "unit": "亿美元",
+            "metricLabel": "单笔数据"
+          },
+          {
+            "logic": "算力设施逻辑",
+            "en": "CoreWeave",
+            "zh": "算力基础设施",
+            "chips": [
+              "GPU 云",
+              "算力资源"
+            ],
+            "lead": "110",
+            "unit": "亿美元",
+            "metricLabel": "数据额"
+          }
+        ],
+        "cardCount": 3,
+        "imageCount": 0,
+        "images": [],
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page006",
+      "props": {
+        "eyebrow": "深挖",
+        "title": "亮点一：自研可控",
+        "sub": "*场景：行业客户需在信创或内网环境长期运维 BI 能力，不能接受 GP…",
+        "lead": [
+          "*场景：行业客户需在信创或内网环境长期运维 BI 能力，不能接受 GP…",
+          "*能力：BI 展现、查询、连接、权限、治理全栈自研；对标 DataEa…",
+          "*结果：交付清单可验证「无 Superset/DataEase 容器或…",
+          "*场景：行业客户需在信创或内网环境长期运维 BI 能力，不能接受 GP…",
+          "*能力：BI 展现、查询、连接、权限、治理全栈自研；对标 DataEa…"
+        ],
+        "keywords": [
+          "*场景：行业客户需在信创或内网环境…",
+          "*能力：BI 展现、查询、连接、权…",
+          "*结果：交付清单可验证「无 Sup…",
+          "能力泡沫",
+          "退潮看兑现"
+        ],
+        "closing": "*结果：交付清单可验证「无 Superse…",
+        "chartTitle": "赛道数据占比",
+        "shareLabel": "SHARE",
+        "tracks": [
+          {
+            "label": "通用大模型",
+            "pct": 43.3
+          },
+          {
+            "label": "垂直应用",
+            "pct": 25.3
+          },
+          {
+            "label": "基础设施",
+            "pct": 16.3
+          },
+          {
+            "label": "AI 芯片",
+            "pct": 10
+          },
+          {
+            "label": "其他",
+            "pct": 5.1
+          }
+        ],
+        "metrics": [
+          {
+            "label": "全年数据",
+            "lead": "970",
+            "tail": "",
+            "unit": "亿美元"
+          },
+          {
+            "label": "大额事件",
+            "lead": "97",
+            "tail": "",
+            "unit": "笔"
+          },
+          {
+            "label": "平均单笔",
+            "lead": "10",
+            "tail": "",
+            "unit": "亿美元"
+          },
+          {
+            "label": "湾区占比",
+            "lead": "63",
+            "tail": ".9",
+            "unit": "%"
+          }
+        ],
+        "cardCount": 4,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "chartType": "bars",
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page051",
+      "props": {
+        "eyebrow": "深挖",
+        "segment": "云厂商联盟",
+        "title": "亮点二：多源统一接入",
+        "titleTail": "云厂商联盟",
+        "lead": "*能力：连接器注册表按类型插件扩展；关系型走 SQL，时序/文档/搜索走原生查询；可选同步入托…",
+        "closing": "*结果：数据工程师在一个控制台完成建源、同…",
+        "chartTitle": "云厂商 · 模型公司联盟",
+        "barsTitle": "云厂商相关投资 / 占比",
+        "totalVal": "252",
+        "totalUnit": "亿美元",
+        "totalLbl": "云厂商相关投资合计",
+        "hub": {
+          "lead": "AI 模型公司",
+          "sub": "算力需求方"
+        },
+        "cycle": [
+          "资本投资",
+          "算力授信",
+          "消费回收"
+        ],
+        "legendInvest": "资本投资",
+        "legendReturn": "算力消费回收",
+        "providers": [
+          {
+            "label": "Azure",
+            "value": 88,
+            "note": "Microsoft 云"
+          },
+          {
+            "label": "AWS",
+            "value": 74,
+            "note": "Amazon 云"
+          },
+          {
+            "label": "Google Cloud",
+            "value": 69,
+            "note": "Google 云"
+          },
+          {
+            "label": "Oracle Cloud",
+            "value": 21,
+            "note": "Oracle 云"
+          }
+        ],
+        "providerCount": 4,
+        "chartType": "map",
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showLoop": true,
+        "showValues": true,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page025",
+      "props": {
+        "eyebrow": "深挖",
+        "title": "亮点三：完整 BI 展现",
+        "sub": "*场景：管理层需要驾驶舱，分析员需要自助探索，外部门户需要嵌入只读图表。",
+        "numLead": "10",
+        "numTail": "",
+        "numUnit": "亿美元",
+        "numCaption": "全年平均单笔数据规模",
+        "note": "垂直应用不应只用数据规模评价，更要看收入效率。",
+        "closing": "*结果：建设与消费在同一应用内由权限区分；…",
+        "aux": [
+          {
+            "label": "总事件数",
+            "value": "97",
+            "unit": "笔"
+          },
+          {
+            "label": "全年数据额",
+            "value": "970",
+            "unit": "亿美元"
+          },
+          {
+            "label": "最高单笔",
+            "value": "64",
+            "unit": "亿美元"
+          }
+        ],
+        "numberSlant": true,
+        "auxCount": 3,
+        "showCaption": true,
+        "showNote": true,
+        "showLens": true,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page032",
+      "props": {
+        "eyebrow": "价值闭环",
+        "segment": "医疗 AI 赛道",
+        "title": "从数据到决策的价值闭环",
+        "titleTail": "医疗 AI 赛道",
+        "lead": "治理：权限策略、语义数据集、服务审批",
+        "statLine": "数据额 34 亿美元 · 8 笔事件",
+        "closing": "共享：开放 API、总线注册、受控发布",
+        "badge": "医疗 AI",
+        "panelTitle": "三大方向 · 数据分布 / 亿美元",
+        "branches": [
+          {
+            "name": "影像诊断",
+            "value": 11,
+            "note": "放射影像识别与分诊"
+          },
+          {
+            "name": "药物发现",
+            "value": 14,
+            "note": "靶点发现与分子生成"
+          },
+          {
+            "name": "临床文书",
+            "value": 9,
+            "note": "病历与文书自动化"
+          }
+        ],
+        "images": [],
+        "imageCount": 0,
+        "imageRatio": "landscape",
+        "branchCount": 3,
+        "focusEnabled": true,
+        "focusIndex": 1,
+        "showValues": true,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page070",
+      "props": {
+        "eyebrow": "章节",
+        "marker": "研究口径",
+        "segment": "附录 · 口径与来源",
+        "title": "技术架构",
+        "titleTail": "附录 · 口径与来源",
+        "lead": "技术架构",
+        "statLine": "样本 97 笔 · 单笔 ≥1 亿美元 · 截至 2024 全年",
+        "anchorValue": "97",
+        "anchorLabel": "大额数据事件样本量 / 笔",
+        "closing": "详见正文",
+        "colHeads": {
+          "dim": "口径维度",
+          "level": "可信度",
+          "note": "口径定义与来源"
+        },
+        "rows": [
+          {
+            "dim": "身份冒用",
+            "level": 95,
+            "note": "查账号"
+          },
+          {
+            "dim": "越权读数",
+            "level": 92,
+            "note": "申权限"
+          },
+          {
+            "dim": "凭证泄露",
+            "level": 90,
+            "note": "轮换"
+          },
+          {
+            "dim": "数据来源",
+            "level": 85,
+            "note": "公开新闻、公司公告与行业数据库多源交叉"
+          },
+          {
+            "dim": "汇率与单位",
+            "level": 88,
+            "note": "统一折算为美元，以「亿美元」为展示单位"
+          },
+          {
+            "dim": "赛道划分",
+            "level": 78,
+            "note": "模型 / 应用 / 基础设施 / 硬件 / 安全 五类，按主营归类"
+          }
+        ],
+        "flowTitle": "口径处理流程",
+        "flow": [
+          "步骤1",
+          "步骤2",
+          "步骤3",
+          "步骤4",
+          "步骤5"
+        ],
+        "rowCount": 6,
+        "showLevel": true,
+        "showFlow": true,
+        "flowStepCount": 5,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page065",
+      "props": {
+        "eyebrow": "架构总览",
+        "segment": "策略 · 筛选垂直应用",
+        "title": "系统组成与信任边界",
+        "titleTail": "策略 · 筛选垂直应用",
+        "lead": "*API 服务 — 统一业务入口，承载数据源、查询、仪表板、治理",
+        "closing": "*外部系统 — 业务数据源、企业身份源、数…",
+        "flowTitle": "业务工作流 · AI 嵌入位置",
+        "steps": [
+          {
+            "name": "*控制台 — 单 Web 应用，管…",
+            "en": "Trigger",
+            "note": "真实工作请求进入"
+          },
+          {
+            "name": "*API 服务 — 统一业务入口，…",
+            "en": "Context",
+            "note": "上下文与资料汇集"
+          },
+          {
+            "name": "*平台数据层 — 元数据、权限、仪…",
+            "en": "AI Embed",
+            "note": "嵌入式生成与决策"
+          },
+          {
+            "name": "*托管分析库 — 可选，承接同步后…",
+            "en": "Review",
+            "note": "专家确认与修订"
+          },
+          {
+            "name": "*外部系统 — 业务数据源、企业身…",
+            "en": "Deliver",
+            "note": "回写至业务系统"
+          }
+        ],
+        "embedNodeTag": "嵌入点",
+        "cardsTitle": "筛选维度 · Retention",
+        "cards": [
+          {
+            "name": "付费留存",
+            "en": "Retention",
+            "note": "续费率能否穿越预算周期"
+          },
+          {
+            "name": "使用频次",
+            "en": "Frequency",
+            "note": "是否进入高频日常动作"
+          },
+          {
+            "name": "席位扩张",
+            "en": "Seat Growth",
+            "note": "团队内部能否自然扩散"
+          },
+          {
+            "name": "净收入留存",
+            "en": "NRR",
+            "note": "老客户是否持续增购"
+          }
+        ],
+        "tagsTitle": "落地场景",
+        "tags": [
+          "法律",
+          "医疗",
+          "客服",
+          "企业搜索",
+          "开发者工具"
+        ],
+        "stepCount": 5,
+        "focusEnabled": true,
+        "focusIndex": 2,
+        "cardCount": 4,
+        "showTags": true,
+        "tagCount": 5,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page047",
+      "props": {
+        "eyebrow": "模块分工",
+        "marker": "Seed → B",
+        "season": "早期轮 · 主题萌芽",
+        "title": "核心能力域职责",
+        "titleTail": "早期轮信号",
+        "lead": "核心能力域职责",
+        "statLine": "种子轮 8 笔 / 1.2 亿美元 · A 轮 12 笔 / 1.8 亿美元",
+        "anchorValue": "20.6%",
+        "anchorLabel": "早期轮占全年事件数",
+        "closing": "详见正文",
+        "colHeads": {
+          "dim": "轮次",
+          "events": "事件数",
+          "amount": "数据额",
+          "bubble": "平均单笔",
+          "themes": "萌芽主题",
+          "note": "信号"
+        },
+        "rows": [
+          {
+            "dim": "能力域",
+            "en": "Seed",
+            "events": "8",
+            "amount": "1.2",
+            "avg": 0.15,
+            "themes": [
+              "Agent",
+              "安全"
+            ],
+            "note": "职责"
+          },
+          {
+            "dim": "身份与权限",
+            "en": "Series A",
+            "events": "12",
+            "amount": "1.8",
+            "avg": 0.15,
+            "themes": [
+              "具身智能",
+              "行业模型"
+            ],
+            "note": "登录会话、角色能力、行级策略"
+          },
+          {
+            "dim": "数据源连接",
+            "en": "Series B",
+            "events": "6",
+            "amount": "3.4",
+            "avg": 0.57,
+            "themes": [
+              "企业应用",
+              "数据闭环"
+            ],
+            "note": "连接器注册、连通测试、凭证托管"
+          },
+          {
+            "dim": "数据同步",
+            "en": "Strategic",
+            "events": "4",
+            "amount": "2.1",
+            "avg": 0.53,
+            "themes": [
+              "云资源",
+              "平台卡位"
+            ],
+            "note": "同步作业、历史、ETL 规则"
+          }
+        ],
+        "rowCount": 4,
+        "showBubble": true,
+        "showThemes": true,
+        "showSignal": true,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page066",
+      "props": {
+        "eyebrow": "同步主路径",
+        "segment": "策略 · 观察 IPO 窗口",
+        "title": "业务请求如何被安全处理",
+        "titleTail": "策略 · 观察 IPO 窗口",
+        "lead": "身份与权限校验 — 确认会话有效，裁决菜单与数据范围",
+        "closing": "审计留痕 — 关键管理操作记入审计日志",
+        "axisLabel": "IPO 观察序列 · 能力锚定者",
+        "nodes": [
+          {
+            "name": "OpenAI",
+            "sector": "通用大模型",
+            "note": "体量决定市场情绪基准"
+          },
+          {
+            "name": "Anthropic",
+            "sector": "安全模型",
+            "note": "增速验证叙事可持续性"
+          },
+          {
+            "name": "Databricks",
+            "sector": "数据平台",
+            "note": "老牌营收验证 AI 溢价"
+          },
+          {
+            "name": "CoreWeave",
+            "sector": "算力基础设施",
+            "note": "云成本与毛利率受考验"
+          }
+        ],
+        "metricsTitle": "观察指标 · Signals",
+        "metrics": [
+          {
+            "name": "上市表现",
+            "note": "首日与解禁后定价"
+          },
+          {
+            "name": "收入增速",
+            "note": "能否支撑高能力"
+          },
+          {
+            "name": "毛利率",
+            "note": "盈利模型是否成立"
+          },
+          {
+            "name": "云成本占比",
+            "note": "算力侵蚀利润程度"
+          }
+        ],
+        "nodeCount": 4,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showMetrics": true,
+        "metricCount": 4,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page042",
+      "props": {
+        "eyebrow": "扩展路径",
+        "segment": "销售与营销 AI",
+        "title": "异步同步与开放集成",
+        "titleTail": "销售与营销 AI",
+        "lead": "*开放集成：嵌入 SDK 输出只读图表；开放 API 提供只读查询；发布后注册至数据交换总线",
+        "statLine": "数据额 24 亿美元 · 10 笔事件",
+        "closing": "*开放集成：嵌入 SDK 输出只读图表；开…",
+        "badge": "销售营销",
+        "panelTitle": "增长漏斗 · 数据 / 亿美元",
+        "segments": [
+          {
+            "name": "广告创意",
+            "value": 8,
+            "note": "获客 · 营销素材批量生成"
+          },
+          {
+            "name": "线索评分",
+            "value": 7,
+            "note": "筛选 · 意向预测与排序"
+          },
+          {
+            "name": "自动外呼",
+            "value": 6,
+            "note": "转化 · 邮件与语音触达"
+          }
+        ],
+        "images": [],
+        "imageCount": 0,
+        "imageRatio": "landscape",
+        "segmentCount": 3,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showValues": true,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page044",
+      "props": {
+        "eyebrow": "部署参考",
+        "segment": "开源模型公司",
+        "title": "部署与运行形态",
+        "titleTail": "开源模型公司",
+        "lead": "部署与运行形态",
+        "statLine": "数据额 28 亿美元 · 7 笔事件",
+        "closing": "详见正文",
+        "badge": "开源模型",
+        "bridgeTitle": "影响力到收入 · 转化路径",
+        "source": {
+          "kicker": "社区影响力",
+          "value": "2.8",
+          "unit": "亿次",
+          "caption": "累计模型下载量",
+          "tag": "开发者入口"
+        },
+        "target": {
+          "kicker": "企业服务",
+          "pct": 37,
+          "display": "37",
+          "unit": "%",
+          "caption": "企业服务收入占比",
+          "tag": "商业化兑现"
+        },
+        "ribbonLabel": "影响力 → 收入",
+        "images": [],
+        "imageCount": 0,
+        "imageRatio": "landscape",
+        "chartType": "ring",
+        "focusEnabled": true,
+        "focusIndex": 1,
+        "showBridge": true,
+        "showValues": true,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page061",
+      "props": {
+        "eyebrow": "可信保障",
+        "marker": "监管合规",
+        "segment": "风险 · 监管合规",
+        "title": "安全与可靠性承诺",
+        "titleTail": "风险 · 监管合规",
+        "lead": "安全与可靠性承诺",
+        "statLine": "合规团队增长 +42% · 采购审查周期 +36% · 版权风险事件 19 起",
+        "anchorValue": "58%",
+        "anchorLabel": "客户要求数据隔离占比",
+        "closing": "详见正文",
+        "colHeads": {
+          "dim": "风险维度",
+          "level": "风险强度",
+          "note": "成本与影响"
+        },
+        "rows": [
+          {
+            "dim": "身份冒用",
+            "level": 88,
+            "note": "会话校验失败则拒绝访问"
+          },
+          {
+            "dim": "越权读数",
+            "level": 76,
+            "note": "行级策略过滤未授权数据"
+          },
+          {
+            "dim": "凭证泄露",
+            "level": 70,
+            "note": "连接密码加密存储"
+          },
+          {
+            "dim": "同步失败",
+            "level": 58,
+            "note": "作业状态可见，历史可排查"
+          },
+          {
+            "dim": "内容安全",
+            "level": 44,
+            "note": "有害内容过滤与生成留痕"
+          }
+        ],
+        "flowTitle": "合规交付流程",
+        "flow": [
+          "步骤1",
+          "步骤2",
+          "步骤3",
+          "步骤4",
+          "步骤5"
+        ],
+        "rowCount": 5,
+        "showLevel": true,
+        "showFlow": true,
+        "flowStepCount": 5,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page057",
+      "props": {
+        "eyebrow": "章节",
+        "title": "业务场景",
+        "sub": "业务场景",
+        "kicker": "章节",
+        "numLead": "6",
+        "numTail": ".8",
+        "numUnit": "亿美元",
+        "ghost": "6.8",
+        "numCaption": "Figure AI 最大单笔数据",
+        "note": "关键不只是 demo，而是供应链、可靠性和量产成本。",
+        "closing": "详见正文",
+        "aux": [
+          {
+            "label": "投后能力",
+            "value": "26",
+            "unit": "亿美元"
+          },
+          {
+            "label": "数据轮次",
+            "value": "B 轮",
+            "unit": ""
+          },
+          {
+            "label": "赛道方向",
+            "value": "人形机器人",
+            "unit": ""
+          }
+        ],
+        "numberSlant": true,
+        "auxCount": 3,
+        "showCaption": true,
+        "showNote": true,
+        "showGhost": true,
+        "showLens": true,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page058",
+      "props": {
+        "eyebrow": "场景选型",
+        "title": "典型场景地图",
+        "titleTail": "SSI 案例页",
+        "logic": "强叙事逻辑",
+        "company": "SSI",
+        "enName": "SAFE SUPERINTELLIGENCE",
+        "badge": "安全智能",
+        "lead": "典型场景地图",
+        "closing": "详见正文",
+        "metrics": [
+          {
+            "label": "最大单笔数据",
+            "value": "10",
+            "unit": "亿美元",
+            "num": true
+          },
+          {
+            "label": "产品收入",
+            "value": "0",
+            "unit": "",
+            "num": true
+          },
+          {
+            "label": "团队规模",
+            "value": "85",
+            "unit": "人",
+            "num": true
+          },
+          {
+            "label": "赛道方向",
+            "value": "安全智能",
+            "num": false
+          }
+        ],
+        "tags": [
+          "强团队",
+          "强叙事",
+          "长期技术"
+        ],
+        "imageCount": 0,
+        "imageRatio": "portrait",
+        "images": [],
+        "metricCount": 4,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showTags": true,
+        "tagCount": 3,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page036",
+      "props": {
+        "eyebrow": "场景 A",
+        "segment": "机器人与具身智能",
+        "title": "场景 A：多源接入总览",
+        "titleTail": "机器人与具身智能",
+        "lead": "*阶段：发现源 → 注册连接 → 可选同步 → 验证出数 → 搭建仪表板 → 授权消费",
+        "statLine": "数据额 41 亿美元 · 7 笔事件",
+        "closing": "*成功标准：分析员仅看到授权仪表板，数据与…",
+        "badge": "具身智能",
+        "panelTitle": "应用分布 · 数据 / 亿美元",
+        "segments": [
+          {
+            "name": "人形机器人",
+            "value": 21,
+            "note": "通用操作与服务场景"
+          },
+          {
+            "name": "工业自动化",
+            "value": 11,
+            "note": "柔性产线与质检"
+          },
+          {
+            "name": "仓储机器人",
+            "value": 9,
+            "note": "拣选与物流搬运"
+          }
+        ],
+        "images": [],
+        "imageCount": 0,
+        "imageRatio": "landscape",
+        "segmentCount": 3,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showValues": true,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page027",
+      "props": {
+        "eyebrow": "步骤详解",
+        "title": "场景 A：配置与同步步骤",
+        "titleTail": "出手次数 Top",
+        "lead": "填写连接信息 — 配置地址与库表范围",
+        "anchorLead": "38%",
+        "anchorNote": "前 6 家机构覆盖的大额轮次占比",
+        "closing": "查看执行历史 — 核对同步状态与行数",
+        "axisLabel": "参与大额轮次 / 笔",
+        "rows": [
+          {
+            "name": "Northgate Capital",
+            "tag": "全赛道布局",
+            "val": 14
+          },
+          {
+            "name": "Lumen Partners",
+            "tag": "应用层为主",
+            "val": 11
+          },
+          {
+            "name": "Aperture Ventures",
+            "tag": "通用大模型",
+            "val": 9
+          },
+          {
+            "name": "Vertex Growth",
+            "tag": "基础设施",
+            "val": 7
+          },
+          {
+            "name": "Meridian Fund",
+            "tag": "安全与数据",
+            "val": 6
+          },
+          {
+            "name": "Cobalt Equity",
+            "tag": "AI 芯片",
+            "val": 5
+          }
+        ],
+        "rowCount": 6,
+        "chartType": "bars",
+        "showValues": true,
+        "showTags": true,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showAnchor": true,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page013",
+      "props": {
+        "eyebrow": "步骤详解",
+        "title": "场景 A：仪表板消费与授权",
+        "sub": "创建仪表板 — 选择布局，添加图表",
+        "lead": "绑定查询 — 直连数据源执行查询",
+        "chainTitle": "风险传导链",
+        "closing": "嵌入分享 — 生成外部门户链接",
+        "risks": [
+          {
+            "node": "高能力",
+            "title": "能力泡沫",
+            "desc": "一级能力透支远期增长预期"
+          },
+          {
+            "node": "盈利验证",
+            "title": "盈利模式未验证",
+            "desc": "试点难以转化为稳定订阅收入"
+          },
+          {
+            "node": "监管压力",
+            "title": "监管成本上升",
+            "desc": "隐私、版权与合规推高交付成本"
+          },
+          {
+            "node": "大厂竞争",
+            "title": "开源与大厂挤压",
+            "desc": "开源逼近能力，大厂压缩独立空间"
+          },
+          {
+            "node": "算力成本",
+            "title": "算力供应链卡脖子",
+            "desc": "推理成本居高不下，吞噬毛利"
+          }
+        ],
+        "cardCount": 5,
+        "images": [],
+        "imageCount": 0,
+        "imageRatio": "portrait",
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showSecondary": true,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page063",
+      "props": {
+        "eyebrow": "异常分支",
+        "marker": "开源与大厂竞争",
+        "segment": "风险 · 开源与大厂竞争",
+        "title": "场景 A：异常与边界处理",
+        "titleTail": "风险 · 开源与大厂竞争",
+        "lead": "场景 A：异常与边界处理",
+        "closing": "详见正文",
+        "bandTitle": "初创公司独立空间 · 被两侧压缩",
+        "bandLeft": "开源可替代",
+        "bandRight": "大厂生态覆盖",
+        "bandCore": "剩余壁垒",
+        "bandCoreSub": "数据 · 工作流 · 行业入口",
+        "metersTitle": "竞争压力 · 逼近壁垒线",
+        "threshold": 60,
+        "indicators": [
+          {
+            "name": "开源模型性能逼近",
+            "value": 86,
+            "note": "能力差距快速收窄"
+          },
+          {
+            "name": "大厂产品覆盖",
+            "value": 72,
+            "note": "原生集成挤压入口"
+          },
+          {
+            "name": "企业自建意愿",
+            "value": 34,
+            "note": "内部团队替代采购"
+          }
+        ],
+        "chartType": "pressure",
+        "segmentCount": 3,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showBand": true,
+        "showValues": true,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page035",
+      "props": {
+        "eyebrow": "场景 B",
+        "marker": "硬件",
+        "segment": "AI 芯片赛道",
+        "title": "场景 B：查询服务治理总览",
+        "titleTail": "AI 芯片赛道",
+        "lead": "*阶段：申请 → 审批 → 设计 → 发布 → 总线注册 → 下游订阅",
+        "statLine": "主力三大方向合计 · 训练 46 · 推理 32 · 边缘 19（亿美元）",
+        "anchorValue": "97",
+        "anchorUnit": "亿美元",
+        "anchorLabel": "全年数据额 · 13 笔事件",
+        "closing": "*阶段：申请 → 审批 → 设计 → 发布…",
+        "colHeads": {
+          "dim": "芯片方向",
+          "val": "数据额",
+          "share": "资金拆分",
+          "note": "判断"
+        },
+        "rows": [
+          {
+            "dim": "身份冒用",
+            "tier": "训练",
+            "val": "46",
+            "note": "查账号"
+          },
+          {
+            "dim": "越权读数",
+            "tier": "推理",
+            "val": "32",
+            "note": "申权限"
+          },
+          {
+            "dim": "凭证泄露",
+            "tier": "边缘",
+            "val": "19",
+            "note": "轮换"
+          },
+          {
+            "dim": "互联与先进封装",
+            "tier": "孵化",
+            "val": "8",
+            "note": "Chiplet 与高带宽互联"
+          },
+          {
+            "dim": "光子 / 前沿架构",
+            "tier": "孵化",
+            "val": "5",
+            "note": "存算一体与光计算探索"
+          }
+        ],
+        "rowCount": 5,
+        "showShare": true,
+        "showJudgment": true,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page024",
+      "props": {
+        "eyebrow": "步骤详解",
+        "title": "场景 B：申请与审批协作",
+        "sub": "浏览服务目录 — 查看已有服务避免重复",
+        "lead": "提交服务申请 — 填写用途与数据范围",
+        "closing": "审批通过 — 进入设计实现阶段",
+        "countLabel": "交易数量 / 笔",
+        "amountLabel": "数据金额 / 亿美元",
+        "rows": [
+          {
+            "band": "1 — 2 亿美元",
+            "count": 41,
+            "amount": 58
+          },
+          {
+            "band": "2 — 5 亿美元",
+            "count": 29,
+            "amount": 91
+          },
+          {
+            "band": "5 — 10 亿美元",
+            "count": 15,
+            "amount": 103
+          },
+          {
+            "band": "10 亿美元以上",
+            "count": 12,
+            "amount": 718
+          }
+        ],
+        "rowCount": 4,
+        "metricMode": "both",
+        "showValues": true,
+        "focusEnabled": true,
+        "focusIndex": 3,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page031",
+      "props": {
+        "eyebrow": "步骤详解",
+        "marker": "法律 AI",
+        "segment": "专业服务 · 法律",
+        "title": "场景 B：发布与总线注册",
+        "titleTail": "法律 AI 赛道",
+        "lead": "联调验证 — 小样本确认结果",
+        "statLine": "数据额 26 亿美元 · 6 笔事件 · 平均单笔 4.3 亿美元",
+        "anchorValue": "46%",
+        "anchorLabel": "合同审查占场景比例",
+        "closing": "变更治理 — 修改走版本与再审批",
+        "colHeads": {
+          "dim": "场景方向",
+          "share": "场景占比",
+          "note": "能力说明"
+        },
+        "rows": [
+          {
+            "dim": "身份冒用",
+            "share": 46,
+            "note": "查账号"
+          },
+          {
+            "dim": "越权读数",
+            "share": 22,
+            "note": "申权限"
+          },
+          {
+            "dim": "凭证泄露",
+            "share": 14,
+            "note": "轮换"
+          },
+          {
+            "dim": "合规审查",
+            "share": 11,
+            "note": "政策对照、留痕与审计链路"
+          },
+          {
+            "dim": "文书起草",
+            "share": 7,
+            "note": "模板生成与草拟辅助"
+          }
+        ],
+        "flowTitle": "法律工作流",
+        "flow": [
+          "设计查询逻辑",
+          "联调验证",
+          "提交发布",
+          "注册总线",
+          "目录上架"
+        ],
+        "rowCount": 5,
+        "showShare": true,
+        "showFlow": true,
+        "flowStepCount": 5,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page033",
+      "props": {
+        "eyebrow": "能力对照",
+        "segment": "金融 AI 赛道",
+        "title": "场景与产品能力映射",
+        "titleTail": "金融 AI 赛道",
+        "lead": "场景与产品能力映射",
+        "statLine": "数据额 22 亿美元 · 7 笔事件",
+        "closing": "详见正文",
+        "badge": "金融 AI",
+        "panelTitle": "场景占比",
+        "segments": [
+          {
+            "label": "投研",
+            "value": 31,
+            "note": "研报与因子挖掘"
+          },
+          {
+            "label": "合规",
+            "value": 28,
+            "note": "政策对照与留痕"
+          },
+          {
+            "label": "风控",
+            "value": 24,
+            "note": "反欺诈与信用评估"
+          },
+          {
+            "label": "客户服务",
+            "value": 17,
+            "note": "智能投顾与问答"
+          }
+        ],
+        "images": [],
+        "imageCount": 0,
+        "imageRatio": "portrait",
+        "chartType": "donut",
+        "segmentCount": 4,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showLegend": true,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page064",
+      "props": {
+        "eyebrow": "实施节奏",
+        "segment": "策略 · 优先基础设施",
+        "title": "落地路径建议",
+        "titleTail": "策略 · 优先基础设施",
+        "lead": "*第二阶段：扩展连接器 → RBAC 与行级策略 → 主题仪表板",
+        "closing": "*第四阶段：服务目录 → 审批发布 → 总…",
+        "criteriaTitle": "筛选指标 · Screening",
+        "criteria": [
+          {
+            "name": "收入增速",
+            "note": "是否有刚性放量需求"
+          },
+          {
+            "name": "毛利率",
+            "note": "成本结构是否健康"
+          },
+          {
+            "name": "客户集中度",
+            "note": "收入是否过度依赖少数客户"
+          },
+          {
+            "name": "资源锁定",
+            "note": "是否绑定算力 / 数据资源"
+          }
+        ],
+        "cardsTitle": "推荐方向 · Infrastructure",
+        "cards": [
+          {
+            "name": "GPU 云",
+            "en": "Compute Cloud",
+            "note": "刚性算力预算，最接近行业级基础需求。",
+            "certainty": 92
+          },
+          {
+            "name": "数据平台",
+            "en": "Data Platform",
+            "note": "训练与评测的数据底座，复用性强。",
+            "certainty": 84
+          },
+          {
+            "name": "推理优化",
+            "en": "Inference Opt.",
+            "note": "直接压低单位推理成本，刚需且可量化。",
+            "certainty": 80
+          },
+          {
+            "name": "评测工具",
+            "en": "Eval & Bench",
+            "note": "模型选型的度量入口，绑定决策链路。",
+            "certainty": 74
+          }
+        ],
+        "cardCount": 4,
+        "columns": 2,
+        "criteriaCount": 4,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showMeter": true,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page041",
+      "props": {
+        "eyebrow": "路线图",
+        "segment": "客服 AI 赛道",
+        "title": "演进方向（已文档化）",
+        "titleTail": "客服 AI 赛道",
+        "lead": "连接器收官：API、文件、Db2、Impala、Redshift 持续打磨",
+        "statLine": "平均替代率 32% · 工单时长下降 41% · 9 笔事件",
+        "anchorValue": "27",
+        "anchorUnit": "亿美元",
+        "anchorLabel": "全年数据额 · 9 笔事件",
+        "closing": "不纳入当期：AI 智能问数、第三方 BI …",
+        "colHeads": {
+          "dim": "降本场景",
+          "val": "自动化率",
+          "share": "降本贡献",
+          "note": "判断"
+        },
+        "rows": [
+          {
+            "dim": "身份冒用",
+            "tier": "替代",
+            "val": "48",
+            "note": "查账号"
+          },
+          {
+            "dim": "越权读数",
+            "tier": "辅助",
+            "val": "31",
+            "note": "申权限"
+          },
+          {
+            "dim": "凭证泄露",
+            "tier": "辅助",
+            "val": "22",
+            "note": "轮换"
+          },
+          {
+            "dim": "多语言支持",
+            "tier": "扩展",
+            "val": "18",
+            "note": "跨区域统一服务覆盖"
+          },
+          {
+            "dim": "质检与培训",
+            "tier": "扩展",
+            "val": "15",
+            "note": "全量对话质检与复盘"
+          }
+        ],
+        "rowCount": 5,
+        "showShare": true,
+        "showJudgment": true,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page040",
+      "props": {
+        "eyebrow": "文档体系",
+        "segment": "教育 AI 赛道",
+        "title": "延伸阅读与文档入口",
+        "titleTail": "教育 AI 赛道",
+        "lead": "延伸阅读与文档入口",
+        "statLine": "数据额 14 亿美元 · 5 笔事件",
+        "closing": "详见正文",
+        "badge": "教育 AI",
+        "panelTitle": "学习路径 · 数据 / 亿美元",
+        "stageWord": "Stage",
+        "segments": [
+          {
+            "name": "K12 辅导",
+            "value": 6,
+            "note": "个性化习题与答疑"
+          },
+          {
+            "name": "企业培训",
+            "value": 5,
+            "note": "岗位技能与上岗考核"
+          },
+          {
+            "name": "教师工具",
+            "value": 3,
+            "note": "备课、批改与学情分析"
+          }
+        ],
+        "images": [],
+        "imageCount": 0,
+        "imageRatio": "portrait",
+        "segmentCount": 3,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showValues": true,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page067",
+      "props": {
+        "eyebrow": "决策摘要",
+        "kicker": "决策摘要",
+        "quoteLead": "政企数据团队需要",
+        "quoteEm": "POC 演示",
+        "quoteTail": "。",
+        "tagline": "让数据留在内网，让分析触手可及",
+        "brandLabel": "VitalSpan LAB",
+        "brandSub": "FUNDING INTELLIGENCE",
+        "align": "center",
+        "backgroundVariant": "paper",
+        "showKicker": true,
+        "showQuoteMark": true,
+        "showTagline": true,
+        "showBrand": true,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    },
+    {
+      "layout": "theme07_page069",
+      "props": {
+        "eyebrow": "联系我们",
+        "title": "下一步行动",
+        "titleTail": "关键指标与观察信号",
+        "lead": "选型评估：连接器清单对照与权限工作坊",
+        "anchorValue": "+38%",
+        "anchorLabel": "垂直应用收入兑现 · 2025E 情景增速",
+        "scenarioTag": "情景推演 · 2024 = 100",
+        "closing": "*VitalSpan — 让数据留在内网，…",
+        "panelTitle": "2024 → 2025E 指标推演（指数，2024 = 100）",
+        "baselineLabel": "2024 基线 · 100",
+        "axisFrom": "2024",
+        "axisTo": "2025E",
+        "metrics": [
+          {
+            "label": "垂直应用收入兑现",
+            "value": 138,
+            "note": "付费留存与席位扩张"
+          },
+          {
+            "label": "基础设施资本确定性",
+            "value": 124,
+            "note": "GPU 云与数据平台"
+          },
+          {
+            "label": "平均单笔规模",
+            "value": 105,
+            "note": "头部集中度提升"
+          },
+          {
+            "label": "全年大额事件数",
+            "value": 88,
+            "note": "事件数量理性回落"
+          },
+          {
+            "label": "叙事型能力",
+            "value": 82,
+            "note": "面临公开市场重定价"
+          }
+        ],
+        "chartType": "slope",
+        "metricCount": 5,
+        "focusEnabled": true,
+        "focusIndex": 0,
+        "showValues": true,
+        "showBand": true,
+        "showDecorations": true,
+        "accentColor": "#86D62B"
+      }
+    }
+  ]
+}

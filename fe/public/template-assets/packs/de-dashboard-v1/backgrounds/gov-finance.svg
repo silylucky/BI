@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="gov-finance-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#f0f2f5"/>
+      <stop offset="1" stop-color="#eef5ec"/>
+    </linearGradient>
+    <radialGradient id="gov-finance-glow" cx="50%" cy="0%" r="55%">
+      <stop stop-color="#52c41a" stop-opacity="0.07"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gov-finance-dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.8" fill="#52c41a" opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#gov-finance-bg)"/>
+  <rect width="1920" height="1080" fill="url(#gov-finance-glow)"/>
+  <rect width="1920" height="1080" fill="url(#gov-finance-dots)"/>
+  <rect width="1920" height="3" fill="#52c41a" opacity="0.35"/>
+</svg>

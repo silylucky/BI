@@ -1,0 +1,31 @@
+wip: [fe,.cursor] 21f (+473/-48) @ 2026-08-04 13:47 +0800
+
+Areas:
+  fe/          18 files (+414/-47)
+  .cursor/     3 files (+59/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T131731-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T131731.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  fe/src/components/charts/engine/d3/core/axes.ts
+A  fe/src/components/charts/engine/d3/core/chartPresentationScale.test.ts
+A  fe/src/components/charts/engine/d3/core/chartPresentationScale.ts
+M  fe/src/components/charts/engine/d3/core/chartVisualTokens.ts
+M  fe/src/components/charts/engine/d3/flow/renderFunnel.ts
+M  fe/src/components/charts/engine/d3/geo/renderChoropleth.test.ts
+M  fe/src/components/charts/engine/d3/geo/renderChoropleth.ts
+M  fe/src/components/charts/engine/d3/matrix/renderHeatmap.ts
+M  fe/src/components/charts/engine/d3/quota/renderKpi.ts
+M  fe/src/components/charts/engine/d3/radial/renderGauge.ts
+M  fe/src/components/charts/engine/d3/radial/renderLiquid.ts
+M  fe/src/components/charts/engine/d3/types.ts
+M  fe/src/components/charts/engine/d3/views/D3CanvasView.tsx
+M  fe/src/components/charts/engine/d3/views/D3GeoMapView.tsx
+M  fe/src/components/charts/engine/d3/views/buildCartesianConfig.ts
+M  fe/src/components/charts/engine/d3/views/buildRenderConfig.ts
+M  fe/src/components/charts/engine/geo/geoRegionLabelStyle.test.ts
+M  fe/src/components/charts/engine/geo/geoRegionLabelStyle.ts
+
+stat: 21 files changed, 473 insertions(+), 48 deletions(-)
+branch: dev | scheduled-auto-commit

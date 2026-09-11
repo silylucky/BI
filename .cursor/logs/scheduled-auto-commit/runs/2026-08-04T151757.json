@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-04T15:17:57+08:00",
+  "finishedAt": "2026-08-04T15:18:28+08:00",
+  "branch": "dev",
+  "commit": "7a09c07a",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,backend,docs,tests,+1] 60f (+2729/-450) @ 2026-08-04 15:18 +...",
+  "filesChanged": 60,
+  "insertions": 2729,
+  "deletions": 450,
+  "topDirs": { "fe": 30, "backend": 18, "docs": 6, "tests": 3, ".cursor": 3 },
+  "sampleFiles": [
+    "backend/migrations/versions/0032_report_schedules_persistence.py",
+    "fe/src/pages/admin/reports/components/DashboardScheduleSheet.tsx",
+    "fe/src/components/dashboard/ChartGeoAreaMappingPanel.tsx",
+    "backend/app/reports/scheduler/channels/dispatch.py"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/", "fe/.env.production.local"]
+}

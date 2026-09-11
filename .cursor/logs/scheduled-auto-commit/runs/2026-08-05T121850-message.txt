@@ -1,0 +1,38 @@
+wip: [fe,backend,tests,docs] 28f (+1043/-523) @ 2026-08-05 12:18 +0800
+
+Areas:
+  fe/          11 files (+342/-243)
+  backend/     10 files (+485/-274)
+  tests/       4 files (+57/-4)
+  docs/        3 files (+159/-2)
+
+Changed (up to 25):
+M  backend/app/api/v1/ingestion/sync.py
+M  backend/app/dashboard/templates/presets.py
+A  backend/app/dashboard/templates/presets_dash_grids.py
+M  backend/app/dashboard/templates/presets_de_dash.py
+M  backend/app/dashboard/templates/presets_gov.py
+M  backend/app/dashboard/templates/seed.py
+M  backend/app/ingestion/sync_consume.py
+A  backend/app/ingestion/target_table_guard.py
+M  backend/app/metadata/dataset/service.py
+A  backend/app/metadata/dataset/suggest_bind_columns.py
+A  docs/feature-truth/2026-08-05-chart-catalog-44type-completion-verify.md
+M  docs/feature-truth/_generated-2026-08-03-matrix.json
+M  docs/material/chart-style-audit/2026-08-03-full-matrix.md
+M  fe/src/components/dashboard/templates/TemplateLayoutLivePreview.tsx
+M  fe/src/components/dashboard/templates/TemplatePreviewDialog.test.tsx
+M  fe/src/components/dashboard/templates/TemplatePreviewDialog.tsx
+A  fe/src/components/dashboard/templates/TemplateStaticThumbnailPreview.tsx
+M  fe/src/pages/admin/datasets/DatasetEditorForm.tsx
+M  fe/src/pages/admin/datasets/DatasetFormPage.tsx
+M  fe/src/pages/admin/datasets/DatasetTablePicker.tsx
+M  fe/src/pages/admin/datasets/components/DatasetBindPanel.tsx
+M  fe/src/pages/admin/ingestion/SyncJobFormPage.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobForm.tsx
+M  fe/src/pages/admin/ingestion/ingestion.smoke.test.tsx
+M  tests/test_ingestion_api.py
+... and 3 more
+
+stat: 28 files changed, 1043 insertions(+), 523 deletions(-)
+branch: dev | scheduled-auto-commit

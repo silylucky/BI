@@ -1,0 +1,40 @@
+---
+description: VitalSpan 项目身份与文档分层（摘要；总约束见 project.mdc）
+alwaysApply: true
+---
+
+# VitalSpan 项目约定（摘要）
+
+> **总约束与任务路由** → @.cursor/rules/project.mdc  
+> **工程体量/分层** → @.cursor/rules/engineering.mdc · @.cursor/rules/common.mdc  
+> **生产红线** → @.cursor/rules/production.mdc
+
+自研 BI 平台，**零第三方 BI 运行时依赖**。面向政企/行业 IT 与数据团队。
+
+## 文档分层
+
+| 层 | 路径 | 用途 |
+|----|------|------|
+| SRS | `docs/srs/` | 需求权威 |
+| Goal/PRD/Plan | `docs/automate/` | 执行真理源 |
+| 架构 | `docs/arch.md` | 技术决策、目录、环境变量 |
+| API / 服务 / UI | `docs/api/` · `docs/services/` · `docs/ui/` | 契约与域附录 |
+
+## 目录铁律
+
+| 项 | 约定 |
+|----|------|
+| 前端 | **`fe/`** |
+| API 前缀 | `/api/v1/`；健康 `/health` |
+| 鉴权 | `app/auth/` + `main.py` 注册 `AuthMiddleware` |
+| 地图 | 仅离线中国 — @.cursor/rules/geo-map-offline-china.mdc |
+
+## 数据源选型
+
+改连接器 / 新增 dialect 前必读 `docs/services/datasources.md` 选型表（RoAPI sidecar HTTP · csv/excel 文件路径 · SQL 原生 · rest_api 通用 JSON · trino 湖仓联邦）；禁止混用分工（如把 RoAPI 当文件上传器）。
+
+## 实现纪律
+
+- 修 bug 前：`.agents/skills/bug-case-library/cases/`
+- 文档同步：@.cursor/rules/prd-sync.mdc
+- 技能索引：见根 `AGENTS.md`

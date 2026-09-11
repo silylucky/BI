@@ -1,0 +1,489 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DeepTalk VitalSpan Agent Tools",
+  "description": "DeepTalk VitalSpan Agent Tools. Product: vitalspan plugin components.tools (Node). CI/dev scripts: docs/api/vs-ai-spec/tools/*.py",
+  "tools": [
+    {
+      "name": "vitalspan_health_check",
+      "runtime": "plugin",
+      "description": "GET /health before workflow 2 or 3",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "vitalspan_get_contract_card",
+      "runtime": "plugin",
+      "description": "Workflow 2: return contract_card.json (L0 rules on demand)",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "vitalspan_get_capability_catalog",
+      "runtime": "plugin",
+      "description": "Machine-readable capabilities for experts (chartTypes, paradigms, layout constraints, optional themes)",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "sections": {
+            "type": "string",
+            "description": "workflows|chartTypes|paradigms|layout|themes|compliance|routing|all"
+          }
+        }
+      }
+    },
+    {
+      "name": "vitalspan_scaffold_artifact",
+      "runtime": "plugin",
+      "description": "Workflow 2: scaffold customViz under examples/ (default generic-blank-*)",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Bundle id slug"
+          },
+          "name": {
+            "type": "string",
+            "description": "Chinese display name"
+          },
+          "runtime": {
+            "type": "string",
+            "enum": [
+              "html",
+              "d3"
+            ],
+            "default": "html"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ]
+      }
+    },
+    {
+      "name": "vitalspan_validate_artifact",
+      "runtime": "plugin",
+      "description": "Workflow 2: preflight + structured fix/snippet JSON + validate stamp",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "Path under workspace, e.g. examples/my-widget.json"
+          }
+        },
+        "required": [
+          "file"
+        ]
+      }
+    },
+    {
+      "name": "vitalspan_publish_artifact",
+      "runtime": "plugin",
+      "description": "Validate + POST/PUT customViz bundle to platform library. Completion requires ok artifactId= and styleComplianceTier=full in stdout.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "Path under vs-ai-spec, e.g. examples/my-widget.json"
+          },
+          "artifact_id": {
+            "type": "string",
+            "description": "Optional existing uuid for PUT update"
+          }
+        },
+        "required": [
+          "file"
+        ]
+      }
+    },
+    {
+      "name": "vitalspan_list_artifacts",
+      "runtime": "plugin",
+      "description": "List current user's ai_viz artifacts",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "default": 100
+          },
+          "offset": {
+            "type": "integer",
+            "default": 0
+          },
+          "q": {
+            "type": "string",
+            "description": "Filter by manifest id or displayName"
+          }
+        }
+      }
+    },
+    {
+      "name": "vitalspan_delete_artifact",
+      "runtime": "plugin",
+      "description": "DELETE artifact by id (owner only); default 409 if referenced; pass unlink=true to remove widgets from dashboards first",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "artifact_id": {
+            "type": "string"
+          },
+          "unlink": {
+            "type": "boolean",
+            "default": true,
+            "description": "When true, DELETE ?unlink=true removes referencing widgets then deletes artifact"
+          }
+        },
+        "required": [
+          "artifact_id"
+        ]
+      }
+    },
+    {
+      "name": "vitalspan_get_artifact",
+      "runtime": "plugin",
+      "description": "Download full bundle to workspace examples/ for edit→validate→publish PUT",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "artifact_id": {
+            "type": "string"
+          },
+          "file": {
+            "type": "string",
+            "description": "Optional output path under workspace"
+          }
+        },
+        "required": [
+          "artifact_id"
+        ]
+      }
+    },
+    {
+      "name": "vitalspan_list_artifact_dashboard_refs",
+      "runtime": "plugin",
+      "description": "List dashboards/data-screens referencing artifactId",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "artifact_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "artifact_id"
+        ]
+      }
+    },
+    {
+      "name": "vitalspan_delete_dashboard",
+      "runtime": "plugin",
+      "description": "DELETE dashboard or data-screen by uuid",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "dashboard_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "dashboard_id"
+        ]
+      }
+    },
+    {
+      "name": "vitalspan_validate_chart_config",
+      "runtime": "plugin",
+      "description": "Workflow 1: validate L1/L2 chartConfig via POST /charts/validate",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "file"
+        ]
+      }
+    },
+    {
+      "name": "vitalspan_validate_layout_draft",
+      "runtime": "plugin",
+      "description": "Workflow 3: validate layout JSON + record upload stamp (5min)",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file": { "type": "string" },
+          "check_charts": { "type": "boolean" }
+        },
+        "required": ["file"]
+      }
+    },
+    {
+      "name": "vitalspan_patch_dashboard_layout",
+      "runtime": "plugin",
+      "description": "Workflow 3: patch layout file (merge or operations JSON)",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file": { "type": "string" },
+          "patch_file": { "type": "string" },
+          "operations": { "type": "string" }
+        },
+        "required": ["file"]
+      }
+    },
+    {
+      "name": "vitalspan_apply_screen_theme",
+      "runtime": "plugin",
+      "description": "Workflow 3 optional: merge screen theme into styleConfig",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file": { "type": "string" },
+          "theme": { "type": "string" },
+          "apply_chart_de_style": { "type": "boolean" }
+        },
+        "required": ["file", "theme"]
+      }
+    },
+    {
+      "name": "vitalspan_route_request",
+      "runtime": "plugin",
+      "description": "Optional wf1/wf2/wf3 suggestion from capability-routing.json",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "User request in natural language"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    },
+    {
+      "name": "vitalspan_list_layout_references",
+      "runtime": "plugin",
+      "description": "Workflow 3: read-only index of layout reference ids (REFERENCE ONLY)",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "vitalspan_get_layout_reference",
+      "runtime": "plugin",
+      "description": "Workflow 3: export read-only layout reference JSON under workspace",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "file": { "type": "string" }
+        },
+        "required": ["id"]
+      }
+    },
+    {
+      "name": "vitalspan_list_layout_rhythms",
+      "runtime": "plugin",
+      "description": "Workflow 3 default: list Layout Rhythm Contracts (LRC) — generic layout grammar",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "vitalspan_list_chart_types",
+      "runtime": "plugin",
+      "description": "Workflow 1/3: list built-in chartType ids",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "vitalspan_compose_dashboard",
+      "runtime": "plugin",
+      "description": "Workflow 3 optional scaffold: rhythm + blocks (topology only). Delivery via upload file.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "surface_kind": {
+            "type": "string",
+            "enum": [
+              "dashboard",
+              "data-screen"
+            ],
+            "description": "Required when creating new"
+          },
+          "dashboard_id": {
+            "type": "string",
+            "description": "Existing uuid to update"
+          },
+          "name": {
+            "type": "string"
+          },
+          "rhythm": {
+            "type": "string",
+            "description": "Layout rhythm id from list_layout_rhythms (wf3 default)"
+          },
+          "blocks": {
+            "type": "string",
+            "description": "JSON array of {band, kind, chartType?, artifactId?, title?}"
+          },
+          "template": {
+            "type": "string",
+            "description": "Legacy preset layout id from list_layout_templates"
+          },
+          "chart_types": {
+            "type": "string",
+            "description": "Comma-separated built-in types (legacy template path)"
+          },
+          "artifact_ids": {
+            "type": "string",
+            "description": "Comma-separated customViz uuids (legacy template path)"
+          },
+          "data_binding": {
+            "type": "string",
+            "enum": [
+              "manual",
+              "demo"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "vitalspan_get_dashboard_layout",
+      "runtime": "plugin",
+      "description": "Workflow 3: GET dashboard + write editor-save JSON for style-only patch",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "dashboard_id": {
+            "type": "string"
+          },
+          "file": {
+            "type": "string",
+            "description": "Output path under workspace examples/"
+          }
+        },
+        "required": [
+          "dashboard_id",
+          "file"
+        ]
+      }
+    },
+    {
+      "name": "vitalspan_create_dashboard",
+      "runtime": "plugin",
+      "description": "Create empty dashboard or data-screen (prefer compose_dashboard for workflow 3)",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "surface_kind": {
+            "type": "string",
+            "enum": [
+              "dashboard",
+              "data-screen"
+            ]
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "surface_kind"
+        ]
+      }
+    },
+    {
+      "name": "vitalspan_list_dashboards",
+      "runtime": "plugin",
+      "description": "List dashboards and data-screens",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "surface_kind": {
+            "type": "string",
+            "enum": [
+              "dashboard",
+              "data-screen"
+            ]
+          },
+          "limit": {
+            "type": "integer",
+            "default": 100
+          }
+        }
+      }
+    },
+    {
+      "name": "vitalspan_upload_dashboard",
+      "runtime": "plugin",
+      "description": "Workflow 3: PUT dashboard editor-save layout from file or inline chart_types",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "dashboard_id": {
+            "type": "string"
+          },
+          "file": {
+            "type": "string"
+          },
+          "chart_types": {
+            "type": "string"
+          },
+          "artifact_ids": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "dashboard_id"
+        ]
+      }
+    },
+    {
+      "name": "vitalspan_completion_gate",
+      "runtime": "plugin",
+      "description": "Reject completion without artifactId+tier=full (wf2) or compose/upload stdout with layout widgets (wf3)",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "workflow": {
+            "type": "string",
+            "enum": [
+              "1",
+              "2",
+              "3"
+            ],
+            "description": "1=builtin chart, 2=artifact, 3=dashboard"
+          },
+          "agent_summary": {
+            "type": "string",
+            "description": "Agent final message to validate"
+          },
+          "tool_stdout": {
+            "type": "string",
+            "description": "Required for workflow 2 (publish) and 3 (compose/upload) raw tool output"
+          }
+        },
+        "required": [
+          "workflow",
+          "agent_summary"
+        ]
+      }
+    }
+  ]
+}

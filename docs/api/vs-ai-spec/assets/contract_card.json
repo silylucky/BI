@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "summary": "customViz 最小机器契约（L3 从零）；规范经工具返回，不写入 Agent prompt",
+  "mount": {
+    "id": "mount.required",
+    "rule": "entry 脚本须 host.vsCv.mount(function (p) { render(p); })",
+    "runtime": ["html", "d3"]
+  },
+  "style": {
+    "id": "style.read",
+    "rule": "var st = (p && p.style) || {}；须消费 labelShow/tooltipShow/paletteColors/seriesGradient 或 CSS --vs-palette-* / --vs-style-*",
+    "forbidden": ["getStyle()", "vs-cv-style-update", ".vs-cv-style"]
+  },
+  "dom": {
+    "id": "dom.vs-cv",
+    "rule": "容器 id 前缀 vs-cv-；禁 id=app/root；禁 document.getElementById，用 host.querySelector('#vs-cv-*')",
+    "canvas": "业务逻辑只写在 #vs-cv-canvas 内"
+  },
+  "d3": {
+    "id": "d3.host",
+    "rule": "runtime:d3 时用 host.vsCv.d3；禁 CDN script src 与内联整库",
+    "layout": "尺寸优先读 p.layout，禁仅 clientWidth||320"
+  },
+  "forbidden": ["MapLibre", "在线地图瓦片", "javascript:", "onclick=", "onmouseenter="],
+  "routing": {
+    "id": "route.required",
+    "rule": "先 vitalspan_route_request；矩形树/饼图/漏斗/地图/sankey 等 → wf1 chartType，禁止 customViz 仿制",
+    "misrouteWarn": "AIVIZ_WARN_BUILTIN_MISROUTE"
+  },
+  "data": {
+    "id": "data.encoding",
+    "rule": "笛卡尔/折线绘图须 rowsToSeries(p) 或 resolveBoundColumns + localeCompare 排序；读 p.encoding；金样仅参考",
+    "warns": ["AIVIZ_WARN_DATA_ENCODING", "AIVIZ_WARN_DATA_DOMAIN_SORT"]
+  },
+  "publishGate": "styleComplianceTier=full 且 warnings=0",
+  "guidance": {
+    "id": "guidance.layers",
+    "rule": "L0 硬契约 · L1 数据/生命周期 warn · L2 金样仅参考 · L3 Agent 自主 renderBusiness",
+    "scaffold": "仅 generic-blank-*；route 返回的 paradigm/runtime 供 fieldSlots 对齐，禁止整包抄金样",
+    "validate": "失败读 fix/snippet 自愈；5173 绑定同数据集验收真源"
+  }
+}

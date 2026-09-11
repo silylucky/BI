@@ -1,0 +1,120 @@
+---
+description: VitalSpan 文档同步评估（PRD / 业务域 / API / 架构 / SRS）
+alwaysApply: true
+---
+
+# 文档同步评估
+
+> 项目实例路径以 `docs/` 为准；栈规则 @.cursor/rules/docs-layer.mdc
+
+## 文档分层（各司其职）
+
+| 层 | VitalSpan 路径 | 回答什么问题 | **不是** |
+|----|----------------|--------------|----------|
+| **SRS** | `docs/srs/` | 需求合同、范围、分期、附录 | 代码锚点与逐步实施清单 |
+| **PRD** | `docs/automate/prd.md` + `prd/F*.md` | 做什么、验收标准、功能 ID、代码锚点 | 逐步业务流程说明书 |
+| **业务域** | **`docs/services/<域>.md`** + `docs/services/README.md` | 域职责、边界、依赖、主流程衔接（研发向） | HTTP path/method/schema |
+| **API** | `docs/api/README.md` | REST 契约：路由、期次、状态、代码锚点 | 用户故事或 UI 交互 |
+| **架构** | `docs/arch.md` | 分层、模块、环境变量、部署 | 单域业务细则 |
+| **壳层 IA** | `docs/ui/layout.md` · `docs/ui/anchor.md` | 路由与导航、壳层规格、页面组件锚点 | 组件 Token 细节 |
+| **Mock 诚实清单** | `docs/mock/` | 非测试 stub/mock 占位索引 | 正式 API/域能力叙事 |
+| **演化** | `docs/automate/goal.md` · `plan.md` | 方向、里程碑顺序 | 功能验收条款 |
+
+**阅读顺序**：SRS 边界 → PRD 索引定位功能 ID → **`docs/services/<域>.md` 理解域边界与依赖** → `docs/api/` 查契约 → 代码。
+
+> **VitalSpan 路径映射（相对 docs-reviewer 通用 taxonomy）**
+>
+> | 通用 taxonomy | VitalSpan 实际 | 说明 |
+> |---------------|----------------|------|
+> | `docs/domain/` | **`docs/services/`** | 域职责/边界/依赖（研发向附录，非 Process Test Pack） |
+> | `docs/adr/` | **`docs/arch.md` §2 + 详节** | ADR 内嵌架构文档，**不建** `docs/adr/` |
+> | `docs/api/<模块>.md` | **`docs/api/README.md`** | 单文件路由登记簿 + 运行时 OpenAPI；**非** Postman 可消费说明书（分期补 per-domain 或扩写） |
+> | `docs/service/` | **`docs/arch.md` §7–§9` + 根 `README.md`** | 本地启动与 compose；生产 runbook 走 deploy-dev |
+> | `docs/data/` | **暂无** | 持久化见 `arch.md` ADR + Alembic `backend/migrations/`；head 须在 arch 登记 |
+
+> **说明**：通用框架中的 `docs/domain/` 在本项目以 **`docs/services/`** 承担域附录角色；若未来新增 `docs/domain/` 叙事文档，在本表并列登记，职责仍不与 API 重复。
+
+## 业务域文档（`docs/services/`）
+
+面向研发、测试与 Agent：**说明各后端域做什么、不做什么、依赖谁**。
+
+### 单域附录应包含
+
+| 章节 | 内容 |
+|------|------|
+| 元信息 | 模块路径、PRD 分片、里程碑、实现状态 |
+| 职责 | 域内能力列表 |
+| 边界 | In / Out 表（明确**不**涵盖什么） |
+| 依赖 | 上游/下游域（不写 HTTP 细节） |
+| 入口 | 主要类型、API 指针 |
+
+### 禁止写入 `docs/services/`
+
+- 接口 path、method、request/response JSON（→ `docs/api/README.md`）
+- 与 PRD 验收标准逐条重复（域文档讲**边界与依赖**，PRD 讲**交付与验收**）
+- SRS 级新需求（→ 回流 `docs/srs/`）
+
+## 文档同步总表
+
+代码变更后按下表核对（**唯一收口**；`common.mdc` · `vitalspan-project.mdc` 只 `@` 本表）：
+
+| 变更内容 | 同步文档 |
+|---------|---------|
+| SRS / 需求边界、分期 | `docs/srs/`；评估 `docs/automate/prd/` 与 `plan.md` |
+| 业务逻辑 / 用户可见行为 | `docs/automate/prd.md` + 对应 `prd/F*.md` |
+| 域职责、边界、依赖变化 | `docs/services/<域>.md` + `docs/services/README.md` 状态 |
+| 新增/修改 `/api/v1/*` 或 `/health` | `docs/api/README.md` 补一行 |
+| 架构、目录、环境变量 | `docs/arch.md`、`docs/api/README.md` |
+| 壳层、路由与导航 IA | `docs/ui/layout.md` · `docs/ui/anchor.md` |
+| 非测试 stub/mock 登记 | `docs/mock/<模块>.md` · `docs/mock/README.md` |
+| 里程碑完成 / 功能已实现 | `prd/F*.md` 状态 + 上表相关附录 |
+
+## PRD 同步评估
+
+### 何时必须评估 PRD
+
+- 新增、删除或弱化功能项
+- 验收标准或代码锚点变化
+- 里程碑（`plan.md`）勾选完成时回写对应 `prd/F*.md`
+
+### 何时必须评估 `docs/services/`
+
+- 新增后端域或调整域边界（In/Out）
+- 跨域依赖顺序变化（如 `ingestion` 与 `datasources`）
+- 模块从「规划」变为「已实现」
+
+### 何时通常无需更新
+
+- 纯重构、命名调整、性能优化（行为与流程不变）
+- 修复与 PRD/域文档/契约已描述行为一致的 bug
+- 仅改样式、布局，不改变交互语义与流程
+
+### 评估步骤
+
+1. 定位功能 ID（`prd.md` 索引）与业务域（`docs/services/README.md`）
+2. 读 `prd/F*.md` 分片，核对验收标准与代码锚点
+3. 读 `docs/services/<域>.md`，核对边界与依赖是否仍与实现一致
+4. 行为/边界偏离 → 更新域附录与/或 PRD 分片；hub 索引/评分变化 → 同步 `prd.md` frontmatter
+5. API、架构 → 按「文档同步总表」核对
+
+### 更新要点
+
+- PRD hub：更新 `last_updated`、必要时 `feature_count`
+- PRD 分片：**行为描述**、**验收标准**、**代码锚点**、**状态**
+- 域附录：改边界/依赖时更新 In/Out 与依赖表；大改时更新 `README.md` 索引
+- 有意偏离 PRD → 在 commit/代码注释中注明原因
+
+### 示例
+
+```markdown
+# ✅ M1 新增 GET /api/v1/me — 须更新
+- docs/api/README.md：登记路由，状态 → 已实现
+- prd/F01-BOOT.md：BOOT-003 勾选验收
+- docs/services/auth.md、core.md：锚点与状态
+
+# ✅ ingestion 改为 SourceConnection 模型 — 须更新
+- prd/F16-DATA.md：DATA-001 描述
+- docs/services/ingestion.md：依赖与边界（不依赖 M3 datasources 读源）
+
+# ❌ 提取 useXxxForm（行为不变）— 通常无需改 PRD 与 services
+```

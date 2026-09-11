@@ -1,0 +1,29 @@
+{
+    "startedAt": "2026-08-11T10:46:46+08:00",
+    "finishedAt": "2026-08-11T10:47:25+08:00",
+    "branch": "dev",
+    "commit": "17451a8d",
+    "outcome": "success",
+    "push": false,
+    "messageSubject": "wip: [fe,backend] 12f (+194/-92) @ 2026-08-11 10:47 +0800",
+    "messageBodyPreview": "Areas:\n  fe/          11 files (+.../-...)\n  backend/      1 files (+.../-...)",
+    "filesChanged": 12,
+    "insertions": 194,
+    "deletions": 92,
+    "topDirs": {
+        "fe": 11,
+        "backend": 1
+    },
+    "sampleFiles": [
+        "backend/app/dashboard/templates/service.py",
+        "fe/src/components/dashboard/templates/VizTemplateCard.tsx",
+        "fe/src/components/dashboard/templates/templateLabels.test.ts",
+        "fe/src/components/dashboard/templates/templateLabels.ts",
+        "fe/src/components/layout/list-page-kit.test.tsx",
+        "fe/src/components/layout/list-page-kit.tsx",
+        "fe/src/lib/dashboardTemplates.test.ts",
+        "fe/src/lib/dashboardTemplates.ts",
+        "fe/src/pages/admin/datasets/DatasetListPage.tsx",
+        "fe/src/pages/admin/datasources/DatasourceListPage.tsx"
+    ]
+}

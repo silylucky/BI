@@ -1,0 +1,85 @@
+{
+  "version": 2,
+  "description": "customViz 范式引导：Agent 起盘仅 generic-blank；金样在 referenceSamples 中按需查阅，禁止整包 scaffold。",
+  "scaffoldPolicy": "Agent 仅 vitalspan_scaffold_artifact → generic-blank-*；referenceSamples 仅供 list/get 参考 fieldSlots/动画写法。",
+  "paradigms": [
+    {
+      "id": "P5-open-canvas",
+      "label": "开放画布（L3 从零）",
+      "when": "训练集外新形态；只改 renderBusiness",
+      "scaffold": { "html": "generic-blank-html", "d3": "generic-blank-d3" },
+      "referenceSamples": [],
+      "runtime": ["html", "d3"],
+      "fieldSlots": {
+        "dimensions": { "min": 1, "max": 1, "note": "默认单列；多列明细请改 manifest 并对齐 P2" },
+        "metrics": { "min": 1, "max": 8, "note": "按需调整 max" }
+      },
+      "default": true
+    },
+    {
+      "id": "P1-cartesian",
+      "label": "笛卡尔图",
+      "when": "类别轴 + 数值；排名、对比、趋势（视觉自定）",
+      "scaffold": { "html": "generic-blank-html", "d3": "generic-blank-d3" },
+      "referenceSamples": ["ranking-bar", "trend-line"],
+      "runtime": ["html", "d3"],
+      "fieldSlots": {
+        "dimensions": { "min": 1, "max": 1, "note": "通常单列类别/时间" },
+        "metrics": { "min": 1, "max": 1, "note": "须可绑数值" }
+      }
+    },
+    {
+      "id": "P2-multi-column-detail",
+      "label": "多维明细",
+      "when": "多列平铺展示，不做聚合；滚动或静态表",
+      "scaffold": { "html": "generic-blank-html", "d3": "generic-blank-d3" },
+      "referenceSamples": ["scrolling-table"],
+      "runtime": ["html"],
+      "fieldSlots": {
+        "dimensions": { "min": 1, "max": 6, "note": "max 须 >1" },
+        "metrics": { "min": 0, "max": 0, "note": "必须为 0" }
+      }
+    },
+    {
+      "id": "P3-scroll-feed",
+      "label": "滚动条",
+      "when": "单列文案 + 可选等级/数值",
+      "scaffold": { "html": "generic-blank-html", "d3": "generic-blank-d3" },
+      "referenceSamples": ["alert-feed"],
+      "runtime": ["html"],
+      "fieldSlots": {
+        "dimensions": { "min": 1, "max": 1 },
+        "metrics": { "min": 1, "max": 1 }
+      }
+    },
+    {
+      "id": "P4-generic-dom",
+      "label": "通用 DOM",
+      "when": "KPI 卡、简单双列、未定形态；勿用于 P2",
+      "scaffold": { "html": "generic-blank-html", "d3": "generic-blank-d3" },
+      "referenceSamples": ["html-minimal", "hex-kpi-grid"],
+      "runtime": ["html"],
+      "fieldSlots": {
+        "dimensions": { "min": 1, "max": 8 },
+        "metrics": { "min": 1, "max": 8 }
+      }
+    }
+  ],
+  "referenceSampleFiles": {
+    "generic-blank-html": "examples/generic-blank-html.json",
+    "generic-blank-d3": "examples/generic-blank-d3.json",
+    "html-minimal": "examples/html-minimal.json",
+    "scrolling-table": "examples/scrolling-table.json",
+    "alert-feed": "examples/custom-viz-alert-feed.json",
+    "ranking-bar": "examples/custom-viz-ranking-bar-chart-fixed.json",
+    "trend-line": "examples/custom-viz-trend-line.json",
+    "hex-kpi-grid": "examples/hex-kpi-grid.json"
+  },
+  "defaultScaffold": {
+    "html": "generic-blank-html",
+    "d3": "generic-blank-d3"
+  },
+  "warnCodes": {
+    "AIVIZ_WARN_DETAIL_TABLE_METRICS": "fieldSlots 不符合 P2 多维明细范式：dimensions.max>1 时 metrics 须 min=0,max=0"
+  }
+}

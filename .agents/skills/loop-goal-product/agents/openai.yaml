@@ -1,0 +1,5 @@
+interface:
+  display_name: "产品分闭环"
+  short_description: "product-reviewer→go-fast 冲产品分"
+policy:
+  allow_implicit_invocation: true

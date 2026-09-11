@@ -1,0 +1,37 @@
+wip: [fe,tests,docs] 27f (+1568/-212) @ 2026-08-05 16:50 +0800
+
+Areas:
+  fe/          25 files (+1338/-212)
+  tests/       1 files (+74/-0)
+  docs/        1 files (+156/-0)
+
+Changed (up to 25):
+A  docs/feature-truth/2026-08-05-category-axis-thinning-truth-audit.md
+M  fe/.env.example
+A  fe/live-dash-response.json
+M  fe/src/components/charts/engine/d3/cartesian/renderBar.ts
+M  fe/src/components/charts/engine/d3/cartesian/renderBarHorizontal.ts
+M  fe/src/components/charts/engine/d3/cartesian/renderWaterfall.ts
+M  fe/src/components/charts/engine/d3/core/axes.test.ts
+M  fe/src/components/charts/engine/d3/core/axes.ts
+M  fe/src/components/charts/engine/d3/core/hierarchicalAxis.ts
+M  fe/src/components/charts/engine/d3/core/sceneGraph.ts
+M  fe/src/lib/api.ts
+M  fe/src/lib/apiUpload.ts
+M  fe/src/lib/appBasePath.ts
+M  fe/src/lib/chartValueFormat.test.ts
+M  fe/src/lib/chartValueFormat.ts
+M  fe/src/lib/dev-user-switch.ts
+A  fe/src/lib/liveDashLoad.test.ts
+M  fe/src/pages/admin/dashboard/DashboardEditPage.tsx
+M  fe/src/pages/admin/ingestion/EtlRulesPage.tsx
+A  fe/src/pages/admin/ingestion/components/EtlColumnField.tsx
+A  fe/src/pages/admin/ingestion/etlRuleSuggest.test.ts
+A  fe/src/pages/admin/ingestion/etlRuleSuggest.ts
+A  fe/src/pages/admin/ingestion/hooks/useSyncJobSourceColumns.ts
+M  fe/src/pages/admin/ingestion/ingestion.smoke.test.tsx
+M  fe/src/pages/login/LoginPage.tsx
+... and 2 more
+
+stat: 27 files changed, 1568 insertions(+), 212 deletions(-)
+branch: dev | scheduled-auto-commit

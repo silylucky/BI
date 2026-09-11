@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vitalspan.local/schemas/custom-viz-plugin.json",
+  "title": "CustomVizArtifactCreate",
+  "type": "object",
+  "required": ["manifest", "files"],
+  "properties": {
+    "manifest": {
+      "type": "object",
+      "required": ["id", "displayName", "entry", "fieldSlots", "styleSchema"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,62}[a-z0-9]$" },
+        "displayName": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "version": { "type": "string" },
+        "entry": { "type": "string", "default": "index.html" },
+        "runtime": {
+          "type": "string",
+          "enum": ["html", "d3"],
+          "description": "L3 only. Omit: rendererHint===d3 → d3, else html."
+        },
+        "rendererHint": {
+          "type": "string",
+          "description": "Legacy alias only. Prefer runtime. Not a third renderer."
+        },
+        "fieldSlots": { "type": "object" },
+        "styleSchema": { "$ref": "styles.schema.json" },
+        "defaultStyle": { "type": "object" }
+      }
+    },
+    "files": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "maxLength": 2097152 }
+    }
+  }
+}

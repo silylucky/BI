@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-04T16:47:37+08:00",
+  "finishedAt": "2026-08-04T16:48:02+08:00",
+  "branch": "dev",
+  "commit": "eeb302bf",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,.cursor,backend,tests] 26f (+1199/-366) @ 2026-08-04 16:48 +...",
+  "filesChanged": 26,
+  "insertions": 1199,
+  "deletions": 366,
+  "topDirs": { "fe": 20, ".cursor": 3, "backend": 2, "tests": 1 },
+  "sampleFiles": [
+    "fe/src/lib/geoAreaMappingTable.ts",
+    "fe/src/hooks/useSyncJobRun.ts",
+    "fe/src/pages/admin/ingestion/components/SyncJobForm.tsx",
+    "backend/app/api/v1/ingestion/sync.py"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/", "data/artifacts/", "fe/.env.production.local"]
+}

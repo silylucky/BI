@@ -1,0 +1,112 @@
+{
+  "manifest": {
+    "id": "demo-ranking-strip",
+    "displayName": "演示排名条",
+    "version": "1.0.0",
+    "entry": "index.html",
+    "fieldSlots": {
+      "dimensions": {
+        "min": 1,
+        "max": 1,
+        "label": "类别"
+      },
+      "metrics": {
+        "min": 1,
+        "max": 1,
+        "label": "数值"
+      }
+    },
+    "styleSchema": {
+      "type": "object",
+      "x-styleSections": [
+        {
+          "title": "条形外观",
+          "properties": [
+            "accentColor",
+            "barHeight",
+            "cornerRadius",
+            "fillOpacity"
+          ]
+        },
+        {
+          "title": "标签与排列",
+          "properties": [
+            "showValue",
+            "barLabelColor",
+            "layoutMode",
+            "valuePrefix"
+          ]
+        }
+      ],
+      "properties": {
+        "accentColor": {
+          "type": "string",
+          "format": "color",
+          "title": "强调色"
+        },
+        "barHeight": {
+          "type": "number",
+          "minimum": 8,
+          "maximum": 48,
+          "title": "条高度",
+          "description": "条形区域高度（像素）"
+        },
+        "cornerRadius": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 16,
+          "title": "圆角",
+          "step": 1
+        },
+        "fillOpacity": {
+          "type": "number",
+          "format": "opacity",
+          "minimum": 20,
+          "maximum": 100,
+          "title": "填充不透明度"
+        },
+        "showValue": {
+          "type": "boolean",
+          "title": "显示数值"
+        },
+        "layoutMode": {
+          "type": "string",
+          "enum": [
+            "horizontal",
+            "compact"
+          ],
+          "enumNames": [
+            "标准横向",
+            "紧凑模式"
+          ],
+          "title": "排列方式"
+        },
+        "valuePrefix": {
+          "type": "string",
+          "title": "数值前缀",
+          "description": "显示在数值前的符号，如 ¥ 或 #"
+        },
+        "barLabelColor": {
+          "type": "string",
+          "format": "color",
+          "title": "条目标签色"
+        }
+      }
+    },
+    "defaultStyle": {
+      "accentColor": "#2563eb",
+      "barHeight": 20,
+      "cornerRadius": 4,
+      "fillOpacity": 100,
+      "showValue": true,
+      "layoutMode": "horizontal",
+      "valuePrefix": "",
+      "barLabelColor": "#e2e8f0"
+    },
+    "rendererHint": "vanilla",
+    "runtime": "html"
+  },
+  "files": {
+    "index.html": "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><style>html,body{margin:0;height:100%;background:transparent;color:var(--dashboard-text-primary,#e2e8f0);font-family:system-ui,sans-serif}#vs-cv-root{padding:12px}.row{display:flex;align-items:center;gap:8px;margin:6px 0}.row.compact{gap:4px;margin:4px 0}.bar{height:var(--vs-style-bar-height,20px);background:var(--vs-palette-0,var(--vs-style-accent-color,#2563eb));opacity:calc(var(--vs-style-fill-opacity,100)/100);border-radius:var(--vs-style-corner-radius,4px);min-width:4px}.lbl{color:var(--vs-style-bar-label-color,#e2e8f0);width:48px;font-size:12px}.val{font-size:12px;min-width:2rem;text-align:right}</style></head><body><div id=\"vs-cv-root\"></div><script>(function(){var host=document.currentScript&&document.currentScript.parentElement;function readPayload(){if(host&&host.vsCv&&host.vsCv.getPayload)return host.vsCv.getPayload();var n=(host||document).querySelector('.vs-cv-payload');if(!n||!n.textContent)return null;try{return JSON.parse(n.textContent)}catch(e){return null}}function bindingStatusOf(p){if(!p)return 'unbound';return p.bindingStatus||((p.rows&&p.rows.length)?'bound':'unbound')}function statusHint(p){var st=bindingStatusOf(p);if(st==='error')return(p&&p.error)||'数据加载失败';if(st==='empty')return'暂无数据';if(st==='unbound')return'请在右侧绑定数据集与字段';return null}function attachPayloadListener(render){render();if(host&&host.vsCv&&host.vsCv.onPayload){host.vsCv.onPayload(function(p){render(p)});return}if(host&&host.classList.contains('vs-custom-viz-host')){host.addEventListener('vs-cv-payload-update',function(e){render(e.detail||readPayload())})}}function attachLayoutListener(render){if(host&&host.vsCv&&host.vsCv.onLayout){host.vsCv.onLayout(function(){render(readPayload())});return}if(typeof ResizeObserver!=='undefined'&&host){new ResizeObserver(function(){render(readPayload())}).observe(host)}}function boot(render){if(host&&host.vsCv&&host.vsCv.mount){host.vsCv.mount(function(p){render(p)});return}attachPayloadListener(function(p){render(p||readPayload())});attachLayoutListener(function(){render(readPayload())})}function rowsFromPayload(p){var st=bindingStatusOf(p);if(st!=='bound'||!p||!p.rows||!p.rows.length)return null;var cols=p.columns||[];var di=cols.findIndex(function(c){return c!=='sum'&&c!=='count'});var mi=cols.findIndex(function(c,i){return i!==di});if(di<0)di=0;if(mi<0)mi=1;return p.rows.map(function(r){return{n:String(r[di]),v:Number(r[mi])||0}})}function render(){var p=readPayload();var st=(p&&p.style)||{};var root=(host||document).querySelector('#vs-cv-root');if(!root)return;var hint=statusHint(p);var data=rowsFromPayload(p);root.innerHTML='';if(hint||!data){var msg=document.createElement('div');msg.style.cssText='padding:12px;font-size:12px;color:var(--dashboard-text-muted,#98a2b3);text-align:center';msg.textContent=hint||'暂无数据';root.appendChild(msg);return}var max=Math.max.apply(null,data.map(function(d){return d.v}).concat([1]));var compact=st.layoutMode==='compact';var show=st.showValue!==false;var prefix=String(st.valuePrefix||'');var labelVisible=st.labelShow!==false;data.forEach(function(d){var row=document.createElement('div');row.className='row'+(compact?' compact':'');if(labelVisible){var lbl=document.createElement('span');lbl.className='lbl';lbl.textContent=d.n;row.appendChild(lbl)}var bar=document.createElement('div');bar.className='bar';bar.style.width=(d.v/max*100)+'%';row.appendChild(bar);if(show){var val=document.createElement('span');val.className='val';val.textContent=prefix+d.v;row.appendChild(val)}root.appendChild(row)})}boot(render)})();</script></body></html>"
+  }
+}

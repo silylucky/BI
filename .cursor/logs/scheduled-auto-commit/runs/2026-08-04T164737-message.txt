@@ -1,0 +1,38 @@
+wip: [fe,.cursor,backend,tests] 26f (+1199/-366) @ 2026-08-04 16:48 +...
+
+Areas:
+  fe/          20 files (+1087/-359)
+  .cursor/     3 files (+53/-1)
+  backend/     2 files (+32/-6)
+  tests/       1 files (+27/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T161816-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T161816.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/ingestion/sync.py
+M  backend/app/metadata/dataset/service.py
+M  fe/src/components/charts/engine/d3/views/D3GeoMapView.tsx
+M  fe/src/components/charts/engine/geo/geoMapContentKey.test.ts
+M  fe/src/components/charts/engine/geo/geoMapContentKey.ts
+M  fe/src/components/dashboard/ChartGeoAreaMappingPanel.tsx
+M  fe/src/components/dashboard/chartAdvancedMapAreaMapping.test.tsx
+A  fe/src/hooks/useSyncJobRun.ts
+M  fe/src/lib/chartGeoAreaMapping.ts
+A  fe/src/lib/datasourceRoles.ts
+A  fe/src/lib/geoAreaMappingTable.test.ts
+A  fe/src/lib/geoAreaMappingTable.ts
+M  fe/src/pages/admin/datasets/DatasetFormPage.tsx
+M  fe/src/pages/admin/datasets/components/DatasetBindPanel.tsx
+M  fe/src/pages/admin/datasets/dataset-form.smoke.test.tsx
+M  fe/src/pages/admin/datasets/types.ts
+M  fe/src/pages/admin/datasources/DatasourceListPage.tsx
+M  fe/src/pages/admin/ingestion/SyncJobFormPage.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobConsumeGuide.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobForm.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobsEmptyState.tsx
+M  fe/src/pages/admin/ingestion/ingestion.smoke.test.tsx
+... and 1 more
+
+stat: 26 files changed, 1199 insertions(+), 366 deletions(-)
+branch: dev | scheduled-auto-commit

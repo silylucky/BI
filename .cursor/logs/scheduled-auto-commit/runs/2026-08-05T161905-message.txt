@@ -1,0 +1,35 @@
+wip: [fe,backend,tests] 24f (+915/-200) @ 2026-08-05 16:19 +0800
+
+Areas:
+  fe/          19 files (+822/-194)
+  backend/     3 files (+25/-6)
+  tests/       2 files (+68/-0)
+
+Changed (up to 25):
+M  backend/app/dashboard/schemas.py
+M  backend/app/dashboard/service.py
+M  backend/app/dashboard/templates/schemas.py
+A  fe/dash-debug-layout.json
+M  fe/src/components/charts/engine/d3/core/axes.test.ts
+M  fe/src/components/charts/engine/d3/core/axes.ts
+M  fe/src/components/charts/engine/d3/core/hierarchicalAxis.test.ts
+M  fe/src/components/charts/engine/d3/core/hierarchicalAxis.ts
+M  fe/src/components/charts/engine/d3/core/sceneGraph.ts
+M  fe/src/components/dashboard/DashboardShareDialog.tsx
+M  fe/src/hooks/useDashboardListCardLayout.ts
+M  fe/src/lib/apiError.ts
+A  fe/src/lib/dashDebugLayoutLoad.test.ts
+A  fe/src/lib/resolveDashboardLayoutJson.test.ts
+A  fe/src/lib/resolveDashboardLayoutJson.ts
+M  fe/src/pages/admin/dashboard/DashboardEditPage.tsx
+M  fe/src/pages/admin/data-screens/DataScreenPreviewPage.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobForm.tsx
+A  fe/src/pages/admin/ingestion/components/SyncSourceTableSelect.tsx
+A  fe/src/pages/admin/ingestion/components/syncSourceTablePicker.test.ts
+A  fe/src/pages/admin/ingestion/components/syncSourceTablePicker.ts
+M  fe/src/pages/admin/ingestion/ingestion.smoke.test.tsx
+A  tests/test_dashboard_out_serialization.py
+M  tests/test_dashboard_style_config_roundtrip.py
+
+stat: 24 files changed, 915 insertions(+), 200 deletions(-)
+branch: dev | scheduled-auto-commit

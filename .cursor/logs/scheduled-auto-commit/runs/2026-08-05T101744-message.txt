@@ -1,0 +1,23 @@
+wip: [fe,docs] 13f (+424/-16) @ 2026-08-05 10:17 +0800
+
+Areas:
+  fe/          12 files (+227/-16)
+  docs/        1 files (+197/-0)
+
+Changed (up to 25):
+A  docs/feature-truth/2026-08-05-line-de-parity-truth-audit.md
+A  fe/src/components/charts/engine/antv/spec/encodeCartesian.test.ts
+A  fe/src/components/charts/engine/d3/renderD3LineChart.test.ts
+M  fe/src/components/charts/engine/d3/renderD3LineChart.ts
+M  fe/src/components/charts/engine/d3/types.ts
+M  fe/src/components/charts/engine/d3/views/buildCartesianConfig.ts
+M  fe/src/components/charts/engine/plugins/plans/buildPlan.ts
+M  fe/src/components/dashboard/chartStyleSections/ChartCartesianStyleSections.tsx
+M  fe/src/lib/applyChartDeStyleBlocks.ts
+M  fe/src/lib/chartDeAxis/catalog.test.ts
+M  fe/src/lib/chartDeStyleBlocks.ts
+M  fe/src/lib/chartStyleCartesianFields.ts
+M  fe/src/lib/chartTypeStyleProfiles.ts
+
+stat: 13 files changed, 424 insertions(+), 16 deletions(-)
+branch: dev | scheduled-auto-commit

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480" preserveAspectRatio="none meet">
+  <defs>
+    <linearGradient id="20f28d25-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#115e59" stop-opacity="0.25"/>
+      <stop offset="1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="#042f2e" fill-opacity="0.85"/>
+  <rect x="0" y="0" width="8" height="480" fill="#2dd4bf" opacity="0.35"/>
+  <rect x="12" y="24" width="2" height="432" fill="#2dd4bf" opacity="0.15"/>
+  <rect x="792" y="0" width="8" height="480" fill="#2dd4bf" opacity="0.2"/>
+  <circle cx="4" cy="80" r="2" fill="#2dd4bf" opacity="0.5"/>
+  <circle cx="4" cy="150" r="2" fill="#2dd4bf" opacity="0.5"/>
+  <circle cx="4" cy="220" r="2" fill="#2dd4bf" opacity="0.5"/>
+  <circle cx="4" cy="290" r="2" fill="#2dd4bf" opacity="0.5"/>
+  <circle cx="4" cy="360" r="2" fill="#2dd4bf" opacity="0.5"/>
+  <g opacity="0.45" stroke="#2dd4bf" stroke-width="1.5" fill="none">
+  <path d="M20 44 V20 H44"/>
+  <path d="M756 20 H780 V44"/>
+  <path d="M780 436 V460 H756"/>
+  <path d="M44 460 H20 V436"/>
+</g>
+  <path d="M724 440 Q738 433 752 440 Q766 447 780 440" fill="none" stroke="#2dd4bf" stroke-width="1" opacity="0.4"/>
+  <rect width="800" height="480" fill="url(#20f28d25-fade)" pointer-events="none"/>
+</svg>

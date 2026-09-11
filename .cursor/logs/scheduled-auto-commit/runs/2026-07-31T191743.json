@@ -1,0 +1,22 @@
+{
+  "startedAt": "2026-07-31T19:17:43+08:00",
+  "finishedAt": "2026-07-31T19:18:12+08:00",
+  "branch": "dev",
+  "commit": "9147ced1",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,backend,docs,tests,+1] 134f (+2638/-1254) @ 2026-07-31 19:17...",
+  "messageBodyPreview": "Areas:\n  fe/          118 files (+2400+/−1100+)\n  backend/     6 files\n  docs/        4 files\n  tests/       3 files",
+  "filesChanged": 135,
+  "insertions": 2638,
+  "deletions": 1254,
+  "topDirs": { "fe": 118, "backend": 6, "docs": 4, "tests": 3, ".cursor": 3 },
+  "sampleFiles": [
+    "fe/public/template-assets/packs/gov-enterprise-v1/manifest.json",
+    "fe/src/pages/admin/ingestion/SyncJobsPage.tsx",
+    "fe/src/pages/admin/system/users/UserAccountStatusPanel.tsx",
+    "backend/app/api/v1/ingestion/sync.py",
+    "backend/migrations/versions/0030_guomi_password_sm3_dev.py"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/"]
+}

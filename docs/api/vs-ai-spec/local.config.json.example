@@ -1,0 +1,8 @@
+{
+  "vitalspan": {
+    "api_base": "http://127.0.0.1:8000/api/v1",
+    "fe_base": "http://127.0.0.1:5173/admin",
+    "vitalspan_root": ""
+  },
+  "_comment": "复制为 local.config.json。vitalspan_root 留空则自动探测同级 VitalSpan 仓；API 按联调环境修改。"
+}

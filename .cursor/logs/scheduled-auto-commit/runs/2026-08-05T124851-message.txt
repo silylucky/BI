@@ -1,0 +1,12 @@
+wip: [fe,backend] 2f (+51/-2) @ 2026-08-05 12:48 +0800
+
+Areas:
+  fe/          1 files (+9/-2)
+  backend/     1 files (+42/-0)
+
+Changed (up to 25):
+A  backend/migrations/versions/0036_analyst_template_manage.py
+M  fe/src/lib/capabilities.ts
+
+stat: 2 files changed, 51 insertions(+), 2 deletions(-)
+branch: dev | scheduled-auto-commit

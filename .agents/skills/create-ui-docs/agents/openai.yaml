@@ -1,0 +1,5 @@
+interface:
+  display_name: "提取 UI 文档"
+  short_description: "扫前端写入 docs/ui 防漂移"
+policy:
+  allow_implicit_invocation: true

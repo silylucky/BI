@@ -1,0 +1,11 @@
+{
+  "runId": "2026-08-12T183906",
+  "tick": 419,
+  "status": "success",
+  "commit": "2388beff",
+  "subject": "wip: [.cursor,docs] 2f (+185/-4) @ 2026-08-12 18:39 +0800",
+  "filesChanged": 2,
+  "insertions": 185,
+  "deletions": 4,
+  "pushed": false
+}

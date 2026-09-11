@@ -1,0 +1,29 @@
+wip: [fe,.cursor,docs,backend] 17f (+416/-189) @ 2026-07-31 13:58 +0800
+
+Areas:
+  fe/          10 files (+244/-186)
+  .cursor/     3 files (+46/-1)
+  docs/        3 files (+22/-2)
+  backend/     1 files (+104/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T132817-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T132817.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+A  backend/tests/test_official_demo_sql.py
+M  docs/arch.md
+M  docs/automate/plans/2026-07-21-chart-per-type-verification.md
+M  docs/services/datasources.md
+M  fe/src/components/dashboard/DashboardListCard.tsx
+M  fe/src/components/dashboard/hubCardUi.ts
+M  fe/src/components/dashboard/templates/VizTemplateCard.tsx
+M  fe/src/components/dashboard/viz-components/VizComponentCard.tsx
+M  fe/src/components/ui/panel-empty-state.tsx
+M  fe/src/lib/dashboardTemplates.test.ts
+M  fe/src/pages/admin/reports/ReportCenterPage.tsx
+M  fe/src/pages/admin/reports/ReportTemplatesPage.tsx
+M  fe/src/pages/admin/reports/components/PrefabReportsEmptyPreview.tsx
+M  fe/src/pages/admin/viz-templates/viz-templates.smoke.test.tsx
+
+stat: 17 files changed, 416 insertions(+), 189 deletions(-)
+branch: dev | scheduled-auto-commit

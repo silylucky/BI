@@ -1,0 +1,33 @@
+id: go-swallowed-error
+language: go
+severity: error
+message: 错误被吞掉：if err != nil 分支为空
+note: 静默做错事。至少要 log 或 return。
+files:
+  - "**/*.go"
+ignores:
+  - "**/*_test.go"
+  - "**/vendor/**"
+rule:
+  any:
+    - pattern: |
+        if $$$INIT; err != nil {
+        }
+    - pattern: |
+        if err != nil {
+        }
+---
+id: go-ignored-error-assign
+language: go
+severity: warning
+message: 显式丢弃 error（_ = ...）
+note: |
+  有意忽略要写明理由注释；否则多数是漏处理。
+  Close() / defer 场景可在规则里加 not 排除。
+files:
+  - "**/*.go"
+ignores:
+  - "**/*_test.go"
+  - "**/vendor/**"
+rule:
+  pattern: '_ = $CALL($$$)'

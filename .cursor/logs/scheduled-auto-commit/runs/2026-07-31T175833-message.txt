@@ -1,0 +1,38 @@
+wip: [fe,backend,.cursor,tests] 42f (+1621/-771) @ 2026-07-31 17:58 +...
+
+Areas:
+  fe/          33 files (+1441/-740)
+  backend/     5 files (+123/-29)
+  .cursor/     3 files (+56/-2)
+  tests/       1 files (+1/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T172815-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T172815.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/dashboard/templates/presets.py
+M  backend/app/dashboard/templates/presets_gov.py
+A  backend/app/dashboard/templates/presets_gov_assets.py
+M  backend/app/dashboard/templates/presets_gov_screens.py
+M  backend/app/dashboard/templates/seed.py
+M  fe/src/components/dashboard/DashboardQuickCreateDialog.tsx
+M  fe/src/components/dashboard/PublishVizComponentDialog.tsx
+M  fe/src/components/dashboard/templates/PublishTemplateDialog.tsx
+M  fe/src/components/dashboard/templates/templateLabels.ts
+M  fe/src/components/dashboard/viz-components/CreateVizComponentDialog.tsx
+M  fe/src/components/dashboard/viz-components/InsertVizComponentDialog.tsx
+A  fe/src/components/layout/admin-form-dialog.tsx
+M  fe/src/components/layout/list-page-kit.tsx
+M  fe/src/config/system-admin-nav.tsx
+M  fe/src/layouts/AdminLayout.smoke.test.tsx
+M  fe/src/lib/admin-layout-routes.ts
+M  fe/src/lib/resolve-nav.test.ts
+M  fe/src/lib/workspace.ts
+M  fe/src/pages/admin/account/components/ProfileEditDialog.tsx
+M  fe/src/pages/admin/account/components/UserViewFormDialog.tsx
+M  fe/src/pages/admin/governance/components/CreateWorkflowTemplateDialog.tsx
+M  fe/src/pages/admin/reports/ReportCenterPage.tsx
+... and 17 more
+
+stat: 42 files changed, 1621 insertions(+), 771 deletions(-)
+branch: dev | scheduled-auto-commit

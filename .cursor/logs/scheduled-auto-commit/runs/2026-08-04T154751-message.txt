@@ -1,0 +1,30 @@
+wip: [fe,.cursor] 20f (+401/-44) @ 2026-08-04 15:48 +0800
+
+Areas:
+  fe/          17 files (+341/-43)
+  .cursor/     3 files (+60/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T151757-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T151757.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  fe/src/components/charts/ChartRenderer.tsx
+M  fe/src/components/dashboard/DashboardListCardPreview.tsx
+M  fe/src/components/dashboard/templates/TemplateCardPreview.tsx
+M  fe/src/components/dashboard/viz-components/VizComponentLivePreview.tsx
+M  fe/src/components/layout/AdminNavPerfTracker.tsx
+M  fe/src/components/layout/app-sidebar.tsx
+A  fe/src/hooks/useAdminHeavyRenderSuspended.ts
+M  fe/src/index.css
+M  fe/src/layouts/AdminLayout.tsx
+A  fe/src/lib/adminHeavyRenderSuspend.test.ts
+A  fe/src/lib/adminHeavyRenderSuspend.ts
+A  fe/src/lib/adminNavPerf.test.ts
+A  fe/src/lib/listPreviewActivation.test.ts
+M  fe/src/lib/listPreviewActivation.ts
+M  fe/src/lib/reportCatalogUtils.test.ts
+A  fe/src/lib/routePrefetch.test.ts
+M  fe/src/lib/routePrefetch.ts
+
+stat: 20 files changed, 401 insertions(+), 44 deletions(-)
+branch: dev | scheduled-auto-commit

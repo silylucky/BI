@@ -1,0 +1,23 @@
+{
+  "AIVIZ_INVALID_MANIFEST": "manifest 缺字段。用 scaffold generic-blank 起盘；fieldSlots 与范式一致",
+  "AIVIZ_UNSAFE_CONTENT": "禁止 <script src=、HTML onclick=/onmouseenter=、javascript:。悬停暂停用 CSS 或 addEventListener",
+  "AIVIZ_FORBIDDEN_HOST_ID": "禁止 id=\"app\" id=\"root\"；改用 id=\"vs-cv-*\"",
+  "AIVIZ_MOUNT_REQUIRED": "entry 必须 host.vsCv.mount(renderFn)，html/d3 均须如此",
+  "AIVIZ_MISSING_ENTRY": "files 须含 manifest.entry（通常 index.html）",
+  "AIVIZ_INLINE_D3_FORBIDDEN": "禁止内联 d3 整库；runtime:d3 时用 host.vsCv.d3，勿 CDN",
+  "AIVIZ_FICTION_API": "禁止 getStyle()、vs-cv-style-update、.vs-cv-style；样式只读 (p&&p.style)||{}",
+  "AIVIZ_WARN_MOUNT_RECOMMENDED": "html runtime 也应 host.vsCv.mount(render)",
+  "AIVIZ_WARN_RESIZE_LAYOUT": "render 须读 payload.layout.width/height；勿仅用 clientWidth",
+  "AIVIZ_WARN_D3_INTERRUPT": "d3 重绘前 svg.interrupt()；有 .transition( 必须 interrupt",
+  "AIVIZ_WARN_D3_CLEAR": "d3 每次 render 须 svg.selectAll('*').remove() 清空旧图层",
+  "AIVIZ_WARN_BUILTIN_MISROUTE": "应走 wf1 内置 chartType（如 treemap），禁止 customViz 文本列表仿制",
+  "AIVIZ_WARN_STYLE_KEYS_NOT_APPLIED": "须接线 labelShow/tooltipShow、#tooltip、placeTooltipNearPointer",
+  "AIVIZ_WARN_DATA_ENCODING": "笛卡尔须读 p.encoding 或 rowsToSeries/resolveBoundColumns",
+  "AIVIZ_WARN_DATA_DOMAIN_SORT": "折线/面积须 rowsToSeries 或 localeCompare 排序类目轴",
+  "AIVIZ_WARN_STYLE_COMPLIANCE": "render 读 (p&&p.style)||{}；styleSchema 每项加中文 title",
+  "AIVIZ_WARN_DETAIL_TABLE_METRICS": "P2 须 dimensions.max>1 且 metrics min=0,max=0；参考 scrolling-table fieldSlots，勿整包 scaffold",
+  "AIVIZ_WARN_DOM_HOST_LOOKUP": "禁止 (host||document).getElementById；用 host.querySelector('#vs-cv-*')",
+  "AIVIZ_WARN_DOM_DOCUMENT_LOOKUP": "禁止 document.getElementById；节点须在宿主内 querySelector",
+  "AIVIZ_WARN_PLATFORM_DUPLICATE_STYLE": "styleSchema 键与平台六块重复；删 schema 项，用 payload.rows/样式 Tab",
+  "AIVIZ_WARN_PLATFORM_STYLE_KEYS": "须读 labelShow/tooltipShow/paletteColors 或 --vs-palette-*"
+}

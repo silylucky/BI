@@ -1,0 +1,19 @@
+{
+  "startedAt": "2026-08-04T14:47:39+08:00",
+  "finishedAt": "2026-08-04T14:47:52+08:00",
+  "branch": "dev",
+  "commit": "ada6a29e",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,docs,.cursor] 34f (+959/-134) @ 2026-08-04 14:47 +0800",
+  "filesChanged": 34,
+  "insertions": 959,
+  "deletions": 134,
+  "topDirs": { "fe": 28, "docs": 3, ".cursor": 3 },
+  "sampleFiles": [
+    "fe/src/lib/chartGeoAreaMapping.ts",
+    "fe/src/components/charts/engine/geo/geoMapChart.ts",
+    "docs/feature-truth/2026-08-04-map-area-mapping-truth-audit.md"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/", "fe/.env.production.local"]
+}

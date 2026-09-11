@@ -1,0 +1,34 @@
+wip: [tests,backend,fe,docs,+2] 20f (+319/-102) @ 2026-08-07 01:22 +0800
+
+Areas:
+  tests/       6 files (+185/-11)
+  backend/     5 files (+47/-73)
+  fe/          3 files (+37/-3)
+  docs/        3 files (+11/-8)
+  .agents/     2 files (+36/-0)
+  .cursor/     1 files (+3/-7)
+
+Changed (up to 25):
+M  .agents/skills/bug-case-library/SKILL.md
+A  .agents/skills/bug-case-library/cases/fe-richtext-blank-line-collapse.md
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/views.py
+M  backend/app/views/onboarding.py
+M  backend/app/views/store.py
+M  backend/app/views/user_override.py
+M  backend/migrations/versions/0038_view_user_override_persistence.py
+M  docs/api/README.md
+M  docs/automate/prd/F09-VIEW.md
+M  docs/services/views.md
+M  fe/src/components/dashboard/richTextHtml.test.ts
+M  fe/src/components/dashboard/richTextHtml.ts
+M  fe/src/index.css
+M  tests/conftest.py
+M  tests/test_ff_track_e_view_nfr_e95d.py
+M  tests/test_m12_batch1_r238.py
+M  tests/test_rpt_view_cat_gov_r60.py
+A  tests/test_view_user_override_persistence.py
+M  tests/test_viz_view_design_cat_r63.py
+
+stat: 20 files changed, 319 insertions(+), 102 deletions(-)
+branch: dev | scheduled-auto-commit

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="72" viewBox="0 0 320 72" preserveAspectRatio="xMidYMid slice">
+  <rect width="320" height="72" fill="#0f172a"/>
+  <g transform="scale(0.4444444444444444 1.125)">
+  
+  <defs>
+    <linearGradient id="fade-l" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#2dd4bf" stop-opacity="0"/><stop offset="1" stop-color="#2dd4bf" stop-opacity="0.55"/></linearGradient>
+    <linearGradient id="fade-r" x1="1" y1="0" x2="0" y2="0"><stop stop-color="#2dd4bf" stop-opacity="0"/><stop offset="1" stop-color="#2dd4bf" stop-opacity="0.55"/></linearGradient>
+  </defs>
+  <path d="M36 20 L48 32 L36 44 L24 32 Z" fill="none" stroke="#2dd4bf" stroke-width="1.2" opacity="0.55"/>
+  <circle cx="36" cy="32" r="2" fill="#2dd4bf" opacity="0.55"/>
+  <path d="M684 20 L696 32 L684 44 L672 32 Z" fill="none" stroke="#2dd4bf" stroke-width="1.2" opacity="0.55"/>
+  <circle cx="684" cy="32" r="2" fill="#2dd4bf" opacity="0.55"/>
+  <rect x="72" y="31.5" width="160" height="1" fill="url(#fade-l)"/>
+  <rect x="488" y="31.5" width="160" height="1" fill="url(#fade-r)"/>
+  <rect x="260" y="10" width="200" height="44" fill="#2dd4bf" fill-opacity="0.06" rx="2"/>
+  <path d="M344 32 Q352 28 360 32 Q368 36 376 32" fill="none" stroke="#2dd4bf" stroke-width="1" opacity="0.45"/>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+﻿{
+    "excludedUntracked":  [
+                              ".tmp/",
+                              "data/artifacts/",
+                              "data/backups/",
+                              "fe/.env.production.local"
+                          ],
+    "runId":  "2026-08-04T224752",
+    "branch":  "dev",
+    "startedAt":  "2026-08-04T22:47:52+08:00",
+    "reason":  "no_staged_changes",
+    "finishedAt":  "2026-08-04T22:47:52+08:00",
+    "status":  "skipped"
+}

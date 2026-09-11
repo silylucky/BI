@@ -1,0 +1,36 @@
+wip: [fe,docs,.cursor] 25f (+384/-47) @ 2026-08-06 22:51 +0800
+
+Areas:
+  fe/          23 files (+113/-40)
+  docs/        1 files (+268/-0)
+  .cursor/     1 files (+3/-7)
+
+Changed (up to 25):
+M  .cursor/logs/scheduled-auto-commit/state.json
+A  docs/deliverable-gate/2026-08-06-vitalspan-whole-product-graduation.md
+M  fe/src/components/charts/engine/three/geo3dQuality.test.ts
+M  fe/src/components/charts/engine/three/geo3dQuality.ts
+M  fe/src/components/charts/engine/three/geo3dRuntime.test.ts
+M  fe/src/components/charts/engine/three/geo3dRuntime.ts
+M  fe/src/components/charts/engine/three/renderThreeChoropleth.ts
+M  fe/src/components/dashboard/DashboardListCard.tsx
+M  fe/src/components/dashboard/DashboardListCardPreview.tsx
+M  fe/src/components/dashboard/DashboardWidget.tsx
+M  fe/src/components/dashboard/TabsWidget.tsx
+M  fe/src/components/dashboard/dashboardWidgetTypography.ts
+M  fe/src/components/dashboard/hubCardUi.ts
+M  fe/src/components/dashboard/pixelCanvas/PixelCanvas.tsx
+M  fe/src/components/dashboard/pixelCanvas/PixelCanvasScaleContext.tsx
+M  fe/src/components/dashboard/pixelCanvas/PixelShape.tsx
+M  fe/src/components/dashboard/templates/TemplateLayoutLivePreview.tsx
+M  fe/src/components/dashboard/templates/VizTemplateCard.tsx
+M  fe/src/index.css
+M  fe/src/pages/admin/reports/ReportSchedulesPage.tsx
+M  fe/src/pages/admin/reports/ReportTemplatesPage.tsx
+M  fe/src/pages/admin/reports/components/SchedulePrecheckPanel.test.tsx
+M  fe/src/pages/admin/reports/prefab-reports.smoke.test.tsx
+M  fe/src/pages/admin/reports/report-center.smoke.test.tsx
+M  fe/src/pages/admin/reports/report-schedules.smoke.test.tsx
+
+stat: 25 files changed, 384 insertions(+), 47 deletions(-)
+branch: dev | scheduled-auto-commit

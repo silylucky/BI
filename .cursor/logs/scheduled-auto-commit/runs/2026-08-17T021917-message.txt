@@ -1,0 +1,13 @@
+wip: [scripts,deploy] 3f (+216/-0) @ 2026-08-17 02:19 +0800
+
+Areas:
+  scripts/     2 files (+154/-0)
+  deploy/      1 files (+62/-0)
+
+Changed (up to 25):
+A  deploy/remote_apply.sh
+A  scripts/deploy_dev.ps1
+A  scripts/deploy_dev.sh
+
+stat: 3 files changed, 216 insertions(+)
+branch: dev | scheduled-auto-commit

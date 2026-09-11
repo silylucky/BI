@@ -1,0 +1,91 @@
+---
+description: VitalSpan 前端 fe/ 组件化、设计系统与私有化 UX
+globs:
+  - "fe/**/*.tsx"
+  - "fe/**/*.ts"
+  - "fe/**/*.css"
+alwaysApply: false
+---
+
+# 管理前端规范（fe/）
+
+> **React + TypeScript + Vite + TailAdmin 视觉 + shadcn/ui + Radix + Tailwind CSS v4**  
+> 设计系统：**b-design-system-tailadmin-radix**（`.agents/skills/b-design-system-tailadmin-radix/SKILL.md`）  
+> 产品 `docs/automate/goal.md` · 架构 `docs/arch.md` §4.3 · 布局 `docs/ui/layout.md` · 包管理 **pnpm**
+
+**组件与页面设计必须完全遵守 b-design-system-tailadmin-radix，严禁自由发挥**（不得跳过 Skill 凭记忆臆造视觉/交互/布局；缺规范时走 Skill `output-modes/missing-component.md`）。
+
+## 分期说明（M1）
+
+| M1 交付 | M1 不做（后续里程碑补） |
+|---------|-------------------------|
+| Admin 壳层、`routes.tsx` + `layouts/`、`components/ui` 最小集 | TanStack Query、`@/lib/queryKeys.ts`、`mapApiError` 全量数据层 |
+| `check:design` Token 门禁 | Embed 业务页、消费态 view 模式页 |
+
+M1 仅静态壳层时，数据层/表单/envelope 章节为**预备约束**，落地业务 API 联调时起效。
+
+## 基元与导入
+
+- 别名 `@/` → `fe/src/`；UI 用 `@/components/ui/*`，工具 `@/lib/utils`
+- 浮层/菜单/对话框/Tabs/Tooltip 等须经 `@/components/ui/*`（底层 `@radix-ui/react-*`），**禁止** `@base-ui/*` 与手写 portal + click-outside
+- 业务代码禁止原生 `<button>` / `<input>`（测试 mock、Skill 明确豁免除外）
+- 加载 `CardSkeleton` / `Skeleton`；确认 `AlertDialog`（禁 `window.confirm`）；提示 `sonner`
+
+## 公共组件（防漂移）
+
+**清单与用法** → `fe/src/components/README.md`（写页面前**必读**）。
+
+| 规则 | 要求 |
+|------|------|
+| 复用 | README 已有组件能覆盖需求 → 必须 import；不够则扩 props/variant，禁止页面内复制 |
+| 上浮 | 同一 UI 模式 ≥2 页出现 → 抽到 `components/` 或 `components/admin/`（见 README 放置规则），请求逻辑留页面/hooks |
+| 单页 | 强绑定业务、无可复用语义 → `pages/<page>/components/` |
+| 维护 | 新增/变更公共组件：同一 PR 更新 `components/README.md` |
+| 顺手 | 改页时发现重复实现 → 同一 PR 改为公共组件或抽新件 |
+
+禁止：页面内重写 `SectionCard` / `DataTableCard` / `FilterBar` 等等价物；复制 Alert 配色或表格 loading/empty 分支；自创 Token/壳层比例/组件变体。选型须走 Skill `references/decision-matrix.md` → `component-index.md` / `pattern-index.md`。
+
+## 设计系统（b-design-system-tailadmin-radix）
+
+- **视觉语言**：TailAdmin React Pro（经 shadcn/Radix 映射，见 Skill「shadcn 映射速查」）
+- **Token**：`fe/src/index.css` 语义 Token 须与 Skill `templates/globals.css` 对齐；**禁止硬编码 hex**（`check:design` 扫描，`@design-token-ok` 仅用于豁免行）
+- **壳层**：侧栏 290px/90px、顶栏 sticky、内容区 `max-w-(--breakpoint-2xl)`（见 `layout.md` §2）
+- **路由 IA**：`/admin/*` 单应用主壳层 · `/embed/*` 嵌入
+- **状态**：hover / focus-visible / disabled / loading / empty / error / dark / responsive 全覆盖
+- **检索**：先读 `SKILL.md` → 按需 `references/agent-retrieval-guide.md`；普通任务 ≤3 次 reference 读取
+
+## 目录与体量（软约束）
+
+| 项 | 约定 |
+|----|------|
+| M1 过渡 | `src/routes.tsx` + `src/layouts/`（目标态 `src/app/` 见 arch §4.3，二期统一） |
+| 单文件 | ≤300 行，≥200 行须拆 `hooks/` / `components/` |
+| 跨页 | `components/`（见 README 放置规则） |
+| 同目录 | ≤10 组件文件；`pages/admin/*Page.tsx` 路由入口不计入 |
+
+## 数据层（业务联调起）
+
+- 仅调 **`/api/v1/*`** 与文档登记的 `/health`
+- envelope：`code === 0` 成功，失败读 `message` / `msg`（与 `docs/api/README.md` 错误体一致）
+- 数据走 **TanStack Query**，key 注册 `@/lib/queryKeys.ts`；写后 `invalidateQueries`
+- 类型集中 `@/lib/api.ts`，字段 snake_case 跟随服务端
+
+## 表单
+
+- 必填 Label 用 `RequiredLabel`；前端校验与服务端契约一致，只做第一道拦截
+- 字段错误：紧贴输入框、`aria-invalid`、中文文案；**禁 toast 报字段级错误**
+- 校验/错误映射放页面同目录（`endpointErrors.ts` 模式）；≥5 字段抽 `useXxxForm`
+- 提交中 disabled + loading；成功后再关弹窗/抽屉
+
+## 系统文案
+
+面向政企管理员与数据工程师：**简体中文**、可行动、少技术细节。
+
+- 说结果与下一步，禁裸露机器码、英文堆栈、配置键、HTTP 码、`failed to fetch` 等
+- 用户可见错误须经 `mapApiError`（`@/lib/apiError.ts`）或页面 `mapXxxError` 转中文；兜底「操作失败，请稍后重试」
+- 空态/占位符：「暂无数据」「加载中…」
+
+## 视觉与提交
+
+色板、组件样式、动效、页面模式 → `.agents/skills/b-design-system-tailadmin-radix/SKILL.md`。  
+提交前：`cd fe && pnpm run check:design`（M1 起纳入 CI）。

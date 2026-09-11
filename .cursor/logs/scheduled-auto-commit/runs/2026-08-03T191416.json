@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-03T19:14:16+08:00",
+  "finishedAt": "2026-08-03T19:14:25+08:00",
+  "branch": "dev",
+  "commit": "e325445d",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,backend,.cursor,docs,+1] 28f (+721/-74) @ 2026-08-03 19:14 +...",
+  "filesChanged": 28,
+  "insertions": 721,
+  "deletions": 74,
+  "topDirs": { "fe": 20, "backend": 3, ".cursor": 3, "docs": 1, "tests": 1 },
+  "sampleFiles": [
+    "fe/src/components/dashboard/ChartFieldMultiSlot.tsx",
+    "fe/src/lib/chartFieldAssignment.ts",
+    "fe/src/lib/resolveChartEncoding.ts",
+    "backend/app/ingestion/sync_executor.py"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/"]
+}

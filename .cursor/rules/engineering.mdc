@@ -1,0 +1,67 @@
+---
+description: VitalSpan 工程约束（体量 · 信封 · 分层 · 复用 · 超时幂等）
+alwaysApply: true
+---
+
+# 工程公共约束
+
+> 生产红线 @.cursor/rules/production.mdc · 交付 @.cursor/rules/delivery.mdc · 文档 @.cursor/rules/prd-sync.mdc  
+> 路径与模块边界以 `docs/arch.md` §4 为准。
+
+## 体量（软约束 · R11）
+
+| 范围 | 上限 | 说明 |
+|------|------|------|
+| 单函数 | ≤ **60** 行 | 超出拆私有函数或子模块 |
+| 单文件（业务） | fe ≤ **300** 行；py ≤ **200** 行 | fe 细则见 fe-ui.mdc |
+| 同目录手写源文件 | ≤ **12** 个 | 超出建子包/子目录 |
+| **豁免** | — | Alembic 迁移、生成物、脚手架模板不计入 |
+
+## API 信封（R12 · 强制）
+
+成功/失败 JSON 统一字段：
+
+```json
+{ "code": "<string|int>", "message": "人话说明", "detail": {} }
+```
+
+- HTTP 状态码与 `code` 语义一致；失败 `message` 面向用户/运维可读
+- 下载 / SSE / 二进制等例外须在 `docs/api/README.md` 标明
+- 前端 envelope 解析预备约束见 fe-ui.mdc（M1 壳层后联调生效）
+
+## 分层（R13）
+
+| 角色 | 后端 | 前端 `fe/` |
+|------|------|------------|
+| **entry** | `app/api/v1/`、`main.py` | `routes.tsx`、`pages/**` |
+| **use-case** | 域内 `service.py` / 薄 orchestrator | `hooks/`、页面编排 |
+| **domain** | `datasources/`、`query/`、`auth/`… | `components/`、`lib/` 业务 |
+| **shared** | `core/`、`schemas/` | `components/ui/`、`lib/utils.ts` |
+| **outbound** | 方言/外部 HTTP | `@/lib/api.ts` |
+
+```
+entry → use-case → domain
+outbound → 外部系统
+```
+
+- **禁止** entry 写 SQL/方言；**禁止** shared 依赖 domain 业务；**禁止** outbound 管 ORM 会话
+
+## 复用（防漂移 · R13）
+
+| 层 | 清单 | 写 entry/页面前 |
+|----|------|-----------------|
+| 后端域 | `docs/services/<域>.md` | 必读域附录 |
+| 前端组件 | `fe/src/components/README.md` | 必读 |
+
+- 清单能覆盖 → **必须引用**；同域 ≥2 处 → 上浮 domain；跨模块无状态 → shared
+- 公共 API 变更：**同 PR** 更新 README / `docs/services/` + 测试
+
+## 超时 · 幂等（代码侧 · R16）
+
+- 出站与 DB 调用带显式超时，禁无限等待
+- 可重复提交写操作：幂等键或 409；重试只包幂等路径
+- 限流/熔断见 @.cursor/rules/production.mdc
+
+## 密码学调用
+
+业务加解密/摘要走 `app/core/crypto/`（默认国密）；禁止业务文件直接散落 gmssl/cryptography。

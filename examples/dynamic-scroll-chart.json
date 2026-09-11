@@ -1,0 +1,110 @@
+{
+  "manifest": {
+    "id": "dynamic-scroll-chart",
+    "displayName": "动态滚动图表",
+    "version": "1.0.0",
+    "entry": "index.html",
+    "runtime": "html",
+    "rendererHint": "html",
+    "fieldSlots": {
+      "dimensions": {
+        "min": 1,
+        "max": 2,
+        "label": "名称列"
+      },
+      "metrics": {
+        "min": 1,
+        "max": 1,
+        "label": "数值列"
+      }
+    },
+    "styleSchema": {
+      "type": "object",
+      "x-styleSections": [
+        {
+          "title": "滚动",
+          "properties": [
+            "scrollSpeed",
+            "scrollRows",
+            "visibleRows",
+            "pauseOnHover"
+          ]
+        },
+        {
+          "title": "外观",
+          "properties": [
+            "rowHeight",
+            "fontSize",
+            "barColor",
+            "showValue"
+          ]
+        }
+      ],
+      "properties": {
+        "scrollSpeed": {
+          "type": "number",
+          "title": "换行速度（秒/次）",
+          "minimum": 1,
+          "maximum": 30,
+          "default": 3
+        },
+        "scrollRows": {
+          "type": "number",
+          "title": "每次换行行数",
+          "minimum": 1,
+          "maximum": 10,
+          "default": 1
+        },
+        "visibleRows": {
+          "type": "number",
+          "title": "可视行数",
+          "minimum": 3,
+          "maximum": 20,
+          "default": 6
+        },
+        "rowHeight": {
+          "type": "number",
+          "title": "行高（像素）",
+          "minimum": 28,
+          "maximum": 64,
+          "default": 36
+        },
+        "fontSize": {
+          "type": "number",
+          "title": "字号",
+          "minimum": 10,
+          "maximum": 20,
+          "default": 13
+        },
+        "barColor": {
+          "type": "string",
+          "title": "条形颜色",
+          "default": "#3b82f6"
+        },
+        "showValue": {
+          "type": "boolean",
+          "title": "显示数值",
+          "default": true
+        },
+        "pauseOnHover": {
+          "type": "boolean",
+          "title": "悬停暂停",
+          "default": true
+        }
+      }
+    },
+    "defaultStyle": {
+      "scrollSpeed": 3,
+      "scrollRows": 1,
+      "visibleRows": 6,
+      "rowHeight": 36,
+      "fontSize": 13,
+      "barColor": "#3b82f6",
+      "showValue": true,
+      "pauseOnHover": true
+    }
+  },
+  "files": {
+    "index.html": "<!DOCTYPE html><html lang=\"zh-CN\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\"><style>html,body{margin:0;height:100%;overflow:hidden;background:transparent;color:var(--dashboard-text-primary,#e2e8f0);font-family:system-ui,-apple-system,sans-serif}#vs-cv-scroll-chart{height:100%;display:flex;flex-direction:column;overflow:hidden;box-sizing:border-box}#vs-cv-viewport{flex:1;overflow:hidden;position:relative}#vs-cv-track{position:absolute;left:0;right:0;top:0;will-change:transform}#vs-cv-track.anim{transition:transform .6s ease}.vs-cv-row{display:flex;align-items:center;gap:10px;padding:0 10px;box-sizing:border-box;border-bottom:1px solid rgba(148,163,184,.10)}.vs-cv-label{flex:0 0 34%;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--dashboard-text-secondary,#cbd5e1)}.vs-cv-barwrap{flex:1;position:relative;height:38%;min-height:10px;background:rgba(148,163,184,.12);border-radius:4px;overflow:hidden}.vs-cv-bar{position:absolute;left:0;top:0;bottom:0;border-radius:4px;transition:width .8s ease;min-width:2px}.vs-cv-val{flex:0 0 auto;font-variant-numeric:tabular-nums;text-align:right;color:var(--dashboard-text-primary,#e2e8f0)}.vs-cv-hint{padding:24px 12px;text-align:center;font-size:12px;color:var(--dashboard-text-muted,#64748b)}</style></head><body><div id=\"vs-cv-scroll-chart\"><div id=\"vs-cv-viewport\"><div id=\"vs-cv-track\"></div></div></div><script>(function(){var host=document.currentScript&&document.currentScript.parentElement;function q(id){return(host||document).getElementById(id)}function clearEl(el){while(el&&el.firstChild)el.removeChild(el.firstChild)}function bindingStatus(p){if(!p)return'unbound';return p.bindingStatus||((p.rows&&p.rows.length)?'bound':'unbound')}function statusHint(p){var st=bindingStatus(p);if(st==='error')return(p&&p.error)||'数据加载失败';if(st==='empty')return'暂无数据';if(st==='unbound')return'请在右侧绑定数据集与字段';return null}function isNum(v){return typeof v==='number'&&!isNaN(v)}function fmtNum(v){if(!isNum(v))return String(v==null?'':v);return Number.isInteger(v)?v.toLocaleString():v.toFixed(2)}var timer=null,offsetRows=0,rowEls=[];function stopTimer(){if(timer){clearInterval(timer);timer=null}}function render(p){p=p||{};var st=(p&&p.style)||{};var speed=Math.max(1,Number(st.scrollSpeed)||3);var stepRows=Math.max(1,Math.round(Number(st.scrollRows)||1));var visible=Math.max(3,Math.round(Number(st.visibleRows)||6));var rowH=Number(st.rowHeight)||36;var fs=Number(st.fontSize)||13;var barColor=st.barColor||'#3b82f6';var showVal=st.showValue!==false;var pauseHover=st.pauseOnHover!==false;var vp=q('vs-cv-viewport');var track=q('vs-cv-track');if(!vp||!track)return;stopTimer();offsetRows=0;rowEls=[];clearEl(track);track.classList.remove('anim');track.style.transform='translateY(0)';var hint=statusHint(p);if(hint){var msg=document.createElement('div');msg.className='vs-cv-hint';msg.textContent=hint;track.appendChild(msg);return}var cols=p.columns||[];var rows=p.rows||[];var dims=(p.fields&&p.fields.dimensions)||[];var mets=(p.fields&&p.fields.metrics)||[];var di=0,mi=-1;for(var c=0;c<cols.length;c++){if(mets.indexOf(cols[c])>=0){mi=c;break}}if(mi<0){for(var c2=0;c2<cols.length;c2++){var ok=true;for(var r0=0;r0<Math.min(rows.length,20);r0++){if(!isNum(rows[r0][c2])){ok=false;break}}if(ok&&rows.length){mi=c2;break}}}if(mi===0&&cols.length>1)di=1;if(mi<0){var ng=document.createElement('div');ng.className='vs-cv-hint';ng.textContent='请绑定一个数值列';track.appendChild(ng);return}rows=rows.slice(0,200);var maxV=0;for(var r1=0;r1<rows.length;r1++){var v=rows[r1][mi];if(isNum(v)&&v>maxV)maxV=v}if(maxV<=0)maxV=1;var needScroll=rows.length>visible;var copies=needScroll?Math.ceil((stepRows+visible)/rows.length)+1:1;var list=[];for(var cp=0;cp<copies;cp++)list=list.concat(rows);for(var r=0;r<list.length;r++){var rowEl=document.createElement('div');rowEl.className='vs-cv-row';rowEl.style.height=rowH+'px';rowEl.style.fontSize=fs+'px';var lab=document.createElement('div');lab.className='vs-cv-label';lab.textContent=list[r][di]==null?'':String(list[r][di]);rowEl.appendChild(lab);var wrap=document.createElement('div');wrap.className='vs-cv-barwrap';var bar=document.createElement('div');bar.className='vs-cv-bar';bar.style.background=barColor;bar.style.width='0%';bar.setAttribute('data-w',Math.max(1.5,Math.min(100,(isNum(list[r][mi])?list[r][mi]/maxV*100:0)))+'%');wrap.appendChild(bar);rowEl.appendChild(wrap);if(showVal){var val=document.createElement('div');val.className='vs-cv-val';val.style.fontSize=fs+'px';val.textContent=fmtNum(list[r][mi]);rowEl.appendChild(val)}track.appendChild(rowEl);rowEls.push(rowEl)}requestAnimationFrame(function(){requestAnimationFrame(function(){var bars=track.querySelectorAll('.vs-cv-bar');for(var b=0;b<bars.length;b++)bars[b].style.width=bars[b].getAttribute('data-w')})});if(!needScroll)return;function step(){track.classList.add('anim');offsetRows+=stepRows;track.style.transform='translateY('+(-offsetRows*rowH)+'px)';if(offsetRows>=rows.length){setTimeout(function(){track.classList.remove('anim');offsetRows-=rows.length;track.style.transform='translateY('+(-offsetRows*rowH)+'px)'},650)}}timer=setInterval(step,speed*1000);if(pauseHover){vp.onmouseenter=function(){stopTimer()};vp.onmouseleave=function(){if(!timer)timer=setInterval(step,speed*1000)}}else{vp.onmouseenter=null;vp.onmouseleave=null}}if(host&&host.vsCv&&host.vsCv.mount){host.vsCv.mount(render)}else{render({columns:['项目','完成率'],rows:[['华北区',86],['华东区',72],['华南区',93],['西南区',64],['华中区',78],['东北区',55],['西北区',69],['港澳台',81]],fields:{dimensions:['项目'],metrics:['完成率']},style:{}}})})();</script></body></html>"
+  }
+}

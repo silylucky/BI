@@ -1,0 +1,40 @@
+wip: [fe,docs,tests,backend,+3] 25f (+396/-32) @ 2026-08-03 17:14 +0800
+
+Areas:
+  fe/          6 files (+76/-8)
+  docs/        6 files (+34/-8)
+  tests/       4 files (+212/-8)
+  backend/     4 files (+7/-6)
+  .cursor/     3 files (+59/-1)
+  _root/       1 files (+6/-0)
+  .dev/        1 files (+2/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T164427-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T164427.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  .dev/config.yaml
+M  backend/.env.example
+M  backend/app/core/config.py
+M  backend/app/dashboard/export_render.py
+M  backend/app/dashboard/export_snapshot.py
+M  docker-compose.yml
+M  docs/arch.md
+M  docs/feature-design/2026-08-03-report-center-delivery-closure.md
+M  docs/feature-truth/2026-08-03-report-center-g5-visual-pdf-truth-audit.md
+M  docs/features/report-center-manual-test-cases.md
+M  docs/services/reports.md
+M  docs/user-guide/report-center-how-to.md
+M  fe/src/App.tsx
+M  fe/src/lib/api.ts
+A  fe/src/lib/appBasePath.test.ts
+A  fe/src/lib/appBasePath.ts
+M  fe/src/lib/exportSnapshot.ts
+M  fe/src/pages/export/DashboardExportSnapshotPage.smoke.test.tsx
+M  tests/test_dashboard_visual_export.py
+A  tests/test_g5_export_fe_url.py
+A  tests/test_g5_live_export.py
+M  tests/test_report_dashboard_schedule.py
+
+stat: 25 files changed, 396 insertions(+), 32 deletions(-)
+branch: dev | scheduled-auto-commit

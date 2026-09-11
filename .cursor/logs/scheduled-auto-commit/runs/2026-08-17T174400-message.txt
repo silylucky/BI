@@ -1,0 +1,23 @@
+wip: [fe,.cursor] 13f (+153/-47) @ 2026-08-17 17:44 +0800
+
+Areas:
+  fe/          12 files (+149/-43)
+  .cursor/     1 files (+4/-4)
+
+Changed (up to 25):
+M  .cursor/logs/scheduled-auto-commit/state.json
+A  fe/public/template-assets/ui/gallery-thumb-backdrop-dark.svg
+A  fe/public/template-assets/ui/gallery-thumb-backdrop-light.svg
+M  fe/src/components/charts/engine/buildDatasetEncoding.ts
+M  fe/src/components/charts/engine/legendSnapshot.test.ts
+M  fe/src/components/dashboard/BorderlessDecorGallery.tsx
+A  fe/src/components/dashboard/GalleryThumbFrame.tsx
+M  fe/src/components/dashboard/TemplateAssetImageGallery.tsx
+M  fe/src/components/dashboard/imageSourceFieldRail.tsx
+M  fe/src/lib/chartInspectorCapabilities.test.ts
+M  fe/src/lib/chartInspectorCapabilities.ts
+M  fe/src/lib/chartStylePanelGates.test.ts
+M  fe/src/lib/chartStylePanelGates.ts
+
+stat: 13 files changed, 153 insertions(+), 47 deletions(-)
+branch: dev | scheduled-auto-commit

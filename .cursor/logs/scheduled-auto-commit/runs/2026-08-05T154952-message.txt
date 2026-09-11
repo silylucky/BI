@@ -1,0 +1,19 @@
+wip: [f] 10f (+252/-48) @ 2026-08-05 15:50 +0800
+
+Areas:
+  fe/          10 files (+252/-48)
+
+Changed (up to 25):
+A  fe/src/components/charts/engine/d3/cartesian/renderArea.tiered.test.ts
+M  fe/src/components/charts/engine/d3/cartesian/renderBar.test.ts
+M  fe/src/components/charts/engine/d3/cartesian/renderDualAxes.test.ts
+M  fe/src/components/charts/engine/d3/core/hierarchicalAxis.ts
+M  fe/src/pages/admin/datasets/DatasetFormPage.tsx
+M  fe/src/pages/admin/datasets/DatasetTablePicker.tsx
+M  fe/src/pages/admin/datasets/components/DatasetBindPanel.tsx
+M  fe/src/pages/admin/datasets/components/DatasetFieldWorkbench.tsx
+M  fe/src/pages/admin/datasets/dataset-form.smoke.test.tsx
+M  fe/src/pages/admin/datasets/hooks/useDatasetTableColumns.ts
+
+stat: 10 files changed, 252 insertions(+), 48 deletions(-)
+branch: dev | scheduled-auto-commit

@@ -1,0 +1,51 @@
+---
+description: 地图铁律——choropleth 仅离线中国 GeoJSON；gis-map 允许同页 MapLibre（默认禁公网底图）
+alwaysApply: true
+---
+
+# 地图铁律（GEO-IRON-01）
+
+> 对标 DataEase/Superset 时**只借鉴离线区域地图**能力；**禁止**引入其在线地图（高德/天地图/腾讯/Mapbox 瓦片等）路径。
+
+## 双路径
+
+| 路径 | chartType | 引擎 | 底图 |
+|------|-----------|------|------|
+| **Choropleth** | `map` / `map-3d` | `GeoEnginePort` / Three.js Extrude | 仅离线中国 GeoJSON |
+| **GIS 图** | `gis-map` | 同页 MapLibre GL JS（懒加载） | **仅**管理员登记的全球 PMTiles（`tileServiceId`）；无离线省界/空白底图 |
+
+## Choropleth 必须遵守
+
+| 项 | 约定 |
+|----|------|
+| **范围** | **仅中华人民共和国**省级行政区（可扩展省→市下钻，仍须离线 GeoJSON） |
+| **底图** | **仅离线**：`fe/src/assets/geo/*.json` 或经平台 API 分发的 GeoJSON |
+| **渲染** | ECharts / D3 choropleth / Three Extrude（非瓦片底图） |
+| **依赖** | **零**在线地图 SDK、瓦片 CDN、地图 Key |
+
+## gis-map 必须遵守
+
+- **不做** iframe / sandbox / GeoLibre 运行时 / `web.geolibre.app`
+- **配置** 仅校验后的 `nativeBody.gisProject`（AI L1/L2；禁止 L3 customViz 内嵌 MapLibre）
+- **PMTiles** 为**唯一**底图来源：须管理员登记内网 `tileServiceId` 后出图；**不进 release**、layout **不得**写制品绝对路径；未部署/未登记时显示明确错误（禁止回退离线省界或公网瓦片）
+- **查询** JWT 在父页；MapLibre `transformRequest` 不得带 `Authorization` / Cookie
+- **默认** 不得预填公网瓦片 URL；二期才允许管理员登记 `serviceId`
+
+## 明确禁止（共用）
+
+- 高德 / 天地图 / 腾讯 / Mapbox / OSM 等**在线瓦片底图**（choropleth 全禁；gis-map 未登记服务时全禁）
+- AntV L7 / L7Plot **在线 Scene**
+- 运行时请求外部 geo CDN（含 `geo.datav.aliyun.com` 等）——choropleth 资产须**打包进仓库**
+- 世界地图、境外行政区默认底图
+- customViz bundle 内嵌 MapLibre / 在线瓦片
+
+## 代码锚点
+
+- Choropleth：`fe/src/components/charts/engine/geoEnginePort.ts` · `OfflineGeoPort.ts`
+- GIS 图：`fe/src/components/charts/engine/maplibre/`
+- 架构：`docs/arch.md` **ADR-12**
+
+## Agent 纪律
+
+- Choropleth 方案涉及 MapLibre / 在线瓦片 → **停止**，改离线 GeoJSON
+- `gis-map` 方案涉及 iframe 沙箱、GeoLibre 整应用、默认 OpenFreeMap → **停止**，改平台 MapLibre + 已登记 PMTiles

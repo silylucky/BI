@@ -1,0 +1,181 @@
+{
+  "goal": "c:\\Users\\30381\\Desktop\\VitalSpan\\docs\\material\\vitalspan-product-whitepaper\\goal.part-08.json",
+  "themePack": "theme07",
+  "slideCount": 1,
+  "part": {
+    "index": 8,
+    "total": 8,
+    "startSlide": 36,
+    "endSlide": 36
+  },
+  "slides": [
+    {
+      "slide": 36,
+      "layout": "theme07_page018",
+      "label": "季度 Q1 冷启动",
+      "roles": [
+        "trend"
+      ],
+      "fillPlan": {
+        "text": [
+          {
+            "key": "eyebrow",
+            "role": "eyebrow",
+            "type": "string",
+            "maxChars": 18
+          },
+          {
+            "key": "marker",
+            "role": "eyebrow",
+            "type": "string",
+            "maxChars": 18
+          },
+          {
+            "key": "season",
+            "role": "eyebrow",
+            "type": "string",
+            "maxChars": 18
+          },
+          {
+            "key": "title",
+            "role": "title",
+            "type": "string",
+            "maxChars": 18
+          },
+          {
+            "key": "titleTail",
+            "role": "eyebrow",
+            "type": "string",
+            "maxChars": 18
+          },
+          {
+            "key": "lead",
+            "role": "body",
+            "type": "string",
+            "maxChars": 74
+          },
+          {
+            "key": "closing",
+            "role": "eyebrow",
+            "type": "string",
+            "maxChars": 22
+          },
+          {
+            "key": "chartLabel",
+            "role": "eyebrow",
+            "type": "string",
+            "maxChars": 18
+          },
+          {
+            "key": "contextActive",
+            "role": "eyebrow",
+            "type": "number",
+            "maxChars": 18
+          },
+          {
+            "key": "contextLabel",
+            "role": "eyebrow",
+            "type": "string",
+            "maxChars": 18
+          }
+        ],
+        "arrays": [
+          {
+            "key": "months",
+            "role": "misc",
+            "visibleCount": 3,
+            "maxCount": 3,
+            "countKey": null,
+            "itemShape": {
+              "m": "string",
+              "amount": "number"
+            },
+            "itemFields": {
+              "m": {
+                "role": "eyebrow",
+                "type": "string",
+                "maxChars": 18
+              },
+              "amount": {
+                "role": "metric",
+                "type": "number",
+                "numericRange": {
+                  "observedMin": 45,
+                  "observedMax": 59
+                },
+                "numericBounds": {
+                  "min": 0,
+                  "max": 64.9,
+                  "enforced": false
+                },
+                "maxChars": 9
+              }
+            }
+          },
+          {
+            "key": "context",
+            "role": "misc",
+            "visibleCount": 4,
+            "maxCount": 4,
+            "countKey": null,
+            "itemShape": {
+              "q": "string",
+              "amount": "number"
+            },
+            "itemFields": {
+              "q": {
+                "role": "eyebrow",
+                "type": "string",
+                "maxChars": 18
+              },
+              "amount": {
+                "role": "metric",
+                "type": "number",
+                "numericRange": {
+                  "observedMin": 162,
+                  "observedMax": 318
+                },
+                "numericBounds": {
+                  "min": 0,
+                  "max": 349.8,
+                  "enforced": false
+                },
+                "maxChars": 9
+              }
+            }
+          },
+          {
+            "key": "metrics",
+            "role": "metric",
+            "visibleCount": 4,
+            "maxCount": 4,
+            "countKey": "metricCount",
+            "itemShape": {
+              "label": "string",
+              "value": "string",
+              "unit": "string"
+            },
+            "itemFields": {
+              "label": {
+                "role": "eyebrow",
+                "type": "string",
+                "maxChars": 18
+              },
+              "value": {
+                "role": "metric",
+                "type": "string",
+                "maxChars": 9
+              },
+              "unit": {
+                "role": "eyebrow",
+                "type": "string",
+                "maxChars": 18
+              }
+            }
+          }
+        ],
+        "media": []
+      }
+    }
+  ]
+}

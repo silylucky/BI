@@ -1,0 +1,14 @@
+{
+  "startedAt": "2026-08-04T20:48:08+08:00",
+  "finishedAt": "2026-08-04T20:48:25+08:00",
+  "branch": "dev",
+  "commit": "5265514e",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [.] 3f (+27/-1) @ 2026-08-04 20:48 +0800",
+  "filesChanged": 3,
+  "insertions": 27,
+  "deletions": 1,
+  "topDirs": { ".cursor": 3 },
+  "excludedPaths": [".tmp/", "data/backups/", "data/artifacts/", "fe/.env.production.local"]
+}

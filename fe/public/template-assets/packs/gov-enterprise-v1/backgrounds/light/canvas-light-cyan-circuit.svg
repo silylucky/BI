@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="abaeaeb8-base" x1="0" y1="0" x2="1920" y2="1080">
+      <stop stop-color="#e6e7e8"/>
+      <stop offset="0.32" stop-color="#b0bbc1"/>
+      <stop offset="0.68" stop-color="#c1d6df"/>
+      <stop offset="1" stop-color="#8ebdcd"/>
+    </linearGradient>
+    <radialGradient id="abaeaeb8-glowL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(345.59999999999997 237.6) scale(729.6)">
+      <stop stop-color="#22d3ee" stop-opacity="0.32"/>
+      <stop offset="0.55" stop-color="#116271" stop-opacity="0.20800000000000002"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="abaeaeb8-glowR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1574.3999999999999 777.6) scale(614.4)">
+      <stop stop-color="#22d3ee" stop-opacity="0.272"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#abaeaeb8-base)"/>
+  <rect width="1920" height="1080" fill="url(#abaeaeb8-glowL)"/>
+  <rect width="1920" height="1080" fill="url(#abaeaeb8-glowR)"/>
+  <line x1="80" y1="100" x2="599" y2="391" stroke="#22d3ee" stroke-width="0.5" opacity="0.25"/>
+  <line x1="426" y1="294" x2="945" y2="585" stroke="#22d3ee" stroke-width="0.5" opacity="0.25"/>
+  <line x1="772" y1="488" x2="1291" y2="779" stroke="#22d3ee" stroke-width="0.5" opacity="0.25"/>
+  <line x1="1118" y1="682" x2="1637" y2="973" stroke="#22d3ee" stroke-width="0.5" opacity="0.25"/>
+  <line x1="1464" y1="876" x2="223" y2="287" stroke="#22d3ee" stroke-width="0.5" opacity="0.25"/>
+  <line x1="1810" y1="190" x2="569" y2="481" stroke="#22d3ee" stroke-width="0.5" opacity="0.25"/>
+  <line x1="396" y1="384" x2="915" y2="675" stroke="#22d3ee" stroke-width="0.5" opacity="0.25"/>
+  <line x1="742" y1="578" x2="1261" y2="869" stroke="#22d3ee" stroke-width="0.5" opacity="0.25"/>
+  <line x1="1088" y1="772" x2="1607" y2="183" stroke="#22d3ee" stroke-width="0.5" opacity="0.25"/>
+  <line x1="1434" y1="966" x2="193" y2="377" stroke="#22d3ee" stroke-width="0.5" opacity="0.25"/>
+  <line x1="1780" y1="280" x2="253" y2="197" stroke="#22d3ee" stroke-width="0.5" opacity="0.25"/>
+  <circle cx="80" cy="100" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="253" cy="197" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="426" cy="294" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="599" cy="391" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="772" cy="488" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="945" cy="585" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="1118" cy="682" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="1291" cy="779" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="1464" cy="876" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="1637" cy="973" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="1810" cy="190" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="223" cy="287" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="396" cy="384" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="569" cy="481" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="742" cy="578" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="915" cy="675" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="1088" cy="772" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="1261" cy="869" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="1434" cy="966" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="1607" cy="183" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="1780" cy="280" r="2" fill="#22d3ee" opacity="0.42"/>
+  <circle cx="193" cy="377" r="2" fill="#22d3ee" opacity="0.42"/>
+  <g opacity="0.60" stroke="#22d3ee" stroke-width="2" fill="none">
+  <path d="M28 80 V28 H80"/>
+  <path d="M1840 28 H1892 V80"/>
+  <path d="M1892 1000 V1052 H1840"/>
+  <path d="M80 1052 H28 V1000"/>
+</g>
+  <defs>
+    <linearGradient id="abaeaeb8-hdr" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#22d3ee" stop-opacity="0.71"/>
+      <stop offset="1" stop-opacity="0.00"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="72" fill="url(#abaeaeb8-hdr)"/>
+  <line x1="0" y1="72" x2="1920" y2="72" stroke="#22d3ee" stroke-width="1" opacity="0.54"/>
+  <line x1="48" y1="72" x2="1872" y2="72" stroke="#22d3ee" stroke-width="2" opacity="0.32"/>
+  
+  <polygon points="1839.0525588832577,89 1839.0525588832577,111 1820,122 1800.9474411167423,111 1800.9474411167423,89 1820,78" fill="none" stroke="#22d3ee" stroke-width="1.2" opacity="0.54"/>
+  <circle cx="1820" cy="100" r="5.5" fill="#22d3ee" opacity="0.44"/>
+  <polygon points="119.05255888325766,989 119.05255888325766,1011 100,1022 80.94744111674234,1011 80.94744111674234,989 99.99999999999997,978" fill="none" stroke="#22d3ee" stroke-width="1.2" opacity="0.54"/>
+  <circle cx="100" cy="1000" r="5.5" fill="#22d3ee" opacity="0.44"/>
+</svg>

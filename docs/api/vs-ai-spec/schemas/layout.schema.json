@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vitalspan.local/schemas/layout-v2.json",
+  "title": "DashboardLayoutV2",
+  "type": "object",
+  "required": ["version", "canvas", "widgets"],
+  "properties": {
+    "version": { "const": 2 },
+    "canvas": {
+      "type": "object",
+      "required": ["width", "height"],
+      "properties": {
+        "width": { "type": "integer", "minimum": 800 },
+        "height": { "type": "integer", "minimum": 600 }
+      }
+    },
+    "widgets": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/widget" }
+    },
+    "globalFilters": { "type": "array" },
+    "styleConfig": { "type": "object" }
+  },
+  "$defs": {
+    "widget": {
+      "type": "object",
+      "required": ["id", "type", "title", "order"],
+      "properties": {
+        "id": { "type": "string", "format": "uuid" },
+        "type": {
+          "enum": ["chart", "filter", "text", "media", "tabs", "customViz"]
+        },
+        "title": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "x": { "type": "integer", "minimum": 0 },
+        "y": { "type": "integer", "minimum": 0 },
+        "width": { "type": "integer", "minimum": 0 },
+        "height": { "type": "integer", "minimum": 0 },
+        "order": { "type": "integer", "minimum": 0 },
+        "chartConfig": { "type": "object" },
+        "customVizConfig": {
+          "type": "object",
+          "required": ["artifactId"],
+          "properties": {
+            "artifactId": { "type": "string", "format": "uuid" },
+            "dataBinding": {
+              "type": "object",
+              "properties": {
+                "status": { "enum": ["manual", "connected"] }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

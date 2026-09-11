@@ -1,0 +1,15 @@
+{
+  "startedAt": "2026-08-12T14:09:04+08:00",
+  "finishedAt": "2026-08-12T14:09:35+08:00",
+  "branch": "dev",
+  "outcome": "success",
+  "push": false,
+  "commit": "d7e44753",
+  "messageSubject": "wip: [docs,fe,.cursor,scripts] 18f (+612/-90) @ 2026-08-12 14:09 +0800",
+  "messageBodyPreview": "vs-ai-spec: D3 bundle example, renderer guides, theme-tokens; dataset form FE polish; export script",
+  "filesChanged": 18,
+  "insertions": 612,
+  "deletions": 90,
+  "topDirs": { "docs": 12, "fe": 3, ".cursor": 2, "scripts": 1 },
+  "tick": 410
+}

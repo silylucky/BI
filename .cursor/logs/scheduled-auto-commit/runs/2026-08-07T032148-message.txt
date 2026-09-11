@@ -1,0 +1,32 @@
+wip: [backend,fe,tests,.cursor] 20f (+8519/-165) @ 2026-08-07 03:22 +...
+
+Areas:
+  backend/     13 files (+8477/-122)
+  fe/          5 files (+20/-34)
+  tests/       1 files (+19/-2)
+  .cursor/     1 files (+3/-7)
+
+Changed (up to 25):
+M  .cursor/logs/scheduled-auto-commit/state.json
+A  backend/app/dashboard/templates/layouts/industrial-park-screen.json
+A  backend/app/dashboard/templates/layouts/workspace-community.json
+A  backend/app/dashboard/templates/layouts/workspace-digital-cockpit.json
+A  backend/app/dashboard/templates/layouts/workspace-eco.json
+A  backend/app/dashboard/templates/layouts/workspace-efficiency.json
+A  backend/app/dashboard/templates/layouts/workspace-emergency.json
+A  backend/app/dashboard/templates/layouts/workspace-finance.json
+A  backend/app/dashboard/templates/layouts/workspace-grid.json
+A  backend/app/dashboard/templates/layouts/workspace-investment.json
+A  backend/app/dashboard/templates/layouts/workspace-satisfaction.json
+A  backend/app/dashboard/templates/layouts/workspace-smart-city.json
+A  backend/app/dashboard/templates/presets_exported.py
+M  backend/app/dashboard/templates/seed.py
+M  fe/src/components/dashboard/templates/templateLabels.test.ts
+M  fe/src/components/dashboard/templates/templateLabels.ts
+M  fe/src/lib/dashboardTemplates.test.ts
+M  fe/src/lib/dashboardTemplates.ts
+M  fe/src/pages/admin/viz-templates/viz-templates.smoke.test.tsx
+M  tests/test_dash_templates_r01.py
+
+stat: 20 files changed, 8519 insertions(+), 165 deletions(-)
+branch: dev | scheduled-auto-commit

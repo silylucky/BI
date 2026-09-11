@@ -1,0 +1,33 @@
+wip: [fe,.cursor,docs] 22f (+763/-67) @ 2026-07-30 17:58 +0800
+
+Areas:
+  fe/          17 files (+224/-66)
+  .cursor/     3 files (+53/-1)
+  docs/        2 files (+486/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T172819-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T172819.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+A  docs/features/report-center-manual-test-cases.md
+A  docs/user-guide/report-center-how-to.md
+M  fe/src/components/dashboard/gridLayoutAdapter.ts
+M  fe/src/components/dashboard/pixelCanvas/collisionLayout.test.ts
+M  fe/src/components/dashboard/pixelCanvas/createPixelWidget.ts
+M  fe/src/components/dashboard/templates/TemplateCardPreview.test.tsx
+M  fe/src/components/dashboard/templates/TemplateCardPreview.tsx
+M  fe/src/components/dashboard/templates/TemplatePickerDialog.tsx
+M  fe/src/components/dashboard/templates/VizTemplateCard.tsx
+M  fe/src/components/dashboard/viz-components/ComponentCardPreview.tsx
+M  fe/src/components/dashboard/viz-components/VizComponentCard.tsx
+M  fe/src/lib/dashboardTemplates.test.ts
+M  fe/src/lib/dashboardTemplates.ts
+M  fe/src/lib/queryKeys.ts
+M  fe/src/pages/admin/dashboard/DashboardEditPage.tsx
+M  fe/src/pages/admin/viz-components/VizComponentsHubPage.tsx
+M  fe/src/pages/admin/viz-components/viz-components.smoke.test.tsx
+M  fe/src/pages/admin/viz-templates/VizTemplatesHubPage.tsx
+M  fe/src/pages/admin/viz-templates/viz-templates.smoke.test.tsx
+
+stat: 22 files changed, 763 insertions(+), 67 deletions(-)
+branch: dev | scheduled-auto-commit

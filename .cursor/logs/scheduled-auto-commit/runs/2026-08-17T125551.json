@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-17T12:55:51+08:00",
+  "finishedAt": "2026-08-17T12:56:12+08:00",
+  "branch": "dev",
+  "commit": "74e4e0e4",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [.cursor,deploy] 3f (+40/-12) @ 2026-08-17 12:56 +0800",
+  "messageBodyPreview": "Areas:\n  .cursor/   2 files\n  deploy/    1 files",
+  "filesChanged": 3,
+  "insertions": 40,
+  "deletions": 12,
+  "topDirs": { ".cursor": 2, "deploy": 1 },
+  "sampleFiles": [
+    ".cursor/logs/scheduled-auto-commit/runs/2026-08-17T021917.json",
+    ".cursor/logs/scheduled-auto-commit/state.json",
+    "deploy/remote_apply.sh"
+  ],
+  "notes": "excluded data/dashboard-thumbnails (runtime artifacts)"
+}

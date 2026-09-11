@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-04T19:47:49+08:00",
+  "finishedAt": "2026-08-04T19:48:12+08:00",
+  "branch": "dev",
+  "commit": "4c447610",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,backend,.cursor,scripts,+1] 19f (+1213/-560) @ 2026-08-04 19...",
+  "filesChanged": 19,
+  "insertions": 1213,
+  "deletions": 560,
+  "topDirs": { "fe": 8, "backend": 6, ".cursor": 3, "scripts": 1, "tests": 1 },
+  "sampleFiles": [
+    "fe/src/pages/admin/reports/components/ReportMetricExtensionForm.tsx",
+    "backend/app/datasources/dialects/rest_api.py",
+    "scripts/dev-up.ps1",
+    "tests/test_rest_api_internal.py"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/", "data/artifacts/", "fe/.env.production.local"]
+}

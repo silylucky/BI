@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-18T12:13:35+08:00",
+  "finishedAt": "2026-08-18T12:13:35+08:00",
+  "branch": "dev",
+  "outcome": "success",
+  "push": false,
+  "trigger": "loop_tick_40",
+  "commit": "b94fc35d",
+  "messageSubject": "wip: [fe,backend,tests,.cursor,+1] 26f (+1008/-227) @ 2026-08-18 12:13 +0800",
+  "messageBodyPreview": "dataset sync 清理、Standard Analysis 字段映射/主题网格、Custom Viz 测试、ingestion API 调整",
+  "filesChanged": 26,
+  "insertions": 1008,
+  "deletions": 227,
+  "topDirs": { "fe": 17, "backend": 4, "tests": 2, ".cursor": 2, ".agents": 1 },
+  "sampleFiles": [
+    "backend/app/metadata/dataset/cleanup.py",
+    "tests/test_dataset_sync_cleanup.py",
+    "fe/src/pages/admin/reports/components/StandardAnalysisFieldMappingFields.tsx"
+  ]
+}

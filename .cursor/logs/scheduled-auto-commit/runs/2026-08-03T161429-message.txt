@@ -1,0 +1,34 @@
+wip: [fe,.cursor,docs,backend] 22f (+2427/-45) @ 2026-08-03 16:14 +0800
+
+Areas:
+  fe/          16 files (+371/-43)
+  .cursor/     3 files (+62/-1)
+  docs/        2 files (+1993/-0)
+  backend/     1 files (+1/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T154554-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T154554.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/viz/builtin/_helpers.py
+A  docs/feature-truth/_generated-2026-08-03-matrix.json
+M  docs/user-guide/ingestion-sync-jobs-how-to.md
+M  fe/src/components/charts/chartCatalogBackendFieldRules.ts
+A  fe/src/components/charts/engine/d3/quota/renderKpi.test.ts
+M  fe/src/components/charts/engine/d3/quota/renderKpi.ts
+M  fe/src/components/charts/engine/plugins/plans/buildPlan.quota.test.ts
+M  fe/src/components/charts/engine/plugins/plans/buildPlan.ts
+M  fe/src/components/dashboard/ChartDataSlots.tsx
+M  fe/src/components/dashboard/chartFieldSlots.test.ts
+M  fe/src/components/dashboard/chartStyleSections/ChartTypeStyleSections.tsx
+M  fe/src/lib/buildChartRenderModel.ts
+M  fe/src/lib/chartDeAxis/catalog.test.ts
+M  fe/src/lib/chartDeAxis/catalog.ts
+M  fe/src/lib/chartFieldAssignment.test.ts
+M  fe/src/lib/chartFieldAssignment.ts
+A  fe/src/lib/chartStyleAuditMatrix.export.test.ts
+M  fe/src/pages/admin/ingestion/components/SyncJobForm.tsx
+M  fe/src/pages/admin/ingestion/ingestion.smoke.test.tsx
+
+stat: 22 files changed, 2427 insertions(+), 45 deletions(-)
+branch: dev | scheduled-auto-commit

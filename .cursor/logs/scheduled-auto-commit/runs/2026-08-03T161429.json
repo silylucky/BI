@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-03T16:14:29+08:00",
+  "finishedAt": "2026-08-03T16:14:38+08:00",
+  "branch": "dev",
+  "commit": "fa16cb45",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,.cursor,docs,backend] 22f (+2427/-45) @ 2026-08-03 16:14 +0800",
+  "filesChanged": 22,
+  "insertions": 2427,
+  "deletions": 45,
+  "topDirs": { "fe": 16, ".cursor": 3, "docs": 2, "backend": 1 },
+  "sampleFiles": [
+    "fe/src/lib/chartFieldAssignment.ts",
+    "fe/src/components/charts/engine/d3/quota/renderKpi.ts",
+    "docs/feature-truth/_generated-2026-08-03-matrix.json",
+    "fe/src/pages/admin/ingestion/components/SyncJobForm.tsx"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/"]
+}

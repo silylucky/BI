@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-04T17:47:50+08:00",
+  "finishedAt": "2026-08-04T17:48:53+08:00",
+  "branch": "dev",
+  "commit": "a4aecdb7",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,backend,docs,.cursor,+1] 31f (+899/-163) @ 2026-08-04 17:48 ...",
+  "filesChanged": 31,
+  "insertions": 899,
+  "deletions": 163,
+  "topDirs": { "fe": 18, "backend": 4, "docs": 3, ".cursor": 3, "tests": 3 },
+  "sampleFiles": [
+    "fe/src/lib/reportExportUtils.ts",
+    "fe/src/lib/connector-taxonomy.ts",
+    "fe/src/pages/admin/reports/components/ReportMetricDatasetFields.tsx",
+    "docs/feature-truth/2026-08-04-datasource-wizard-connectors-truth-audit.md"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/", "data/artifacts/", "fe/.env.production.local"]
+}

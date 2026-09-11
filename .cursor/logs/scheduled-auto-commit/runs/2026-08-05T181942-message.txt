@@ -1,0 +1,36 @@
+wip: [fe,tests,backend] 25f (+1741/-656) @ 2026-08-05 18:19 +0800
+
+Areas:
+  fe/          23 files (+1659/-640)
+  tests/       1 files (+30/-0)
+  backend/     1 files (+52/-16)
+
+Changed (up to 25):
+M  backend/app/ingestion/etl_suggest.py
+M  fe/src/components/charts/engine/d3/core/d3Legend.test.ts
+M  fe/src/components/charts/engine/d3/core/d3Legend.ts
+A  fe/src/components/charts/engine/d3/radial/pieLabels.test.ts
+M  fe/src/components/charts/engine/d3/radial/pieLabels.ts
+M  fe/src/components/charts/engine/d3/radial/pieLayout.ts
+M  fe/src/components/charts/engine/d3/radial/renderPie.test.ts
+M  fe/src/components/charts/engine/d3/radial/renderPie.ts
+M  fe/src/components/dashboard/chartStyleSections/ChartPieLabelFields.tsx
+M  fe/src/components/dashboard/layoutUtils.ts
+M  fe/src/lib/applyChartDeStyleBlocks.ts
+A  fe/src/lib/defaultPieChartDeStyle.test.ts
+A  fe/src/lib/defaultPieChartDeStyle.ts
+M  fe/src/pages/admin/ingestion/EtlRulesPage.tsx
+M  fe/src/pages/admin/ingestion/SyncJobFormPage.tsx
+M  fe/src/pages/admin/ingestion/components/EtlColumnField.tsx
+A  fe/src/pages/admin/ingestion/components/EtlRuleCard.tsx
+A  fe/src/pages/admin/ingestion/components/EtlRulesEditor.tsx
+M  fe/src/pages/admin/ingestion/components/SyncConsumeActionCard.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobConsumeGuide.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobForm.tsx
+M  fe/src/pages/admin/ingestion/etlRuleSuggest.test.ts
+M  fe/src/pages/admin/ingestion/etlRuleSuggest.ts
+M  fe/src/pages/admin/ingestion/ingestion.smoke.test.tsx
+M  tests/test_etl_suggest.py
+
+stat: 25 files changed, 1741 insertions(+), 656 deletions(-)
+branch: dev | scheduled-auto-commit

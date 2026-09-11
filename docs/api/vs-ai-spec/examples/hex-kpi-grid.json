@@ -1,0 +1,57 @@
+{
+  "manifest": {
+    "id": "hex-kpi-grid",
+    "displayName": "六边形 KPI 网格",
+    "version": "1.0.0",
+    "entry": "index.html",
+    "runtime": "html",
+    "rendererHint": "html",
+    "fieldSlots": {
+      "dimensions": {
+        "min": 1,
+        "max": 1,
+        "label": "维度列"
+      },
+      "metrics": {
+        "min": 1,
+        "max": 8,
+        "label": "数值列"
+      }
+    },
+    "styleSchema": {
+      "type": "object",
+      "x-styleSections": [
+        {
+          "title": "外观",
+          "properties": [
+            "fontSize",
+            "accentColor"
+          ]
+        }
+      ],
+      "properties": {
+        "fontSize": {
+          "type": "number",
+          "title": "字号",
+          "minimum": 10,
+          "maximum": 24,
+          "default": 14
+        },
+        "accentColor": {
+          "type": "string",
+          "format": "color",
+          "title": "强调色",
+          "default": "#38bdf8"
+        }
+      }
+    },
+    "defaultStyle": {
+      "fontSize": 14,
+      "accentColor": "#38bdf8",
+      "title": "六边形 KPI"
+    }
+  },
+  "files": {
+    "index.html": "<!DOCTYPE html><html lang=\"zh-CN\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\"><style>html,body{margin:0;height:100%;overflow:hidden;background:transparent;color:var(--dashboard-text-primary,#e2e8f0);font-family:system-ui,-apple-system,sans-serif}#vs-cv-root{box-sizing:border-box;height:100%;padding:10px 12px;display:flex;flex-direction:column;gap:8px;overflow:hidden}#vs-cv-title{font-size:13px;font-weight:600;color:var(--dashboard-title-color,#f2f4f7)}#vs-cv-canvas{flex:1;min-height:0;overflow:auto;position:relative;border:1px dashed var(--dashboard-widget-border,#334155);border-radius:8px;background:var(--dashboard-widget-surface,rgba(30,41,59,.35))}.vs-cv-blank-hint{padding:24px 12px;text-align:center;font-size:12px;color:var(--dashboard-text-muted,#64748b)}</style></head><body><div id=\"vs-cv-root\"><div id=\"vs-cv-title\"></div><div id=\"vs-cv-canvas\"></div></div><script>(function(){var host=document.currentScript&&document.currentScript.parentElement;function $(id){return host?host.querySelector('#'+id):null}function hostVar(name,fallback){if(!host)return fallback;var v=getComputedStyle(host).getPropertyValue(name).trim();return v||fallback}function resolveStyle(p){var st=(p&&p.style)||{};var palette=Array.isArray(st.paletteColors)?st.paletteColors.slice():[];for(var i=palette.length;i<8;i++){var c=hostVar('--vs-palette-'+i,'');if(c)palette.push(c)}return{accentColor:st.accentColor||palette[0]||hostVar('--vs-style-accent-color','#38bdf8'),fontSize:Number(st.fontSize)||14,labelShow:st.labelShow!==false,tooltipShow:st.tooltipShow!==false,labelColor:st.labelColor||hostVar('--dashboard-text-primary','#e2e8f0'),tooltipColor:st.tooltipColor||hostVar('--dashboard-text-primary','#e2e8f0'),tooltipBg:st.tooltipBackground||'rgba(15,23,42,0.95)',seriesGradient:st.seriesGradient===true,palette:palette}}function bindingStatus(p){if(!p)return'unbound';return p.bindingStatus||((p.rows&&p.rows.length)?'bound':'unbound')}function statusHint(p){var st=bindingStatus(p);if(st==='error')return(p&&p.error)||'数据加载失败';if(st==='empty')return'暂无数据';if(st==='unbound')return'请在右侧绑定数据集与字段';return null}function clearEl(el){while(el&&el.firstChild)el.removeChild(el.firstChild)}function renderBusiness(canvas,p,style){while(canvas.firstChild)canvas.removeChild(canvas.firstChild);var cols=p.columns||[];var rows=p.rows||[];if(!cols.length||!rows.length)return;var wrap=document.createElement('div');wrap.style.cssText='display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:12px;padding:10px';var di=0,mi=cols.length>1?1:0;var limit=Math.min(rows.length,18);for(var r=0;r<limit;r++){var row=rows[r];var label=String(row[di]!=null?row[di]:'');var val=row[mi];var cell=document.createElement('div');cell.style.cssText='clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);+'background:linear-gradient(180deg,'+style.accentColor+'55,'+style.accentColor+'22);border:1px solid '+style.accentColor+';padding:18px 6px;text-align:center;min-height:72px';if(style.labelShow!==false){var lb=document.createElement('div');lb.textContent=label;lb.style.fontSize='11px';lb.style.color=style.labelColor;lb.style.marginBottom='4px';cell.appendChild(lb);}var num=document.createElement('div');num.textContent=typeof val==='number'&&!isNaN(val)?val.toLocaleString():String(val!=null?val:'');num.style.fontSize=(style.fontSize||14)+'px';num.style.fontWeight='600';num.style.color=style.accentColor;cell.appendChild(num);wrap.appendChild(cell);}canvas.appendChild(wrap);}function render(p){p=p||{};var style=resolveStyle(p);var titleEl=$('vs-cv-title');var canvas=$('vs-cv-canvas');if(!canvas)return;clearEl(canvas);if(titleEl){if(style.title){titleEl.textContent=style.title;titleEl.style.display=''}else{titleEl.style.display='none'}}var hint=statusHint(p);if(hint){var msg=document.createElement('div');msg.className='vs-cv-blank-hint';msg.textContent=hint;canvas.appendChild(msg);return}renderBusiness(canvas,p,style)}if(host&&host.vsCv&&host.vsCv.mount){host.vsCv.mount(render)}else{render({})}})();</script></body></html>"
+  }
+}

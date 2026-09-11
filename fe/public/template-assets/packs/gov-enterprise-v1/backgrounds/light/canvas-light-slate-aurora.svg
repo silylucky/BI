@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="214ef861-base" x1="0" y1="0" x2="1920" y2="1080">
+      <stop stop-color="#e7e8e8"/>
+      <stop offset="0.32" stop-color="#b7babe"/>
+      <stop offset="0.68" stop-color="#ced2d7"/>
+      <stop offset="1" stop-color="#acb3bd"/>
+    </linearGradient>
+    <radialGradient id="214ef861-glowL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(345.59999999999997 237.6) scale(729.6)">
+      <stop stop-color="#64748b" stop-opacity="0.312"/>
+      <stop offset="0.55" stop-color="#47505c" stop-opacity="0.2028"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="214ef861-glowR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1574.3999999999999 777.6) scale(614.4)">
+      <stop stop-color="#94a3b8" stop-opacity="0.2652"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  <pattern id="214ef861-pat" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" stroke="#94a3b8" stroke-width="0.4" opacity="0.22"/></pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#214ef861-base)"/>
+  <rect width="1920" height="1080" fill="url(#214ef861-glowL)"/>
+  <rect width="1920" height="1080" fill="url(#214ef861-glowR)"/>
+  <rect width="1920" height="1080" fill="url(#214ef861-pat)" opacity="0.72"/>
+  <g opacity="0.54" stroke="#94a3b8" stroke-width="1.5" fill="none">
+  <path d="M32 72 V32 H72"/>
+  <path d="M1848 32 H1888 V72"/>
+  <path d="M1888 1008 V1048 H1848"/>
+  <path d="M72 1048 H32 V1008"/>
+</g>
+  <path d="M0 885.5999999999999 C384 820.8 672 972 960 907.1999999999999 C1248 842.4 1574.3999999999999 993.6 1920 928.8 L1920 1080 L0 1080 Z" fill="#94a3b8" fill-opacity="0.46"/>
+  <path d="M0 950.4 C480 885.5999999999999 768 1036.8 1056 972 C1382.3999999999999 907.1999999999999 1689.6 1058.4 1920 993.6 L1920 1080 L0 1080 Z" fill="#64748b" fill-opacity="0.29"/>
+  <polygon points="972.470765814496,187.20000000000002 972.470765814496,201.6 960,208.8 947.529234185504,201.6 947.529234185504,187.20000000000002 960,180" fill="none" stroke="#94a3b8" stroke-width="1.2" opacity="0.62"/>
+  <circle cx="960" cy="194.4" r="3.5999999999999996" fill="#94a3b8" opacity="0.50"/><circle cx="936" cy="194.4" r="1.5" fill="#94a3b8" opacity="0.62"/><circle cx="984" cy="194.4" r="1.5" fill="#94a3b8" opacity="0.62"/>
+  <circle cx="960" cy="486" r="120" fill="none" stroke="#94a3b8" stroke-width="0.8" opacity="0.22"/>
+  <circle cx="960" cy="486" r="66" fill="none" stroke="#94a3b8" stroke-width="0.5" opacity="0.16"/>
+  <circle cx="1080" cy="486" r="2.5" fill="#94a3b8" opacity="0.22"/>
+  <circle cx="900" cy="381.6" r="2" fill="#94a3b8" opacity="0.18"/>
+</svg>

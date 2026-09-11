@@ -1,0 +1,20 @@
+{
+  "chartType": "gis-map",
+  "title": "全球 PMTiles GIS 底图示例",
+  "nativeBody": {
+    "gisProject": {
+      "basemap": "pmtiles",
+      "tileServiceId": "planet-z15",
+      "labelLang": "zh-Hans",
+      "basemapFlavor": "light",
+      "projection": "globe",
+      "atmospherePreset": "night",
+      "view": {
+        "center": [100.0, 28.0],
+        "zoom": 1.5,
+        "pitch": 0,
+        "bearing": 0
+      }
+    }
+  }
+}

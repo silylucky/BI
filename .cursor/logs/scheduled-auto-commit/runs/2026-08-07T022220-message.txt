@@ -1,0 +1,31 @@
+wip: [fe,docs,tests,backend,+2] 17f (+299/-27) @ 2026-08-07 02:22 +0800
+
+Areas:
+  fe/          7 files (+139/-1)
+  docs/        5 files (+9/-6)
+  tests/       2 files (+117/-1)
+  backend/     1 files (+8/-12)
+  .github/     1 files (+23/-0)
+  .cursor/     1 files (+3/-7)
+
+Changed (up to 25):
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  .github/workflows/ci.yml
+M  backend/app/dashboard/global_filters/service.py
+M  docs/api/README.md
+M  docs/arch.md
+M  docs/services/dashboard.md
+M  docs/services/integration.md
+M  docs/services/reports.md
+A  fe/e2e/persistence/dashboard-save.spec.ts
+A  fe/playwright.persistence.config.ts
+M  fe/src/components/dashboard/ChartPalettePicker.test.tsx
+M  fe/src/components/dashboard/ChartTableStylePanel.test.tsx
+M  fe/src/components/dashboard/dashboardStyleConfig.test.ts
+M  fe/src/components/dashboard/dashboardThemeVariants.test.ts
+M  fe/src/pages/admin/designer/DesignerPage.tsx
+M  tests/conftest.py
+M  tests/test_persistence_roundtrip.py
+
+stat: 17 files changed, 299 insertions(+), 27 deletions(-)
+branch: dev | scheduled-auto-commit

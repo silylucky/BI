@@ -1,0 +1,5 @@
+interface:
+  display_name: "持续打磨闭环"
+  short_description: "多维评审→go-fast 抛光；支持长跑与.stop"
+policy:
+  allow_implicit_invocation: true

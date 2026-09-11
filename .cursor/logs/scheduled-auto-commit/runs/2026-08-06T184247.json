@@ -1,0 +1,35 @@
+﻿{
+    "messageSubject":  "wip: [fe,backend,tests,docs,+1] 15f (+401/-46) @ 2026-08-06 18:42 +0800",
+    "branch":  "dev",
+    "finishedAt":  "2026-08-06T18:42:56+08:00",
+    "topDirs":  {
+                    "backend":  4,
+                    ".cursor":  1,
+                    "tests":  2,
+                    "fe":  7,
+                    "docs":  1
+                },
+    "sampleFiles":  [
+                        ".cursor/logs/scheduled-auto-commit/state.json",
+                        "backend/app/api/v1/ingestion/sync.py",
+                        "backend/app/ingestion/sync_cancel.py",
+                        "backend/app/ingestion/sync_executor.py",
+                        "backend/app/ingestion/target_table_guard.py",
+                        "docs/api/README.md",
+                        "fe/src/hooks/useSyncJobRun.ts",
+                        "fe/src/lib/apiError.ts",
+                        "fe/src/pages/admin/ingestion/SyncJobFormPage.tsx",
+                        "fe/src/pages/admin/ingestion/SyncJobsPage.tsx"
+                    ],
+    "startedAt":  "2026-08-06T18:42:29+08:00",
+    "insertions":  401,
+    "deletions":  46,
+    "filesChanged":  15,
+    "runId":  "2026-08-06T184247",
+    "outcome":  "success",
+    "commit":  "3b41571c",
+    "messageBodyPreview":  {
+
+                           },
+    "push":  false
+}

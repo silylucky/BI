@@ -1,0 +1,38 @@
+wip: [backend,docs,fe,tests,+1] 25f (+1313/-103) @ 2026-08-03 16:44 +...
+
+Areas:
+  backend/     8 files (+92/-8)
+  docs/        6 files (+579/-25)
+  fe/          5 files (+511/-69)
+  tests/       3 files (+76/-0)
+  .cursor/     3 files (+55/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T161429-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T161429.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/.env.example
+M  backend/app/core/config.py
+A  backend/app/dashboard/export_fe_url.py
+M  backend/app/dashboard/export_jobs.py
+M  backend/app/dashboard/export_render.py
+M  backend/app/reports/scheduler/delivery.py
+M  backend/app/reports/scheduler/delivery_adapter.py
+M  backend/app/reports/scheduler/executor.py
+M  docs/feature-design/2026-08-03-report-center-delivery-closure.md
+A  docs/feature-truth/2026-08-03-dashboard-component-config-truth-audit.md
+M  docs/feature-truth/2026-08-03-report-center-delivery-recheck.md
+A  docs/feature-truth/2026-08-03-report-center-g5-visual-pdf-truth-audit.md
+A  docs/feature-truth/_generated-2026-08-03-3d-table.md
+M  docs/services/reports.md
+M  fe/src/components/dashboard/DashboardQuickCreateDialog.smoke.test.tsx
+M  fe/src/components/dashboard/DashboardQuickCreateDialog.tsx
+M  fe/src/components/layout/admin-form-dialog.tsx
+A  fe/src/components/layout/dialog-form-select.tsx
+M  fe/src/components/ui/select.tsx
+M  tests/test_dashboard_visual_export.py
+M  tests/test_ff_rpt_companion_e95d.py
+M  tests/test_report_dashboard_schedule.py
+
+stat: 25 files changed, 1313 insertions(+), 103 deletions(-)
+branch: dev | scheduled-auto-commit

@@ -1,0 +1,37 @@
+wip: [fe,docs,.cursor] 34f (+959/-134) @ 2026-08-04 14:47 +0800
+
+Areas:
+  fe/          28 files (+751/-123)
+  docs/        3 files (+181/-10)
+  .cursor/     3 files (+27/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T141754-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T141754.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  docs/automate/prd/F06-VIZ.md
+M  docs/feature-truth/2026-08-04-map-advanced-tab-truth-audit.md
+A  docs/feature-truth/2026-08-04-map-area-mapping-truth-audit.md
+M  fe/src/components/charts/ChartRenderer.tsx
+M  fe/src/components/charts/engine/chartConfigContract.test.ts
+M  fe/src/components/charts/engine/d3/geo/renderChoropleth.ts
+M  fe/src/components/charts/engine/d3/types.ts
+M  fe/src/components/charts/engine/d3/views/D3GeoMapView.tsx
+M  fe/src/components/charts/engine/d3/views/buildRenderConfig.ts
+M  fe/src/components/charts/engine/geo/OfflineGeoPort.ts
+M  fe/src/components/charts/engine/geo/geoHeatRegionAnchors.ts
+M  fe/src/components/charts/engine/geo/geoMapChart.ts
+M  fe/src/components/charts/engine/geo/geoMapLevels.ts
+M  fe/src/components/charts/engine/geo/geoProjection.test.ts
+M  fe/src/components/charts/engine/geoEnginePort.ts
+M  fe/src/components/charts/engine/three/geo3dHeatSamples.ts
+M  fe/src/components/charts/engine/three/renderThreeChoropleth.ts
+M  fe/src/components/dashboard/ChartAdvancedPanel.tsx
+A  fe/src/components/dashboard/chartAdvancedMapAreaMapping.test.tsx
+M  fe/src/components/dashboard/chartAdvancedSections.tsx
+M  fe/src/lib/chartDeStyle.ts
+A  fe/src/lib/chartGeoAreaMapping.test.ts
+... and 9 more
+
+stat: 34 files changed, 959 insertions(+), 134 deletions(-)
+branch: dev | scheduled-auto-commit

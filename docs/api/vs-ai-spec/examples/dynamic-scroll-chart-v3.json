@@ -1,0 +1,84 @@
+{
+  "manifest": {
+    "id": "dynamic-scroll-chart",
+    "displayName": "动态滚动条形图",
+    "version": "1.0.0",
+    "entry": "index.html",
+    "runtime": "html",
+    "rendererHint": "html",
+    "fieldSlots": {
+      "dimensions": { "min": 1, "max": 1, "label": "指标名称" },
+      "metrics": { "min": 1, "max": 1, "label": "数值" }
+    },
+    "styleSchema": {
+      "type": "object",
+      "x-styleSections": [
+        { "title": "滚动", "properties": ["scrollSpeed", "scrollRows", "visibleRows", "pauseOnHover"] },
+        { "title": "外观", "properties": ["title", "barColor", "valueUnit", "fontSize"] }
+      ],
+      "properties": {
+        "scrollSpeed": {
+          "type": "number",
+          "title": "换行速度（秒/次）",
+          "minimum": 1,
+          "maximum": 30,
+          "default": 3
+        },
+        "scrollRows": {
+          "type": "number",
+          "title": "每次换行行数",
+          "minimum": 1,
+          "maximum": 10,
+          "default": 1
+        },
+        "visibleRows": {
+          "type": "number",
+          "title": "可视行数",
+          "minimum": 3,
+          "maximum": 15,
+          "default": 6
+        },
+        "pauseOnHover": {
+          "type": "boolean",
+          "title": "悬停暂停",
+          "default": true
+        },
+        "title": {
+          "type": "string",
+          "title": "标题",
+          "default": "业务指标动态播报"
+        },
+        "barColor": {
+          "type": "string",
+          "title": "条形颜色",
+          "default": "#3b82f6"
+        },
+        "valueUnit": {
+          "type": "string",
+          "title": "数值单位",
+          "default": ""
+        },
+        "fontSize": {
+          "type": "number",
+          "title": "字号",
+          "minimum": 10,
+          "maximum": 20,
+          "default": 13
+        }
+      }
+    },
+    "defaultStyle": {
+      "scrollSpeed": 3,
+      "scrollRows": 1,
+      "visibleRows": 6,
+      "pauseOnHover": true,
+      "title": "业务指标动态播报",
+      "barColor": "#3b82f6",
+      "valueUnit": "",
+      "fontSize": 13
+    }
+  },
+  "files": {
+    "index.html": "<!DOCTYPE html><html lang=\"zh-CN\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\"><style>html,body{margin:0;height:100%;overflow:hidden;background:transparent;color:var(--dashboard-text-primary,#e2e8f0);font-family:system-ui,-apple-system,sans-serif}#vs-cv-dyn-scroll{height:100%;display:flex;flex-direction:column;overflow:hidden;box-sizing:border-box;padding:12px 14px}#vs-cv-head{display:flex;justify-content:space-between;align-items:center;flex-shrink:0;margin-bottom:8px}#vs-cv-title{font-weight:600;letter-spacing:.5px}#vs-cv-live{display:flex;align-items:center;gap:5px;font-size:10px;font-weight:700;letter-spacing:1px;color:#34d399}#vs-cv-live i{width:7px;height:7px;border-radius:50%;background:#34d399;animation:vsCvPulse 1.6s ease-in-out infinite}@keyframes vsCvPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.75)}}#vs-cv-viewport{flex:1;overflow:hidden;position:relative;min-height:0}#vs-cv-track{position:absolute;left:0;right:0;top:0;transition:transform .45s cubic-bezier(.4,0,.2,1)}.vs-cv-row{display:flex;align-items:center;gap:10px;box-sizing:border-box;padding-right:4px}.vs-cv-name{flex:0 0 34%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--dashboard-text-primary,#e2e8f0)}.vs-cv-barbox{flex:1;height:14px;background:rgba(148,163,184,.12);border-radius:7px;overflow:hidden}.vs-cv-bar{height:100%;border-radius:7px;min-width:2px;transition:width .6s ease}.vs-cv-val{flex:0 0 80px;text-align:right;font-weight:600;font-variant-numeric:tabular-nums}.vs-cv-val small{font-weight:400;opacity:.6;margin-left:2px;font-size:.8em}.vs-cv-hint{padding:24px 12px;text-align:center;font-size:12px;color:var(--dashboard-text-muted,#64748b)}</style></head><body><div id=\"vs-cv-dyn-scroll\"><div id=\"vs-cv-head\"><span id=\"vs-cv-title\"></span><span id=\"vs-cv-live\"><i></i>LIVE</span></div><div id=\"vs-cv-viewport\"><div id=\"vs-cv-track\"></div></div></div><script>(function(){var host=document.currentScript&&document.currentScript.parentElement;function q(id){return host?host.querySelector('#'+id):document.getElementById(id)}function clearEl(el){while(el&&el.firstChild)el.removeChild(el.firstChild)}function bindingStatus(p){if(!p)return'unbound';return p.bindingStatus||((p.rows&&p.rows.length)?'bound':'unbound')}function statusHint(p){var st=bindingStatus(p);if(st==='error')return(p&&p.error)||'数据加载失败';if(st==='empty')return'暂无数据';if(st==='unbound')return'请在右侧绑定数据集与字段（1 个名称维度 + 1 个数值指标）';return null;}function isNum(v){return typeof v==='number'&&!isNaN(v)}function fmtVal(v){if(!isNum(v))return String(v==null?'':v);return Number.isInteger(v)?v.toLocaleString():v.toFixed(2)}var timer=null;var paused=false;var offset=0;var timerKey='';var hoverOn=true;function stopTimer(){if(timer){clearInterval(timer);timer=null;}}function render(p){p=p||{};var st=(p&&p.style)||{};var speed=Math.max(1,Number(st.scrollSpeed)||3);var step=Math.max(1,Number(st.scrollRows)||1);var visibleRows=Math.max(3,Number(st.visibleRows)||6);var pauseHover=st.pauseOnHover!==false;var title=st.title||'业务指标动态播报';var barColor=st.barColor||'#3b82f6';var unit=st.valueUnit||'';var fs=Number(st.fontSize)||13;var vp=q('vs-cv-viewport');var track=q('vs-cv-track');var titleEl=q('vs-cv-title');if(!track||!vp||!titleEl)return;titleEl.textContent=title;titleEl.style.fontSize=(fs+2)+'px';clearEl(track);stopTimer();offset=0;track.style.transform='translateY(0px)';var hint=statusHint(p);if(hint){var msg=document.createElement('div');msg.className='vs-cv-hint';msg.textContent=hint;track.appendChild(msg);return;}var cols=p.columns||[];var rows=p.rows||[];if(cols.length<2||!rows.length){var emp=document.createElement('div');emp.className='vs-cv-hint';emp.textContent='暂无数据';track.appendChild(emp);return;}var items=[];for(var r=0;r<rows.length;r++){var nm=rows[r][0];var val=Number(rows[r][1]);if(!isFinite(val))val=0;items.push({name:nm==null?'':String(nm),value:val});}if(!items.length){var emp2=document.createElement('div');emp2.className='vs-cv-hint';emp2.textContent='暂无数据';track.appendChild(emp2);return;}var max=1;for(var i=0;i<items.length;i++){if(items[i].value>max)max=items[i].value;}var rowH=Math.max(28,Math.round(fs*2.6));vp.style.height='auto';var need=visibleRows*2+step+2;var total=Math.max(items.length*2,need);total=Math.min(total,Math.max(items.length*2,visibleRows*3));function makeRow(d){var row=document.createElement('div');row.className='vs-cv-row';row.style.height=rowH+'px';row.style.fontSize=fs+'px';var nmEl=document.createElement('span');nmEl.className='vs-cv-name';nmEl.textContent=d.name;row.appendChild(nmEl);var box=document.createElement('div');box.className='vs-cv-barbox';var bar=document.createElement('div');bar.className='vs-cv-bar';var pct=Math.max(2,Math.round((d.value/max)*100));bar.style.width=pct+'%';bar.style.background='linear-gradient(90deg,'+barColor+' 0%,'+barColor+'cc 70%,'+barColor+'88 100%)';box.appendChild(bar);row.appendChild(box);var valEl=document.createElement('span');valEl.className='vs-cv-val';valEl.textContent=fmtVal(d.value);if(unit){var sm=document.createElement('small');sm.textContent=unit;valEl.appendChild(sm);}row.appendChild(valEl);return row;}for(var k=0;k<total;k++){track.appendChild(makeRow(items[k%items.length]));}function tick(){if(paused)return;offset+=step;if(offset>=items.length){track.style.transition='none';offset=0;track.style.transform='translateY(0px)';void track.offsetHeight;track.style.transition='';offset=step%items.length;}track.style.transform='translateY('+(-offset*rowH)+'px)';}timerKey=speed+'|'+step+'|'+visibleRows+'|'+items.length;timer=setInterval(tick,speed*1000);hoverOn=pauseHover;if(!vp.__vsCvHoverBound){vp.__vsCvHoverBound=1;vp.addEventListener('mouseenter',function(){if(hoverOn)paused=true;});vp.addEventListener('mouseleave',function(){paused=false;});}}if(host&&host.vsCv&&host.vsCv.mount){host.vsCv.mount(render);}else{render({});}})();</script></body></html>"
+  }
+}

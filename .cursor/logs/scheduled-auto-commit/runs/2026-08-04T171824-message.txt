@@ -1,0 +1,39 @@
+wip: [backend,tests,docs,fe,+1] 64f (+2756/-578) @ 2026-08-04 17:19 +...
+
+Areas:
+  backend/     36 files (+1240/-161)
+  tests/       11 files (+732/-134)
+  docs/        7 files (+329/-9)
+  fe/          7 files (+396/-273)
+  .cursor/     3 files (+59/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T164737-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T164737.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/.env.example
+M  backend/app/api/v1/ingestion/sync.py
+M  backend/app/core/config.py
+M  backend/app/datasources/registry.py
+M  backend/app/ingestion/models.py
+M  backend/app/ingestion/source_resolver.py
+M  backend/app/ingestion/sync_executor.py
+M  backend/app/ingestion/sync_fetch.py
+A  backend/app/ingestion/sync_fetch_native.py
+A  backend/app/ingestion/sync_fetch_sql.py
+A  backend/app/ingestion/sync_source_capabilities.py
+M  backend/app/integration/reports_export.py
+M  backend/app/reports/catalog/acl.py
+M  backend/app/reports/catalog/service.py
+M  backend/app/reports/engine/execute.py
+M  backend/app/reports/engine/service.py
+M  backend/app/reports/extension/schemas.py
+M  backend/app/reports/extension/service.py
+A  backend/app/reports/persistence/__init__.py
+A  backend/app/reports/persistence/catalog_repo.py
+A  backend/app/reports/persistence/extension_repo.py
+A  backend/app/reports/persistence/memory_stores.py
+... and 39 more
+
+stat: 64 files changed, 2756 insertions(+), 578 deletions(-)
+branch: dev | scheduled-auto-commit

@@ -1,0 +1,20 @@
+{
+    "startedAt": "2026-08-11T15:33:18+08:00",
+    "finishedAt": "2026-08-11T15:34:05+08:00",
+    "branch": "dev",
+    "commit": "6845234d",
+    "outcome": "success",
+    "push": false,
+    "messageSubject": "wip: [fe,docs,.agents,backend,+2] 73f (+8147/-387) @ 2026-08-11 15:33...",
+    "filesChanged": 73,
+    "insertions": 8147,
+    "deletions": 387,
+    "topDirs": {
+        "fe": 32,
+        "docs": 17,
+        ".agents": 12,
+        "backend": 10,
+        "scripts": 1,
+        "tests": 1
+    }
+}

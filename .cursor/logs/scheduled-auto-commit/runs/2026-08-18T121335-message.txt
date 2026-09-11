@@ -1,0 +1,39 @@
+wip: [fe,backend,tests,.cursor,+1] 26f (+1008/-227) @ 2026-08-18 12:1...
+
+Areas:
+  fe/          17 files (+696/-221)
+  backend/     4 files (+116/-1)
+  tests/       2 files (+136/-1)
+  .cursor/     2 files (+24/-4)
+  .agents/     1 files (+36/-0)
+
+Changed (up to 25):
+A  .agents/skills/bug-case-library/cases/dataset-orphan-after-sync-job-delete.md
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T114335.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/ingestion/sync.py
+M  backend/app/datasources/service.py
+A  backend/app/metadata/dataset/cleanup.py
+M  backend/app/metadata/dataset/service.py
+A  fe/src/components/dashboard/custom-viz/CustomVizEditRail.dataset.test.tsx
+M  fe/src/components/dashboard/custom-viz/CustomVizEditRail.tsx
+M  fe/src/components/dashboard/custom-viz/customVizExecute.ts
+M  fe/src/components/dashboard/custom-viz/useCustomVizInspectorState.ts
+A  fe/src/hooks/useVizComponentEditor.test.tsx
+M  fe/src/hooks/useVizComponentEditor.ts
+M  fe/src/hooks/useVizComponentInspectorActions.ts
+M  fe/src/lib/resolveVizComponent.test.ts
+M  fe/src/lib/resolveVizComponent.ts
+M  fe/src/pages/admin/dashboard/DashboardEditPage.tsx
+M  fe/src/pages/admin/reports/StandardAnalysisConfigPage.tsx
+M  fe/src/pages/admin/reports/StandardAnalysisPage.tsx
+M  fe/src/pages/admin/reports/components/ReportMetricDatasetFields.tsx
+M  fe/src/pages/admin/reports/components/StandardAnalysisConfigForm.tsx
+A  fe/src/pages/admin/reports/components/StandardAnalysisFieldMappingFields.tsx
+A  fe/src/pages/admin/reports/components/StandardAnalysisThemeGrid.tsx
+M  fe/src/pages/admin/reports/components/standardAnalysisConfigUi.tsx
+A  tests/test_dataset_sync_cleanup.py
+... and 1 more
+
+stat: 26 files changed, 1008 insertions(+), 227 deletions(-)
+branch: dev | scheduled-auto-commit

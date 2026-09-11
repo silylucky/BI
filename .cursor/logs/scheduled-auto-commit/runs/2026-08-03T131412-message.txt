@@ -1,0 +1,21 @@
+wip: [fe,.cursor] 11f (+362/-144) @ 2026-08-03 13:14 +0800
+
+Areas:
+  fe/          8 files (+335/-143)
+  .cursor/     3 files (+27/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T124416-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T124416.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  fe/src/components/datasources/SchemaBrowser.tsx
+M  fe/src/components/datasources/SchemaTreePanel.tsx
+M  fe/src/components/datasources/TableColumnsPanel.tsx
+M  fe/src/components/datasources/schemaBrowserUtils.ts
+M  fe/src/pages/admin/datasets/DatasetEditorForm.tsx
+M  fe/src/pages/admin/datasets/DatasetTablePicker.tsx
+M  fe/src/pages/admin/datasets/components/DatasetBindPanel.tsx
+M  fe/src/pages/admin/datasets/dataset-form.smoke.test.tsx
+
+stat: 11 files changed, 362 insertions(+), 144 deletions(-)
+branch: dev | scheduled-auto-commit

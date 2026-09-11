@@ -1,0 +1,32 @@
+wip: [fe,backend,.cursor,docs] 20f (+564/-84) @ 2026-08-04 19:19 +0800
+
+Areas:
+  fe/          10 files (+128/-23)
+  backend/     6 files (+211/-60)
+  .cursor/     3 files (+58/-1)
+  docs/        1 files (+167/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T184941-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T184941.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/datasources/dialects/rest_api.py
+M  backend/app/ingestion/scheduler.py
+M  backend/app/ingestion/sync_write.py
+M  backend/app/main.py
+A  backend/app/sample_api/internal.py
+M  backend/app/sample_api/router.py
+A  docs/feature-truth/2026-08-04-report-center-ux-truth-audit.md
+M  fe/src/components/charts/engine/d3/table/D3TableView.tableStyle.test.tsx
+M  fe/src/components/charts/engine/d3/table/TablePivotGrid.tsx
+M  fe/src/components/charts/engine/d3/table/TableStatusBar.tsx
+M  fe/src/components/charts/engine/d3/table/VitalSpanTable.tsx
+M  fe/src/components/dashboard/ChartPickerPopover.test.tsx
+M  fe/src/components/dashboard/ChartPickerPopover.tsx
+M  fe/src/components/dashboard/chartPaletteLabelTooltipFields.tsx
+M  fe/src/index.css
+M  fe/src/lib/chartDeTableStyle.test.ts
+M  fe/src/lib/chartDeTableStyle.ts
+
+stat: 20 files changed, 564 insertions(+), 84 deletions(-)
+branch: dev | scheduled-auto-commit

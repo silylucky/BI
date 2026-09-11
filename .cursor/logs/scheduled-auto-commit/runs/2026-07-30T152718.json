@@ -1,0 +1,19 @@
+{
+  "startedAt": "2026-07-30T15:27:18+08:00",
+  "finishedAt": "2026-07-30T15:27:45+08:00",
+  "branch": "dev",
+  "commit": "68f0d0fe",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,.cursor,docs] 12f (+717/-96) @ 2026-07-30 15:27 +0800",
+  "messageBodyPreview": "Areas:\n  fe/          9 files (+564/-35)\n  .cursor/     2 files (+12/-2)\n  docs/        1 files (+141/-59)",
+  "filesChanged": 12,
+  "insertions": 717,
+  "deletions": 96,
+  "topDirs": { "fe": 9, ".cursor": 2, "docs": 1 },
+  "sampleFiles": [
+    "fe/src/components/dashboard/viz-components/VizComponentChartPreviewShell.tsx",
+    "fe/src/components/charts/engine/d3/cartesian/renderBullet.test.ts",
+    "docs/feature-truth/2026-07-30-component-style-per-type-truth-audit.md"
+  ]
+}

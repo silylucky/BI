@@ -1,0 +1,2027 @@
+{
+  "generatedAt": "2026-08-03",
+  "activeChartTypes": [
+    "gauge",
+    "liquid",
+    "kpi",
+    "table-info",
+    "table-normal",
+    "table-pivot",
+    "t-heatmap",
+    "line",
+    "area",
+    "area-stack",
+    "bar",
+    "bar-stack",
+    "percentage-bar-stack",
+    "bar-group",
+    "bar-group-stack",
+    "waterfall",
+    "bar-horizontal",
+    "bar-stack-horizontal",
+    "percentage-bar-stack-horizontal",
+    "bar-range",
+    "bidirectional-bar",
+    "progress-bar",
+    "stock-line",
+    "bullet-graph",
+    "pie",
+    "pie-donut",
+    "pie-rose",
+    "pie-donut-rose",
+    "radar",
+    "treemap",
+    "word-cloud",
+    "map",
+    "map-3d",
+    "gis-map",
+    "scatter",
+    "quadrant",
+    "funnel",
+    "sankey",
+    "circle-packing",
+    "multi-scatter",
+    "graph",
+    "chart-mix",
+    "chart-mix-group",
+    "chart-mix-stack",
+    "chart-mix-dual-line"
+  ],
+  "activeCount": 45,
+  "matrixRows": 57,
+  "s1ChartTabRows": 135,
+  "chartRows": [
+    {
+      "surface": "S1",
+      "entityId": "gauge",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "gauge",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "variantBasic",
+        "background",
+        "palette",
+        "title",
+        "label",
+        "tooltip",
+        "gaugeShape"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "gauge",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "liquid",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "liquid",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "background",
+        "palette",
+        "title",
+        "label",
+        "tooltip",
+        "liquidShape"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "liquid",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "kpi",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "kpi",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "background",
+        "palette",
+        "title",
+        "label",
+        "kpiIndicator"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "kpi",
+      "configTab": "advanced-out",
+      "gate": "OUT",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "table-info",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "table-info",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "tableBasic",
+        "tableColor",
+        "title",
+        "background"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "table-info",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "table-normal",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "table-normal",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "tableBasic",
+        "tableColor",
+        "title",
+        "background"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "table-normal",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "table-pivot",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "table-pivot",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "tableBasic",
+        "tableColor",
+        "title",
+        "background"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "table-pivot",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "t-heatmap",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "t-heatmap",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "background",
+        "palette",
+        "geo",
+        "title"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "t-heatmap",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "line",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "line",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "variantBasic",
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "line",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "area",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "area",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "area",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "area-stack",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "area-stack",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "area-stack",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-stack",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-stack",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-stack",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "percentage-bar-stack",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "percentage-bar-stack",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "percentage-bar-stack",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-group",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-group",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-group",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-group-stack",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-group-stack",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-group-stack",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "waterfall",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "waterfall",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "waterfall",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-horizontal",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-horizontal",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-horizontal",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-stack-horizontal",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-stack-horizontal",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-stack-horizontal",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "percentage-bar-stack-horizontal",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "percentage-bar-stack-horizontal",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "percentage-bar-stack-horizontal",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-range",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-range",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "bar-range",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bidirectional-bar",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bidirectional-bar",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "bidirectional-bar",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "progress-bar",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "progress-bar",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "progressBarShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "progress-bar",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "stock-line",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "stock-line",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "stockLineShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "stock-line",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bullet-graph",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "bullet-graph",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "bulletShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "bullet-graph",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "pie",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "pie",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "pieShape",
+        "background",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "pie",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "pie-donut",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "pie-donut",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "pieShape",
+        "background",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "pie-donut",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "pie-rose",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "pie-rose",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "pieShape",
+        "background",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "pie-rose",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "pie-donut-rose",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "pie-donut-rose",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "pieShape",
+        "background",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "pie-donut-rose",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "radar",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "radar",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "label",
+        "tooltip",
+        "radarShape"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "radar",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "treemap",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "treemap",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "label",
+        "tooltip",
+        "treemapShape"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "treemap",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "word-cloud",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "word-cloud",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "background",
+        "palette",
+        "title",
+        "wordCloudShape",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "word-cloud",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "map",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "map",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "background",
+        "mapBasic",
+        "title",
+        "geo",
+        "remark",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "map",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "map-3d",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "map-3d",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "background",
+        "title",
+        "geo",
+        "remark",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "map-3d",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "gis-map",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "gis-map",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "gisProject",
+        "gisAtmosphere",
+        "gisSun",
+        "gisOverlay",
+        "gisLayers",
+        "background",
+        "title",
+        "remark",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "gis-map",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "scatter",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "scatter",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "scatter",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "quadrant",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "quadrant",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "quadrantShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "quadrant",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "funnel",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "funnel",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "background",
+        "palette",
+        "title",
+        "legend",
+        "label",
+        "tooltip",
+        "funnelShape"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "funnel",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "sankey",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "sankey",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "background",
+        "palette",
+        "title",
+        "label",
+        "tooltip",
+        "sankeyShape"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "sankey",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "circle-packing",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "circle-packing",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "background",
+        "palette",
+        "title",
+        "label",
+        "tooltip",
+        "circlePackingShape"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "circle-packing",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "multi-scatter",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "multi-scatter",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "multi-scatter",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "graph",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "graph",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "variantBasic",
+        "background",
+        "palette",
+        "title",
+        "label",
+        "tooltip",
+        "graphShape"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "graph",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "chart-mix",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "chart-mix",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "chart-mix",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "chart-mix-group",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "chart-mix-group",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "chart-mix-group",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "chart-mix-stack",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "chart-mix-stack",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "chart-mix-stack",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "chart-mix-dual-line",
+      "configTab": "data",
+      "gate": "GATE",
+      "sections": []
+    },
+    {
+      "surface": "S1",
+      "entityId": "chart-mix-dual-line",
+      "configTab": "style",
+      "gate": "GATE",
+      "sections": [
+        "axis",
+        "cartesianShape",
+        "background",
+        "palette",
+        "title",
+        "remark",
+        "legend",
+        "label",
+        "tooltip"
+      ]
+    },
+    {
+      "surface": "S1",
+      "entityId": "chart-mix-dual-line",
+      "configTab": "advanced",
+      "gate": "GATE",
+      "sections": []
+    }
+  ],
+  "fullMatrix": [
+    {
+      "id": "gauge",
+      "category": "chart",
+      "styleSections": "variantBasic → background → palette → title → label → tooltip → gaugeShape",
+      "inspectorCaps": "label, remark",
+      "d3Matrix": "legend:missing; label:wired; dataZoom:missing; markLines:missing; conditional:missing",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "liquid",
+      "category": "chart",
+      "styleSections": "background → palette → title → label → tooltip → liquidShape",
+      "inspectorCaps": "label, remark",
+      "d3Matrix": "legend:missing; label:wired; dataZoom:missing; markLines:missing; conditional:missing",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "kpi",
+      "category": "chart",
+      "styleSections": "background → palette → title → label → kpiIndicator",
+      "inspectorCaps": "label",
+      "d3Matrix": "plugin-default",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "ok"
+    },
+    {
+      "id": "table",
+      "category": "chart",
+      "deprecated": true,
+      "migratesTo": "table-info",
+      "styleSections": "tableBasic → tableColor → title → background",
+      "inspectorCaps": "—",
+      "d3Matrix": "plugin-default",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "deprecated→table-info",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "table-info",
+      "category": "chart",
+      "styleSections": "tableBasic → tableColor → title → background",
+      "inspectorCaps": "—",
+      "d3Matrix": "plugin-default",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "depthVisual 弱消费",
+      "status": "p1-backlog"
+    },
+    {
+      "id": "table-normal",
+      "category": "chart",
+      "styleSections": "tableBasic → tableColor → title → background",
+      "inspectorCaps": "—",
+      "d3Matrix": "plugin-default",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "—",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "table-pivot",
+      "category": "chart",
+      "styleSections": "tableBasic → tableColor → title → background",
+      "inspectorCaps": "—",
+      "d3Matrix": "plugin-default",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "—",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "t-heatmap",
+      "category": "chart",
+      "styleSections": "background → palette → geo → title",
+      "inspectorCaps": "conditional",
+      "d3Matrix": "plugin-default",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "ok"
+    },
+    {
+      "id": "line",
+      "category": "chart",
+      "styleSections": "variantBasic → axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "wired",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "area",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "wired",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "area-stack",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "wired",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "timeline",
+      "category": "chart",
+      "deprecated": true,
+      "migratesTo": "line",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "plugin-default",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "wired",
+      "knownGaps": "deprecated→line; paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "bar",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "wired",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "bar-stack",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "wired",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "percentage-bar-stack",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "wired",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "bar-group",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "wired",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "bar-group-stack",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "wired",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "waterfall",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:missing; markLines:missing; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "bar-horizontal",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "wired",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "bar-stack-horizontal",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "wired",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "percentage-bar-stack-horizontal",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "wired",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "bar-range",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → label → tooltip",
+      "inspectorCaps": "label, conditional, remark",
+      "d3Matrix": "legend:missing; label:wired; dataZoom:missing; markLines:missing; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "bidirectional-bar",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:missing; markLines:missing; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "progress-bar",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → progressBarShape → background → palette → title → remark → label → tooltip",
+      "inspectorCaps": "label, conditional, remark",
+      "d3Matrix": "legend:missing; label:wired; dataZoom:missing; markLines:missing; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "stock-line",
+      "category": "chart",
+      "styleSections": "axis → stockLineShape → background → palette → title → remark → label → tooltip",
+      "inspectorCaps": "label, conditional, remark",
+      "d3Matrix": "legend:missing; label:wired; dataZoom:missing; markLines:missing; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "bullet-graph",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → bulletShape → background → palette → title → remark → label → tooltip",
+      "inspectorCaps": "label, conditional, remark",
+      "d3Matrix": "legend:missing; label:wired; dataZoom:missing; markLines:missing; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "pie",
+      "category": "chart",
+      "styleSections": "pieShape → background → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:missing; markLines:missing; conditional:wired",
+      "paletteOpacity": "n/a",
+      "seriesGradient": "hidden",
+      "knownGaps": "seriesGradient 未接线（P0 已隐藏 UI）",
+      "status": "p1-backlog"
+    },
+    {
+      "id": "pie-donut",
+      "category": "chart",
+      "styleSections": "pieShape → background → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:missing; markLines:missing; conditional:wired",
+      "paletteOpacity": "n/a",
+      "seriesGradient": "hidden",
+      "knownGaps": "—",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "pie-rose",
+      "category": "chart",
+      "styleSections": "pieShape → background → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:missing; markLines:missing; conditional:wired",
+      "paletteOpacity": "n/a",
+      "seriesGradient": "hidden",
+      "knownGaps": "—",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "pie-donut-rose",
+      "category": "chart",
+      "styleSections": "pieShape → background → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:missing; markLines:missing; conditional:wired",
+      "paletteOpacity": "n/a",
+      "seriesGradient": "hidden",
+      "knownGaps": "—",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "radar",
+      "category": "chart",
+      "styleSections": "background → palette → title → remark → label → tooltip → radarShape",
+      "inspectorCaps": "label, conditional, remark",
+      "d3Matrix": "legend:missing; label:wired; dataZoom:missing; markLines:missing; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "treemap",
+      "category": "chart",
+      "styleSections": "background → palette → title → remark → label → tooltip → treemapShape",
+      "inspectorCaps": "label, conditional, remark",
+      "d3Matrix": "legend:missing; label:wired; dataZoom:missing; markLines:missing; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "word-cloud",
+      "category": "chart",
+      "styleSections": "background → palette → title → wordCloudShape → tooltip",
+      "inspectorCaps": "remark",
+      "d3Matrix": "legend:missing; label:missing; dataZoom:missing; markLines:missing; conditional:missing",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "wordCloud",
+      "category": "chart",
+      "deprecated": true,
+      "migratesTo": "word-cloud",
+      "styleSections": "background → palette → title → wordCloudShape → tooltip",
+      "inspectorCaps": "remark",
+      "d3Matrix": "legend:missing; label:missing; dataZoom:missing; markLines:missing; conditional:missing",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "deprecated→word-cloud; paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "map",
+      "category": "chart",
+      "styleSections": "background → mapBasic → title → geo → remark → tooltip",
+      "inspectorCaps": "label, remark",
+      "d3Matrix": "legend:missing; label:wired; dataZoom:missing; markLines:missing; conditional:missing",
+      "paletteOpacity": "wired",
+      "seriesGradient": "hidden",
+      "knownGaps": "profile 无 label 分区但 caps.label=true；2D 区域标签样式待决策",
+      "status": "p1-backlog"
+    },
+    {
+      "id": "map-3d",
+      "category": "chart",
+      "styleSections": "background → title → geo → remark → tooltip",
+      "inspectorCaps": "label, remark",
+      "d3Matrix": "legend:missing; label:missing; dataZoom:missing; markLines:missing; conditional:missing",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "—",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "gis-map",
+      "category": "chart",
+      "styleSections": "gisProject → gisAtmosphere → gisSun → gisOverlay → gisLayers → background → title → remark → tooltip",
+      "inspectorCaps": "label, remark",
+      "d3Matrix": "plugin-default",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "—",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "heatmap",
+      "category": "chart",
+      "deprecated": true,
+      "migratesTo": "t-heatmap",
+      "styleSections": "axis → background → palette → title → label → tooltip",
+      "inspectorCaps": "label, remark",
+      "d3Matrix": "plugin-default",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "deprecated→t-heatmap; paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "scatter",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "quadrant",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → quadrantShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "funnel",
+      "category": "chart",
+      "styleSections": "background → palette → title → legend → label → tooltip → funnelShape",
+      "inspectorCaps": "legend, label, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:missing; markLines:missing; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "caps.label=true 无独立 label 分区（标签在 palette 内嵌）; paletteOpacity UI 已门控隐藏",
+      "status": "p1-backlog"
+    },
+    {
+      "id": "sankey",
+      "category": "chart",
+      "styleSections": "background → palette → title → label → tooltip → sankeyShape",
+      "inspectorCaps": "label, remark",
+      "d3Matrix": "legend:missing; label:wired; dataZoom:missing; markLines:missing; conditional:missing",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "circle-packing",
+      "category": "chart",
+      "styleSections": "background → palette → title → label → tooltip → circlePackingShape",
+      "inspectorCaps": "label, conditional, remark",
+      "d3Matrix": "legend:missing; label:wired; dataZoom:missing; markLines:missing; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "multi-scatter",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "graph",
+      "category": "chart",
+      "styleSections": "variantBasic → background → palette → title → label → tooltip → graphShape",
+      "inspectorCaps": "label, remark",
+      "d3Matrix": "legend:missing; label:wired; dataZoom:missing; markLines:missing; conditional:missing",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "hidden",
+      "knownGaps": "caps 与 profile legend/label 分叉; paletteOpacity UI 已门控隐藏",
+      "status": "p1-backlog"
+    },
+    {
+      "id": "combo",
+      "category": "chart",
+      "deprecated": true,
+      "migratesTo": "chart-mix",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "plugin-default",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "wired",
+      "knownGaps": "deprecated→chart-mix; paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "chart-mix",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "wired",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "chart-mix-group",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "wired",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "chart-mix-stack",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "wired",
+      "knownGaps": "paletteOpacity UI 已门控隐藏",
+      "status": "p0-fixed"
+    },
+    {
+      "id": "chart-mix-dual-line",
+      "category": "chart",
+      "styleSections": "axis → cartesianShape → background → palette → title → remark → legend → label → tooltip",
+      "inspectorCaps": "legend, label, dataZoom, markLines, conditional, remark",
+      "d3Matrix": "legend:wired; label:wired; dataZoom:wired; markLines:wired; conditional:wired",
+      "paletteOpacity": "hidden",
+      "seriesGradient": "wired",
+      "knownGaps": "legend partial，主系列覆盖待确认; paletteOpacity UI 已门控隐藏",
+      "status": "p1-backlog"
+    },
+    {
+      "id": "filter",
+      "category": "widget",
+      "styleSections": "FilterWidgetInspector: dimensionRef, parameterKey, controlType, defaultValue, placeholder, allowClear, multiSelect",
+      "inspectorCaps": "全局筛选注入 / linkage",
+      "d3Matrix": "n/a",
+      "paletteOpacity": "n/a",
+      "seriesGradient": "n/a",
+      "knownGaps": "—",
+      "status": "ok"
+    },
+    {
+      "id": "text",
+      "category": "widget",
+      "styleSections": "TextEditRail: content, fontSize, fontWeight, color, align, verticalAlign, datasetBinding",
+      "inspectorCaps": "文本渲染 + 可选 dataset 绑定",
+      "d3Matrix": "n/a",
+      "paletteOpacity": "n/a",
+      "seriesGradient": "n/a",
+      "knownGaps": "—",
+      "status": "ok"
+    },
+    {
+      "id": "media",
+      "category": "widget",
+      "styleSections": "MediaEditRail: mediaType, src, objectFit, alt, autoplay, loop, muted",
+      "inspectorCaps": "图片/视频展示",
+      "d3Matrix": "n/a",
+      "paletteOpacity": "n/a",
+      "seriesGradient": "n/a",
+      "knownGaps": "—",
+      "status": "ok"
+    },
+    {
+      "id": "tabs",
+      "category": "widget",
+      "styleSections": "TabsWidgetInspector: tabs[], defaultTabId, tabBarStyle",
+      "inspectorCaps": "标签页切换与子 widget",
+      "d3Matrix": "n/a",
+      "paletteOpacity": "n/a",
+      "seriesGradient": "n/a",
+      "knownGaps": "—",
+      "status": "ok"
+    },
+    {
+      "id": "dashboard-style",
+      "category": "dashboard",
+      "styleSections": "DashboardStyleSections: 仪表板风格(colorScheme), 整体配置, 仪表板背景",
+      "inspectorCaps": "applyDashboardStylePatch → 子 chart 继承",
+      "d3Matrix": "n/a",
+      "paletteOpacity": "n/a",
+      "seriesGradient": "n/a",
+      "knownGaps": "看板级 palette/seriesGradient 为默认继承源",
+      "status": "ok"
+    },
+    {
+      "id": "dashboard-widget-style",
+      "category": "dashboard",
+      "styleSections": "DashboardWidgetStyleSections: 组件外观(shell), 图表标题, 数值格式, 筛选器外观, 图表配色(paletteId/opacity/gradient/depth)",
+      "inspectorCaps": "widgetStyle/titleStyle/numberFormat/filterChrome",
+      "d3Matrix": "n/a",
+      "paletteOpacity": "wired",
+      "seriesGradient": "wired",
+      "knownGaps": "depthVisual 同步子 chart",
+      "status": "ok"
+    },
+    {
+      "id": "dashboard-context",
+      "category": "dashboard",
+      "styleSections": "DashboardContextInspector: 空白态选中时展示 DashboardStyleSections + DashboardWidgetStyleSections",
+      "inspectorCaps": "无 chart 选中时的看板级配置入口",
+      "d3Matrix": "n/a",
+      "paletteOpacity": "n/a",
+      "seriesGradient": "n/a",
+      "knownGaps": "—",
+      "status": "ok"
+    }
+  ]
+}

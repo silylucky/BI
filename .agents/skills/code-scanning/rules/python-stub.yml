@@ -1,0 +1,156 @@
+id: python-notimplemented-raise
+language: python
+severity: error
+message: 可激活 stub：函数抛 NotImplementedError
+note: |
+  非测试主路径上的 NotImplementedError 是假绿——调用方从签名看不出这条路走不通，
+  只有真跑到才炸。挂在 feature flag / dev profile 后面也算。
+  误报场景：抽象基类里同时带 @abstractmethod 的声明（本规则已排除）。
+files:
+  - "**/*.py"
+ignores:
+  - "**/test_*.py"
+  - "**/*_test.py"
+  - "**/tests/**"
+  - "**/conftest.py"
+  - "**/*.pyi"
+rule:
+  kind: raise_statement
+  regex: '\bNotImplementedError\b'
+  not:
+    inside:
+      kind: decorated_definition
+      stopBy: end
+      has:
+        kind: decorator
+        regex: '(?i)abstract|overload'
+---
+id: python-todo-implement-message
+language: python
+severity: error
+message: 占位实现：运行期消息里写着 "TODO / not implemented"
+note: |
+  raise / print 的字符串参数里出现「待实现」语义，说明这条路径没写完却能被调用到。
+  只看 raise 和 print 的实参字符串，不看注释，所以注释里的 TODO 不会命中。
+  误报场景：面向用户的错误文案本身就叫「该功能未开放」——需人工判断。
+files:
+  - "**/*.py"
+ignores:
+  - "**/test_*.py"
+  - "**/*_test.py"
+  - "**/tests/**"
+  - "**/conftest.py"
+  - "**/*.pyi"
+rule:
+  any:
+    - kind: raise_statement
+    - pattern: print($$$ARGS)
+  has:
+    stopBy: end
+    kind: string
+    regex: '(?i)todo:?\s*implement|implement (me|this)|not implemented|unimplemented|coming soon'
+  not:
+    regex: '\bNotImplementedError\b'
+---
+id: python-empty-function-body
+language: python
+severity: warning
+message: 疑似空实现：函数体只有 pass
+note: |
+  只有 pass 的函数常是占位骨架。需人工判断——空的 no-op 适配器 / 钩子是合法的。
+  已排除 @abstractmethod / @overload 装饰的声明与 Protocol、ABC 子类里的声明。
+files:
+  - "**/*.py"
+ignores:
+  - "**/test_*.py"
+  - "**/*_test.py"
+  - "**/tests/**"
+  - "**/conftest.py"
+  - "**/*.pyi"
+rule:
+  kind: function_definition
+  has:
+    field: body
+    kind: block
+    regex: '\Apass\z'
+  not:
+    any:
+      - inside:
+          kind: decorated_definition
+          stopBy: end
+          has:
+            kind: decorator
+            regex: '(?i)abstract|overload'
+      - inside:
+          kind: class_definition
+          stopBy: end
+          has:
+            field: superclasses
+            has:
+              stopBy: end
+              kind: identifier
+              regex: '^(Protocol|ABC|ABCMeta)$'
+---
+id: python-ellipsis-function-body
+language: python
+severity: warning
+message: 疑似空实现：函数体只有 ...（Ellipsis）
+note: |
+  `...` 作为函数体在 .pyi 存根、Protocol、@abstractmethod 里是合法写法，本规则已全部排除；
+  剩下的是普通实现文件里的占位骨架，调用它只会静默返回 None。
+files:
+  - "**/*.py"
+ignores:
+  - "**/test_*.py"
+  - "**/*_test.py"
+  - "**/tests/**"
+  - "**/conftest.py"
+  - "**/*.pyi"
+rule:
+  kind: function_definition
+  has:
+    field: body
+    kind: block
+    regex: '\A\.\.\.\z'
+  not:
+    any:
+      - inside:
+          kind: decorated_definition
+          stopBy: end
+          has:
+            kind: decorator
+            regex: '(?i)abstract|overload'
+      - inside:
+          kind: class_definition
+          stopBy: end
+          has:
+            field: superclasses
+            has:
+              stopBy: end
+              kind: identifier
+              regex: '^(Protocol|ABC|ABCMeta)$'
+---
+id: python-mock-data-in-production
+language: python
+severity: warning
+message: 生产代码里定义了 mock_data / fake_data 变量
+note: |
+  非测试文件里的假数据集合，通常是页面/接口在拿写死数据充数（假绿）。
+  只匹配模块级或类级的赋值定义，不匹配对它的引用与字符串里的同名词。
+  误报场景：确实要发布的示例数据 / 演示种子——需人工判断。
+files:
+  - "**/*.py"
+ignores:
+  - "**/test_*.py"
+  - "**/*_test.py"
+  - "**/tests/**"
+  - "**/conftest.py"
+  - "**/*.pyi"
+  - "**/fixtures/**"
+  - "**/factories/**"
+rule:
+  kind: assignment
+  has:
+    field: left
+    kind: identifier
+    regex: '(?i)^(mock|fake|dummy|stub)_?(data|users?|records?|rows?|items?|list|response)'

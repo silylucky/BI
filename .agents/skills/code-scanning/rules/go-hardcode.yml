@@ -1,0 +1,28 @@
+id: go-hardcoded-private-host
+language: go
+severity: error
+message: 硬编码内网地址 / localhost
+note: 生产代码里应来自配置。测试文件请在 sgconfig.yml 的 ignores 中排除。
+files:
+  - "**/*.go"
+ignores:
+  - "**/*_test.go"
+  - "**/vendor/**"
+rule:
+  kind: interpreted_string_literal
+  regex: '(192\.168\.|10\.\d+\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.|localhost:\d)'
+---
+id: go-hardcoded-credential
+language: go
+severity: error
+message: 疑似硬编码凭据
+note: |
+  regex 兜底，误报由人判。真凭据 = P0；示例/占位（CHANGE_ME）= 看是否会进运行时。
+files:
+  - "**/*.go"
+ignores:
+  - "**/*_test.go"
+  - "**/vendor/**"
+rule:
+  kind: interpreted_string_literal
+  regex: '(?i)(password|passwd|secret|api[_-]?key|token)\s*[:=]\s*\S|CHANGE_ME|dev-only'

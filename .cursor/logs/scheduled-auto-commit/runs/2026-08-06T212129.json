@@ -1,0 +1,33 @@
+﻿{
+    "messageSubject":  "wip: [fe,docs,backend,tests,+1] 28f (+920/-336) @ 2026-08-06 21:21 +0800",
+    "branch":  "dev",
+    "finishedAt":  "2026-08-06T21:21:39+08:00",
+    "topDirs":  {
+                    "backend":  2,
+                    ".cursor":  1,
+                    "tests":  1,
+                    "fe":  20,
+                    "docs":  4
+                },
+    "sampleFiles":  [
+                        ".cursor/logs/scheduled-auto-commit/state.json",
+                        "backend/app/api/v1/reports/__init__.py",
+                        "backend/app/dashboard/export_render.py",
+                        "docs/api/README.md",
+                        "docs/automate/prd/F08-RPT.md",
+                        "docs/services/reports-dashboard-schedule-walkthrough.md",
+                        "docs/services/reports.md",
+                        "fe/src/components/dashboard/DashboardShareDialog.tsx",
+                        "fe/src/config/nav-manifest.tsx",
+                        "fe/src/layouts/AdminLayout.smoke.test.tsx"
+                    ],
+    "startedAt":  "2026-08-06T21:21:11+08:00",
+    "insertions":  920,
+    "deletions":  336,
+    "filesChanged":  28,
+    "runId":  "2026-08-06T212129",
+    "outcome":  "success",
+    "commit":  "8d1ab03c",
+    "messageBodyPreview":  "Areas:\r\n  fe/          20 files (+803/-309)\r\n  docs/        4 files (+66/-20)\r\n  backend/     2 files (+23/-0)\r\n  tests/       1 files (+25/-0)\r\n  .cursor/     1 files (+3/-7)\r\n\r\nChanged (up to 25):\r\nM  .cursor/logs/scheduled-auto-commit/state.json\r\nM  backend/app/api/v1/reports/__init__.py\r\nM  backend/app/dashboard/export_render.py\r\nM  docs/api/README.md\r\nM  docs/automate/prd/F08-RPT.md\r\nA  docs/services/reports-dashboard-schedule-walkthrough.md\r\nM  docs/services/reports.md\r\nM  fe/src/component",
+    "push":  false
+}

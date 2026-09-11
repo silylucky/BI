@@ -1,0 +1,28 @@
+wip: [fe,backend,.cursor] 17f (+516/-132) @ 2026-08-17 17:14 +0800
+
+Areas:
+  fe/          12 files (+402/-127)
+  backend/     3 files (+96/-1)
+  .cursor/     2 files (+18/-4)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T164310.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/dashboard/templates/presets_exported.py
+M  backend/app/dashboard/templates/rebind_demo_encodings.py
+A  backend/tests/test_rebind_demo_encodings.py
+M  fe/src/components/charts/ChartRenderer.tsx
+M  fe/src/components/charts/EmbeddedChartLegend.test.tsx
+M  fe/src/components/charts/EmbeddedChartLegend.tsx
+M  fe/src/components/charts/engine/d3/core/d3Legend.ts
+M  fe/src/components/dashboard/WidgetContextMenu.test.tsx
+M  fe/src/components/dashboard/WidgetContextMenu.tsx
+M  fe/src/components/dashboard/dashboard-edit/DashboardCanvasWidgetRenderer.tsx
+M  fe/src/components/dashboard/pixelCanvas/PixelShape.gap.test.tsx
+M  fe/src/components/dashboard/pixelCanvas/PixelShape.tsx
+A  fe/src/components/dashboard/templates/TemplateLayoutLivePreview.test.tsx
+M  fe/src/components/dashboard/templates/TemplateLayoutLivePreview.tsx
+M  fe/src/pages/admin/dashboard/DashboardEditPage.tsx
+
+stat: 17 files changed, 516 insertions(+), 132 deletions(-)
+branch: dev | scheduled-auto-commit

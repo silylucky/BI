@@ -1,0 +1,39 @@
+wip: [fe,docs,tests,backend,+1] 32f (+1211/-143) @ 2026-08-03 14:14 +...
+
+Areas:
+  fe/          16 files (+593/-59)
+  docs/        6 files (+347/-13)
+  tests/       4 files (+184/-70)
+  backend/     3 files (+28/-0)
+  .cursor/     3 files (+59/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T134416-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T134416.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/viz_components.py
+A  backend/app/viz/components/chart_palette.py
+M  backend/app/viz/components/service.py
+M  docs/api/README.md
+M  docs/automate/prd/F16-DATA.md
+A  docs/feature-truth/2026-08-03-sync-jobs-deliverable-truth-audit.md
+A  docs/material/chart-style-audit/2026-08-03-full-matrix.md
+M  docs/material/product-reviewer/2026-07-31-ingestion-sync-jobs.md
+M  docs/services/ingestion.md
+M  fe/src/components/charts/engine/d3/inspectorCapabilityMatrix.ts
+M  fe/src/components/dashboard/chartStyleSections/ChartCommonStyleSections.tsx
+M  fe/src/components/dashboard/chartStyleSections/ChartTypeStyleSections.tsx
+M  fe/src/components/dashboard/inspectorStyleWiring.test.ts
+A  fe/src/lib/chartStyleAuditMatrix.gen.test.ts
+A  fe/src/lib/chartStyleAuditMatrix.ts
+M  fe/src/lib/chartStyleCartesianFields.ts
+M  fe/src/lib/chartStylePanelGates.test.ts
+M  fe/src/lib/chartStylePanelGates.ts
+M  fe/src/lib/chartStyleSectionRegistry.test.ts
+A  fe/src/lib/chartStyleWiring.gates.test.ts
+M  fe/src/lib/chartTableInspector.ts
+M  fe/src/lib/chartTypeStyleProfiles.test.ts
+... and 7 more
+
+stat: 32 files changed, 1211 insertions(+), 143 deletions(-)
+branch: dev | scheduled-auto-commit

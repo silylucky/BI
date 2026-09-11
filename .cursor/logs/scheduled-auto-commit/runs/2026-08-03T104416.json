@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-03T10:44:16+08:00",
+  "finishedAt": "2026-08-03T10:44:24+08:00",
+  "branch": "dev",
+  "commit": "7e48629d",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,backend,.cursor,docs,+1] 24f (+627/-195) @ 2026-08-03 10:44 ...",
+  "filesChanged": 24,
+  "insertions": 627,
+  "deletions": 195,
+  "topDirs": { "fe": 16, "backend": 3, ".cursor": 3, "docs": 1, "tests": 1 },
+  "sampleFiles": [
+    "fe/src/pages/admin/ingestion/SyncJobsPage.tsx",
+    "fe/src/pages/admin/viz-components/VizComponentsHubFilters.tsx",
+    "backend/app/ingestion/cron_validate.py",
+    "fe/src/components/dashboard/hubFilterUi.ts"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/"]
+}

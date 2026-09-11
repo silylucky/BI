@@ -1,0 +1,39 @@
+wip: [fe,docs,.cursor,tests,+1] 72f (+3258/-304) @ 2026-08-04 12:47 +...
+
+Areas:
+  fe/          62 files (+2423/-287)
+  docs/        4 files (+534/-2)
+  .cursor/     3 files (+59/-1)
+  tests/       2 files (+206/-0)
+  .dev/        1 files (+36/-14)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T103350-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T103350.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  .dev/config.yaml
+A  docs/feature-truth/2026-08-04-map-2d-drill-truth-audit.md
+A  docs/feature-truth/2026-08-04-sync-consume-oneclick-truth-audit.md
+A  docs/material/deploy/2026-08-04-vitalspan-staging-deploy-log.md
+M  docs/user-guide/ingestion-sync-jobs-how-to.md
+M  fe/src/components/charts/ChartDrillChrome.test.tsx
+M  fe/src/components/charts/engine/d3/geo/renderChoropleth.test.ts
+M  fe/src/components/charts/engine/d3/geo/renderChoropleth.ts
+M  fe/src/components/charts/engine/d3/types.ts
+M  fe/src/components/charts/engine/d3/views/D3GeoMapView.tsx
+M  fe/src/components/charts/engine/d3/views/buildRenderConfig.ts
+A  fe/src/components/charts/engine/geo/geoMapBubbleEffectStyle.test.ts
+A  fe/src/components/charts/engine/geo/geoMapBubbleEffectStyle.ts
+A  fe/src/components/charts/engine/geo/geoMapBubbleRippleLayer.ts
+M  fe/src/components/charts/engine/geo/geoMapRenderResult.ts
+M  fe/src/components/charts/engine/geo/geoRegionBorderStyle.test.ts
+M  fe/src/components/charts/engine/geo/geoRegionBorderStyle.ts
+A  fe/src/components/charts/engine/geo/geoRegionFillStyle.test.ts
+M  fe/src/components/charts/engine/geo/geoRegionFillStyle.ts
+A  fe/src/components/charts/engine/geo/geoRegionLabelStyle.test.ts
+A  fe/src/components/charts/engine/geo/geoRegionLabelStyle.ts
+M  fe/src/components/charts/engine/three/geo3dFloatingLabels.ts
+... and 47 more
+
+stat: 72 files changed, 3258 insertions(+), 304 deletions(-)
+branch: dev | scheduled-auto-commit

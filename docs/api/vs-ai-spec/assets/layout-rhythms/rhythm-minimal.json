@@ -1,0 +1,48 @@
+{
+  "id": "rhythm-minimal",
+  "name": "极简",
+  "description": "1440 仪表板：主块 + 可选辅块 + cv",
+  "surfaceKind": "dashboard",
+  "canvas": { "width": 1440, "height": 1080 },
+  "contentStartY": 48,
+  "marginX": 48,
+  "gutter": 24,
+  "shell": false,
+  "styleConfig": {
+    "surfaceKind": "dashboard",
+    "colorScheme": "light",
+    "scaleMode": "canvas",
+    "gapPreset": "md",
+    "widgetGap": 16,
+    "pixelGutter": 24,
+    "paletteId": "default",
+    "widgetStyle": {
+      "background": "#ffffff",
+      "borderColor": "#e4e7ec",
+      "borderWidth": 1,
+      "borderEnabled": true,
+      "borderStyle": "solid",
+      "borderRadius": 12
+    },
+    "titleStyle": { "color": "#1d2939", "fontSize": 14, "fontWeight": 600 },
+    "chartLabelStyle": { "color": "#667085" }
+  },
+  "bands": [
+    {
+      "id": "primary",
+      "optional": false,
+      "minItems": 1,
+      "maxItems": 1,
+      "height": 420,
+      "layout": "single"
+    },
+    {
+      "id": "secondary",
+      "optional": true,
+      "minItems": 0,
+      "maxItems": 2,
+      "height": 320,
+      "layout": "split-2"
+    }
+  ]
+}

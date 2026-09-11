@@ -1,0 +1,17 @@
+{
+  "bounds": [
+    105.15033958,
+    31.23224854,
+    111.59286742,
+    40.06002246
+  ],
+  "width": 2425,
+  "height": 4096,
+  "source": "satellite",
+  "uvMode": "projBounds",
+  "refViewport": {
+    "width": 800,
+    "height": 600
+  },
+  "masked": true
+}

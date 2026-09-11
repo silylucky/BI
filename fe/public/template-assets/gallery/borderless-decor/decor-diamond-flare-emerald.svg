@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice">
+  <g transform="scale(0.6666666666666666 1.5)">
+  
+  <defs>
+    <linearGradient id="55aae2d8-h" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0"/>
+      <stop offset="42%" stop-color="#34d399" stop-opacity="0.95"/>
+      <stop offset="58%" stop-color="#34d399" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="55aae2d8-v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="55aae2d8-g" x="-20%" y="-40%" width="140%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <path d="M36 84 Q240 30 444 84" fill="none" stroke="url(#55aae2d8-h)" stroke-width="2.2" filter="url(#55aae2d8-g)"/>
+  <polygon points="232,74 240,62 248,74 240,86" fill="#34d399" opacity="0.75"/>
+  <polygon points="44,80 52,72 60,80 52,88" fill="#34d399" opacity="0.45"/>
+  <polygon points="420,80 428,72 436,80 428,88" fill="#34d399" opacity="0.45"/>
+
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+wip: [fe,backend,tests,docs,+1] 15f (+401/-46) @ 2026-08-06 18:42 +0800
+
+Areas:
+  fe/          7 files (+186/-29)
+  backend/     4 files (+104/-9)
+  tests/       2 files (+94/-0)
+  docs/        1 files (+14/-1)
+  .cursor/     1 files (+3/-7)
+
+Changed (up to 25):
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/ingestion/sync.py
+A  backend/app/ingestion/sync_cancel.py
+M  backend/app/ingestion/sync_executor.py
+M  backend/app/ingestion/target_table_guard.py
+M  docs/api/README.md
+M  fe/src/hooks/useSyncJobRun.ts
+M  fe/src/lib/apiError.ts
+M  fe/src/pages/admin/ingestion/SyncJobFormPage.tsx
+M  fe/src/pages/admin/ingestion/SyncJobsPage.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobsTable.tsx
+M  fe/src/pages/admin/ingestion/components/sync-job-types.ts
+M  fe/src/pages/admin/ingestion/ingestion.smoke.test.tsx
+M  tests/test_ingestion_api.py
+A  tests/test_sync_cancel.py
+
+stat: 15 files changed, 401 insertions(+), 46 deletions(-)
+branch: dev | scheduled-auto-commit

@@ -1,0 +1,14 @@
+{
+  "startedAt": "2026-08-18T13:20:29+08:00",
+  "finishedAt": "2026-08-18T13:20:29+08:00",
+  "branch": "dev",
+  "outcome": "success",
+  "push": false,
+  "trigger": "loop_fix_immediate",
+  "commit": "79b7fbad",
+  "messageSubject": "wip: [fe,docs,.cursor,_root] 41f (+440/-1445) @ 2026-08-18 13:20 +0800",
+  "filesChanged": 41,
+  "insertions": 440,
+  "deletions": 1445,
+  "topDirs": { "fe": 29, "docs": 8, ".cursor": 3, "_root": 1 }
+}

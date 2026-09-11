@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="8b5db3b8-base" x1="0" y1="0" x2="1920" y2="1080">
+      <stop stop-color="#1a1208"/>
+      <stop offset="0.5" stop-color="#78350f" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#78350f"/>
+    </linearGradient>
+    <radialGradient id="8b5db3b8-glowL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(345.59999999999997 237.6) scale(672)">
+      <stop stop-color="#f59e0b" stop-opacity="0.14"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="8b5db3b8-glowR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1574.3999999999999 777.6) scale(576)">
+      <stop stop-color="#fbbf24" stop-opacity="0.11200000000000002"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  <pattern id="8b5db3b8-pat" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" stroke="#fbbf24" stroke-width="0.4" opacity="0.08"/></pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#8b5db3b8-base)"/>
+  <rect width="1920" height="1080" fill="url(#8b5db3b8-glowL)"/>
+  <rect width="1920" height="1080" fill="url(#8b5db3b8-glowR)"/>
+  <rect width="1920" height="1080" fill="url(#8b5db3b8-pat)" opacity="0.6"/>
+  <g opacity="0.35" stroke="#fbbf24" stroke-width="1.5" fill="none">
+  <path d="M32 72 V32 H72"/>
+  <path d="M1848 32 H1888 V72"/>
+  <path d="M1888 1008 V1048 H1848"/>
+  <path d="M72 1048 H32 V1008"/>
+</g>
+  <path d="M0 885.5999999999999 C384 820.8 672 972 960 907.1999999999999 C1248 842.4 1574.3999999999999 993.6 1920 928.8 L1920 1080 L0 1080 Z" fill="#fbbf24" fill-opacity="0.08"/>
+  <path d="M0 950.4 C480 885.5999999999999 768 1036.8 1056 972 C1382.3999999999999 907.1999999999999 1689.6 1058.4 1920 993.6 L1920 1080 L0 1080 Z" fill="#f59e0b" fill-opacity="0.05"/>
+  <polygon points="960,170.4 965.6427384220077,186.6334368540005 982.8253563910837,186.98359213500126 969.1301425564335,197.3665631459995 974.1068460550193,213.81640786499875 960,204 945.8931539449807,213.81640786499875 950.8698574435665,197.3665631459995 937.1746436089163,186.98359213500126 954.3572615779923,186.6334368540005" fill="none" stroke="#fbbf24" stroke-width="1" opacity="0.4"/>
+  <circle cx="960" cy="486" r="120" fill="none" stroke="#fbbf24" stroke-width="0.8" opacity="0.08"/>
+  <circle cx="960" cy="486" r="66" fill="none" stroke="#fbbf24" stroke-width="0.5" opacity="0.055999999999999994"/>
+  <circle cx="1080" cy="486" r="2.5" fill="#fbbf24" opacity="0.08"/>
+  <circle cx="900" cy="381.6" r="2" fill="#fbbf24" opacity="0.064"/>
+</svg>

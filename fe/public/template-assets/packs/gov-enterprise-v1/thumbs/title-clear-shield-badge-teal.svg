@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="72" viewBox="0 0 320 72" preserveAspectRatio="xMidYMid slice">
+  <rect width="320" height="72" fill="#0f172a"/>
+  <g transform="scale(0.4444444444444444 1.125)">
+  
+  <path d="M32 14 L44.6 26.6 L44.6 39.2 Q32 48.2 19.4 39.2 L19.4 26.6 Z" fill="none" stroke="#2dd4bf" stroke-width="1.2" opacity="0.6"/>
+  <rect x="56" y="8" width="4" height="48" fill="#2dd4bf" opacity="0.5"/>
+  <line x1="72" y1="32" x2="696" y2="32" stroke="#2dd4bf" stroke-width="1" opacity="0.35"/>
+  <path d="M664 32 Q674 27 684 32 Q694 37 704 32" fill="none" stroke="#2dd4bf" stroke-width="1" opacity="0.4"/>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+{
+  "title": "VitalSpan 产品白皮书",
+  "goal": "VitalSpan 自研可配置 BI 平台产品白皮书",
+  "themePack": "theme07",
+  "pageCount": 36,
+  "part": {
+    "index": 4,
+    "total": 8,
+    "startSlide": 16,
+    "endSlide": 20
+  },
+  "slides": [
+    {
+      "layout": "theme07_page065",
+      "props": {}
+    },
+    {
+      "layout": "theme07_page007",
+      "props": {}
+    },
+    {
+      "layout": "theme07_page042",
+      "props": {}
+    },
+    {
+      "layout": "theme07_page061",
+      "props": {}
+    },
+    {
+      "layout": "theme07_page030",
+      "props": {}
+    }
+  ]
+}

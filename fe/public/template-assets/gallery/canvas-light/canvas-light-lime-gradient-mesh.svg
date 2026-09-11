@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice">
+  
+  <g transform="scale(0.16666666666666666 0.16666666666666666)">
+  
+  <defs>
+    <linearGradient id="be0f47e5-base" x1="0" y1="0" x2="1920" y2="1080">
+      <stop stop-color="#e7e8e6"/>
+      <stop offset="0.32" stop-color="#b7bdb2"/>
+      <stop offset="0.68" stop-color="#d0d9c3"/>
+      <stop offset="1" stop-color="#afc393"/>
+    </linearGradient>
+    <radialGradient id="be0f47e5-glowL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(345.59999999999997 237.6) scale(729.6)">
+      <stop stop-color="#84cc16" stop-opacity="0.32"/>
+      <stop offset="0.55" stop-color="#4a6c1b" stop-opacity="0.20800000000000002"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="be0f47e5-glowR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1574.3999999999999 777.6) scale(614.4)">
+      <stop stop-color="#a3e635" stop-opacity="0.272"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  <radialGradient id="be0f47e5-pat" cx="28%" cy="18%" r="55%"><stop stop-color="#a3e635" stop-opacity="0.59"/><stop offset="1" stop-opacity="0.00"/></radialGradient>
+  <radialGradient id="be0f47e5-patb" cx="78%" cy="82%" r="50%"><stop stop-color="#84cc16" stop-opacity="0.45"/><stop offset="1" stop-opacity="0.00"/></radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#be0f47e5-base)"/>
+  <rect width="1920" height="1080" fill="url(#be0f47e5-glowL)"/>
+  <rect width="1920" height="1080" fill="url(#be0f47e5-glowR)"/>
+  <rect width="1920" height="1080" fill="url(#be0f47e5-pat)"/>
+  <rect width="1920" height="1080" fill="url(#be0f47e5-patb)"/>
+  <g opacity="0.70" stroke="#a3e635" stroke-width="2" fill="none">
+  <path d="M24 72 V24 H72"/>
+  <path d="M1848 24 H1896 V72"/>
+  <path d="M1896 1008 V1056 H1848"/>
+  <path d="M72 1056 H24 V1008"/>
+</g>
+  <path d="M0 885.5999999999999 C384 820.8 672 972 960 907.1999999999999 C1248 842.4 1574.3999999999999 993.6 1920 928.8 L1920 1080 L0 1080 Z" fill="#a3e635" fill-opacity="0.46"/>
+  <path d="M0 950.4 C480 885.5999999999999 768 1036.8 1056 972 C1382.3999999999999 907.1999999999999 1689.6 1058.4 1920 993.6 L1920 1080 L0 1080 Z" fill="#84cc16" fill-opacity="0.29"/>
+
+  </g>
+</svg>

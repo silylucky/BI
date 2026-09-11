@@ -1,0 +1,42 @@
+wip: [tests,fe,backend,docs,+4] 82f (+478/-471) @ 2026-07-30 19:28 +0800
+
+Areas:
+  tests/       28 files (+78/-205)
+  fe/          21 files (+218/-78)
+  backend/     15 files (+63/-149)
+  docs/        11 files (+65/-28)
+  .cursor/     3 files (+51/-1)
+  scripts/     2 files (+0/-5)
+  .github/     1 files (+0/-2)
+  _root/       1 files (+3/-3)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T185813-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T185813.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  .github/workflows/ci.yml
+M  README.md
+M  backend/.env.example
+M  backend/app/api/v1/nfr.py
+M  backend/app/core/config.py
+M  backend/app/core/crypto/credentials.py
+M  backend/app/core/crypto/password.py
+M  backend/app/core/middleware/https_audit_guard.py
+M  backend/app/core/nfr/dashboard_first_screen.py
+M  backend/app/core/nfr/dashboard_sla.py
+M  backend/app/core/nfr/deployment_report.py
+M  backend/app/core/nfr/https_audit.py
+M  backend/app/core/nfr/push_channels.py
+M  backend/app/core/nfr/push_config.py
+M  backend/app/core/nfr/runtime_guard.py
+M  backend/app/core/nfr/xinchuang.py
+M  backend/app/reports/scheduler/delivery_adapter.py
+M  docs/arch.md
+M  docs/automate/prd/F03-DS.md
+M  docs/automate/prd/F08-RPT.md
+M  docs/automate/prd/F15-NFR.md
+M  docs/nfr/dashboard-availability.md
+... and 57 more
+
+stat: 82 files changed, 478 insertions(+), 471 deletions(-)
+branch: dev | scheduled-auto-commit

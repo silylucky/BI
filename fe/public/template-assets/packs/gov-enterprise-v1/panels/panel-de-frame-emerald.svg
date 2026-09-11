@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480" preserveAspectRatio="none meet">
+  <defs>
+    <linearGradient id="0de8ca85-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#064e3b" stop-opacity="0.25"/>
+      <stop offset="1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="#021a14" fill-opacity="0.88"/>
+  <path d="M16 8 H784 L792 16 V464 L784 472 H16 L8 464 V16 Z" fill="none" stroke="#34d399" stroke-width="1.5" opacity="0.7"/>
+  <path d="M32 20 H752 V32 H48 V432 H752 V448 H32 V20 Z" fill="none" stroke="#34d399" stroke-width="0.6" opacity="0.25"/>
+  <g opacity="0.8" stroke="#34d399" stroke-width="2" fill="none">
+  <path d="M8 36 V8 H36"/>
+  <path d="M764 8 H792 V36"/>
+  <path d="M792 444 V472 H764"/>
+  <path d="M36 472 H8 V444"/>
+</g>
+  <path d="M44 16 Q56 28 44 40 Q32 28 44 16" fill="none" stroke="#34d399" stroke-width="1" opacity="0.5"/>
+  <line x1="44" y1="16" x2="44" y2="40" stroke="#34d399" stroke-width="0.6" opacity="0.3"/>
+  <rect x="68" y="16" width="120" height="24" fill="#34d399" fill-opacity="0.08" rx="2"/>
+  <rect width="800" height="480" fill="url(#0de8ca85-fade)" pointer-events="none"/>
+</svg>

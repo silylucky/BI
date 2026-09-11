@@ -1,0 +1,43 @@
+wip: [fe,scripts,docs,.cursor,+5] 45f (+1828/-505) @ 2026-07-30 16:28...
+
+Areas:
+  fe/          23 files (+397/-53)
+  scripts/     8 files (+457/-370)
+  docs/        4 files (+97/-74)
+  .cursor/     3 files (+73/-1)
+  backend/     3 files (+625/-3)
+  _root/       1 files (+26/-3)
+  docker/      1 files (+149/-0)
+  .github/     1 files (+3/-0)
+  "docs/       1 files (+1/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T155821-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T155821.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  .github/workflows/ci.yml
+M  README.md
+A  backend/app/dashboard/templates/presets_gov.py
+M  backend/app/dashboard/templates/seed.py
+M  backend/app/main.py
+M  docker/demo-mysql/tables.sql
+M  docs/arch.md
+M  docs/automate/prd/F03-DS.md
+M  docs/feature-truth/2026-07-30-report-center-truth-audit.md
+M  docs/services/datasources.md
+M  "docs/srs/\345\205\250\347\224\237\345\221\275\345\221\250\346\234\237\347\263\273\347\273\237\351\234\200\346\261\202\350\247\204\346\240\274\350\257\264\346\230\216\344\271\246.md"
+A  fe/public/template-assets/thumbs/gov-community.svg
+A  fe/public/template-assets/thumbs/gov-digital-cockpit.svg
+A  fe/public/template-assets/thumbs/gov-eco-monitor.svg
+A  fe/public/template-assets/thumbs/gov-efficiency.svg
+A  fe/public/template-assets/thumbs/gov-emergency-command.svg
+A  fe/public/template-assets/thumbs/gov-finance.svg
+A  fe/public/template-assets/thumbs/gov-grid.svg
+A  fe/public/template-assets/thumbs/gov-investment.svg
+A  fe/public/template-assets/thumbs/gov-satisfaction.svg
+A  fe/public/template-assets/thumbs/gov-smart-city.svg
+M  fe/src/components/dashboard/PublicShareLinkCard.tsx
+... and 20 more
+
+stat: 45 files changed, 1828 insertions(+), 505 deletions(-)
+branch: dev | scheduled-auto-commit

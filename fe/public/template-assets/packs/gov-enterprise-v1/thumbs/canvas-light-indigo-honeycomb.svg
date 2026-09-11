@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice">
+  
+  <g transform="scale(0.16666666666666666 0.16666666666666666)">
+  
+  <defs>
+    <linearGradient id="8660832a-base" x1="0" y1="0" x2="1920" y2="1080">
+      <stop stop-color="#e7e8ea"/>
+      <stop offset="0.32" stop-color="#b4b5c0"/>
+      <stop offset="0.68" stop-color="#c8c7d8"/>
+      <stop offset="1" stop-color="#9e9dc2"/>
+    </linearGradient>
+    <radialGradient id="8660832a-glowL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(345.59999999999997 237.6) scale(729.6)">
+      <stop stop-color="#818cf8" stop-opacity="0.32"/>
+      <stop offset="0.55" stop-color="#32387e" stop-opacity="0.20800000000000002"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="8660832a-glowR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1574.3999999999999 777.6) scale(614.4)">
+      <stop stop-color="#6366f1" stop-opacity="0.272"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  <pattern id="8660832a-pat" width="42" height="48.49742261192856" patternUnits="userSpaceOnUse">
+    <path d="M14 0 L28 0 L35 12.12435565298214 L28 24.24871130596428 L14 24.24871130596428 L7 12.12435565298214 Z" fill="none" stroke="#6366f1" stroke-width="0.6" opacity="0.38"/>
+    <path d="M35 36.373066958946424 L49 36.373066958946424 L56 48.49742261192856 L49 60.6217782649107 L35 60.6217782649107 L28 48.49742261192856 Z" fill="none" stroke="#6366f1" stroke-width="0.6" opacity="0.38"/>
+  </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#8660832a-base)"/>
+  <rect width="1920" height="1080" fill="url(#8660832a-glowL)"/>
+  <rect width="1920" height="1080" fill="url(#8660832a-glowR)"/>
+  <rect width="1920" height="1080" fill="url(#8660832a-pat)"/>
+  <g opacity="0.70" stroke="#6366f1" stroke-width="1.5" fill="none">
+  <path d="M20 56 V20 H56"/>
+  <path d="M1864 20 H1900 V56"/>
+  <path d="M1900 1024 V1060 H1864"/>
+  <path d="M56 1060 H20 V1024"/>
+</g>
+  <polygon points="212.12435565298213,83 212.12435565298213,97 200,104 187.87564434701787,97 187.87564434701787,83 199.99999999999997,76" fill="none" stroke="#6366f1" stroke-width="1.2" opacity="0.46"/>
+  <circle cx="200" cy="90" r="3.5" fill="#6366f1" opacity="0.38"/>
+  <polygon points="552.1243556529821,83 552.1243556529821,97 540,104 527.8756443470179,97 527.8756443470179,83 540,76" fill="none" stroke="#6366f1" stroke-width="1.2" opacity="0.46"/>
+  <circle cx="540" cy="90" r="3.5" fill="#6366f1" opacity="0.38"/>
+  <polygon points="892.1243556529821,83 892.1243556529821,97 880,104 867.8756443470179,97 867.8756443470179,83 880,76" fill="none" stroke="#6366f1" stroke-width="1.2" opacity="0.46"/>
+  <circle cx="880" cy="90" r="3.5" fill="#6366f1" opacity="0.38"/>
+  <polygon points="1232.124355652982,83 1232.124355652982,97 1220,104 1207.875644347018,97 1207.875644347018,83 1220,76" fill="none" stroke="#6366f1" stroke-width="1.2" opacity="0.46"/>
+  <circle cx="1220" cy="90" r="3.5" fill="#6366f1" opacity="0.38"/>
+  <polygon points="1572.124355652982,83 1572.124355652982,97 1560,104 1547.875644347018,97 1547.875644347018,83 1560,76" fill="none" stroke="#6366f1" stroke-width="1.2" opacity="0.46"/>
+  <circle cx="1560" cy="90" r="3.5" fill="#6366f1" opacity="0.38"/>
+  <path d="M960 440 L1060 540 L960 640 L860 540 Z" fill="none" stroke="#6366f1" stroke-width="1.2" opacity="0.22"/>
+  <circle cx="960" cy="540" r="2" fill="#6366f1" opacity="0.22"/>
+
+  </g>
+</svg>

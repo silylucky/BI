@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-04T12:47:13+08:00",
+  "finishedAt": "2026-08-04T12:47:32+08:00",
+  "branch": "dev",
+  "commit": "7cc887e9",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,docs,.cursor,tests,+1] 72f (+3258/-304) @ 2026-08-04 12:47 +...",
+  "filesChanged": 72,
+  "insertions": 3258,
+  "deletions": 304,
+  "topDirs": { "fe": 62, "docs": 4, ".cursor": 3, "tests": 2, ".dev": 1 },
+  "sampleFiles": [
+    "fe/src/components/charts/engine/geo/geoMapBubbleEffectStyle.ts",
+    "fe/src/components/charts/engine/three/geo3dStylePatch.ts",
+    "docs/material/deploy/2026-08-04-vitalspan-staging-deploy-log.md",
+    "tests/test_sync_consume.py"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/", "fe/.env.production.local"]
+}

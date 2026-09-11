@@ -1,0 +1,67 @@
+---
+description: VitalSpan 后端 FastAPI 分层、API 与安全约定
+globs:
+  - "backend/**/*.py"
+  - "tests/**/*.py"
+alwaysApply: false
+---
+
+# 后端（FastAPI）
+
+> 详规：`docs/arch.md` §4.2 · §5 · §7 · `docs/services/` · `.agents/skills/fastapi/SKILL.md`  
+> 分层角色：@.cursor/rules/common.mdc
+
+## 布局
+
+```
+backend/
+├── app/
+│   ├── main.py              # ASGI 入口；注册中间件与 api/v1 路由
+│   ├── core/                # config, logging, TraceIdMiddleware（薄）
+│   ├── auth/                # AuthMiddleware, deps, RBAC/RLS（M7 扩展）
+│   ├── api/v1/              # entry：按域分子路由，聚合到 router
+│   ├── schemas/             # Pydantic 契约（跨域 DTO）
+│   └── <domain>/            # datasources, query, ingestion, dashboard…
+├── migrations/              # Alembic（平台元库）
+└── pyproject.toml
+```
+
+**entry 纪律**：`api/v1/*.py` 只做参数解析、依赖注入、调用域服务、返回响应；业务逻辑在 `<domain>/`。
+
+## API
+
+- 业务路由前缀 **`/api/v1/`**；新路由登记 `docs/api/README.md`
+- 查询类 API **只读**，禁止经 API 写入外部数据源
+- 错误体：`{ "code", "message", "detail" }`（与前端 envelope 对齐）
+- 鉴权：`Authorization: Bearer`；`PUBLIC_PATHS` 豁免见 `vitalspan-project.mdc`
+- M1 占位：`Bearer dev` 仅开发环境；生产禁用
+
+## 配置与安全
+
+- 配置：`core.config.Settings`（`pydantic-settings`），秘密来自环境变量
+- 日志：结构化 JSON，请求字段 **`traceId`**（`X-Trace-Id` 可透传）
+- 凭证：Fernet（`CREDENTIAL_FERNET_KEY`，ADR-06）；API 响应脱敏密码/密钥
+- 查询：强制 LIMIT、参数化；RLS 注入链归 `auth/` + `query/`（M7 起）
+
+## 域模块习惯
+
+| 域 | 职责 | 禁止 |
+|----|------|------|
+| `datasources/` | 连接池、ConnectorRegistry、凭证、元数据浏览 | 在路由层拼 SQL |
+| `query/` | 执行器、绑定、方言、RLS 消费 | 直接管理连接池 |
+| `ingestion/` | 同步、清洗、调度（M1B）；M1B 源用 `SourceConnection` | 替代 ConnectorRegistry |
+| `auth/` | 身份、RBAC、RLS 策略 | 查询执行细节 |
+
+连接器：按 `type` 放 `datasources/dialects/`，经 `ConnectorRegistry` 注册（M3 起）。
+
+## 测试与 CI
+
+- Smoke：`tests/test_health.py` + `TestClient`
+- 风格：`ruff`；配置在 `backend/pyproject.toml`
+- CI 从 `backend/` 目录执行 `ruff` / `pytest`（见 `plan.md` BOOT-006）
+
+## 禁止
+
+- GPL BI 运行时或嵌入 Superset/DataEase
+- `core/` import 上层 domain 业务（反向依赖）
+- 路由层写方言 SQL 或复制 `core` 横切逻辑

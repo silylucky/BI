@@ -1,0 +1,176 @@
+services:
+  postgres:
+    image: docker.m.daocloud.io/library/postgres:16-alpine
+    ports:
+      - "5435:5432"
+    environment:
+      POSTGRES_USER: vitalspan
+      POSTGRES_PASSWORD: vitalspan
+      POSTGRES_DB: vitalspan
+    volumes:
+      - vitalspan_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vitalspan"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  analytics-postgres:
+    image: docker.m.daocloud.io/library/postgres:16-alpine
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: vitalspan
+      POSTGRES_PASSWORD: vitalspan
+      POSTGRES_DB: analytics
+    volumes:
+      - vitalspan_analytics_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vitalspan -d analytics"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  sample-mysql:
+    image: mysql:8
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sample_db
+      MYSQL_USER: sample
+      MYSQL_PASSWORD: sample
+    volumes:
+      - ./docker/sample-mysql/01-bootstrap.sql:/docker-entrypoint-initdb.d/01-bootstrap.sql:ro
+      - ./docker/demo-mysql/tables.sql:/docker-entrypoint-initdb.d/02-tables.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-usample", "-psample"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  meta-mysql:
+    image: mysql:8.0
+    ports:
+      - "3309:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: vitalspan
+      MYSQL_USER: vitalspan
+      MYSQL_PASSWORD: vitalspan
+    volumes:
+      - vitalspan_meta_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uvitalspan", "-pvitalspan"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  sample-mariadb:
+    image: docker.m.daocloud.io/library/mariadb:11
+    ports:
+      - "3308:3306"
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: sample_db
+      MARIADB_USER: sample
+      MARIADB_PASSWORD: sample
+    volumes:
+      - ./docker/sample-mariadb/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  sample-clickhouse:
+    image: docker.m.daocloud.io/clickhouse/clickhouse-server:24-alpine
+    ports:
+      - "8124:8123"
+    volumes:
+      - ./docker/sample-clickhouse/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - ./docker/sample-clickhouse/users.d/default-user.xml:/etc/clickhouse-server/users.d/default-user.xml:ro
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8123/ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  sample-timescaledb:
+    image: docker.m.daocloud.io/timescale/timescaledb:2.17.2-pg16
+    container_name: vitalspan-sample-timescaledb-1
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: vitalspan
+      POSTGRES_PASSWORD: vitalspan
+      POSTGRES_DB: ops_tsdb
+    volumes:
+      - ./docker/sample-timescaledb/01-schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./docker/sample-timescaledb/02-dimensions.sql:/docker-entrypoint-initdb.d/02-dimensions.sql:ro
+      - vitalspan_ops_tsdb_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vitalspan -d ops_tsdb"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
+  # RoAPI 只读查询 sidecar（可选；CONN-028 PoC；见 docker/roapi/README.md）
+  roapi:
+    profiles: ["roapi"]
+    image: ghcr.io/roapi/roapi:v0.11.3
+    ports:
+      - "8086:8080"
+    command:
+      - --addr-http
+      - 0.0.0.0:8080
+      - --table
+      - demo_orders=/data/demo_orders.csv
+      - --table
+      - demo_products=/data/demo_products.csv
+    volumes:
+      - ./docker/roapi/demo_orders.csv:/data/demo_orders.csv:ro
+      - ./docker/roapi/demo_products.csv:/data/demo_products.csv:ro
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:8080/api/schema || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  # 全球 PMTiles 外部瓦片服务（可选；非 VitalSpan 内置；见 docker/pmtiles-tile-server/README.md）
+  pmtiles-tile-server:
+    profiles: ["pmtiles-external"]
+    container_name: vitalspan-pmtiles-tile-server
+    image: docker.m.daocloud.io/library/caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "${PMTILES_TILE_PORT:-8080}:8080"
+    environment:
+      PMTILES_CORS_ORIGIN: "${PMTILES_CORS_ORIGIN:-http://127.0.0.1:5173}"
+      PMTILES_HEALTH_FILE: "${PMTILES_HEALTH_FILE:-planet-z15-20260817.pmtiles}"
+    volumes:
+      - "${PMTILES_DATA_DIR:?Set PMTILES_DATA_DIR to the host directory containing .pmtiles files}:/srv:ro"
+      - ./docker/pmtiles-tile-server/Caddyfile:/etc/caddy/Caddyfile:ro
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "wget -S -O /dev/null -q --header='Range: bytes=0-0' \"http://127.0.0.1:8080/$${PMTILES_HEALTH_FILE}\" 2>&1 | grep -q '206 Partial Content' && wget -q -O /dev/null \"http://127.0.0.1:8080/basemaps-assets/sprites/v4/light.json\" && wget -q -O /dev/null \"http://127.0.0.1:8080/basemaps-assets/fonts/Noto%20Sans%20Regular/0-255.pbf\"",
+        ]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 10s
+
+volumes:
+  vitalspan_pg_data:
+  vitalspan_analytics_pg_data:
+  vitalspan_meta_mysql_data:
+  vitalspan_ops_tsdb_data:

@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-03T14:14:24+08:00",
+  "finishedAt": "2026-08-03T14:14:34+08:00",
+  "branch": "dev",
+  "commit": "3addd760",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,docs,tests,backend,+1] 32f (+1211/-143) @ 2026-08-03 14:14 +...",
+  "filesChanged": 32,
+  "insertions": 1211,
+  "deletions": 143,
+  "topDirs": { "fe": 16, "docs": 6, "tests": 4, "backend": 3, ".cursor": 3 },
+  "sampleFiles": [
+    "fe/src/lib/chartStyleAuditMatrix.ts",
+    "docs/material/chart-style-audit/2026-08-03-full-matrix.md",
+    "docs/feature-truth/2026-08-03-sync-jobs-deliverable-truth-audit.md",
+    "backend/app/viz/components/chart_palette.py"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/"]
+}

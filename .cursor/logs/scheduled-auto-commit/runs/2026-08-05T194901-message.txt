@@ -1,0 +1,35 @@
+wip: [f] 31f (+639/-196) @ 2026-08-05 19:49 +0800
+
+Areas:
+  fe/          31 files (+639/-196)
+
+Changed (up to 25):
+M  fe/src/components/charts/engine/applyChartStyleChain.test.ts
+M  fe/src/components/charts/engine/buildStyleContext.ts
+M  fe/src/components/charts/engine/chartConfigContract.test.ts
+M  fe/src/components/charts/engine/d3/cartesian/renderBar.ts
+M  fe/src/components/charts/engine/d3/cartesian/renderBarHorizontal.ts
+A  fe/src/components/charts/engine/d3/core/cartesianDataLabel.ts
+M  fe/src/components/charts/engine/d3/flow/renderFunnel.ts
+M  fe/src/components/charts/engine/d3/radial/pieLabels.ts
+M  fe/src/components/charts/engine/d3/radial/renderPie.ts
+M  fe/src/components/charts/engine/d3/renderD3LineChart.ts
+M  fe/src/components/charts/engine/d3/types.ts
+M  fe/src/components/charts/engine/d3/views/buildCartesianConfig.ts
+M  fe/src/components/charts/engine/d3/views/buildRenderConfig.ts
+M  fe/src/components/charts/engine/d3/views/buildStyleProps.ts
+M  fe/src/components/charts/engine/types.ts
+M  fe/src/components/dashboard/TemplateAssetImageGallery.tsx
+M  fe/src/components/dashboard/chartStyleSections/ChartCommonStyleSections.tsx
+A  fe/src/components/dashboard/chartStyleSections/ChartDeLabelContentFields.tsx
+M  fe/src/components/dashboard/chartStyleSections/ChartPieLabelFields.tsx
+M  fe/src/components/dashboard/imageSourceField.test.ts
+M  fe/src/components/dashboard/imageSourceField.tsx
+M  fe/src/components/dashboard/imageSourceFieldRail.tsx
+M  fe/src/components/dashboard/imageSourceUtils.ts
+M  fe/src/lib/applyChartDeStyleBlocks.ts
+A  fe/src/lib/chartDataLabelFormat.test.ts
+... and 6 more
+
+stat: 31 files changed, 639 insertions(+), 196 deletions(-)
+branch: dev | scheduled-auto-commit

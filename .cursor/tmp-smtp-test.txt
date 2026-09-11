@@ -1,0 +1,68 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\30381\AppData\Local\Programs\Python\Python312\python.exe
+cachedir: .pytest_cache
+rootdir: c:\Users\30381\Desktop\VitalSpan
+configfile: pytest.ini
+plugins: anyio-4.14.1
+collecting ... collected 1 item
+
+..\tests\test_report_dashboard_schedule.py::test_dashboard_execute_smtp_attaches_pdf FAILED [100%]
+
+================================== FAILURES ===================================
+__________________ test_dashboard_execute_smtp_attaches_pdf ___________________
+..\tests\test_report_dashboard_schedule.py:369: in test_dashboard_execute_smtp_attaches_pdf
+    assert body.get("status") == "semi_real_succeeded"
+E   AssertionError: assert 'semi_real_failed' == 'semi_real_succeeded'
+E     
+E     - semi_real_succeeded
+E     + semi_real_failed
+---------------------------- Captured stdout call -----------------------------
+{"timestamp": "2026-08-23T15:52:17.169200+00:00", "level": "INFO", "logger": "vitalspan.http", "message": "request_started", "traceId": "787d2ca584434d18866c4aad5b990702", "method": "POST", "path": "/api/v1/dashboards"}
+{"timestamp": "2026-08-23T15:52:17.543054+00:00", "level": "INFO", "logger": "vitalspan.http", "message": "request_finished", "traceId": "787d2ca584434d18866c4aad5b990702", "method": "POST", "path": "/api/v1/dashboards", "status_code": 201}
+{"timestamp": "2026-08-23T15:52:17.547548+00:00", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST http://testserver/api/v1/dashboards \"HTTP/1.1 201 Created\""}
+{"timestamp": "2026-08-23T15:52:17.575224+00:00", "level": "INFO", "logger": "vitalspan.http", "message": "request_started", "traceId": "ec6dbdd94185435183f801a2e04576da", "method": "PUT", "path": "/api/v1/dashboards/e7b86f0c-a751-49df-ae39-061f298153e2/layout"}
+{"timestamp": "2026-08-23T15:52:17.590270+00:00", "level": "INFO", "logger": "vitalspan.http", "message": "request_finished", "traceId": "ec6dbdd94185435183f801a2e04576da", "method": "PUT", "path": "/api/v1/dashboards/e7b86f0c-a751-49df-ae39-061f298153e2/layout", "status_code": 200}
+{"timestamp": "2026-08-23T15:52:17.592779+00:00", "level": "INFO", "logger": "httpx", "message": "HTTP Request: PUT http://testserver/api/v1/dashboards/e7b86f0c-a751-49df-ae39-061f298153e2/layout \"HTTP/1.1 200 OK\""}
+{"timestamp": "2026-08-23T15:52:17.624959+00:00", "level": "INFO", "logger": "vitalspan.http", "message": "request_started", "traceId": "67f0d81119174644a7bc65d09157c302", "method": "POST", "path": "/api/v1/reports/schedules"}
+{"timestamp": "2026-08-23T15:52:18.120651+00:00", "level": "INFO", "logger": "vitalspan.http", "message": "request_finished", "traceId": "67f0d81119174644a7bc65d09157c302", "method": "POST", "path": "/api/v1/reports/schedules", "status_code": 201}
+{"timestamp": "2026-08-23T15:52:18.123660+00:00", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST http://testserver/api/v1/reports/schedules \"HTTP/1.1 201 Created\""}
+{"timestamp": "2026-08-23T15:52:18.151857+00:00", "level": "INFO", "logger": "vitalspan.http", "message": "request_started", "traceId": "88ac2ddf30f14142acc592fc57932d49", "method": "POST", "path": "/api/v1/reports/schedules/84afd0bc-f84d-46af-8830-68902be0511d/transition"}
+{"timestamp": "2026-08-23T15:52:18.164186+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Adding job tentatively -- it will be properly scheduled when the scheduler starts", "traceId": "88ac2ddf30f14142acc592fc57932d49"}
+{"timestamp": "2026-08-23T15:52:18.167194+00:00", "level": "INFO", "logger": "vitalspan.http", "message": "request_finished", "traceId": "88ac2ddf30f14142acc592fc57932d49", "method": "POST", "path": "/api/v1/reports/schedules/84afd0bc-f84d-46af-8830-68902be0511d/transition", "status_code": 200}
+{"timestamp": "2026-08-23T15:52:18.170711+00:00", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST http://testserver/api/v1/reports/schedules/84afd0bc-f84d-46af-8830-68902be0511d/transition \"HTTP/1.1 200 OK\""}
+{"timestamp": "2026-08-23T15:52:18.203528+00:00", "level": "INFO", "logger": "vitalspan.http", "message": "request_started", "traceId": "5c9dd4c6f91547868d2c9ea74cb66f12", "method": "POST", "path": "/api/v1/reports/schedules/84afd0bc-f84d-46af-8830-68902be0511d/execute"}
+{"timestamp": "2026-08-23T15:52:18.247770+00:00", "level": "INFO", "logger": "vitalspan.http", "message": "request_finished", "traceId": "5c9dd4c6f91547868d2c9ea74cb66f12", "method": "POST", "path": "/api/v1/reports/schedules/84afd0bc-f84d-46af-8830-68902be0511d/execute", "status_code": 200}
+{"timestamp": "2026-08-23T15:52:18.250778+00:00", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST http://testserver/api/v1/reports/schedules/84afd0bc-f84d-46af-8830-68902be0511d/execute \"HTTP/1.1 200 OK\""}
+------------------------------ Captured log call ------------------------------
+INFO     vitalspan.http:__init__.py:18 request_started
+INFO     vitalspan.http:__init__.py:25 request_finished
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/v1/dashboards "HTTP/1.1 201 Created"
+INFO     vitalspan.http:__init__.py:18 request_started
+INFO     vitalspan.http:__init__.py:25 request_finished
+INFO     httpx:_client.py:1025 HTTP Request: PUT http://testserver/api/v1/dashboards/e7b86f0c-a751-49df-ae39-061f298153e2/layout "HTTP/1.1 200 OK"
+INFO     vitalspan.http:__init__.py:18 request_started
+INFO     vitalspan.http:__init__.py:25 request_finished
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/v1/reports/schedules "HTTP/1.1 201 Created"
+INFO     vitalspan.http:__init__.py:18 request_started
+INFO     apscheduler.scheduler:base.py:507 Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO     vitalspan.http:__init__.py:25 request_finished
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/v1/reports/schedules/84afd0bc-f84d-46af-8830-68902be0511d/transition "HTTP/1.1 200 OK"
+INFO     vitalspan.http:__init__.py:18 request_started
+INFO     vitalspan.http:__init__.py:25 request_finished
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/v1/reports/schedules/84afd0bc-f84d-46af-8830-68902be0511d/execute "HTTP/1.1 200 OK"
+============================== warnings summary ===============================
+..\..\..\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\30381\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+app\query\schemas.py:27
+  C:\Users\30381\Desktop\VitalSpan\backend\app\query\schemas.py:27: UserWarning: Field name "schema" in "ExecuteRequest" shadows an attribute in parent "BaseModel"
+    class ExecuteRequest(BaseModel):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED ..\tests\test_report_dashboard_schedule.py::test_dashboard_execute_smtp_attaches_pdf - AssertionError: assert 'semi_real_failed' == 'semi_real_succeeded'
+  
+  - semi_real_succeeded
+  + semi_real_failed
+======================== 1 failed, 2 warnings in 2.63s ========================

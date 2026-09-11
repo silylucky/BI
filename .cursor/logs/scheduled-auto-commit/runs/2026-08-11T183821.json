@@ -1,0 +1,34 @@
+{
+  "startedAt": "2026-08-11T18:38:21+08:00",
+  "finishedAt": "2026-08-11T18:39:05+08:00",
+  "branch": "dev",
+  "outcome": "success",
+  "push": false,
+  "commit": "2c75bd1d",
+  "messageSubject": "wip: [backend,fe,docs,tests,+4] 156f (+5164/-4591) @ 2026-08-11 18:38...",
+  "messageBodyPreview": "Areas:\n  backend/     57 files\n  fe/          54 files\n  docs/        26 files\n  tests/       9 files\n  .agents/     7 files\n\nKey: prefab→standard analysis refactor, ocr-code-review fleet mode, docs hygiene cleanup",
+  "filesChanged": 157,
+  "insertions": 5164,
+  "deletions": 4591,
+  "topDirs": {
+    "backend": 57,
+    "fe": 54,
+    "docs": 26,
+    "tests": 9,
+    ".agents": 7,
+    ".ast-grep": 1,
+    ".cursor": 1,
+    ".dev": 1
+  },
+  "sampleFiles": [
+    "backend/app/reports/standard/service.py",
+    "backend/migrations/versions/0044_standard_analysis.py",
+    "fe/src/pages/admin/reports/StandardAnalysisPage.tsx",
+    "fe/src/pages/admin/reports/useStandardAnalysis.ts",
+    "docs/hygiene/unused-asset-scan/2026-08-11-all-docs-scan.md",
+    ".agents/skills/ocr-code-review/scripts/ocr_review.py",
+    "tests/test_standard_analysis.py"
+  ],
+  "tick": 371,
+  "notes": "prefab reports removed; standard analysis domain added"
+}

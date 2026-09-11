@@ -1,0 +1,10 @@
+{
+  "startedAt": "2026-08-12T02:39:00+08:00",
+  "finishedAt": "2026-08-12T02:40:18+08:00",
+  "branch": "dev",
+  "outcome": "skipped",
+  "push": false,
+  "reason": "工作区无业务代码改动；积压 tick #384–#387 一并跳过",
+  "tick": 387,
+  "notes": "catch-up for occurrences 13-16"
+}

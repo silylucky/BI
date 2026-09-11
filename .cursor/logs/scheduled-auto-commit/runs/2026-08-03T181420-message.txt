@@ -1,0 +1,35 @@
+wip: [fe,.cursor] 25f (+635/-100) @ 2026-08-03 18:14 +0800
+
+Areas:
+  fe/          22 files (+574/-99)
+  .cursor/     3 files (+61/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T174417-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T174417.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  fe/src/components/charts/ChartRenderer.tsx
+M  fe/src/components/charts/engine/applyChartStyleChain.test.ts
+M  fe/src/components/charts/engine/buildStyleContext.ts
+M  fe/src/components/charts/engine/d3/radial/renderLiquid.test.ts
+M  fe/src/components/charts/engine/d3/radial/renderLiquid.ts
+M  fe/src/components/dashboard/chartStyleSections/ChartCommonStyleSections.tsx
+A  fe/src/components/dashboard/chartStyleSections/ChartLiquidLabelFields.tsx
+M  fe/src/layouts/AdminLayout.smoke.test.tsx
+M  fe/src/lib/applyChartDeStyleBlocks.ts
+M  fe/src/lib/chartDeStyle.ts
+M  fe/src/lib/chartValueFormat.test.ts
+M  fe/src/lib/chartValueFormat.ts
+A  fe/src/lib/liquidLabelFormat.test.ts
+A  fe/src/lib/liquidLabelFormat.ts
+M  fe/src/lib/resolve-nav.test.ts
+M  fe/src/lib/workspace.ts
+M  fe/src/pages/admin/ingestion/SyncJobHistoryPage.tsx
+M  fe/src/pages/admin/ingestion/SyncJobsPage.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobConsumeGuide.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobForm.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobsTable.tsx
+M  fe/src/pages/admin/ingestion/ingestion.smoke.test.tsx
+
+stat: 25 files changed, 635 insertions(+), 100 deletions(-)
+branch: dev | scheduled-auto-commit

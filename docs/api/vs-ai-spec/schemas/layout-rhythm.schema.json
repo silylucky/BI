@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vitalspan.local/schemas/layout-rhythm.json",
+  "title": "LayoutRhythmContract",
+  "type": "object",
+  "required": ["id", "name", "surfaceKind", "canvas", "contentStartY", "marginX", "gutter", "styleConfig", "bands"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^rhythm-[a-z0-9-]+$" },
+    "name": { "type": "string", "minLength": 1 },
+    "description": { "type": "string" },
+    "surfaceKind": { "enum": ["data-screen", "dashboard"] },
+    "canvas": {
+      "type": "object",
+      "required": ["width", "height"],
+      "properties": {
+        "width": { "type": "integer", "minimum": 800 },
+        "height": { "type": "integer", "minimum": 600 }
+      }
+    },
+    "contentStartY": { "type": "integer", "minimum": 0 },
+    "marginX": { "type": "integer", "minimum": 0 },
+    "gutter": { "type": "integer", "minimum": 0 },
+    "shell": {
+      "oneOf": [
+        { "type": "boolean" },
+        {
+          "type": "object",
+          "properties": {
+            "title": { "type": "string" },
+            "accent": { "type": "string" },
+            "clock": { "type": "boolean" }
+          }
+        }
+      ]
+    },
+    "styleConfig": { "type": "object" },
+    "bands": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "height", "layout"],
+        "properties": {
+          "id": { "type": "string" },
+          "optional": { "type": "boolean" },
+          "minItems": { "type": "integer", "minimum": 0 },
+          "maxItems": { "type": "integer", "minimum": 1 },
+          "height": { "type": "integer", "minimum": 48 },
+          "layout": {
+            "enum": ["full", "split-2", "split-3", "sidebar-main", "grid-2x2", "metrics-row"]
+          }
+        }
+      }
+    }
+  }
+}

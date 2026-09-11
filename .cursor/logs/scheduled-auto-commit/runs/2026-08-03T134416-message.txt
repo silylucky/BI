@@ -1,0 +1,38 @@
+wip: [fe,backend,tests,.cursor] 38f (+1783/-423) @ 2026-08-03 13:44 +...
+
+Areas:
+  fe/          23 files (+994/-228)
+  backend/     8 files (+485/-123)
+  tests/       4 files (+263/-71)
+  .cursor/     3 files (+41/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T131412-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T131412.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/ingestion/sync.py
+M  backend/app/datasources/service.py
+M  backend/app/ingestion/models.py
+A  backend/app/ingestion/source_resolver.py
+M  backend/app/ingestion/sync_executor.py
+A  backend/app/ingestion/sync_fetch.py
+A  backend/app/ingestion/sync_write.py
+A  backend/migrations/versions/0031_sync_job_incremental.py
+A  fe/src/components/ui/unsaved-leave-dialog.tsx
+A  fe/src/hooks/use-form-dirty-state.ts
+M  fe/src/lib/apiError.ts
+M  fe/src/lib/chartStyleSectionRegistry.test.ts
+M  fe/src/lib/chartTypeStyleProfiles.ts
+M  fe/src/lib/demoPackage.test.ts
+M  fe/src/lib/demoPackage.ts
+M  fe/src/pages/admin/datasets/DatasetEditorForm.tsx
+M  fe/src/pages/admin/datasets/DatasetFormPage.tsx
+M  fe/src/pages/admin/datasources/DatasourceDetailPage.tsx
+M  fe/src/pages/admin/datasources/DatasourceFormPage.tsx
+M  fe/src/pages/admin/datasources/DatasourceListPage.tsx
+M  fe/src/pages/admin/datasources/components/DatasourceConnectionForm.tsx
+M  fe/src/pages/admin/datasources/datasource-detail.smoke.test.tsx
+... and 13 more
+
+stat: 38 files changed, 1783 insertions(+), 423 deletions(-)
+branch: dev | scheduled-auto-commit

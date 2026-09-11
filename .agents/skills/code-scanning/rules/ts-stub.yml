@@ -1,0 +1,47 @@
+id: ts-unimplemented-throw
+language: typescript
+severity: error
+message: 可激活 stub：throw 出未实现语义
+note: |
+  非测试主路径上的「抛未实现」= 假绿，调用方看不出这条路走不通。
+  .vue 文件需在 sgconfig.yml 配 languageGlobs 才会被扫（只覆盖 <script> 段）。
+files:
+  - "**/*.ts"
+  - "**/*.mts"
+  - "**/*.vue"
+ignores:
+  - "**/*.test.*"
+  - "**/*.spec.*"
+  - "**/__mocks__/**"
+  - "**/*.stories.*"
+  - "**/*.d.ts"
+rule:
+  pattern: throw new $ERR($MSG)
+  has:
+    stopBy: end
+    kind: string
+    regex: '(?i)not implemented|unimplemented|\btodo\b|\bstub\b|未实现'
+---
+id: ts-mock-data-export
+language: typescript
+severity: error
+message: 假数据被导出到主路径（mockData / fakeData）
+note: |
+  测试文件与 __mocks__ 已由本规则的 ignores 排除；能扫到说明它在生产代码路径上。
+  fixtures/ 目录如果是刻意的测试数据源，按仓在 ignores 里补一条。
+files:
+  - "**/*.ts"
+  - "**/*.mts"
+  - "**/*.vue"
+ignores:
+  - "**/*.test.*"
+  - "**/*.spec.*"
+  - "**/__mocks__/**"
+  - "**/*.stories.*"
+  - "**/*.d.ts"
+  - "**/fixtures/**"
+rule:
+  any:
+    - pattern: export const $NAME = $$$
+    - pattern: export let $NAME = $$$
+  regex: '(?i)\b(mockData|fakeData|dummyData|sampleData|stubData|mockUsers|fakeUsers)\b'

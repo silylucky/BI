@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="a56dc7ed-base" x1="0" y1="0" x2="1920" y2="1080">
+      <stop stop-color="#0a1628"/>
+      <stop offset="0.5" stop-color="#1e3a8a" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <radialGradient id="a56dc7ed-glowL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(345.59999999999997 237.6) scale(672)">
+      <stop stop-color="#3b82f6" stop-opacity="0.17"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="a56dc7ed-glowR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1574.3999999999999 777.6) scale(576)">
+      <stop stop-color="#60a5fa" stop-opacity="0.136"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  <radialGradient id="a56dc7ed-pat" cx="28%" cy="18%" r="55%"><stop stop-color="#60a5fa" stop-opacity="0.18"/><stop offset="1" stop-opacity="0"/></radialGradient>
+  <radialGradient id="a56dc7ed-patb" cx="78%" cy="82%" r="50%"><stop stop-color="#3b82f6" stop-opacity="0.14"/><stop offset="1" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#a56dc7ed-base)"/>
+  <rect width="1920" height="1080" fill="url(#a56dc7ed-glowL)"/>
+  <rect width="1920" height="1080" fill="url(#a56dc7ed-glowR)"/>
+  <rect width="1920" height="1080" fill="url(#a56dc7ed-pat)"/>
+  <rect width="1920" height="1080" fill="url(#a56dc7ed-patb)"/>
+  <g opacity="0.45" stroke="#60a5fa" stroke-width="2" fill="none">
+  <path d="M24 72 V24 H72"/>
+  <path d="M1848 24 H1896 V72"/>
+  <path d="M1896 1008 V1056 H1848"/>
+  <path d="M72 1056 H24 V1008"/>
+</g>
+  <path d="M0 885.5999999999999 C384 820.8 672 972 960 907.1999999999999 C1248 842.4 1574.3999999999999 993.6 1920 928.8 L1920 1080 L0 1080 Z" fill="#60a5fa" fill-opacity="0.08"/>
+  <path d="M0 950.4 C480 885.5999999999999 768 1036.8 1056 972 C1382.3999999999999 907.1999999999999 1689.6 1058.4 1920 993.6 L1920 1080 L0 1080 Z" fill="#3b82f6" fill-opacity="0.05"/>
+</svg>

@@ -1,0 +1,29 @@
+wip: [fe,docs] 19f (+687/-235) @ 2026-08-05 14:49 +0800
+
+Areas:
+  fe/          18 files (+686/-234)
+  docs/        1 files (+1/-1)
+
+Changed (up to 25):
+M  docs/user-guide/ingestion-sync-jobs-how-to.md
+M  fe/src/components/charts/engine/d3/core/axes.test.ts
+M  fe/src/components/charts/engine/d3/core/axes.ts
+M  fe/src/components/charts/engine/d3/core/hierarchicalAxis.test.ts
+M  fe/src/components/charts/engine/d3/core/hierarchicalAxis.ts
+A  fe/src/components/dashboard/WidgetBackgroundImageFitFields.tsx
+M  fe/src/components/dashboard/chartStyleFields.tsx
+M  fe/src/components/dashboard/dashboardStyleConfig.ts
+M  fe/src/components/datasources/SchemaBrowser.tsx
+M  fe/src/components/datasources/SchemaTreePanel.tsx
+M  fe/src/components/datasources/schemaBrowserUtils.ts
+A  fe/src/lib/widgetBackgroundImageFit.ts
+M  fe/src/lib/widgetStylePresentation.ts
+M  fe/src/pages/admin/datasets/DatasetEditorForm.tsx
+M  fe/src/pages/admin/datasets/DatasetFormPage.tsx
+M  fe/src/pages/admin/datasets/DatasetTablePicker.tsx
+M  fe/src/pages/admin/datasets/dataset-form.smoke.test.tsx
+A  fe/src/pages/admin/datasets/datasetTableSelection.test.ts
+A  fe/src/pages/admin/datasets/datasetTableSelection.ts
+
+stat: 19 files changed, 687 insertions(+), 235 deletions(-)
+branch: dev | scheduled-auto-commit

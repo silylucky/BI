@@ -1,0 +1,41 @@
+wip: [fe,backend,docker,docs,+3] 57f (+1618/-359) @ 2026-07-31 14:28 ...
+
+Areas:
+  fe/          29 files (+597/-325)
+  backend/     16 files (+653/-22)
+  docker/      4 files (+113/-5)
+  docs/        3 files (+7/-4)
+  .cursor/     3 files (+44/-1)
+  _root/       1 files (+15/-2)
+  tests/       1 files (+189/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T135826-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T135826.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  README.md
+A  backend/app/api/v1/demo_package.py
+M  backend/app/api/v1/router.py
+A  backend/app/dashboard/demo_instances/__init__.py
+A  backend/app/dashboard/demo_instances/seed.py
+A  backend/app/dashboard/demo_package/status.py
+M  backend/app/dashboard/schemas.py
+M  backend/app/dashboard/templates/demo_datasource.py
+A  backend/app/dashboard/templates/official_demo_bootstrap.py
+M  backend/app/datasources/schemas.py
+M  backend/app/datasources/service.py
+M  backend/app/main.py
+A  backend/tests/test_demo_datasource.py
+A  backend/tests/test_demo_instances_seed.py
+A  backend/tests/test_demo_package_status.py
+A  backend/tests/test_official_demo_bootstrap.py
+M  backend/tests/test_official_demo_sql.py
+A  docker/demo-mysql/migrations/001_schema_version.sql
+A  docker/demo-mysql/migrations/002_vs_official_views.sql
+A  docker/demo-mysql/migrations/003_fix_matrix_heat_group_by.sql
+M  docker/demo-mysql/tables.sql
+M  docs/api/README.md
+... and 32 more
+
+stat: 57 files changed, 1618 insertions(+), 359 deletions(-)
+branch: dev | scheduled-auto-commit

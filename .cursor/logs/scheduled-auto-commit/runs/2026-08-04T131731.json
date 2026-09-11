@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-04T13:17:31+08:00",
+  "finishedAt": "2026-08-04T13:17:48+08:00",
+  "branch": "dev",
+  "commit": "51357e7a",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,.cursor,docs,tests] 32f (+1303/-22) @ 2026-08-04 13:17 +0800",
+  "filesChanged": 32,
+  "insertions": 1303,
+  "deletions": 22,
+  "topDirs": { "fe": 26, ".cursor": 3, "docs": 2, "tests": 1 },
+  "sampleFiles": [
+    "fe/src/lib/chartLinkageRules.ts",
+    "fe/src/components/dashboard/useChartLinkageState.ts",
+    "fe/src/pages/admin/dashboard/DashboardEditPage.tsx",
+    "docs/feature-truth/2026-08-04-map-advanced-tab-truth-audit.md"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/", "fe/.env.production.local"]
+}

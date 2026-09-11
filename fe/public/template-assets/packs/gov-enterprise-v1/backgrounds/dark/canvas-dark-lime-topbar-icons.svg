@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="36c51b63-base" x1="0" y1="0" x2="1920" y2="1080">
+      <stop stop-color="#0a1408"/>
+      <stop offset="0.5" stop-color="#365314" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#365314"/>
+    </linearGradient>
+    <radialGradient id="36c51b63-glowL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(345.59999999999997 237.6) scale(672)">
+      <stop stop-color="#84cc16" stop-opacity="0.13"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="36c51b63-glowR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1574.3999999999999 777.6) scale(576)">
+      <stop stop-color="#a3e635" stop-opacity="0.10400000000000001"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#36c51b63-base)"/>
+  <rect width="1920" height="1080" fill="url(#36c51b63-glowL)"/>
+  <rect width="1920" height="1080" fill="url(#36c51b63-glowR)"/>
+  <defs>
+    <linearGradient id="36c51b63-hdr" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#a3e635" stop-opacity="0.22"/>
+      <stop offset="1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="72" fill="url(#36c51b63-hdr)"/>
+  <line x1="0" y1="72" x2="1920" y2="72" stroke="#a3e635" stroke-width="1" opacity="0.35"/>
+  <line x1="48" y1="72" x2="1872" y2="72" stroke="#a3e635" stroke-width="2" opacity="0.15"/>
+  <path d="M160 26 Q170 36 160 46 Q150 36 160 26" fill="none" stroke="#a3e635" stroke-width="1" opacity="0.35"/>
+  <line x1="160" y1="26" x2="160" y2="46" stroke="#a3e635" stroke-width="0.6" opacity="0.21"/>
+  <path d="M216 26 Q226 36 216 46 Q206 36 216 26" fill="none" stroke="#a3e635" stroke-width="1" opacity="0.35"/>
+  <line x1="216" y1="26" x2="216" y2="46" stroke="#a3e635" stroke-width="0.6" opacity="0.21"/>
+  <path d="M272 26 Q282 36 272 46 Q262 36 272 26" fill="none" stroke="#a3e635" stroke-width="1" opacity="0.35"/>
+  <line x1="272" y1="26" x2="272" y2="46" stroke="#a3e635" stroke-width="0.6" opacity="0.21"/>
+  <path d="M328 26 Q338 36 328 46 Q318 36 328 26" fill="none" stroke="#a3e635" stroke-width="1" opacity="0.35"/>
+  <line x1="328" y1="26" x2="328" y2="46" stroke="#a3e635" stroke-width="0.6" opacity="0.21"/>
+  <path d="M384 26 Q394 36 384 46 Q374 36 384 26" fill="none" stroke="#a3e635" stroke-width="1" opacity="0.35"/>
+  <line x1="384" y1="26" x2="384" y2="46" stroke="#a3e635" stroke-width="0.6" opacity="0.21"/>
+  <path d="M440 26 Q450 36 440 46 Q430 36 440 26" fill="none" stroke="#a3e635" stroke-width="1" opacity="0.35"/>
+  <line x1="440" y1="26" x2="440" y2="46" stroke="#a3e635" stroke-width="0.6" opacity="0.21"/>
+  <path d="M496 26 Q506 36 496 46 Q486 36 496 26" fill="none" stroke="#a3e635" stroke-width="1" opacity="0.35"/>
+  <line x1="496" y1="26" x2="496" y2="46" stroke="#a3e635" stroke-width="0.6" opacity="0.21"/>
+  <g opacity="0.4" stroke="#a3e635" stroke-width="1.5" fill="none">
+  <path d="M40 120 V88 H72"/>
+  <path d="M1848 88 H1880 V120"/>
+  <path d="M1880 1008 V1040 H1848"/>
+  <path d="M72 1040 H40 V1008"/>
+</g>
+  <rect x="60" y="100" width="1800" height="920" fill="none" stroke="#a3e635" stroke-width="0.5" opacity="0.15" rx="2"/>
+  <path d="M960 501.6 Q1020 561.6 960 621.6 Q900 561.6 960 501.6" fill="none" stroke="#a3e635" stroke-width="1" opacity="0.1"/>
+  <line x1="960" y1="501.6" x2="960" y2="621.6" stroke="#a3e635" stroke-width="0.6" opacity="0.06"/>
+  <polygon points="90.39230484541326,1014 90.39230484541326,1026 80,1032 69.60769515458674,1026 69.60769515458674,1014 79.99999999999999,1008" fill="none" stroke="#a3e635" stroke-width="1.2" opacity="0.3"/>
+  <circle cx="80" cy="1020" r="3" fill="#a3e635" opacity="0.18"/>
+  <path d="M120 1008 L132 1020 L120 1032 L108 1020 Z" fill="none" stroke="#a3e635" stroke-width="1.2" opacity="0.3"/>
+  <circle cx="120" cy="1020" r="2" fill="#a3e635" opacity="0.3"/>
+  <path d="M160 1008 L168.4 1016.4 L168.4 1024.8 Q160 1030.8 151.6 1024.8 L151.6 1016.4 Z" fill="none" stroke="#a3e635" stroke-width="1.2" opacity="0.3"/>
+</svg>

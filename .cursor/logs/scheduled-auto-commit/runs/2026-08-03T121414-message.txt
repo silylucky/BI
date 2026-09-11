@@ -1,0 +1,21 @@
+wip: [fe,.cursor] 11f (+172/-131) @ 2026-08-03 12:14 +0800
+
+Areas:
+  fe/          8 files (+122/-130)
+  .cursor/     3 files (+50/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T114412-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T114412.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  fe/src/components/dashboard/pixelCanvas/PixelCanvas.test.tsx
+M  fe/src/components/dashboard/pixelCanvas/PixelCanvas.tsx
+M  fe/src/components/dashboard/pixelCanvas/collisionLayout.test.ts
+M  fe/src/components/dashboard/pixelCanvas/createPixelWidget.ts
+M  fe/src/components/dashboard/viz-components/CreateVizComponentDialog.tsx
+M  fe/src/components/datasources/SchemaBrowser.tsx
+M  fe/src/pages/admin/datasources/components/DatasourceDetailPanel.tsx
+M  fe/src/pages/admin/datasources/datasource-detail.smoke.test.tsx
+
+stat: 11 files changed, 172 insertions(+), 131 deletions(-)
+branch: dev | scheduled-auto-commit

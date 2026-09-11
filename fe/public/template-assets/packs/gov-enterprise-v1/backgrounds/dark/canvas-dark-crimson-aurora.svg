@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="b709ef38-base" x1="0" y1="0" x2="1920" y2="1080">
+      <stop stop-color="#1a0508"/>
+      <stop offset="0.5" stop-color="#7f1d1d" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#7f1d1d"/>
+    </linearGradient>
+    <radialGradient id="b709ef38-glowL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(345.59999999999997 237.6) scale(672)">
+      <stop stop-color="#ef4444" stop-opacity="0.13"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b709ef38-glowR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1574.3999999999999 777.6) scale(576)">
+      <stop stop-color="#f87171" stop-opacity="0.10400000000000001"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  <pattern id="b709ef38-pat" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" stroke="#f87171" stroke-width="0.4" opacity="0.08"/></pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#b709ef38-base)"/>
+  <rect width="1920" height="1080" fill="url(#b709ef38-glowL)"/>
+  <rect width="1920" height="1080" fill="url(#b709ef38-glowR)"/>
+  <rect width="1920" height="1080" fill="url(#b709ef38-pat)" opacity="0.6"/>
+  <g opacity="0.35" stroke="#f87171" stroke-width="1.5" fill="none">
+  <path d="M32 72 V32 H72"/>
+  <path d="M1848 32 H1888 V72"/>
+  <path d="M1888 1008 V1048 H1848"/>
+  <path d="M72 1048 H32 V1008"/>
+</g>
+  <path d="M0 885.5999999999999 C384 820.8 672 972 960 907.1999999999999 C1248 842.4 1574.3999999999999 993.6 1920 928.8 L1920 1080 L0 1080 Z" fill="#f87171" fill-opacity="0.08"/>
+  <path d="M0 950.4 C480 885.5999999999999 768 1036.8 1056 972 C1382.3999999999999 907.1999999999999 1689.6 1058.4 1920 993.6 L1920 1080 L0 1080 Z" fill="#ef4444" fill-opacity="0.05"/>
+  <path d="M960 170.4 L976.8 187.20000000000002 L976.8 204 Q960 216 943.2 204 L943.2 187.20000000000002 Z" fill="none" stroke="#f87171" stroke-width="1.2" opacity="0.4"/>
+  <circle cx="960" cy="486" r="120" fill="none" stroke="#f87171" stroke-width="0.8" opacity="0.08"/>
+  <circle cx="960" cy="486" r="66" fill="none" stroke="#f87171" stroke-width="0.5" opacity="0.055999999999999994"/>
+  <circle cx="1080" cy="486" r="2.5" fill="#f87171" opacity="0.08"/>
+  <circle cx="900" cy="381.6" r="2" fill="#f87171" opacity="0.064"/>
+</svg>

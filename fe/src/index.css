@@ -1,0 +1,1681 @@
+@import "tailwindcss";
+
+@custom-variant dark (
+  &:is(.dark *):not(:is(.dashboard-theme-scope[data-dashboard-color-scheme="light"] *)),
+  &:is(.dashboard-theme-scope.dark *)
+);
+
+@theme {
+  --font-outfit: Outfit, sans-serif;
+
+  --color-brand-50: #ecf3ff;
+  --color-brand-100: #dde9ff;
+  --color-brand-200: #c2d6ff;
+  --color-brand-300: #9cb9ff;
+  --color-brand-400: #7592ff;
+  --color-brand-500: #465fff;
+  --color-brand-600: #3641f5;
+  --color-brand-700: #2a31d8;
+
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f2f4f7;
+  --color-gray-200: #e4e7ec;
+  --color-gray-300: #d0d5dd;
+  --color-gray-400: #98a2b3;
+  --color-gray-500: #667085;
+  --color-gray-600: #475467;
+  --color-gray-700: #344054;
+  --color-gray-800: #1d2939;
+  --color-gray-900: #101828;
+  --color-gray-dark: #1a2231;
+
+  --color-success-50: #ecfdf3;
+  --color-success-400: #32d583;
+  --color-success-500: #12b76a;
+  --color-success-600: #039855;
+  --color-success-700: #027a48;
+  --color-error-500: #f04438;
+  --color-error-600: #d92d20;
+  --color-warning-50: #fffaeb;
+  --color-warning-400: #fdb022;
+  --color-warning-500: #f79009;
+  --color-warning-600: #dc6803;
+  --color-warning-700: #b54708;
+
+  --color-blue-light-50: #f0f9ff;
+  --color-blue-light-400: #36bffa;
+  --color-blue-light-500: #0ba5ec;
+  --color-blue-light-600: #0086c9;
+  --color-blue-light-700: #026aa2;
+
+  --color-white: #ffffff;
+
+  --shadow-theme-xs: 0 1px 2px 0 rgb(16 24 40 / 5%);
+  --shadow-theme-sm: 0 1px 3px 0 rgb(16 24 40 / 10%), 0 1px 2px -1px rgb(16 24 40 / 10%);
+  --shadow-theme-md: 0 4px 8px -2px rgb(16 24 40 / 10%), 0 2px 4px -2px rgb(16 24 40 / 6%);
+  --shadow-focus-ring: 0 0 0 4px rgb(70 95 255 / 12%);
+
+  --breakpoint-2xl: 1536px;
+
+  --text-theme-xs: 0.75rem;
+  --text-theme-xs--line-height: 1.125rem;
+  --text-theme-sm: 0.875rem;
+  --text-theme-sm--line-height: 1.25rem;
+  --text-theme-xl: 1.25rem;
+  --text-theme-xl--line-height: 1.875rem;
+
+  --z-index-1: 1;
+  --z-index-40: 40;
+  --z-index-99999: 99999;
+}
+
+@theme inline {
+  --color-primary: var(--color-brand-500);
+  --color-primary-foreground: var(--color-white);
+  --color-muted: var(--color-gray-100);
+  --color-muted-foreground: var(--color-gray-500);
+  --color-border: var(--color-gray-200);
+  --color-ring: var(--color-brand-500);
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+/* 原生 checkbox/radio 兜底：未接入设计系统组件时仍跟随品牌色与主题 */
+@layer base {
+  input[type="checkbox"],
+  input[type="radio"] {
+    accent-color: var(--color-brand-500);
+    color-scheme: light dark;
+  }
+
+  input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.25rem;
+  }
+
+  input[type="radio"] {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@utility menu-item {
+  @apply relative flex w-full items-center gap-3 rounded-lg px-3 py-2 text-theme-sm font-medium transition-colors outline-none focus-visible:ring-2 focus-visible:ring-brand-500/35 focus-visible:ring-offset-1 dark:focus-visible:ring-brand-400/40;
+}
+
+@utility menu-item-active {
+  @apply bg-brand-50 text-brand-500 before:absolute before:top-1/2 before:left-0 before:h-5 before:w-1 before:-translate-y-1/2 before:rounded-r-full before:bg-brand-500 dark:bg-brand-500/12 dark:text-brand-400 dark:before:bg-brand-400;
+}
+
+@utility menu-item-inactive {
+  @apply text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-white/5;
+}
+
+@utility menu-item-icon-size {
+  @apply flex size-6 shrink-0 items-center justify-center [&_svg]:size-5;
+}
+
+@utility menu-item-icon-active {
+  @apply text-brand-500 dark:text-brand-400;
+}
+
+@utility menu-item-icon-inactive {
+  @apply text-gray-500 group-hover:text-gray-700 dark:text-gray-400 dark:group-hover:text-gray-300;
+}
+
+@utility menu-item-text {
+  @apply truncate;
+}
+
+@utility menu-group {
+  @apply mb-5 last:mb-0;
+}
+
+@utility menu-group-title {
+  @apply mb-2 flex px-3 text-[11px] font-semibold tracking-wider text-gray-400 uppercase;
+}
+
+@utility menu-dropdown-item {
+  @apply relative flex items-center rounded-lg px-3 py-1.5 text-theme-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-brand-500/35 focus-visible:ring-offset-1 dark:focus-visible:ring-brand-400/40;
+}
+
+@utility menu-dropdown-item-active {
+  @apply font-medium text-brand-500 before:absolute before:top-1/2 before:-left-3 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full before:bg-brand-500 dark:text-brand-400 dark:before:bg-brand-400;
+}
+
+@utility menu-dropdown-item-inactive {
+  @apply text-gray-600 hover:bg-gray-100 hover:text-gray-800 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-200;
+}
+
+@utility menu-dropdown-badge {
+  @apply rounded-full px-2 py-0.5 text-theme-xs font-medium;
+}
+
+@utility menu-dropdown-badge-active {
+  @apply bg-brand-100 text-brand-600 dark:bg-brand-500/20 dark:text-brand-300;
+}
+
+@utility menu-dropdown-badge-inactive {
+  @apply bg-gray-100 text-gray-600 dark:bg-white/10 dark:text-gray-400;
+}
+
+@utility menu-dropdown-badge-pro {
+  @apply menu-dropdown-badge;
+}
+
+@utility menu-dropdown-badge-pro-active {
+  @apply menu-dropdown-badge-active;
+}
+
+@utility menu-dropdown-badge-pro-inactive {
+  @apply menu-dropdown-badge-inactive;
+}
+
+@utility menu-dropdown-badge-preview {
+  @apply menu-dropdown-badge;
+}
+
+@utility menu-dropdown-badge-preview-active {
+  @apply bg-gray-200 text-gray-700 dark:bg-gray-700/40 dark:text-gray-300;
+}
+
+@utility menu-dropdown-badge-preview-inactive {
+  @apply bg-gray-100 text-gray-500 dark:bg-white/10 dark:text-gray-500;
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/** TailAdmin 细滚动条：壳层主题切换时保持统一视觉，不用系统原生滚动条 */
+@utility custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(228 231 236) transparent;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background-color: rgb(228 231 236);
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: rgb(208 213 221);
+  }
+}
+
+html.dark .custom-scrollbar {
+  scrollbar-color: rgb(52 64 84) transparent;
+}
+
+html.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgb(52 64 84);
+}
+
+html.dark .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: rgb(71 84 103);
+}
+
+/**
+ * Admin 弹层内滚动条：Dialog / Sheet / Popover / Dropdown / Select 挂载在 body，
+ * 不在 [data-admin-layout] 子树内，须单独对齐 custom-scrollbar，避免系统粗黑滚动条。
+ */
+:is(
+  [data-slot="dialog-content"],
+  [data-slot="sheet-content"],
+  [data-slot="popover-content"],
+  [data-slot="dropdown-menu-content"],
+  [data-slot="dropdown-menu-sub-content"],
+  [data-slot="select-content"]
+) {
+  --admin-scroll-thumb: rgb(228 231 236);
+  --admin-scroll-thumb-hover: rgb(208 213 221);
+}
+
+html.dark :is(
+  [data-slot="dialog-content"],
+  [data-slot="sheet-content"],
+  [data-slot="popover-content"],
+  [data-slot="dropdown-menu-content"],
+  [data-slot="dropdown-menu-sub-content"],
+  [data-slot="select-content"]
+) {
+  --admin-scroll-thumb: rgb(52 64 84);
+  --admin-scroll-thumb-hover: rgb(71 84 103);
+}
+
+:is(
+  [data-slot="dialog-content"],
+  [data-slot="sheet-content"],
+  [data-slot="popover-content"],
+  [data-slot="dropdown-menu-content"],
+  [data-slot="dropdown-menu-sub-content"],
+  [data-slot="select-content"]
+) :where(
+  .overflow-auto,
+  .overflow-y-auto,
+  .overflow-x-auto,
+  .overflow-scroll,
+  .overflow-x-only,
+  .custom-scrollbar
+):not(.no-scrollbar) {
+  scrollbar-width: thin;
+  scrollbar-color: var(--admin-scroll-thumb) transparent;
+}
+
+:is(
+  [data-slot="dialog-content"],
+  [data-slot="sheet-content"],
+  [data-slot="popover-content"],
+  [data-slot="dropdown-menu-content"],
+  [data-slot="dropdown-menu-sub-content"],
+  [data-slot="select-content"]
+) :where(
+  .overflow-auto,
+  .overflow-y-auto,
+  .overflow-x-auto,
+  .overflow-scroll,
+  .overflow-x-only,
+  .custom-scrollbar
+):not(.no-scrollbar)::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+:is(
+  [data-slot="dialog-content"],
+  [data-slot="sheet-content"],
+  [data-slot="popover-content"],
+  [data-slot="dropdown-menu-content"],
+  [data-slot="dropdown-menu-sub-content"],
+  [data-slot="select-content"]
+) :where(
+  .overflow-auto,
+  .overflow-y-auto,
+  .overflow-x-auto,
+  .overflow-scroll,
+  .overflow-x-only,
+  .custom-scrollbar
+):not(.no-scrollbar)::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+:is(
+  [data-slot="dialog-content"],
+  [data-slot="sheet-content"],
+  [data-slot="popover-content"],
+  [data-slot="dropdown-menu-content"],
+  [data-slot="dropdown-menu-sub-content"],
+  [data-slot="select-content"]
+) :where(
+  .overflow-auto,
+  .overflow-y-auto,
+  .overflow-x-auto,
+  .overflow-scroll,
+  .overflow-x-only,
+  .custom-scrollbar
+):not(.no-scrollbar)::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background-color: var(--admin-scroll-thumb);
+}
+
+:is(
+  [data-slot="dialog-content"],
+  [data-slot="sheet-content"],
+  [data-slot="popover-content"],
+  [data-slot="dropdown-menu-content"],
+  [data-slot="dropdown-menu-sub-content"],
+  [data-slot="select-content"]
+) :where(
+  .overflow-auto,
+  .overflow-y-auto,
+  .overflow-x-auto,
+  .overflow-scroll,
+  .overflow-x-only,
+  .custom-scrollbar
+):not(.no-scrollbar):hover::-webkit-scrollbar-thumb {
+  background-color: var(--admin-scroll-thumb-hover);
+}
+
+/* 看板主题滚动条：跟 data-dashboard-color-scheme，不跟 Admin html.dark（DE 白色半透明） */
+.dashboard-theme-scope[data-dashboard-color-scheme="light"],
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"],
+.dashboard-theme-scope.dark {
+  --dashboard-scroll-thumb: rgb(255 255 255 / 0.35);
+  --dashboard-scroll-thumb-hover: rgb(255 255 255 / 0.55);
+  --dashboard-scroll-track: transparent;
+}
+
+.dashboard-theme-scope[data-dashboard-color-scheme="light"] {
+  color-scheme: light;
+}
+
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"],
+.dashboard-theme-scope.dark {
+  color-scheme: dark;
+}
+
+/** 看板组件内滚动条（表格、文本、画布 host 等） */
+@utility dashboard-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--dashboard-scroll-thumb) transparent;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background-color: var(--dashboard-scroll-thumb);
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: var(--dashboard-scroll-thumb-hover);
+  }
+}
+
+.dashboard-theme-scope :where(
+  .overflow-auto,
+  .overflow-y-auto,
+  .overflow-x-auto,
+  .overflow-scroll,
+  .overflow-x-only,
+  .dashboard-scroll
+):not(.dashboard-edit-rail-scroll):not(.dashboard-config-rail):not(.pixel-canvas-host) {
+  scrollbar-width: thin;
+  scrollbar-color: var(--dashboard-scroll-thumb) transparent;
+}
+
+.dashboard-theme-scope :where(
+  .overflow-auto,
+  .overflow-y-auto,
+  .overflow-x-auto,
+  .overflow-scroll,
+  .overflow-x-only,
+  .dashboard-scroll
+):not(.dashboard-edit-rail-scroll):not(.dashboard-config-rail):not(.pixel-canvas-host)::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dashboard-theme-scope :where(
+  .overflow-auto,
+  .overflow-y-auto,
+  .overflow-x-auto,
+  .overflow-scroll,
+  .overflow-x-only,
+  .dashboard-scroll
+):not(.dashboard-edit-rail-scroll):not(.dashboard-config-rail):not(.pixel-canvas-host)::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dashboard-theme-scope :where(
+  .overflow-auto,
+  .overflow-y-auto,
+  .overflow-x-auto,
+  .overflow-scroll,
+  .overflow-x-only,
+  .dashboard-scroll
+):not(.dashboard-edit-rail-scroll):not(.dashboard-config-rail):not(.pixel-canvas-host)::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background-color: var(--dashboard-scroll-thumb);
+}
+
+.dashboard-theme-scope :where(
+  .overflow-auto,
+  .overflow-y-auto,
+  .overflow-x-auto,
+  .overflow-scroll,
+  .overflow-x-only,
+  .dashboard-scroll
+):not(.dashboard-edit-rail-scroll):not(.dashboard-config-rail):not(.pixel-canvas-host):hover::-webkit-scrollbar-thumb {
+  background-color: var(--dashboard-scroll-thumb-hover);
+}
+
+/* 看板内 custom-scrollbar 与 dashboard-scroll 令牌对齐 */
+.dashboard-theme-scope .custom-scrollbar {
+  scrollbar-color: var(--dashboard-scroll-thumb) transparent;
+}
+
+.dashboard-theme-scope .custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dashboard-theme-scope .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--dashboard-scroll-thumb);
+}
+
+.dashboard-theme-scope .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: var(--dashboard-scroll-thumb-hover);
+}
+
+.dashboard-theme-scope [data-radix-scroll-area-thumb] {
+  background-color: rgb(255 255 255) !important;
+  opacity: 0.35;
+}
+
+.dashboard-theme-scope [data-radix-scroll-area-thumb]:hover {
+  opacity: 0.55;
+}
+
+/** 仅横向滚动；避免 overflow-x:auto 连带 overflow-y:auto 与页面主滚动条重叠 */
+@utility overflow-x-only {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+body {
+  @apply font-outfit font-normal bg-gray-50 text-gray-700 antialiased dark:bg-gray-900 dark:text-gray-400;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+/* Dashboard 编辑画布：点阵底 + 拖拽缩放把手 */
+.dashboard-canvas-surface {
+  background-color: rgb(249 250 251);
+  background-image: radial-gradient(rgb(228 231 236 / 0.9) 1px, transparent 1px);
+  background-size: 16px 16px;
+  /* 栅格 RGL：预留滚动条宽度，避免 WidthProvider 宽度抖动 */
+  scrollbar-gutter: stable;
+}
+
+/* 像素画布：滚动在 pixel-canvas-host，surface 不预留 stable 槽（否则右侧常有点阵窄条） */
+.dashboard-canvas-surface:has(.pixel-canvas-host) {
+  scrollbar-gutter: auto;
+}
+
+.dashboard-canvas-surface[data-dashboard-color-scheme="dark"] {
+  background-color: rgb(255 255 255 / 0.02);
+  background-image: radial-gradient(rgb(255 255 255 / 0.08) 1px, transparent 1px);
+}
+
+.dashboard-canvas-surface:has([data-canvas-user-bg="true"]) {
+  background-color: transparent;
+  background-image: none;
+}
+
+/* 栅格画布：无 transform scale，固定放大一级 */
+.dashboard-grid-edit .dashboard-widget-surface {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.dashboard-grid-edit .dashboard-widget-surface :where(.text-theme-xs) {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+.dashboard-grid-edit .dashboard-widget-surface :where(.text-theme-sm) {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.dashboard-grid-edit .dashboard-widget-surface .dashboard-chart-table :where(th, td) {
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+}
+
+.dashboard-grid-edit .dashboard-widget-surface :where(.dw-hint) {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+/* 像素画布壳层字号：浏览/预览/播放/缩略图按 1 走（与内容一起等比缩小，WYSIWYG），
+   编辑态按 --pixel-canvas-chrome-scale 反比补偿，保证缩小画布时标题可读 */
+.pixel-canvas-host {
+  --pixel-canvas-scale: 1;
+  --pixel-canvas-chrome-scale: 1;
+  --dw-screen-body: 1rem;
+  --dw-screen-caption: 0.875rem;
+  --dw-screen-table: 0.9375rem;
+  --dw-screen-rail-text: 0.875rem;
+  --dw-screen-rail-height: 2.25rem;
+  --dw-screen-edit-bar-width: 2rem;
+  --dw-screen-action-icon: 1.125rem;
+  --dw-screen-title-height: 2rem;
+  overflow-x: hidden;
+  scrollbar-gutter: auto !important;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  overscroll-behavior-y: contain;
+  overflow-anchor: none;
+  /* 藏条后回收轨道宽度，画布组件可多占横向空间 */
+  margin-right: -20px;
+  padding-right: 20px;
+}
+
+.pixel-canvas-host[data-pixel-canvas-mode="edit"]:not([data-pixel-canvas-design-locked="true"]) {
+  --pixel-canvas-chrome-scale: max(var(--pixel-canvas-scale), 0.5);
+}
+
+.pixel-canvas-host[data-pixel-canvas-scroll-x="true"] {
+  margin-right: 0;
+  padding-right: 0;
+  scrollbar-width: thin !important;
+}
+
+/* 预览/分享态：内层滚到边界后继续滚动画布 */
+.pixel-canvas-host .dashboard-widget-surface :where(.overflow-auto, .overflow-y-auto) {
+  overscroll-behavior-y: auto;
+}
+
+.pixel-canvas-host .dashboard-widget-surface {
+  font-size: calc(var(--dw-screen-body) / var(--pixel-canvas-chrome-scale));
+  line-height: calc(1.375rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .dashboard-widget-surface :where(.text-theme-xs),
+.pixel-canvas-host .dashboard-widget-surface :where(.text-sm) {
+  font-size: calc(var(--dw-screen-caption) / var(--pixel-canvas-chrome-scale));
+  line-height: calc(1.25rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .dashboard-widget-surface :where(.text-theme-sm),
+.pixel-canvas-host .dashboard-widget-surface :where(.text-base) {
+  font-size: calc(var(--dw-screen-body) / var(--pixel-canvas-chrome-scale));
+  line-height: calc(1.375rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .dashboard-widget-surface :where(.text-title-sm) {
+  font-size: calc(0.875rem / var(--pixel-canvas-chrome-scale));
+  line-height: calc(1.25rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .dashboard-widget-surface :where(label.text-sm) {
+  font-size: calc(var(--dw-screen-caption) / var(--pixel-canvas-chrome-scale));
+  line-height: calc(1.25rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .dashboard-widget-surface .dashboard-chart-table :where(th, td) {
+  /* 表格属内容区：随画布 transform 等比缩放，不参与 chrome-scale 反比补偿（与预览 WYSIWYG 一致） */
+  font-size: var(--dw-screen-table);
+  line-height: 1.375rem;
+}
+
+.pixel-canvas-host .dashboard-widget-surface :where(.dw-hint) {
+  font-size: calc(var(--dw-screen-caption) / var(--pixel-canvas-chrome-scale));
+  line-height: calc(1.25rem / var(--pixel-canvas-chrome-scale));
+}
+/* DataEase shape-inner：标题与图表共享内边距；水平 padding 由 inner 承担 */
+.pixel-canvas-host .pixel-shape-inner .shape-title {
+  display: flex;
+  align-items: center;
+  min-height: auto;
+  padding: 0;
+  background: transparent;
+}
+
+.pixel-canvas-host .pixel-shape-inner .shape-title :where(.widget-inline-title:not([style*="font-size"])) {
+  font-size: calc(var(--dw-screen-body) / var(--pixel-canvas-chrome-scale));
+  line-height: calc(1.375rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .pixel-shape-inner .shape-remark {
+  padding: 0 0 calc(0.375rem / var(--pixel-canvas-chrome-scale));
+}
+
+/* DE 默认 inner padding（无 widgetStyle 配置时）：0 */
+.pixel-canvas-host .pixel-shape-inner.dashboard-widget-surface:not([style*="padding"]) {
+  padding: 0;
+}
+
+/* 兼容旧选择器：栅格模式仍用 body 级标题 */
+.pixel-canvas-host .pixel-shape-body > .shape-title {
+  display: flex;
+  align-items: center;
+  min-height: var(--widget-title-min-row, calc(var(--dw-screen-title-height) / var(--pixel-canvas-chrome-scale)));
+  padding: calc(0.5rem / var(--pixel-canvas-chrome-scale)) calc(0.75rem / var(--pixel-canvas-chrome-scale))
+    var(--widget-title-content-gap, calc(0.25rem / var(--pixel-canvas-chrome-scale)));
+}
+
+.pixel-canvas-host .pixel-shape-body > .shape-title :where(.widget-inline-title:not([style*="font-size"])) {
+  font-size: calc(var(--dw-screen-body) / var(--pixel-canvas-chrome-scale));
+  line-height: calc(1.375rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .pixel-shape-body > .shape-remark {
+  padding: 0 calc(0.75rem / var(--pixel-canvas-chrome-scale)) calc(0.375rem / var(--pixel-canvas-chrome-scale));
+}
+
+.dashboard-grid-edit .pixel-shape-body .shape-title,
+.dashboard-grid-edit .grid-widget-cell .shape-title {
+  display: flex;
+  align-items: center;
+  min-height: var(--widget-title-min-row, 2rem);
+  padding: 0.5rem 0.75rem 0;
+  padding-bottom: var(--widget-title-content-gap, 0.25rem);
+}
+
+.dashboard-grid-edit .pixel-shape-body .shape-remark,
+.dashboard-grid-edit .grid-widget-cell .shape-remark {
+  padding: 0 0.75rem 0.375rem;
+}
+
+.pixel-canvas-host .pixel-shape-drag-rail {
+  height: calc(var(--dw-screen-rail-height) / var(--pixel-canvas-chrome-scale));
+  font-size: calc(var(--dw-screen-rail-text) / var(--pixel-canvas-chrome-scale));
+  line-height: calc(1.25rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .pixel-shape-drag-rail :where(svg) {
+  width: calc(1rem / var(--pixel-canvas-chrome-scale));
+  height: calc(1rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .pixel-shape-drag-edge {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.pixel-canvas-host .pixel-shape-inner .shape-title.pixel-shape-title-drag {
+  gap: calc(0.25rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .pixel-shape-inner--with-rail {
+  padding-top: calc(var(--dw-screen-rail-height) / var(--pixel-canvas-chrome-scale));
+}
+
+/* shape-inner：边框由 mergeWidgetShellStyle 内联样式驱动，避免覆盖用户配置 */
+
+.dashboard-theme-scope .pixel-canvas-host .pixel-shape-inner.pixel-shape-selected {
+  box-shadow: inset 0 0 0 1px var(--dashboard-accent, var(--color-brand-500));
+}
+
+/* DataEase curGap：shape 外层 padding 过渡（拖拽/缩放时关闭以免跟手迟滞） */
+.dashboard-shape-gap-shell {
+  box-sizing: border-box;
+  padding: var(--dashboard-shape-gap, 0px);
+  transition: padding 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-shape-gap-shell {
+    transition: none;
+  }
+}
+
+.pixel-shape-outer[data-pixel-is-player].dashboard-shape-gap-shell,
+.dashboard-grid-edit .react-grid-item.react-draggable-dragging > .grid-widget-cell.dashboard-shape-gap-shell,
+.dashboard-grid-edit .react-grid-item.react-resizable-resizing > .grid-widget-cell.dashboard-shape-gap-shell {
+  transition: none !important;
+  --dashboard-shape-gap: 0px;
+  padding: 0;
+}
+
+/* isPlayer：活动组件浮于邻块之上，邻块不参与命中（无体积阻挡） */
+.pixel-canvas-host[data-pixel-canvas-playing] .pixel-shape-outer:not([data-pixel-is-player]) {
+  pointer-events: none;
+}
+
+.dashboard-theme-scope .pixel-canvas-host .pixel-shape-outer.pixel-shape-selected {
+  border-color: var(--dashboard-accent, var(--color-brand-500));
+}
+
+.chart-drill-chrome {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-height: 1.75rem;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--dashboard-table-border, #e4e7ec);
+  background: color-mix(in srgb, var(--dashboard-widget-surface, #fff) 92%, transparent);
+  backdrop-filter: blur(6px);
+  pointer-events: auto;
+}
+
+.chart-drill-chrome--preview {
+  position: relative;
+  inset: auto;
+}
+
+.chart-drill-chrome__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+  flex-shrink: 0;
+}
+
+.chart-drill-chrome__icon-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  min-width: 1.5rem;
+  color: var(--dashboard-action-icon, var(--color-gray-500));
+}
+
+.chart-drill-chrome__icon-btn:hover {
+  color: var(--dashboard-action-icon-hover, var(--color-gray-800));
+}
+
+.chart-drill-chrome__trail {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  flex-wrap: wrap;
+  gap: 0.125rem;
+  font-size: var(--text-theme-xs, 0.75rem);
+  line-height: 1.25rem;
+}
+
+.chart-drill-chrome__group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+.chart-drill-chrome__sep {
+  color: var(--color-gray-400);
+  user-select: none;
+}
+
+.chart-drill-crumb {
+  max-width: 8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-gray-500);
+}
+
+.chart-drill-crumb[data-level="0"] {
+  color: var(--color-gray-600);
+}
+
+.chart-drill-crumb[data-level="1"] {
+  color: var(--dashboard-drill-level-0, #465fff);
+}
+
+.chart-drill-crumb[data-level="2"] {
+  color: var(--dashboard-drill-level-1, #0ba5ec);
+}
+
+.chart-drill-crumb[data-level="3"] {
+  color: var(--dashboard-drill-level-2, #12b76a);
+}
+
+.chart-drill-crumb:hover {
+  text-decoration: underline;
+}
+
+.chart-drill-chrome__notice {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 0.25rem;
+  font-size: var(--text-theme-xs, 0.75rem);
+  line-height: 1.25rem;
+  color: var(--color-warning-600, #dc6803);
+}
+
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"] .chart-drill-chrome__notice {
+  color: var(--color-warning-400, #fdb022);
+}
+
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"] .chart-drill-chrome {
+  border-color: var(--color-gray-700);
+  background: color-mix(in srgb, var(--dashboard-widget-surface, #111827) 88%, transparent);
+}
+
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"] .chart-drill-crumb[data-level="0"] {
+  color: var(--color-gray-300);
+}
+
+.dashboard-theme-scope[data-canvas-user-bg="true"] .pixel-canvas-host {
+  /* 宿主与画板同色铺满，避免按组件比例留白时两侧透出壳层底色 */
+  background-color: var(--dashboard-artboard-bg);
+}
+
+.dashboard-theme-scope:not([data-canvas-user-bg="true"]) [data-testid="pixel-canvas-artboard"] {
+  background-color: var(--dashboard-artboard-bg, #f8fafc) !important;
+}
+
+.dashboard-edit-aux-grid {
+  pointer-events: none;
+}
+
+/* 看板编辑右栏：外层裁剪（滚动条不露出壳层 border 内缘） */
+.dashboard-edit-rail-scroll-clip {
+  overflow: hidden;
+}
+
+/* 看板编辑右栏：内层滚动 + 负边距藏条（Windows 叠加滚动条） */
+.dashboard-edit-rail-scroll {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  scrollbar-gutter: auto !important;
+  overscroll-behavior-y: contain;
+  margin-right: -20px;
+  padding-right: 20px;
+}
+
+.dashboard-edit-rail-scroll::-webkit-scrollbar,
+.dashboard-config-rail::-webkit-scrollbar,
+.pixel-canvas-host::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.dashboard-config-rail {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* fill 高度路由：JS 挂载 admin-fill-lock，避免右栏内容撑出页面级第二条滚动条 */
+html.admin-fill-lock,
+html.admin-fill-lock body {
+  overflow: hidden !important;
+  height: 100%;
+  max-height: 100%;
+}
+
+html.admin-fill-lock #root {
+  overflow: hidden;
+  height: 100%;
+  max-height: 100%;
+}
+
+.dashboard-theme-scope .pixel-canvas-host {
+  background-color: var(--dashboard-artboard-bg, #f8fafc);
+}
+
+/* DE curGap：padding 区透明，仅内层 body 绘制组件底 */
+.dashboard-theme-scope .dashboard-shape-gap-shell {
+  background-color: transparent !important;
+}
+
+.dashboard-theme-scope .dashboard-chart-table thead {
+  background-color: var(--dashboard-table-header-bg, transparent);
+  backdrop-filter: blur(6px);
+}
+
+.dashboard-theme-scope .dashboard-chart-table thead th {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.dashboard-theme-scope .dashboard-chart-table tbody td {
+  vertical-align: middle;
+}
+
+.dashboard-theme-scope .dashboard-chart-table tbody tr {
+  background-color: var(--dashboard-table-body-bg, transparent);
+  color: var(--dashboard-table-body-fg, #344054);
+}
+
+.dashboard-theme-scope .dashboard-chart-table tbody :where(td.vs-table-td:not(.vs-table-index)) {
+  background-color: var(--dashboard-table-column-bg, var(--dashboard-table-body-bg, transparent));
+}
+
+.dashboard-theme-scope .dashboard-chart-table[data-row-hover] tbody tr {
+  transition: background-color 120ms ease;
+}
+
+.dashboard-theme-scope .dashboard-chart-table[data-row-hover] tbody tr:hover {
+  background-color: var(--dashboard-table-row-hover-bg, rgb(0 0 0 / 0.07));
+}
+
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"]:not([data-canvas-user-bg="true"])
+  [data-testid="pixel-canvas-artboard"] {
+  background-color: var(--dashboard-artboard-bg, #0f172a) !important;
+  background-image: none !important;
+}
+
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"] .pixel-canvas-host,
+.dashboard-theme-scope.dark .pixel-canvas-host {
+  background-color: var(--dashboard-artboard-bg, #0f172a);
+}
+
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"] .dashboard-chart-table tbody tr,
+.dashboard-theme-scope.dark .dashboard-chart-table tbody tr {
+  background-color: var(--dashboard-table-body-bg, transparent);
+  color: var(--dashboard-table-body-fg, #d0d5dd);
+}
+
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"] .dashboard-chart-table[data-row-hover] tbody tr:hover,
+.dashboard-theme-scope.dark .dashboard-chart-table[data-row-hover] tbody tr:hover {
+  background-color: var(--dashboard-table-row-hover-bg, rgb(255 255 255 / 0.1));
+}
+
+.dashboard-theme-scope .dashboard-chart-table tfoot tr {
+  background-color: var(--dashboard-table-summary-bg, var(--dashboard-table-header-bg, #f9fafb));
+  color: var(--dashboard-table-summary-fg, var(--dashboard-table-body-fg, #344054));
+}
+
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"] .dashboard-chart-table tfoot tr,
+.dashboard-theme-scope.dark .dashboard-chart-table tfoot tr {
+  background-color: var(--dashboard-table-summary-bg, var(--dashboard-table-header-bg, #0f172a));
+  color: var(--dashboard-table-summary-fg, var(--dashboard-table-body-fg, #d0d5dd));
+}
+
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"] .dashboard-chart-table thead,
+.dashboard-theme-scope.dark .dashboard-chart-table thead {
+  background-color: var(--dashboard-table-header-bg, #0f172a);
+}
+
+/* VitalSpan 图表表格 — DataEase 向视觉与交互 */
+.vs-table-scroll {
+  --vs-scroll-fade: color-mix(in srgb, var(--dashboard-widget-surface, #fff) 90%, transparent);
+}
+
+.vs-table-scroll::before,
+.vs-table-scroll::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 14px;
+  z-index: 6;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 140ms ease;
+}
+
+.vs-table-scroll[data-scroll-left]::before {
+  left: 0;
+  opacity: 1;
+  background: linear-gradient(to right, var(--vs-scroll-fade), transparent);
+}
+
+.vs-table-scroll[data-scroll-right]::after {
+  right: 0;
+  opacity: 1;
+  background: linear-gradient(to left, var(--vs-scroll-fade), transparent);
+}
+
+.vs-chart-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+}
+
+.vs-chart-table :where(td.vs-table-td) {
+  background-color: var(--dashboard-table-column-bg, var(--dashboard-table-body-bg, transparent));
+}
+
+.vs-chart-table thead .vs-table-sticky-lead,
+.vs-chart-table thead .vs-table-sticky-first {
+  background-color: var(--dashboard-table-corner-bg, var(--dashboard-table-header-bg));
+}
+
+.vs-chart-table :where(.vs-table-th, .vs-table-td) {
+  border-right: 1px solid var(--dashboard-table-border, #f2f4f7);
+}
+
+.vs-chart-table :where(.vs-table-th:last-child, .vs-table-td:last-child) {
+  border-right: none;
+}
+
+.vs-chart-table[data-zebra] tbody tr:nth-child(odd) :where(td.vs-table-td:not(.vs-table-index)) {
+  background-color: var(--dashboard-table-column-bg, var(--dashboard-table-body-bg, transparent));
+}
+
+.vs-chart-table[data-zebra] tbody tr:nth-child(even) td {
+  background-color: var(--dashboard-table-zebra-bg);
+}
+
+.vs-chart-table[data-row-hover] tbody tr:hover td {
+  background-color: var(--dashboard-table-row-hover-bg, rgba(70, 95, 255, 0.06)) !important;
+}
+
+.vs-chart-table[data-row-hover] tbody tr:hover td:first-child {
+  box-shadow: inset 3px 0 0 var(--dashboard-table-accent, #465fff);
+}
+
+.vs-chart-table[data-depth-visual] tbody tr {
+  transition: background-color 150ms ease, box-shadow 150ms ease;
+}
+
+.vs-chart-table[data-depth-visual] tbody tr:hover {
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
+}
+
+.vs-chart-table[data-depth-visual="enhanced"] tbody tr:hover {
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.16);
+}
+
+.vs-kpi-depth-standard {
+  filter: drop-shadow(0 2px 6px rgba(15, 23, 42, 0.12));
+}
+
+.vs-kpi-depth-enhanced {
+  filter: drop-shadow(0 6px 16px rgba(15, 23, 42, 0.18));
+  transform: perspective(480px) rotateX(2deg);
+  transform-origin: center bottom;
+}
+
+.vs-chart-table[data-density="compact"] :where(.vs-table-th, .vs-table-td) {
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+}
+
+.vs-chart-table[data-density="comfortable"] :where(.vs-table-th, .vs-table-td) {
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+}
+
+.vs-chart-table tbody tr {
+  transition: background-color 150ms ease;
+}
+
+.vs-chart-table[data-freeze-lead] .vs-table-sticky-lead {
+  position: sticky;
+  left: 0;
+  z-index: 4;
+  background-color: var(--dashboard-table-index-bg, var(--dashboard-table-header-bg));
+  box-shadow: 1px 0 0 var(--dashboard-table-border);
+}
+
+.vs-chart-table[data-freeze-lead] .vs-table-sticky-first {
+  position: sticky;
+  left: var(--vs-table-sticky-offset, 0px);
+  z-index: 3;
+  background-color: var(--dashboard-table-body-bg, var(--dashboard-widget-surface));
+  box-shadow: 4px 0 8px -4px rgb(15 23 42 / 0.1);
+}
+
+.vs-chart-table[data-freeze-lead] thead .vs-table-sticky-lead,
+.vs-chart-table[data-freeze-lead] thead .vs-table-sticky-first {
+  z-index: 12;
+  background-color: var(--dashboard-table-header-bg);
+}
+
+.vs-chart-table .vs-table-index {
+  background-color: var(--dashboard-table-index-bg);
+  font-weight: 500;
+}
+
+.vs-chart-table .vs-table-drillable {
+  color: var(--dashboard-drill-level-0, #465fff);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.vs-chart-table .vs-table-drillable:hover {
+  text-decoration: underline;
+}
+
+.vs-chart-table .vs-table-summary-row td {
+  background-color: var(--dashboard-table-summary-bg, var(--dashboard-table-header-bg));
+  color: var(--dashboard-table-summary-fg, var(--dashboard-table-body-fg));
+  border-top: 2px solid var(--dashboard-table-border);
+}
+
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"] .vs-table-scroll,
+.dashboard-theme-scope.dark .vs-table-scroll {
+  --vs-scroll-fade: color-mix(in srgb, var(--dashboard-widget-surface, #1e293b) 92%, transparent);
+}
+
+.vs-chart-table[data-layout-interactive] .vs-table-resize-handle-line {
+  opacity: 0.85;
+}
+
+.vs-chart-table[data-layout-interactive] .vs-table-th:hover .vs-table-resize-handle-line,
+.vs-chart-table[data-layout-interactive] .vs-table-resize-handle:hover .vs-table-resize-handle-line {
+  opacity: 1;
+  background-color: rgb(70 95 255 / 0.85);
+}
+
+.vs-chart-table[data-layout-interactive] .vs-table-row-resize .vs-table-resize-handle {
+  opacity: 0.55;
+}
+
+.vs-chart-table[data-layout-interactive] .vs-table-row-resize:hover .vs-table-resize-handle {
+  opacity: 1;
+}
+
+.vs-table-resize-guide[data-orientation="column"]::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: inherit;
+  width: 0;
+  border-left: 1px dashed rgb(70 95 255 / 0.95);
+}
+
+.vs-table-resize-guide[data-orientation="row"]::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: inherit;
+  height: 0;
+  border-top: 1px dashed rgb(70 95 255 / 0.95);
+}
+
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"] .vs-chart-table[data-freeze-lead] .vs-table-sticky-first,
+.dashboard-theme-scope.dark .vs-chart-table[data-freeze-lead] .vs-table-sticky-first {
+  box-shadow: 4px 0 8px -4px rgb(0 0 0 / 0.35);
+}
+
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"] .widget-pending-preview-icon,
+.dashboard-theme-scope.dark .widget-pending-preview-icon {
+  background-color: rgb(255 255 255 / 0.06);
+  color: var(--color-gray-400);
+}
+
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"] .widget-pending-preview [class*="rounded-full"],
+.dashboard-theme-scope.dark .widget-pending-preview [class*="rounded-full"] {
+  background-color: rgb(255 255 255 / 0.08) !important;
+  color: var(--color-gray-300) !important;
+}
+
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"] input:not([type="checkbox"]):not([type="radio"]):not(.widget-inline-title),
+.dashboard-theme-scope.dark input:not([type="checkbox"]):not([type="radio"]):not(.widget-inline-title),
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"] button[role="combobox"],
+.dashboard-theme-scope.dark button[role="combobox"] {
+  background-color: #0f172a;
+  border-color: #344054;
+  color: #e2e8f0;
+}
+
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"] .widget-inline-title,
+.dashboard-theme-scope.dark .widget-inline-title {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.dashboard-theme-scope [data-dashboard-dialog] {
+  background: var(--dashboard-dialog-bg, var(--color-white));
+  color: var(--dashboard-dialog-fg, inherit);
+}
+
+.dashboard-theme-scope.dark [data-dashboard-dialog],
+.dashboard-theme-scope[data-dashboard-color-scheme="dark"] [data-dashboard-dialog] {
+  background: var(--dashboard-dialog-bg, var(--color-gray-900));
+  color: var(--dashboard-dialog-fg, var(--color-gray-100));
+}
+
+/* Portal 浮层菜单：跟 data-dashboard-color-scheme，不跟 Admin html.dark */
+[data-dashboard-menu][data-dashboard-color-scheme="dark"] {
+  background-color: var(--dashboard-dialog-bg, #1d2939) !important;
+  border-color: #344054 !important;
+  color: var(--dashboard-dialog-fg, #ececed) !important;
+}
+
+[data-dashboard-menu][data-dashboard-color-scheme="dark"] [role="separator"] {
+  background-color: #344054 !important;
+}
+
+/* 像素画布：嵌入图表容器填满内容区（编辑态轴标签可溢出；viewBox 缩放由 sceneGraph 负责） */
+.pixel-canvas-host .embedded-chart-live-surface {
+  width: 100%;
+  height: 100%;
+}
+
+.pixel-canvas-host .embedded-chart-live-surface > div {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  flex: 1;
+}
+
+/* 仅 D3/ECharts 场景 SVG 填满容器；内嵌表格（.embedded-chart-table-host）的 lucide 图标保持 Tailwind size-* */
+.pixel-canvas-host .embedded-chart-live-surface:not(:has(.embedded-chart-table-host)) svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+.pixel-canvas-host .dashboard-no-drag,
+.pixel-canvas-host .embedded-chart-table-host {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  flex: 1 1 0%;
+}
+
+.pixel-canvas-host .pixel-shape-inner,
+.pixel-canvas-host .pixel-shape-content {
+  height: 100%;
+  min-height: 0;
+}
+
+.pixel-canvas-host [data-legend-position] {
+  height: 100%;
+  min-height: 0;
+}
+
+/* DataEase isPlayer：外框 imperative 跟手；chart 壳层 GPU transform；松手后引擎 remeasure */
+.pixel-canvas-host .pixel-shape-outer[data-pixel-is-player] .pixel-shape-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.pixel-canvas-host .pixel-shape-outer[data-pixel-is-player] .pixel-shape-content {
+  height: 100%;
+  min-height: 0;
+  flex: 1;
+}
+
+/* isPlayer：外框 imperative 跟手；viz 容器填满，canvas 由引擎 changeSize 控比（禁止 CSS 非等比拉伸） */
+.pixel-canvas-host .pixel-shape-outer[data-pixel-is-player] .embedded-chart-live-surface {
+  width: 100%;
+  height: 100%;
+}
+
+.pixel-canvas-host .pixel-shape-outer[data-pixel-is-player] .embedded-chart-live-surface > div {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  flex: 1;
+}
+
+.pixel-canvas-host .pixel-shape-outer[data-pixel-is-player] .dashboard-no-drag,
+.pixel-canvas-host .pixel-shape-outer[data-pixel-is-player] .embedded-chart-table-host {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.pixel-canvas-host .widget-pending-preview-icon {
+  width: calc(2rem / var(--pixel-canvas-chrome-scale));
+  height: calc(2rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .widget-pending-preview-icon :where(svg) {
+  width: calc(1rem / var(--pixel-canvas-chrome-scale));
+  height: calc(1rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .tabs-widget-root {
+  overflow-anchor: none;
+}
+
+/* Tab 容器：页签栏与投放层按画布缩放反比补偿 */
+.pixel-canvas-host .tabs-widget-root .tabs-widget-tab {
+  min-height: calc(2rem / var(--pixel-canvas-chrome-scale));
+  padding: calc(0.375rem / var(--pixel-canvas-chrome-scale)) calc(0.75rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .tabs-widget-root .tabs-widget-tab-count {
+  font-size: calc(var(--dw-screen-caption) / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .tabs-widget-root .tabs-widget-add-btn {
+  width: calc(2rem / var(--pixel-canvas-chrome-scale));
+  height: calc(2rem / var(--pixel-canvas-chrome-scale));
+  margin-bottom: calc(0.125rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .tabs-widget-root .tabs-widget-add-icon {
+  width: calc(1rem / var(--pixel-canvas-chrome-scale));
+  height: calc(1rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .tabs-widget-root .tabs-widget-empty-icon {
+  width: calc(2.5rem / var(--pixel-canvas-chrome-scale));
+  height: calc(2.5rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .tabs-widget-root .tabs-widget-empty-icon-svg {
+  width: calc(1.25rem / var(--pixel-canvas-chrome-scale));
+  height: calc(1.25rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .tabs-widget-root .tabs-widget-drop-icon {
+  width: calc(2.25rem / var(--pixel-canvas-chrome-scale));
+  height: calc(2.25rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .tabs-widget-root .tabs-widget-drop-icon-svg {
+  width: calc(1.125rem / var(--pixel-canvas-chrome-scale));
+  height: calc(1.125rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .tabs-widget-drop-layer {
+  border-width: calc(2px / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-host .tab-palette-buffer-label {
+  font-size: calc(var(--dw-screen-caption) / var(--pixel-canvas-chrome-scale));
+  line-height: calc(1.25rem / var(--pixel-canvas-chrome-scale));
+  padding: calc(0.125rem / var(--pixel-canvas-chrome-scale)) calc(0.5rem / var(--pixel-canvas-chrome-scale));
+}
+
+.pixel-canvas-mark-line {
+  stroke: var(--color-mark-line, #59c7f9);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+}
+
+.dashboard-canvas-drop-active .react-grid-layout {
+  outline: 2px dashed rgb(70 95 255 / 35%);
+  outline-offset: 2px;
+  border-radius: 0.75rem;
+}
+
+.dashboard-grid-edit .dashboard-grid-empty {
+  min-height: 480px;
+}
+
+.dashboard-grid-edit .react-grid-item {
+  transition: none !important;
+}
+
+.dashboard-grid-edit .react-grid-item > .grid-widget-cell {
+  display: flex;
+  height: 100%;
+  min-height: 0;
+  flex-direction: column;
+}
+
+.dashboard-grid-edit .react-grid-item.cssTransforms {
+  transition: none !important;
+}
+
+.dashboard-grid-edit .dashboard-drag-handle {
+  touch-action: none;
+  user-select: none;
+  cursor: grab;
+}
+
+.dashboard-grid-edit .react-grid-item.react-draggable-dragging .dashboard-drag-handle {
+  cursor: grabbing;
+}
+
+.dashboard-grid-edit .react-grid-item.react-draggable-dragging {
+  z-index: 20;
+}
+
+/* 缩放手柄：八向 shape-point；扩大命中区便于操作 */
+.dashboard-grid-edit .react-grid-item > .react-resizable-handle {
+  position: absolute;
+  z-index: 30;
+  opacity: 0;
+  pointer-events: none;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  margin-top: -6px;
+  border-radius: 2px;
+  background: rgb(255 255 255);
+  border: 1px solid rgb(70 95 255 / 0.85);
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 0.6);
+}
+
+.dashboard-grid-edit .react-grid-item:hover > .react-resizable-handle,
+.dashboard-grid-edit .react-grid-item:has(> .grid-widget-cell.grid-widget-selected) > .react-resizable-handle,
+.dashboard-grid-edit .react-grid-item:has(> .grid-widget-cell > .dashboard-widget-selected) > .react-resizable-handle,
+.dashboard-grid-edit .react-grid-item.react-resizable-resizing > .react-resizable-handle {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dashboard-grid-edit .react-grid-item > .react-resizable-handle-se {
+  right: 2px;
+  bottom: 2px;
+  left: auto;
+  top: auto;
+  margin: 0;
+  cursor: se-resize;
+}
+
+.dashboard-grid-edit .react-grid-item > .react-resizable-handle-sw {
+  left: 2px;
+  bottom: 2px;
+  top: auto;
+  margin: 0;
+  cursor: sw-resize;
+}
+
+.dashboard-grid-edit .react-grid-item > .react-resizable-handle-ne {
+  right: 2px;
+  top: 2px;
+  left: auto;
+  margin: 0;
+  cursor: ne-resize;
+}
+
+.dashboard-grid-edit .react-grid-item > .react-resizable-handle-nw {
+  left: 2px;
+  top: 2px;
+  margin: 0;
+  cursor: nw-resize;
+}
+
+.dashboard-grid-edit .react-grid-item > .react-resizable-handle-n {
+  top: 0;
+  left: 50%;
+  right: auto;
+  margin-left: -6px;
+  margin-top: 0;
+  cursor: n-resize;
+}
+
+.dashboard-grid-edit .react-grid-item > .react-resizable-handle-s {
+  bottom: 0;
+  left: 50%;
+  top: auto;
+  margin-left: -6px;
+  margin-top: 0;
+  cursor: s-resize;
+}
+
+.dashboard-grid-edit .react-grid-item > .react-resizable-handle-e {
+  right: 0;
+  top: 50%;
+  left: auto;
+  margin: 0;
+  margin-top: -6px;
+  cursor: e-resize;
+}
+
+.dashboard-grid-edit .react-grid-item > .react-resizable-handle-w {
+  left: 0;
+  top: 50%;
+  margin: 0;
+  margin-top: -6px;
+  cursor: w-resize;
+}
+
+.dashboard-grid-edit .react-grid-item > .react-resizable-handle-se::after {
+  content: none;
+}
+
+.dashboard-grid-edit .react-grid-placeholder {
+  border-radius: 1rem;
+  border: 1px dashed rgb(156 163 175 / 70%);
+  background: rgb(156 163 175 / 12%) !important;
+  opacity: 1 !important;
+}
+
+.dashboard-rgl-width-host {
+  min-height: 1px;
+}
+
+/* Dashboard 富文本：相对行高，避免大字号被固定 line-height 裁切 */
+.rich-main-class {
+  font-size: 32px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.rich-main-class p {
+  margin: 0;
+}
+
+/* 空段落保高：防止漏网的 <p></p> 折叠（正常路径已写成 <p><br></p>） */
+.rich-main-class p:empty::before {
+  content: "\00a0";
+}
+
+.rich-main-class [style*="font-size"] {
+  line-height: 1.4;
+}
+
+/* TailAdmin 风格取色器（react-colorful） */
+.vs-color-picker .react-colorful {
+  width: 100%;
+  gap: 8px;
+}
+
+.vs-color-picker .react-colorful__saturation {
+  border-radius: 8px;
+  border-bottom: none;
+  min-height: 108px;
+}
+
+.vs-color-picker .react-colorful__hue {
+  height: 8px;
+  border-radius: 999px;
+}
+
+.vs-color-picker .react-colorful__saturation-pointer,
+.vs-color-picker .react-colorful__hue-pointer {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #fff;
+  box-shadow:
+    0 0 0 1px rgb(0 0 0 / 10%),
+    0 1px 3px rgb(0 0 0 / 16%);
+}
+
+/* 登录页品牌区动效 */
+@keyframes login-brand-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes login-brand-preview-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) rotate(-2deg) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(-2deg) scale(1);
+  }
+}
+
+@keyframes login-brand-bar-grow {
+  from {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  to {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+}
+
+@keyframes login-brand-line-draw {
+  from {
+    stroke-dashoffset: 240;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.login-brand-fade {
+  animation: login-brand-fade-up 0.7s ease-out both;
+}
+
+.login-brand-chip {
+  animation: login-brand-fade-up 0.55s ease-out both;
+}
+
+.login-brand-preview-enter {
+  animation: login-brand-preview-in 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+  transform: rotate(-2deg);
+}
+
+.login-brand-bar {
+  animation: login-brand-bar-grow 0.6s ease-out both;
+}
+
+.login-brand-line path {
+  stroke-dasharray: 240;
+  animation: login-brand-line-draw 1.2s ease-out 0.4s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-brand-fade,
+  .login-brand-chip,
+  .login-brand-preview-enter,
+  .login-brand-bar,
+  .login-brand-line path {
+    animation: none;
+  }
+}
+
+.pixel-shape-inner[data-screen-border-asset] {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.pixel-shape-inner[data-screen-border-asset] .pixel-shape-content {
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  height: 100%;
+  min-height: 0;
+  flex: 1;
+}
+
+.pixel-shape-inner[data-screen-border-asset] .dashboard-no-drag {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-screen-border-flow] animateMotion {
+    display: none;
+  }
+}

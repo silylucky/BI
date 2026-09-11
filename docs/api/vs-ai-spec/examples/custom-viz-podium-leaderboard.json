@@ -1,0 +1,107 @@
+{
+  "manifest": {
+    "id": "podium-leaderboard",
+    "displayName": "领奖台排行榜",
+    "version": "1.1.3",
+    "entry": "index.html",
+    "runtime": "html",
+    "rendererHint": "vanilla",
+    "fieldSlots": {
+      "dimensions": {
+        "min": 1,
+        "max": 1,
+        "label": "名称"
+      },
+      "metrics": {
+        "min": 1,
+        "max": 1,
+        "label": "数值"
+      }
+    },
+    "styleSchema": {
+      "type": "object",
+      "x-styleSections": [
+        {
+          "title": "领奖台颜色",
+          "properties": [
+            "goldColor",
+            "silverColor",
+            "bronzeColor",
+            "accentColor"
+          ]
+        },
+        {
+          "title": "显示与数量",
+          "properties": [
+            "showPodium",
+            "showValues",
+            "animationDuration"
+          ]
+        }
+      ],
+      "properties": {
+        "goldColor": {
+          "type": "string",
+          "format": "color",
+          "title": "金牌颜色"
+        },
+        "silverColor": {
+          "type": "string",
+          "format": "color",
+          "title": "银牌颜色"
+        },
+        "bronzeColor": {
+          "type": "string",
+          "format": "color",
+          "title": "铜牌颜色"
+        },
+        "accentColor": {
+          "type": "string",
+          "format": "color",
+          "title": "列表数值颜色"
+        },
+        "showPodium": {
+          "type": "boolean",
+          "title": "显示领奖台"
+        },
+        "showValues": {
+          "type": "boolean",
+          "title": "显示数值"
+        },
+        "animationDuration": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3000,
+          "title": "动画时长(ms)"
+        }
+      }
+    },
+    "styleHooks": {
+      "showPodium": {
+        "hideWhenFalse": true,
+        "hideSelectors": [
+          "#podium-area"
+        ]
+      },
+      "showValues": {
+        "hideWhenFalse": true,
+        "hideSelectors": [
+          ".podium-value",
+          ".row-value"
+        ]
+      }
+    },
+    "defaultStyle": {
+      "goldColor": "#f59e0b",
+      "silverColor": "#94a3b8",
+      "bronzeColor": "#d97706",
+      "accentColor": "#3b82f6",
+      "showPodium": true,
+      "showValues": true,
+      "animationDuration": 800
+    }
+  },
+  "files": {
+    "index.html": "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<style>\n*{margin:0;padding:0;box-sizing:border-box}\nhtml,body{height:100%;font-family:system-ui,-apple-system,sans-serif;background:transparent;overflow:hidden}\n#podium-container{\n  width:100%;height:100%;\n  --vs-scale:1;\n  padding:calc(12px * var(--vs-scale)) calc(16px * var(--vs-scale));\n  display:flex;flex-direction:column;overflow:hidden\n}\n.podium-area{\n  display:flex;align-items:flex-end;justify-content:center;\n  gap:calc(14px * var(--vs-scale));\n  flex-shrink:0;height:var(--podium-area-h,0px)\n}\n.podium-card{\n  display:flex;flex-direction:column;align-items:center;\n  width:32%;max-width:calc(180px * var(--vs-scale));\n  height:100%;justify-content:flex-end;\n  opacity:0;animation:vsRise .6s ease-out forwards\n}\n.podium-medal{\n  border-radius:50%;display:flex;align-items:center;justify-content:center;\n  font-weight:800;color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.22);\n  margin-bottom:calc(6px * var(--vs-scale));\n  width:calc(40px * var(--vs-scale));height:calc(40px * var(--vs-scale));\n  font-size:calc(16px * var(--vs-scale));flex-shrink:0\n}\n.podium-card.first .podium-medal{\n  width:calc(50px * var(--vs-scale));height:calc(50px * var(--vs-scale));\n  font-size:calc(20px * var(--vs-scale))\n}\n.podium-name{\n  font-size:calc(13px * var(--vs-scale));font-weight:600;\n  color:var(--dashboard-text-primary,#1e293b);\n  max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;\n  margin-bottom:calc(2px * var(--vs-scale));flex-shrink:0\n}\n.podium-value{\n  font-family:Consolas,Menlo,monospace;font-variant-numeric:tabular-nums;\n  font-size:calc(15px * var(--vs-scale));font-weight:700;\n  margin-bottom:calc(6px * var(--vs-scale));flex-shrink:0\n}\n.podium-base{\n  width:100%;border-radius:calc(8px * var(--vs-scale)) calc(8px * var(--vs-scale)) 0 0;\n  opacity:.92;flex:var(--base-flex,1) 1 0;min-height:calc(18px * var(--vs-scale))\n}\n.list-area{\n  flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;\n  margin-top:var(--list-gap,0px)\n}\n.list-row{\n  display:flex;align-items:center;\n  min-height:calc(30px * var(--vs-scale));\n  padding:calc(4px * var(--vs-scale));\n  border-bottom:1px dashed rgba(100,116,139,.18);\n  opacity:0;animation:vsFade .45s ease-out forwards\n}\n.row-rank{\n  width:calc(24px * var(--vs-scale));height:calc(24px * var(--vs-scale));\n  border-radius:calc(6px * var(--vs-scale));\n  display:flex;align-items:center;justify-content:center;\n  font-size:calc(11px * var(--vs-scale));font-weight:700;\n  background:rgba(100,116,139,.14);color:var(--dashboard-text-muted,#64748b);\n  margin-right:calc(8px * var(--vs-scale));flex-shrink:0\n}\n.row-name{\n  flex:1;min-width:0;font-size:calc(12px * var(--vs-scale));\n  color:var(--dashboard-text-primary,#1e293b);\n  white-space:nowrap;overflow:hidden;text-overflow:ellipsis\n}\n.row-value{\n  font-family:Consolas,Menlo,monospace;font-variant-numeric:tabular-nums;\n  font-size:calc(12px * var(--vs-scale));font-weight:600;\n  margin-left:calc(8px * var(--vs-scale));flex-shrink:0\n}\n.empty-state{\n  display:flex;align-items:center;justify-content:center;\n  height:100%;min-height:calc(60px * var(--vs-scale));\n  color:#94a3b8;font-size:calc(13px * var(--vs-scale))\n}\n@keyframes vsRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}\n@keyframes vsFade{from{opacity:0}to{opacity:1}}\n</style>\n</head>\n<body>\n<div id=\"podium-container\">\n  <div id=\"podium-area\" class=\"podium-area\"></div>\n  <div id=\"list-area\" class=\"list-area\"></div>\n</div>\n<script>\n(function(){\n  var host=document.currentScript&&document.currentScript.parentElement;\n  var GOLD='#f59e0b',SILVER='#94a3b8',BRONZE='#d97706';\n  function str(st,k,d){return typeof st[k]==='string'?st[k]:d}\n  function num(st,k,d){var v=Number(st[k]);return isFinite(v)?v:d}\n  function bool(st,k,d){return typeof st[k]==='boolean'?st[k]:d}\n  function medalColor(st,rank){\n    if(rank===1)return str(st,'goldColor',GOLD);\n    if(rank===2)return str(st,'silverColor',SILVER);\n    return str(st,'bronzeColor',BRONZE);\n  }\n  function parseRows(p){\n    if(!p||p.bindingStatus!=='bound'||!p.rows||!p.rows.length)return[];\n    var out=[];\n    for(var i=0;i<p.rows.length;i++){\n      var row=p.rows[i];\n      var v=Number(row[1]);\n      if(!isNaN(v))out.push({name:String(row[0]),value:v});\n    }\n    out.sort(function(a,b){return b.value-a.value});\n    return out;\n  }\n  function formatValue(v){\n    if(v>=1e8)return(v/1e8).toFixed(1)+'亿';\n    if(v>=1e4)return(v/1e4).toFixed(1)+'万';\n    if(v>=1e3)return(v/1e3).toFixed(1)+'K';\n    return v.toLocaleString();\n  }\n  function layoutMetrics(p,st,headCount,restCount){\n    var layout=p.layout||{};\n    var W=Math.max(1,layout.width||(host&&host.clientWidth)||320);\n    var H=Math.max(1,layout.height||(host&&host.clientHeight)||240);\n    var scale=Math.min(W/380,H/340);\n    scale=Math.max(0.45,Math.min(scale,3));\n    var pad=Math.round(12*scale);\n    var gap=Math.round(8*scale);\n    var innerH=H-pad*2;\n    var showPodium=bool(st,'showPodium',true);\n    var podiumH=0;\n    if(showPodium&&headCount>0){\n      if(restCount===0)podiumH=innerH;\n      else{\n        var ratio=Math.max(0.28,Math.min(0.52,0.5-restCount*0.015));\n        podiumH=Math.round(innerH*ratio);\n      }\n    }\n    var listGap=(podiumH>0&&restCount>0)?gap:0;\n    return{scale:scale,podiumH:podiumH,listGap:listGap};\n  }\n  function applyLayout(container,pa,la,metrics){\n    container.style.setProperty('--vs-scale',String(metrics.scale));\n    pa.style.setProperty('--podium-area-h',metrics.podiumH+'px');\n    la.style.setProperty('--list-gap',metrics.listGap+'px');\n  }\n  function showHint(pa,la,text,metrics){\n    pa.innerHTML='';pa.style.display='none';\n    la.innerHTML='';\n    var d=document.createElement('div');\n    d.className='empty-state';d.textContent=text;\n    la.appendChild(d);\n    if(metrics)applyLayout(host.querySelector('#podium-container'),pa,la,metrics);\n  }\n  function render(p){\n    p=p||{};\n    var st=p.style||{};\n    var container=host&&host.querySelector('#podium-container');\n    var pa=host&&host.querySelector('#podium-area');\n    var la=host&&host.querySelector('#list-area');\n    if(!container||!pa||!la)return;\n    if(p.bindingStatus!=='bound'){\n      showHint(pa,la,'请在右侧绑定数据集与字段',layoutMetrics(p,st,0,0));\n      return;\n    }\n    var data=parseRows(p);\n    if(!data.length){\n      showHint(pa,la,'暂无数据',layoutMetrics(p,st,0,0));\n      return;\n    }\n    var showPodium=bool(st,'showPodium',true);\n    var showValues=bool(st,'showValues',true)&&st.labelShow!==false;\n    var anim=num(st,'animationDuration',800);\n    var accent=str(st,'accentColor','#3b82f6');if(Array.isArray(st.paletteColors)&&st.paletteColors[0]&&!st.accentColor)accent=st.paletteColors[0];\n    var displayCount=data.length;\n    var head=showPodium?data.slice(0,Math.min(3,displayCount)):[];\n    var rest=data.slice(head.length,displayCount);\n    var headCount=head.length;\n    var restCount=rest.length;\n    var metrics=layoutMetrics(p,st,headCount,restCount);\n    applyLayout(container,pa,la,metrics);\n    pa.innerHTML='';la.innerHTML='';\n    pa.style.display=headCount?'flex':'none';\n    var order=[1,0,2];\n    var baseFlex=[0.72,1,0.55];\n    var delay=0;\n    for(var k=0;k<order.length;k++){\n      var idx=order[k];\n      if(idx>=headCount)continue;\n      var item=head[idx];\n      var rank=idx+1;\n      var card=document.createElement('div');\n      card.className='podium-card'+(rank===1?' first':'');\n      card.style.animationDuration=(anim/1000)+'s';\n      card.style.animationDelay=delay+'ms';\n      card.style.setProperty('--base-flex',String(baseFlex[idx]));\n      delay+=120;\n      var medal=document.createElement('div');\n      medal.className='podium-medal';\n      medal.style.background=medalColor(st,rank);\n      medal.textContent=String(rank);\n      card.appendChild(medal);\n      var nm=document.createElement('div');\n      nm.className='podium-name';\n      nm.title=item.name;nm.textContent=item.name;\n      card.appendChild(nm);\n      if(showValues){\n        var pv=document.createElement('div');\n        pv.className='podium-value';\n        pv.style.color=medalColor(st,rank);\n        pv.textContent=formatValue(item.value);\n        card.appendChild(pv);\n      }\n      var base=document.createElement('div');\n      base.className='podium-base';\n      base.style.background=medalColor(st,rank);\n      card.appendChild(base);\n      pa.appendChild(card);\n    }\n    for(var i=0;i<rest.length;i++){\n      var item2=rest[i];\n      var rank2=headCount+i+1;\n      var row=document.createElement('div');\n      row.className='list-row';\n      row.style.animationDuration=(anim/1600)+'s';\n      row.style.animationDelay=(delay+i*45)+'ms';\n      var rk=document.createElement('span');\n      rk.className='row-rank';\n      rk.textContent=String(rank2);\n      row.appendChild(rk);\n      var nm2=document.createElement('span');\n      nm2.className='row-name';\n      nm2.title=item2.name;nm2.textContent=item2.name;\n      row.appendChild(nm2);\n      if(showValues){\n        var vv=document.createElement('span');\n        vv.className='row-value';\n        vv.style.color=accent;\n        vv.textContent=formatValue(item2.value);\n        row.appendChild(vv);\n      }\n      la.appendChild(row);\n    }\n  }\n  function boot(){\n    if(host&&host.vsCv&&host.vsCv.mount){\n      host.vsCv.mount(function(p){render(p)});\n      return;\n    }\n    var n=host&&host.querySelector('.vs-cv-payload');\n    var p=null;\n    if(n&&n.textContent){try{p=JSON.parse(n.textContent)}catch(e){}}\n    render(p||{});\n  }\n  boot();\n})();\n</script>\n</body>\n</html>\n"
+  }
+}

@@ -1,0 +1,41 @@
+wip: [fe,backend,.cursor,docs,+3] 50f (+2527/-997) @ 2026-07-30 16:58...
+
+Areas:
+  fe/          34 files (+1230/-517)
+  backend/     8 files (+864/-434)
+  .cursor/     3 files (+58/-1)
+  docs/        2 files (+208/-0)
+  scripts/     1 files (+2/-0)
+  tests/       1 files (+58/-0)
+  docker/      1 files (+107/-45)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T162815-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T162815.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/dashboard/templates/demo_datasource.py
+M  backend/app/dashboard/templates/presets.py
+M  backend/app/dashboard/templates/presets_gov.py
+A  backend/app/dashboard/templates/presets_gov_screens.py
+A  backend/app/dashboard/templates/presets_gov_sql.py
+M  backend/app/dashboard/templates/seed.py
+M  backend/app/dashboard/templates/service.py
+A  backend/tests/test_presets_gov.py
+M  docker/demo-mysql/tables.sql
+A  docs/ux-critique/2026-07-30-datasources-backlog.md
+A  docs/ux-critique/2026-07-30-report-center-backlog.md
+A  fe/public/template-assets/backgrounds/screen-gov-community.svg
+A  fe/public/template-assets/backgrounds/screen-gov-cyan-grid.svg
+M  fe/src/components/dashboard/ChartEmbedShareActions.tsx
+A  fe/src/components/dashboard/DashboardBoardShareBody.tsx
+M  fe/src/components/dashboard/PublicShareLinkCard.tsx
+M  fe/src/components/dashboard/canvasBackgroundPipeline.test.ts
+M  fe/src/components/dashboard/dashboardStyleConfig.test.ts
+M  fe/src/components/dashboard/dashboardStyleConfig.ts
+M  fe/src/components/dashboard/dashboardThemeVariants.test.ts
+M  fe/src/components/dashboard/dashboardThemeVariants.ts
+M  fe/src/components/dashboard/screen/DataScreenSharePanel.tsx
+... and 25 more
+
+stat: 50 files changed, 2527 insertions(+), 997 deletions(-)
+branch: dev | scheduled-auto-commit

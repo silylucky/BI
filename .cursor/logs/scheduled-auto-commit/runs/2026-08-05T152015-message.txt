@@ -1,0 +1,39 @@
+wip: [fe,backend,docs,tests,+1] 44f (+1131/-235) @ 2026-08-05 15:20 +...
+
+Areas:
+  fe/          37 files (+929/-227)
+  backend/     4 files (+21/-7)
+  docs/        1 files (+154/-0)
+  tests/       1 files (+25/-0)
+  .agents/     1 files (+2/-1)
+
+Changed (up to 25):
+M  .agents/skills/bug-case-library/cases/fe-cartesian-multi-dim-axis-labels.md
+M  backend/app/dashboard/templates/acl.py
+M  backend/app/dashboard/templates/presets.py
+M  backend/app/dashboard/templates/seed.py
+M  backend/app/dashboard/templates/service.py
+A  docs/feature-truth/2026-08-05-cartesian-multi-dim-hierarchical-axis-truth-audit.md
+M  fe/src/components/charts/engine/buildDatasetEncoding.test.ts
+M  fe/src/components/charts/engine/buildDatasetEncoding.ts
+M  fe/src/components/charts/engine/d3/cartesian/renderArea.ts
+A  fe/src/components/charts/engine/d3/cartesian/renderBar.test.ts
+M  fe/src/components/charts/engine/d3/cartesian/renderBar.ts
+M  fe/src/components/charts/engine/d3/cartesian/renderBarHorizontal.ts
+M  fe/src/components/charts/engine/d3/cartesian/renderDualAxes.ts
+M  fe/src/components/charts/engine/d3/core/hierarchicalAxis.test.ts
+M  fe/src/components/charts/engine/d3/core/hierarchicalAxis.ts
+M  fe/src/components/charts/engine/d3/core/sceneGraph.ts
+M  fe/src/components/charts/engine/d3/renderD3LineChart.test.ts
+M  fe/src/components/charts/engine/d3/renderD3LineChart.ts
+M  fe/src/components/charts/engine/d3/types.ts
+M  fe/src/components/charts/engine/d3/views/buildCartesianConfig.ts
+M  fe/src/components/charts/engine/d3/views/buildRenderConfig.ts
+M  fe/src/components/charts/engine/plugins/plans/buildPlan.ts
+M  fe/src/components/dashboard/chartStyleFields.tsx
+M  fe/src/components/dashboard/createLayoutWidget.test.ts
+M  fe/src/components/dashboard/templates/templateLabels.ts
+... and 19 more
+
+stat: 44 files changed, 1131 insertions(+), 235 deletions(-)
+branch: dev | scheduled-auto-commit

@@ -1,0 +1,29 @@
+wip: [fe,.cursor,docs,backend] 17f (+75/-121) @ 2026-08-18 13:17 +0800
+
+Areas:
+  fe/          12 files (+32/-91)
+  .cursor/     3 files (+41/-5)
+  docs/        1 files (+2/-2)
+  backend/     1 files (+0/-23)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T131443-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T131443.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/datasources/service.py
+M  docs/ui/layout.md
+M  fe/src/components/charts/engine/d3/d3ViewRouter.tsx
+M  fe/src/components/charts/engine/plugins/register.ts
+M  fe/src/components/dashboard/TextWidget.tsx
+M  fe/src/components/dashboard/pixelCanvas/PixelShape.tsx
+M  fe/src/components/dashboard/pixelCanvas/tabInsertResolver.ts
+M  fe/src/config/nav-manifest.tsx
+M  fe/src/index.css
+M  fe/src/lib/chartExecuteProbe.ts
+M  fe/src/pages/admin/dashboard/DashboardEditPage.tsx
+M  fe/src/pages/admin/datasets/dataset-form.smoke.test.tsx
+M  fe/src/pages/admin/reports/ReportSchedulesPage.tsx
+M  fe/src/pages/admin/reports/StandardAnalysisPage.tsx
+
+stat: 17 files changed, 75 insertions(+), 121 deletions(-)
+branch: dev | scheduled-auto-commit

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="64" viewBox="0 0 720 64" preserveAspectRatio="none meet"><rect width="720" height="64" fill="#1a1208" fill-opacity="0.82"/>
+  <defs>
+    <linearGradient id="fade-l" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fbbf24" stop-opacity="0"/><stop offset="1" stop-color="#fbbf24" stop-opacity="0.55"/></linearGradient>
+    <linearGradient id="fade-r" x1="1" y1="0" x2="0" y2="0"><stop stop-color="#fbbf24" stop-opacity="0"/><stop offset="1" stop-color="#fbbf24" stop-opacity="0.55"/></linearGradient>
+  </defs>
+  <path d="M36 20 L48 32 L36 44 L24 32 Z" fill="none" stroke="#fbbf24" stroke-width="1.2" opacity="0.55"/>
+  <circle cx="36" cy="32" r="2" fill="#fbbf24" opacity="0.55"/>
+  <path d="M684 20 L696 32 L684 44 L672 32 Z" fill="none" stroke="#fbbf24" stroke-width="1.2" opacity="0.55"/>
+  <circle cx="684" cy="32" r="2" fill="#fbbf24" opacity="0.55"/>
+  <rect x="72" y="31.5" width="160" height="1" fill="url(#fade-l)"/>
+  <rect x="488" y="31.5" width="160" height="1" fill="url(#fade-r)"/>
+  <rect x="260" y="10" width="200" height="44" fill="#fbbf24" fill-opacity="0.06" rx="2"/>
+  <polygon points="360,24 361.8809128073359,29.41114561800017 367.60845213036123,29.52786404500042 363.0433808521445,32.98885438199983 364.70228201833976,38.47213595499958 360,35.2 355.29771798166024,38.47213595499958 356.9566191478555,32.98885438199983 352.39154786963877,29.52786404500042 358.1190871926641,29.41114561800017" fill="none" stroke="#fbbf24" stroke-width="1" opacity="0.45"/></svg>

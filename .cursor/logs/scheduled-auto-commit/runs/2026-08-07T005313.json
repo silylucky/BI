@@ -1,0 +1,32 @@
+﻿{
+    "messageSubject":  "wip: [fe,backend,docs,.cursor] 14f (+746/-21) @ 2026-08-07 00:53 +0800",
+    "branch":  "dev",
+    "finishedAt":  "2026-08-07T00:53:32+08:00",
+    "topDirs":  {
+                    "fe":  8,
+                    "backend":  3,
+                    ".cursor":  1,
+                    "docs":  2
+                },
+    "sampleFiles":  [
+                        ".cursor/logs/scheduled-auto-commit/state.json",
+                        "backend/app/views/models.py",
+                        "backend/app/views/user_override_repo.py",
+                        "backend/migrations/versions/0038_view_user_override_persistence.py",
+                        "docs/feature-truth/2026-08-07-system-admin-truth-audit.md",
+                        "docs/material/product-reviewer/2026-07-31-system-admin-r3.md",
+                        "fe/src/pages/admin/system/SystemAdminHomePage.tsx",
+                        "fe/src/pages/admin/system/audit/audit.smoke.test.tsx",
+                        "fe/src/pages/admin/system/grants/grants.smoke.test.tsx",
+                        "fe/src/pages/admin/system/orgs/orgs.smoke.test.tsx"
+                    ],
+    "startedAt":  "2026-08-07T00:52:40+08:00",
+    "insertions":  746,
+    "deletions":  21,
+    "filesChanged":  14,
+    "runId":  "2026-08-07T005313",
+    "outcome":  "success",
+    "commit":  "d32617c2",
+    "messageBodyPreview":  "Areas:\r\n  fe/          8 files (+293/-7)\r\n  backend/     3 files (+159/-1)\r\n  docs/        2 files (+291/-6)\r\n  .cursor/     1 files (+3/-7)\r\n\r\nChanged (up to 25):\r\nM  .cursor/logs/scheduled-auto-commit/state.json\r\nM  backend/app/views/models.py\r\nA  backend/app/views/user_override_repo.py\r\nA  backend/migrations/versions/0038_view_user_override_persistence.py\r\nA  docs/feature-truth/2026-08-07-system-admin-truth-audit.md\r\nM  docs/material/product-reviewer/2026-07-31-system-admin-r3.md\r\nM  fe/src/p",
+    "push":  false
+}

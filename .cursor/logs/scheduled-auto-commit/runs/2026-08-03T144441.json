@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-03T14:44:41+08:00",
+  "finishedAt": "2026-08-03T14:44:50+08:00",
+  "branch": "dev",
+  "commit": "766ce4b5",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,.cursor,backend,docs,+1] 27f (+1306/-354) @ 2026-08-03 14:44...",
+  "filesChanged": 27,
+  "insertions": 1306,
+  "deletions": 354,
+  "topDirs": { "fe": 20, ".cursor": 3, "backend": 2, "docs": 1, "tests": 1 },
+  "sampleFiles": [
+    "fe/src/pages/admin/ingestion/components/SyncJobForm.tsx",
+    "fe/src/pages/admin/viz-components/VizComponentsHubPage.tsx",
+    "docs/user-guide/ingestion-sync-jobs-how-to.md",
+    "backend/app/viz/components/service.py"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/"]
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="120" viewBox="0 0 480 120">
+  <defs>
+    <linearGradient id="cf2138b6-h" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0"/>
+      <stop offset="42%" stop-color="#f59e0b" stop-opacity="0.95"/>
+      <stop offset="58%" stop-color="#f59e0b" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="cf2138b6-v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="cf2138b6-g" x="-20%" y="-40%" width="140%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <path d="M24 86 Q120 62 240 86 T456 86" fill="none" stroke="url(#cf2138b6-h)" stroke-width="2.4" filter="url(#cf2138b6-g)"/>
+  <path d="M24 86 Q120 70 240 86 T456 86 L456 120 L24 120 Z" fill="url(#cf2138b6-v)" opacity="0.35"/>
+</svg>

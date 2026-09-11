@@ -1,0 +1,16 @@
+{
+  "chartConfig": {
+    "chartType": "pie",
+    "styleVariant": "default",
+    "dimensions": [{ "field": "{{dimension_1}}", "label": "类别" }],
+    "metrics": [{ "field": "{{metric_1}}", "label": "占比" }],
+    "nativeBody": {
+      "dataBinding": { "status": "manual" },
+      "deStyle": {
+        "paletteId": "default",
+        "legend": { "show": true, "position": "right" },
+        "title": { "show": true, "color": "#1e293b", "fontSize": 16 }
+      }
+    }
+  }
+}

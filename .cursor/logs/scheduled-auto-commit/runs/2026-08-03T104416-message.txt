@@ -1,0 +1,37 @@
+wip: [fe,backend,.cursor,docs,+1] 24f (+627/-195) @ 2026-08-03 10:44 ...
+
+Areas:
+  fe/          16 files (+475/-176)
+  backend/     3 files (+84/-10)
+  .cursor/     3 files (+27/-1)
+  docs/        1 files (+8/-8)
+  tests/       1 files (+33/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T101420-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T101420.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/ingestion/sync.py
+A  backend/app/ingestion/cron_validate.py
+M  backend/app/ingestion/scheduler.py
+M  docs/material/product-reviewer/2026-07-31-ingestion-sync-jobs.md
+A  fe/src/components/dashboard/hubFilterUi.ts
+M  fe/src/components/dashboard/viz-components/componentLabels.ts
+M  fe/src/lib/apiError.ts
+M  fe/src/pages/admin/ingestion/SyncJobFormPage.tsx
+M  fe/src/pages/admin/ingestion/SyncJobHistoryPage.tsx
+M  fe/src/pages/admin/ingestion/SyncJobsPage.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobsEmptyState.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobsTable.tsx
+M  fe/src/pages/admin/ingestion/components/sync-job-types.ts
+M  fe/src/pages/admin/ingestion/ingestion.smoke.test.tsx
+A  fe/src/pages/admin/viz-components/VizComponentsHubFilters.tsx
+M  fe/src/pages/admin/viz-components/VizComponentsHubPage.tsx
+A  fe/src/pages/admin/viz-templates/DemoPackageStatusHint.tsx
+M  fe/src/pages/admin/viz-templates/VizTemplatesHubFilters.tsx
+M  fe/src/pages/admin/viz-templates/VizTemplatesHubPage.tsx
+M  fe/src/pages/admin/viz-templates/viz-templates.smoke.test.tsx
+M  tests/test_ingestion_api.py
+
+stat: 24 files changed, 627 insertions(+), 195 deletions(-)
+branch: dev | scheduled-auto-commit

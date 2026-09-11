@@ -1,0 +1,39 @@
+wip: [fe,backend,.cursor,tests,+1] 30f (+1101/-416) @ 2026-07-31 11:5...
+
+Areas:
+  fe/          19 files (+592/-397)
+  backend/     5 files (+164/-17)
+  .cursor/     3 files (+52/-1)
+  tests/       2 files (+59/-1)
+  docs/        1 files (+234/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T112836-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T112836.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/.env.example
+M  backend/app/dashboard/export_jobs.py
+A  backend/app/dashboard/export_layout.py
+M  backend/app/reports/scheduler/delivery_adapter.py
+M  backend/app/reports/scheduler/executor.py
+A  docs/feature-truth/2026-07-31-report-center-full-truth-audit.md
+M  fe/src/components/dashboard/DashboardListCard.test.tsx
+M  fe/src/components/dashboard/DashboardListCard.tsx
+M  fe/src/components/dashboard/DashboardListCardPreview.tsx
+M  fe/src/components/dashboard/DashboardPreviewThumb.tsx
+A  fe/src/components/dashboard/hubCardUi.ts
+M  fe/src/components/dashboard/templates/TemplateLayoutLivePreview.tsx
+M  fe/src/components/dashboard/templates/VizTemplateCard.tsx
+M  fe/src/components/dashboard/viz-components/VizComponentCard.tsx
+M  fe/src/components/dashboard/viz-components/VizComponentChartPreviewShell.test.tsx
+M  fe/src/components/dashboard/viz-components/VizComponentChartPreviewShell.tsx
+M  fe/src/components/dashboard/viz-components/VizComponentLivePreview.tsx
+M  fe/src/lib/apiError.ts
+M  fe/src/pages/admin/reports/BatchImportPanel.smoke.test.tsx
+M  fe/src/pages/admin/reports/PrefabReportsPage.tsx
+M  fe/src/pages/admin/reports/components/PrefabBindingForm.tsx
+M  fe/src/pages/admin/reports/components/PrefabReportsEmptyPreview.tsx
+... and 5 more
+
+stat: 30 files changed, 1101 insertions(+), 416 deletions(-)
+branch: dev | scheduled-auto-commit

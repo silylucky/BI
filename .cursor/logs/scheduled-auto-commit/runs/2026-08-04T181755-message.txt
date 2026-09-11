@@ -1,0 +1,39 @@
+wip: [fe,backend,tests,docs,+1] 68f (+1693/-441) @ 2026-08-04 18:18 +...
+
+Areas:
+  fe/          26 files (+467/-136)
+  backend/     23 files (+351/-104)
+  tests/       12 files (+566/-60)
+  docs/        4 files (+249/-140)
+  .cursor/     3 files (+60/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T174751-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T174751.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/.env.example
+A  backend/.env.staging.example
+M  backend/app/auth/middleware.py
+M  backend/app/datasources/dialects/influxdb.py
+M  backend/app/ingestion/sync_fetch_native.py
+M  backend/app/ingestion/sync_fetch_sql.py
+M  backend/app/ingestion/sync_source_capabilities.py
+A  backend/app/ingestion/sync_sql_builder.py
+M  backend/app/main.py
+M  backend/app/query/capabilities.py
+M  backend/app/query/dialects/__init__.py
+A  backend/app/query/dialects/db2.py
+A  backend/app/query/dialects/hive.py
+A  backend/app/query/dialects/tdengine.py
+A  backend/app/query/dialects/trino.py
+M  backend/app/reports/engine/acl.py
+A  backend/app/sample_api/router.py
+A  backend/data/artifacts/dashboard-export/9d25581f-bccf-458f-8f23-571be9367326/259f13230aa14b6181bbc869a68612b9.pdf
+A  backend/data/artifacts/dashboard-export/a9f0cc16-ea99-47d6-92f6-ab5456154f26/691c72cb297d4c3faa7eccfff8dd9ea5.pdf
+A  backend/data/artifacts/dashboard-export/b96c820f-d6df-4583-b609-7fbf4e715d6f/932ac89d09994f1190a000128084d610.pdf
+A  backend/data/artifacts/dashboard-export/da5533d2-cddd-4213-8647-8edc5903ad98/c2124dc9c6c84cf19dd7ff27003d6496.pdf
+A  backend/data/artifacts/dashboard-export/df079d58-8d6a-4942-8922-87e39630ed69/bd6d3355402f41f1b43d244a2d1e27c0.pdf
+... and 43 more
+
+stat: 68 files changed, 1693 insertions(+), 441 deletions(-)
+branch: dev | scheduled-auto-commit

@@ -1,0 +1,25 @@
+wip: [docs,fe,scripts,.cursor] 13f (+1017/-16) @ 2026-08-17 19:14 +0800
+
+Areas:
+  docs/        6 files (+500/-11)
+  fe/          4 files (+75/-1)
+  scripts/     2 files (+438/-0)
+  .cursor/     1 files (+4/-4)
+
+Changed (up to 25):
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  docs/api/vs-ai-spec/PROTOCOL.md
+A  docs/api/vs-ai-spec/examples/ai-mixed-command-screen.json
+A  docs/api/vs-ai-spec/examples/custom-viz-alert-feed.json
+M  docs/api/vs-ai-spec/examples/custom-viz-bundle.json
+A  docs/api/vs-ai-spec/examples/custom-viz-pulse-kpi.json
+A  docs/api/vs-ai-spec/examples/custom-viz-ring-progress.json
+M  fe/src/components/dashboard/custom-viz/customVizPayload.test.ts
+M  fe/src/components/dashboard/custom-viz/customVizPayload.ts
+A  fe/src/components/dashboard/customVizHost.test.ts
+M  fe/src/components/dashboard/customVizHost.tsx
+A  scripts/fix-custom-viz-bundle-observer.py
+A  scripts/setup-vs-ai-mixed-screen.py
+
+stat: 13 files changed, 1017 insertions(+), 16 deletions(-)
+branch: dev | scheduled-auto-commit

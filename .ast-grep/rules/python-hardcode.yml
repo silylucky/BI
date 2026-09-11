@@ -1,0 +1,67 @@
+id: python-hardcoded-internal-host
+language: python
+severity: warning
+message: 硬编码内网地址 / localhost 端口
+note: |
+  写死的 192.168.x / 10.x / 172.16-31.x / localhost:port 换环境即断，
+  也常暴露内网拓扑。应走配置或环境变量。
+  误报场景：本地开发脚本、docker-compose 默认值、单元测试桩地址——需按文件用途判断。
+files:
+  - "**/*.py"
+ignores:
+  - "**/test_*.py"
+  - "**/*_test.py"
+  - "**/tests/**"
+  - "**/conftest.py"
+rule:
+  kind: string
+  regex: '(?i)(//|@|^["'']|\b)(192\.168\.\d{1,3}\.\d{1,3}|10\.\d{1,3}\.\d{1,3}\.\d{1,3}|172\.(1[6-9]|2\d|3[01])\.\d{1,3}\.\d{1,3}|localhost:\d{2,5}|127\.0\.0\.1:\d{2,5})'
+---
+id: python-hardcoded-credential
+language: python
+severity: error
+message: 疑似硬编码凭据：密钥类变量被直接赋成字符串字面量
+note: |
+  password / secret / api_key / token 类变量直接赋字面量，等于把凭据提交进仓库，
+  且换环境必然失效。应读环境变量或密钥管理服务。
+  已排除空串与 os.environ / os.getenv 取值；剩下命中基本都要处理。
+files:
+  - "**/*.py"
+ignores:
+  - "**/test_*.py"
+  - "**/*_test.py"
+  - "**/tests/**"
+  - "**/conftest.py"
+rule:
+  kind: assignment
+  all:
+    - has:
+        field: left
+        stopBy: end
+        kind: identifier
+        regex: '(?i)(password|passwd|secret|api_?key|access_?key|auth_?token|_token|^token)$'
+    - has:
+        field: right
+        kind: string
+        has:
+          kind: string_content
+          regex: '.{6,}'
+---
+id: python-placeholder-value
+language: python
+severity: error
+message: 占位配置值（CHANGE_ME / dev-only 之类）留在了代码里
+note: |
+  这类值一旦进生产就是「看起来配好了、其实没配」，比缺配置更危险——不会启动失败，
+  只会在真正调用时以奇怪的方式失败。
+  误报场景：文档字符串或错误提示里引用这些占位词——需看上下文。
+files:
+  - "**/*.py"
+ignores:
+  - "**/test_*.py"
+  - "**/*_test.py"
+  - "**/tests/**"
+  - "**/conftest.py"
+rule:
+  kind: string
+  regex: '(?i)(change_?me|replace_?me|your[-_](api[-_])?key|dev[-_]only|xxx+[-_]replace|todo[-_]set)'

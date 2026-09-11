@@ -1,0 +1,39 @@
+wip: [fe,backend,docs,tests,+1] 60f (+2729/-450) @ 2026-08-04 15:18 +...
+
+Areas:
+  fe/          30 files (+1343/-276)
+  backend/     18 files (+977/-95)
+  docs/        6 files (+289/-47)
+  tests/       3 files (+63/-31)
+  .cursor/     3 files (+57/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T144739-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T144739.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/reports/__init__.py
+M  backend/app/auth/permissions/catalog.py
+M  backend/app/core/config.py
+M  backend/app/dashboard/export_jobs.py
+A  backend/app/reports/artifact_store.py
+M  backend/app/reports/dev_seed.py
+A  backend/app/reports/models.py
+M  backend/app/reports/scheduler/acl.py
+A  backend/app/reports/scheduler/channels/__init__.py
+A  backend/app/reports/scheduler/channels/dispatch.py
+M  backend/app/reports/scheduler/delivery.py
+M  backend/app/reports/scheduler/delivery_adapter.py
+M  backend/app/reports/scheduler/executor.py
+M  backend/app/reports/scheduler/jobs.py
+M  backend/app/reports/scheduler/schemas.py
+M  backend/app/reports/scheduler/service.py
+A  backend/app/reports/scheduler/store.py
+A  backend/migrations/versions/0032_report_schedules_persistence.py
+M  docs/api/README.md
+M  docs/arch.md
+A  docs/feature-truth/2026-08-04-g5-schedule-tob-truth-audit.md
+M  docs/feature-truth/2026-08-04-map-area-mapping-truth-audit.md
+... and 35 more
+
+stat: 60 files changed, 2729 insertions(+), 450 deletions(-)
+branch: dev | scheduled-auto-commit

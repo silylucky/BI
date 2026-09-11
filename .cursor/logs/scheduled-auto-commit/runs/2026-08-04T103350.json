@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-04T10:33:50+08:00",
+  "finishedAt": "2026-08-04T10:34:55+08:00",
+  "branch": "dev",
+  "commit": "c5dda997",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,docs,.cursor,backend,+2] 24f (+1111/-179) @ 2026-08-04 10:34...",
+  "filesChanged": 24,
+  "insertions": 1111,
+  "deletions": 179,
+  "topDirs": { "fe": 11, "docs": 4, ".cursor": 3, "backend": 3, "tests": 2, "scripts": 1 },
+  "sampleFiles": [
+    "backend/app/ingestion/sync_consume.py",
+    "fe/src/pages/admin/ingestion/components/SyncConsumeActionCard.tsx",
+    "fe/src/lib/syncConsumeApi.ts",
+    "docs/user-guide/ingestion-sync-jobs-how-to.md"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/"]
+}

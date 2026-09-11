@@ -1,0 +1,275 @@
+{
+  "id": "gov-digital-cockpit",
+  "name": "数字政府 KPI 驾驶舱",
+  "description": "纸纹水印浅色底图 · 顶栏 KPI 条 · 满意度趋势 · 官方示例数据",
+  "surfaceKind": "data-screen",
+  "tags": [
+    "gov-recommended",
+    "gov-style",
+    "government",
+    "kpi"
+  ],
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "styleConfig": {
+    "widgetGap": 0,
+    "canvasBackground": "#ffffff",
+    "colorScheme": "light",
+    "themeAccent": null,
+    "fontFamily": "\"Times New Roman\", Times, serif",
+    "gapPreset": "none",
+    "pixelGutter": 0,
+    "scaleMode": null,
+    "canvasBackgroundImage": "/template-assets/packs/gov-enterprise-v1/backgrounds/light/canvas-light-cyan-command.svg",
+    "canvasBackgroundImageFit": null,
+    "canvasBackgroundImagePosition": null,
+    "canvasBackgroundCustom": true,
+    "canvasDecorPresetId": "custom",
+    "refreshIntervalSec": null,
+    "defaultQueryLimit": null,
+    "widgetStyle": {
+      "background": "#ffffff",
+      "backgroundImage": "/template-assets/packs/gov-enterprise-v1/backgrounds/light/canvas-light-teal-honeycomb.svg",
+      "backgroundShow": true,
+      "backgroundMode": "image",
+      "framePresetId": null,
+      "frameColor": null,
+      "frameOpacity": null,
+      "opacity": 0.0,
+      "backgroundImageOpacity": 0.54,
+      "backgroundImageFit": null,
+      "backgroundImagePosition": null,
+      "backdropBlur": null,
+      "borderRadius": 16,
+      "borderRadiusTopLeft": null,
+      "borderRadiusTopRight": null,
+      "borderRadiusBottomLeft": null,
+      "borderRadiusBottomRight": null,
+      "radiusMode": null,
+      "padding": 14,
+      "paddingTop": null,
+      "paddingRight": null,
+      "paddingBottom": null,
+      "paddingLeft": null,
+      "paddingMode": null,
+      "borderColor": "#2596b8",
+      "borderWidth": 1,
+      "borderStyle": "solid",
+      "borderEnabled": false
+    },
+    "paletteId": "clarity",
+    "paletteColors": [
+      "#0ba5ec",
+      "#36bffa",
+      "#53b1fd",
+      "#2e90fa",
+      "#465fff",
+      "#12b76a",
+      "#4ade80",
+      "#667085",
+      "#98a2b3"
+    ],
+    "paletteOpacity": null,
+    "seriesGradient": false,
+    "depthVisual": null,
+    "chartLabelShow": null,
+    "chartLabelStyle": {
+      "fontSize": null,
+      "color": "#64748b"
+    },
+    "tooltipShow": null,
+    "chartTooltipStyle": null,
+    "tableColorStyle": {
+      "opacity": null,
+      "headerBg": "rgba(11, 165, 236, 0.12)",
+      "headerFg": "#344054",
+      "bodyBg": null,
+      "bodyFg": "#344054",
+      "summaryBg": "rgba(54, 191, 250, 0.08)",
+      "summaryFg": "#344054",
+      "zebraBg": "rgba(11, 165, 236, 0.08)",
+      "zebraStriped": null,
+      "columnBg": null,
+      "cornerBg": "rgba(11, 165, 236, 0.14)",
+      "emptyHintFg": "#667085",
+      "paginationFg": "#667085",
+      "paginationFontSize": null,
+      "scrollbarColor": "rgba(54, 191, 250, 0.45)",
+      "borderColor": "#f2f4f7",
+      "paginationMode": null,
+      "pageSize": null,
+      "paginationVariant": null,
+      "columnWidthMode": null,
+      "columnWidths": null,
+      "columnWidthsPx": null,
+      "seriesColumnWidthPx": null,
+      "rowHeightPx": null,
+      "wordWrap": null,
+      "rowHover": null,
+      "showSummary": null
+    },
+    "titleStyle": {
+      "show": null,
+      "fontSize": 14,
+      "color": "#1e293b",
+      "fontWeight": 600,
+      "fontStyle": null,
+      "align": null,
+      "letterSpacing": null,
+      "shadow": false
+    },
+    "filterChromeStyle": {
+      "titlePosition": null,
+      "titleColor": "#64748b"
+    },
+    "filterControlStyle": null,
+    "numberFormat": null,
+    "actionIconColor": null,
+    "drillLevelColors": null,
+    "dialogStyle": {
+      "background": "#ffffff",
+      "fontColor": "#344054"
+    },
+    "chrome": null,
+    "themeVariants": {
+      "light": {
+        "canvasBackground": "#ffffff",
+        "canvasBackgroundImageFit": null,
+        "canvasBackgroundImagePosition": null,
+        "canvasBackgroundImage": "/template-assets/packs/gov-enterprise-v1/backgrounds/light/canvas-light-cyan-command.svg",
+        "canvasBackgroundCustom": true,
+        "canvasDecorPresetId": "custom",
+        "themeAccent": null,
+        "widgetStyle": {
+          "background": "#ffffff",
+          "borderColor": "#2596b8",
+          "borderWidth": 1,
+          "borderStyle": "solid",
+          "borderEnabled": false,
+          "opacity": 0.0
+        },
+        "titleStyle": {
+          "color": "#1e293b"
+        },
+        "dialogStyle": {
+          "background": "#ffffff",
+          "fontColor": "#344054"
+        },
+        "filterChromeStyle": {
+          "titlePosition": null,
+          "titleColor": "#64748b"
+        }
+      },
+      "dark": {
+        "canvasBackground": "#0f172a",
+        "canvasBackgroundImageFit": null,
+        "canvasBackgroundImagePosition": null,
+        "canvasBackgroundImage": null,
+        "canvasBackgroundCustom": null,
+        "canvasDecorPresetId": null,
+        "themeAccent": null,
+        "widgetStyle": {
+          "background": "#1e293b",
+          "borderColor": "#344054",
+          "borderWidth": null,
+          "borderStyle": null,
+          "borderEnabled": null,
+          "opacity": null
+        },
+        "titleStyle": {
+          "color": "#f2f4f7"
+        },
+        "dialogStyle": {
+          "background": "#1d2939",
+          "fontColor": "#ececed"
+        },
+        "filterChromeStyle": {
+          "titlePosition": null,
+          "titleColor": "#98a2b3"
+        }
+      }
+    },
+    "surfaceKind": "data-screen",
+    "screenPlaylist": null
+  },
+  "shell": {
+    "title": "资源分析大屏",
+    "clock": true,
+    "accent": "#64748b",
+    "mode": "platform"
+  },
+  "platformTemplateKey": "builtin-gov-digital-cockpit",
+  "sourceLayoutFile": "workspace-digital-cockpit.json",
+  "composeHints": {
+    "shellMode": "platform",
+    "preserveCoordinates": true,
+    "note": "槽位坐标来自 5173 内置模板；compose 勿再叠加 de-shell 偏移"
+  },
+  "slots": [
+    {
+      "type": "chart",
+      "title": "公共服务满意度走势",
+      "x": 547,
+      "y": 85,
+      "width": 831,
+      "height": 324,
+      "defaultChartType": "area"
+    },
+    {
+      "type": "chart",
+      "title": "部门效能",
+      "x": 547,
+      "y": 445,
+      "width": 831,
+      "height": 311,
+      "defaultChartType": "area"
+    },
+    {
+      "type": "chart",
+      "title": "事件类型",
+      "x": 1395,
+      "y": 428,
+      "width": 498,
+      "height": 613,
+      "defaultChartType": "bullet-graph"
+    },
+    {
+      "type": "chart",
+      "title": "仪表盘",
+      "x": 1395,
+      "y": 80,
+      "width": 498,
+      "height": 329,
+      "defaultChartType": "gauge"
+    },
+    {
+      "type": "chart",
+      "title": "K 线图",
+      "x": 547,
+      "y": 772,
+      "width": 831,
+      "height": 269,
+      "defaultChartType": "stock-line"
+    },
+    {
+      "type": "chart",
+      "title": "矩形树图",
+      "x": 19,
+      "y": 85,
+      "width": 503,
+      "height": 324,
+      "defaultChartType": "treemap"
+    },
+    {
+      "type": "chart",
+      "title": "汇总表",
+      "x": 19,
+      "y": 428,
+      "width": 503,
+      "height": 613,
+      "defaultChartType": "table-normal"
+    }
+  ]
+}

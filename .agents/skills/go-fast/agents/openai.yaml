@@ -1,0 +1,5 @@
+interface:
+  display_name: "极速开工"
+  short_description: "有规格直接干；无则出规格拆单并发"
+policy:
+  allow_implicit_invocation: true

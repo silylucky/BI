@@ -1,0 +1,34 @@
+wip: [fe,docs,.cursor] 23f (+539/-72) @ 2026-08-18 11:43 +0800
+
+Areas:
+  fe/          19 files (+316/-65)
+  docs/        2 files (+198/-2)
+  .cursor/     2 files (+25/-5)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T111351.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+A  docs/material/product-reviewer/2026-08-18-report-center.md
+M  docs/ui/layout.md
+M  fe/src/components/dashboard/DatasetFieldGroups.tsx
+M  fe/src/components/dashboard/custom-viz/CustomVizEditRail.tsx
+A  fe/src/components/dashboard/custom-viz/useCustomVizInspectorState.test.tsx
+M  fe/src/components/dashboard/custom-viz/useCustomVizInspectorState.ts
+M  fe/src/hooks/useVizComponentInspectorActions.ts
+M  fe/src/lib/reportCenterNav.ts
+M  fe/src/pages/admin/dashboard/DashboardEditPage.tsx
+M  fe/src/pages/admin/reports/ReportCenterPage.tsx
+M  fe/src/pages/admin/reports/ReportSchedulesPage.tsx
+M  fe/src/pages/admin/reports/ReportTemplatesPage.tsx
+M  fe/src/pages/admin/reports/StandardAnalysisConfigPage.tsx
+M  fe/src/pages/admin/reports/StandardAnalysisPage.tsx
+A  fe/src/pages/admin/reports/components/ReportCenterDashboardScheduleHint.tsx
+M  fe/src/pages/admin/reports/components/ReportCenterScheduleHub.tsx
+M  fe/src/pages/admin/reports/components/SchedulePageOverview.tsx
+M  fe/src/pages/admin/reports/components/StandardAnalysisPackList.tsx
+M  fe/src/pages/admin/reports/report-center.smoke.test.tsx
+M  fe/src/pages/admin/reports/useStandardAnalysis.ts
+M  fe/src/pages/admin/reports/useStandardAnalysisEditor.ts
+
+stat: 23 files changed, 539 insertions(+), 72 deletions(-)
+branch: dev | scheduled-auto-commit

@@ -1,0 +1,38 @@
+wip: [fe,docs,tests,.cursor] 40f (+1909/-136) @ 2026-08-17 18:43 +0800
+
+Areas:
+  fe/          32 files (+1754/-118)
+  docs/        6 files (+113/-14)
+  tests/       1 files (+38/-0)
+  .cursor/     1 files (+4/-4)
+
+Changed (up to 25):
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  docs/api/vs-ai-spec/README.md
+M  docs/api/vs-ai-spec/guides/D3-OPTIONAL.md
+M  docs/api/vs-ai-spec/guides/RENDERERS.md
+M  docs/arch.md
+M  docs/data/README.md
+A  docs/material/arch-reviewer/2026-08-17-vitalspan-full.md
+M  fe/package.json
+M  fe/pnpm-lock.yaml
+M  fe/src/components/charts/engine/d3/d3ViewRouter.tsx
+A  fe/src/components/charts/engine/geolibre/GeoLibreMapHost.tsx
+A  fe/src/components/charts/engine/geolibre/geolibreProject.test.ts
+A  fe/src/components/charts/engine/geolibre/geolibreProject.ts
+A  fe/src/components/charts/engine/geolibre/geolibreWidgetStore.test.ts
+A  fe/src/components/charts/engine/geolibre/geolibreWidgetStore.ts
+M  fe/src/components/charts/engine/plugins/README.md
+M  fe/src/components/charts/engine/plugins/register.ts
+M  fe/src/components/dashboard/chartStyleSections/ChartStyleSection.tsx
+A  fe/src/components/dashboard/gisMap/GisMapBasemapInspector.tsx
+A  fe/src/components/dashboard/gisMap/GisMapInspector.tsx
+A  fe/src/components/dashboard/gisMap/GisMapLayerInspector.tsx
+A  fe/src/components/dashboard/gisMap/GisMapStyleInspector.tsx
+A  fe/src/components/dashboard/gisMap/useGisMapStore.ts
+M  fe/src/lib/chartStyleSectionRegistry.ts
+M  fe/src/lib/chartTypeStyleProfiles.ts
+... and 15 more
+
+stat: 40 files changed, 1909 insertions(+), 136 deletions(-)
+branch: dev | scheduled-auto-commit

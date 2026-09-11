@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="f102da86-base" x1="0" y1="0" x2="1920" y2="1080">
+      <stop stop-color="#e8e8e6"/>
+      <stop offset="0.32" stop-color="#c2bab2"/>
+      <stop offset="0.68" stop-color="#e1d3c2"/>
+      <stop offset="1" stop-color="#d0b790"/>
+    </linearGradient>
+    <radialGradient id="f102da86-glowL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(345.59999999999997 237.6) scale(729.6)">
+      <stop stop-color="#d97706" stop-opacity="0.32"/>
+      <stop offset="0.55" stop-color="#795c14" stop-opacity="0.20800000000000002"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="f102da86-glowR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1574.3999999999999 777.6) scale(614.4)">
+      <stop stop-color="#fbbf24" stop-opacity="0.272"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#f102da86-base)"/>
+  <rect width="1920" height="1080" fill="url(#f102da86-glowL)"/>
+  <rect width="1920" height="1080" fill="url(#f102da86-glowR)"/>
+  <circle cx="960" cy="518.4" r="160" fill="none" stroke="#fbbf24" stroke-width="0.8" opacity="0.32"/>
+  <circle cx="960" cy="518.4" r="104" fill="none" stroke="#fbbf24" stroke-width="0.5" opacity="0.28" stroke-dasharray="4 6"/>
+  <line x1="800" y1="518.4" x2="1120" y2="518.4" stroke="#fbbf24" stroke-width="0.4" opacity="0.25"/>
+  <line x1="960" y1="358.4" x2="960" y2="678.4" stroke="#fbbf24" stroke-width="0.4" opacity="0.25"/>
+  <circle cx="960" cy="518.4" r="260" fill="none" stroke="#fbbf24" stroke-width="0.8" opacity="0.32"/>
+  <circle cx="960" cy="518.4" r="169" fill="none" stroke="#fbbf24" stroke-width="0.5" opacity="0.28" stroke-dasharray="4 6"/>
+  <line x1="700" y1="518.4" x2="1220" y2="518.4" stroke="#fbbf24" stroke-width="0.4" opacity="0.25"/>
+  <line x1="960" y1="258.4" x2="960" y2="778.4" stroke="#fbbf24" stroke-width="0.4" opacity="0.25"/>
+  <circle cx="960" cy="518.4" r="360" fill="none" stroke="#fbbf24" stroke-width="0.8" opacity="0.32"/>
+  <circle cx="960" cy="518.4" r="234" fill="none" stroke="#fbbf24" stroke-width="0.5" opacity="0.28" stroke-dasharray="4 6"/>
+  <line x1="600" y1="518.4" x2="1320" y2="518.4" stroke="#fbbf24" stroke-width="0.4" opacity="0.25"/>
+  <line x1="960" y1="158.39999999999998" x2="960" y2="878.4" stroke="#fbbf24" stroke-width="0.4" opacity="0.25"/>
+  <g opacity="0.62" stroke="#fbbf24" stroke-width="1.5" fill="none">
+  <path d="M20 60 V20 H60"/>
+  <path d="M1860 20 H1900 V60"/>
+  <path d="M1900 1020 V1060 H1860"/>
+  <path d="M60 1060 H20 V1020"/>
+</g>
+  <polygon points="960,446.4 976.9282152660232,495.1003105620015 1028.476069173251,496.15077640500374 987.3904276693004,527.2996894379985 1002.3205381650581,576.6492235949962 960,547.1999999999999 917.6794618349419,576.6492235949962 932.6095723306996,527.2996894379985 891.5239308267489,496.1507764050038 943.0717847339768,495.1003105620015" fill="none" stroke="#fbbf24" stroke-width="1" opacity="0.28"/>
+</svg>

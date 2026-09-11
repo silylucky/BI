@@ -1,0 +1,236 @@
+# VitalSpan 环境地图 + browser-reviewer 走查配置
+# 密钥：复制 secrets.env.example → secrets.env（勿提交）
+# Schema：.agents/skills/browser-reviewer/references/dev-config.md
+
+project:
+  name: vitalspan
+  owner: VitalSpan 研发团队
+  docs:
+    arch: docs/arch.md
+    prd: docs/automate/prd.md
+    api: docs/api/README.md
+    runbook: README.md
+
+active_env: local
+
+environments:
+  local:
+    kind: local
+    label: 本机开发
+    browser_url: http://localhost:5173/admin
+    api_url: http://localhost:8000
+    health_url: http://localhost:8000/health
+    start: pnpm dev
+    start_cwd: fe
+    ready_timeout_sec: 180
+    deploy:
+      location: 本机
+      method: docker compose + uvicorn + vite
+      region: ""
+      link: ""
+    logs:
+      url: ""
+      query_hint: "backend stdout JSON；字段 traceId"
+    metrics_url: ""
+    traces_url: ""
+    network:
+      vpn_or_bastion: none
+      note: ""
+      kubectl_context: ""
+    connections:
+      - name: platform-postgres
+        kind: db
+        host: localhost
+        port: 5432
+        database: vitalspan
+        note: docker compose service postgres；元库 DATABASE_URL
+      - name: analytics-postgres
+        kind: db
+        host: localhost
+        port: 5433
+        database: analytics
+        note: 分析库 ANALYTICS_DATABASE_URL
+      - name: sample-mysql
+        kind: db
+        host: localhost
+        port: 3307
+        database: sample_db
+        note: 官方演示包必需；SAMPLE_MYSQL_URL
+      - name: meta-mysql
+        kind: db
+        host: localhost
+        port: 3309
+        database: vitalspan
+        note: 可选 MySQL 元库
+      - name: rpt-smtp
+        kind: other
+        host: localhost
+        port: 1025
+        database: ""
+        note: MailHog；RPT_SMTP_HOST/PORT
+    auth:
+      strategy: form
+      login_path: /login
+      username: admin
+      password_env: VITALSPAN_DEV_ADMIN_PASSWORD
+    walkthrough:
+      enabled: true
+      allow_writes: true
+      allow_destructive: false
+    notes: |
+      走查前须：`docker compose up -d postgres sample-mysql mailhog`；
+      `cd backend && alembic upgrade head && uvicorn app.main:app --reload --port 8000`。
+      看板 PDF 导出闭环：`cd fe && pnpm dev --host 127.0.0.1 --port 5173`（单实例；backend `FE_BASE_URL=http://127.0.0.1:5173`）。
+      开发 RBAC 切换：admin / analyst / viewer（同 VITALSPAN_DEV_ADMIN_PASSWORD）。
+
+  staging:
+    kind: staging
+    label: 远端测试（192.168.10.22）
+    browser_url: http://192.168.10.22:8088/admin
+    api_url: http://192.168.10.22:8088
+    health_url: http://192.168.10.22:8088/health
+    deploy:
+      location: 192.168.10.22
+      method: 直接部署（apt PG/MySQL + systemd + Nginx :8088）
+      region: 内网 lab
+      link: docs/material/deploy/2026-08-04-vitalspan-staging-deploy-log.md
+      ssh_host: ontomind@192.168.10.22
+      remote_root: /opt/apps/vitalspan
+    logs:
+      url: ""
+      query_hint: "ssh 后 journalctl -u vitalspan-backend -f"
+    metrics_url: ""
+    traces_url: ""
+    network:
+      vpn_or_bastion: none
+      note: 内网 192.168.10.0/24；:80 被 Apache 占用，VitalSpan 用 :8088
+      kubectl_context: ""
+    connections:
+      - name: platform-postgres
+        kind: db
+        host: 192.168.10.22
+        port: 5432
+        database: vitalspan
+        note: 宿主机原生 PostgreSQL
+      - name: analytics-postgres
+        kind: db
+        host: 192.168.10.22
+        port: 5432
+        database: analytics
+        note: 同实例第二库
+      - name: sample-mysql
+        kind: db
+        host: 192.168.10.22
+        port: 3306
+        database: sample_db
+        note: 宿主机原生 MySQL
+    auth:
+      strategy: form
+      login_path: /login
+      username: admin
+      password_env: VITALSPAN_DEV_ADMIN_PASSWORD
+    walkthrough:
+      enabled: true
+      allow_writes: true
+      allow_destructive: false
+    notes: |
+      部署日志：docs/material/deploy/2026-08-04-vitalspan-staging-deploy-log.md
+      看板 346 条；OpenStack 安全组需放行 8088/TCP（及可选 8000）。
+
+  prod:
+    kind: production
+    label: 生产
+    browser_url: ""
+    api_url: ""
+    health_url: ""
+    deploy:
+      location: ""
+      method: ""
+      region: ""
+      link: ""
+    logs:
+      url: ""
+      query_hint: ""
+    metrics_url: ""
+    traces_url: ""
+    network:
+      vpn_or_bastion: required
+      note: 仅运维地图；禁止走查写操作
+      kubectl_context: ""
+    connections: []
+    auth:
+      strategy: form
+      login_path: /login
+      username: ""
+    walkthrough:
+      enabled: false
+      allow_writes: false
+      allow_destructive: false
+    notes: 不收集生产密码；active_env 禁止默认指向 prod
+
+app:
+  name: vitalspan
+  base_url: http://localhost:5173/admin
+  start: pnpm dev
+  start_cwd: fe
+  ready_timeout_sec: 180
+
+auth:
+  strategy: form
+  login_path: /login
+  username: admin
+  password_env: VITALSPAN_DEV_ADMIN_PASSWORD
+  success:
+    url_includes: /admin
+
+external:
+  api_base: http://localhost:8000
+
+viewport:
+  desktop:
+    width: 1440
+    height: 900
+
+walkthrough:
+  allow_writes: true
+  allow_destructive: false
+  allow_prod: false
+  artifact_dir: .dev/walkthrough
+  baseline_dir: .dev/baselines
+  pixel:
+    mode: perceptual
+    threshold: 0.01
+
+roles:
+  - id: admin
+    username: admin
+    password_env: VITALSPAN_DEV_ADMIN_PASSWORD
+  - id: analyst
+    username: analyst
+    password_env: VITALSPAN_DEV_ADMIN_PASSWORD
+  - id: viewer
+    username: viewer
+    password_env: VITALSPAN_DEV_ADMIN_PASSWORD
+
+# 与 $HOME/.dev 分工：跨项目 LDAP/S3/日志验真读家目录台账
+integrations:
+  home_dev_config: ~/.dev/config.yaml
+  # 可选：全球 PMTiles 外部瓦片服务（非 VitalSpan 进程；客户不要则不部署）
+  pmtiles_external:
+    optional: true
+    compose_profile: pmtiles-external
+    start_script: scripts/start-pmtiles-external.ps1
+    register_api: POST /api/v1/tile-services
+    docs: docs/services/pmtiles-tile-server.md
+  note: |
+    Windows 家目录台账：C:\Users\<用户名>\.dev\config.yaml
+    外部 smoke 先读家目录 credential_env，再与本文件 connections 变量名对齐。
+    禁止把 AK/SK 写入本 yaml。
+
+# 发布登记（执行见 release-package skill；仓内 release 脚本待建）
+release:
+  version: ""
+  artifact: ""
+  rollback: ""
+  sbom: ""
+  notes: 无版本裸拷贝禁止交付；见 .cursor/rules/delivery.mdc

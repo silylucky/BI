@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-18T13:12:10+08:00",
+  "finishedAt": "2026-08-18T13:12:35+08:00",
+  "branch": "dev",
+  "outcome": "success",
+  "push": false,
+  "trigger": "loop_start_immediate",
+  "commit": "e0c31535",
+  "messageSubject": "wip: [.cursor,fe,docs,backend,+2] 16f (+821/-43) @ 2026-08-18 13:12 +0800",
+  "messageBodyPreview": "dataset sync cleanup、CustomViz dataset binding truth audit、tabInsertResolver、DashboardEditPage",
+  "filesChanged": 16,
+  "insertions": 821,
+  "deletions": 43,
+  "topDirs": { ".cursor": 6, "fe": 4, "docs": 2, "backend": 2, "tests": 1, ".agents": 1 },
+  "sampleFiles": [
+    "docs/feature-truth/2026-08-18-dataset-sync-cleanup-truth-audit.md",
+    "backend/app/metadata/dataset/cleanup.py",
+    "fe/src/components/dashboard/pixelCanvas/tabInsertResolver.ts"
+  ]
+}

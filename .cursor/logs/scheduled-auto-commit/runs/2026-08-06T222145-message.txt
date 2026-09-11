@@ -1,0 +1,37 @@
+wip: [fe,docs,.cursor] 27f (+943/-394) @ 2026-08-06 22:21 +0800
+
+Areas:
+  fe/          25 files (+884/-350)
+  docs/        1 files (+56/-37)
+  .cursor/     1 files (+3/-7)
+
+Changed (up to 25):
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  docs/feature-truth/2026-08-06-dashboard-scheduled-report-truth-audit.md
+M  fe/src/components/charts/engine/d3/cartesian/renderDualAxes.test.ts
+M  fe/src/components/charts/engine/d3/cartesian/renderDualAxes.ts
+M  fe/src/components/dashboard/DashboardShareDialog.tsx
+A  fe/src/lib/formatDateTime.ts
+M  fe/src/lib/scheduleSourceMeta.ts
+M  fe/src/pages/admin/dashboard/DashboardListPage.tsx
+M  fe/src/pages/admin/reports/PrefabReportsPage.tsx
+M  fe/src/pages/admin/reports/ReportCenterPage.tsx
+M  fe/src/pages/admin/reports/ReportSchedulesPage.tsx
+M  fe/src/pages/admin/reports/ReportTemplatesPage.tsx
+M  fe/src/pages/admin/reports/ReportViewPage.tsx
+M  fe/src/pages/admin/reports/components/DashboardSchedulePanel.tsx
+M  fe/src/pages/admin/reports/components/PrefabBindingsTable.tsx
+M  fe/src/pages/admin/reports/components/ReportCenterScheduleHub.tsx
+M  fe/src/pages/admin/reports/components/ScheduleDeliveryHealthAlert.tsx
+M  fe/src/pages/admin/reports/components/ScheduleExportHealthAlert.tsx
+M  fe/src/pages/admin/reports/components/ScheduleFormFields.tsx
+M  fe/src/pages/admin/reports/components/ScheduleHistoryTable.tsx
+M  fe/src/pages/admin/reports/components/SchedulePageOverview.tsx
+M  fe/src/pages/admin/reports/components/SchedulePanel.tsx
+M  fe/src/pages/admin/reports/components/SchedulePrecheckPanel.tsx
+M  fe/src/pages/admin/reports/components/ScheduleRecentFailuresPanel.tsx
+M  fe/src/pages/admin/reports/components/ScheduleRecipientsField.tsx
+... and 2 more
+
+stat: 27 files changed, 943 insertions(+), 394 deletions(-)
+branch: dev | scheduled-auto-commit

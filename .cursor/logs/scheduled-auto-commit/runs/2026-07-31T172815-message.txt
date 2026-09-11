@@ -1,0 +1,39 @@
+wip: [fe,docs,.cursor,backend,+1] 41f (+1921/-608) @ 2026-07-31 17:28...
+
+Areas:
+  fe/          30 files (+1446/-593)
+  docs/        5 files (+285/-14)
+  .cursor/     3 files (+54/-1)
+  backend/     2 files (+5/-0)
+  tests/       1 files
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T165840-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T165840.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/reports/dev_seed.py
+M  backend/app/reports/extension/schemas.py
+A  docs/material/product-reviewer/2026-07-31-account-center-r3.md
+M  docs/material/product-reviewer/2026-07-31-report-center.md
+A  docs/material/product-reviewer/2026-07-31-system-admin-r2.md
+M  docs/material/product-reviewer/2026-07-31-system-admin.md
+M  docs/ui/layout.md
+M  fe/src/config/account-nav.tsx
+M  fe/src/lib/queryKeys.ts
+A  fe/src/lib/reportCenterPrefs.test.ts
+A  fe/src/lib/reportCenterPrefs.ts
+A  fe/src/lib/reportTemplateReadiness.ts
+M  fe/src/lib/resolve-nav.test.ts
+M  fe/src/lib/workspace.test.ts
+M  fe/src/lib/workspace.ts
+M  fe/src/pages/admin/account/AccountProfilePage.smoke.test.tsx
+M  fe/src/pages/admin/account/AccountProfilePage.tsx
+A  fe/src/pages/admin/account/AccountThemePage.tsx
+M  fe/src/pages/admin/account/components/AccountInfoCard.tsx
+D  fe/src/pages/admin/account/components/AccountSecurityLinks.tsx
+M  fe/src/pages/admin/reports/ReportCenterPage.tsx
+M  fe/src/pages/admin/reports/ReportViewPage.tsx
+... and 16 more
+
+stat: 42 files changed, 1921 insertions(+), 608 deletions(-)
+branch: dev | scheduled-auto-commit

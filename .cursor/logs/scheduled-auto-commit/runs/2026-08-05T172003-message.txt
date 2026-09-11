@@ -1,0 +1,38 @@
+wip: [fe,backend,tests,docs] 32f (+873/-646) @ 2026-08-05 17:20 +0800
+
+Areas:
+  fe/          21 files (+339/-636)
+  backend/     5 files (+155/-7)
+  tests/       4 files (+184/-2)
+  docs/        2 files (+195/-1)
+
+Changed (up to 25):
+M  backend/.env.example
+M  backend/app/api/v1/ingestion/sync.py
+A  backend/app/ingestion/etl_seed.py
+A  backend/app/ingestion/etl_suggest.py
+M  backend/app/ingestion/sync_consume.py
+A  docs/feature-truth/2026-08-05-etl-default-auto-config-truth-audit.md
+M  docs/services/ingestion.md
+M  fe/.env.example
+D  fe/dash-debug-layout.json
+D  fe/live-dash-response.json
+A  fe/src/components/charts/engine/d3/cartesian/renderCompareChartsSmoke.test.ts
+A  fe/src/components/charts/engine/d3/cartesian/renderWaterfall.test.ts
+M  fe/src/components/charts/engine/d3/cartesian/renderWaterfall.ts
+M  fe/src/components/ui/route-error-boundary.test.tsx
+M  fe/src/components/ui/route-error-boundary.tsx
+M  fe/src/lib/api.ts
+M  fe/src/lib/appBasePath.ts
+D  fe/src/lib/dashDebugLayoutLoad.test.ts
+D  fe/src/lib/liveDashLoad.test.ts
+M  fe/src/lib/syncConsumeApi.ts
+M  fe/src/pages/admin/ingestion/EtlRulesPage.tsx
+M  fe/src/pages/admin/ingestion/components/SyncConsumeActionCard.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobForm.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobsEmptyState.tsx
+M  fe/src/pages/admin/ingestion/etlRuleSuggest.test.ts
+... and 7 more
+
+stat: 32 files changed, 873 insertions(+), 646 deletions(-)
+branch: dev | scheduled-auto-commit

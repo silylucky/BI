@@ -1,0 +1,32 @@
+﻿{
+    "messageSubject":  "wip: [fe,.agents,backend,.cursor] 15f (+312/-38) @ 2026-08-06 19:13 +...",
+    "branch":  "dev",
+    "finishedAt":  "2026-08-06T19:13:56+08:00",
+    "topDirs":  {
+                    "backend":  2,
+                    ".cursor":  1,
+                    "fe":  10,
+                    ".agents":  2
+                },
+    "sampleFiles":  [
+                        ".agents/skills/bug-case-library/cases/be-dashboard-canvas-bg-data-url-limit.md",
+                        ".agents/skills/bug-case-library/cases/fe-webpage-insert-backgroundImage-crash.md",
+                        ".cursor/logs/scheduled-auto-commit/state.json",
+                        "backend/app/dashboard/schemas.py",
+                        "backend/tests/test_dashboard_image_data_url_limit.py",
+                        "fe/src/components/dashboard/WidgetBackgroundImageFitFields.tsx",
+                        "fe/src/components/dashboard/WidgetBackgroundImagePicker.tsx",
+                        "fe/src/components/dashboard/imageSourceUtils.ts",
+                        "fe/src/components/dashboard/widgetSurfaceStyleFields.tsx",
+                        "fe/src/lib/apiError.ts"
+                    ],
+    "startedAt":  "2026-08-06T19:13:11+08:00",
+    "insertions":  312,
+    "deletions":  38,
+    "filesChanged":  15,
+    "runId":  "2026-08-06T191343",
+    "outcome":  "success",
+    "commit":  "c2c2afae",
+    "messageBodyPreview":  "Areas:\r\n  fe/          10 files (+205/-27)\r\n  .agents/     2 files (+73/-0)\r\n  backend/     2 files (+31/-4)\r\n  .cursor/     1 files (+3/-7)\r\n\r\nChanged (up to 25):\r\nA  .agents/skills/bug-case-library/cases/be-dashboard-canvas-bg-data-url-limit.md\r\nA  .agents/skills/bug-case-library/cases/fe-webpage-insert-backgroundImage-crash.md\r\nM  .cursor/logs/scheduled-auto-commit/state.json\r\nM  backend/app/dashboard/schemas.py\r\nA  backend/tests/test_dashboard_image_data_url_limit.py\r\nM  fe/src/components/da",
+    "push":  false
+}

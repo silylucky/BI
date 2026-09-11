@@ -1,0 +1,39 @@
+wip: [fe,.cursor,.dev,_root,+1] 34f (+795/-244) @ 2026-07-31 16:28 +0800
+
+Areas:
+  fe/          24 files (+423/-240)
+  .cursor/     3 files (+37/-1)
+  .dev/        3 files (+252/-0)
+  _root/       2 files (+12/-1)
+  docs/        2 files (+71/-2)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T155816-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T155816.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+A  .dev/README.md
+A  .dev/config.yaml
+A  .dev/secrets.env.example
+M  .gitignore
+M  README.md
+A  docs/README.md
+M  docs/arch.md
+M  fe/src/components/layout/admin-page-shell.test.tsx
+M  fe/src/components/layout/list-page-kit.tsx
+M  fe/src/index.css
+M  fe/src/layouts/AdminLayout.smoke.test.tsx
+M  fe/src/layouts/AdminLayout.tsx
+M  fe/src/lib/admin-layout-routes.test.ts
+M  fe/src/lib/admin-layout-routes.ts
+M  fe/src/pages/admin/account/AccountPreferencesPage.tsx
+M  fe/src/pages/admin/account/AccountSecurityPage.tsx
+M  fe/src/pages/admin/data-screens/DataScreenListPage.tsx
+M  fe/src/pages/admin/datasets/DatasetFormPage.tsx
+M  fe/src/pages/admin/datasets/DatasetListPage.tsx
+M  fe/src/pages/admin/datasets/components/DatasetBindPanel.tsx
+M  fe/src/pages/admin/datasources/DatasourceFormPage.tsx
+M  fe/src/pages/admin/datasources/components/DatasourceConnectionForm.tsx
+... and 9 more
+
+stat: 34 files changed, 795 insertions(+), 244 deletions(-)
+branch: dev | scheduled-auto-commit

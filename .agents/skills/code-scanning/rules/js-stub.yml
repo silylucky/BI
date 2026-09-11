@@ -1,0 +1,71 @@
+id: js-unimplemented-throw
+language: javascript
+severity: error
+message: 可激活 stub：throw 出未实现语义
+note: |
+  非测试主路径上的「抛未实现」= 假绿，调用方看不出这条路走不通。
+  挂在 env / flag 后面也算。
+files:
+  - "**/*.js"
+  - "**/*.jsx"
+  - "**/*.mjs"
+  - "**/*.cjs"
+ignores:
+  - "**/*.test.*"
+  - "**/*.spec.*"
+  - "**/__mocks__/**"
+  - "**/*.stories.*"
+rule:
+  pattern: throw new $ERR($MSG)
+  has:
+    stopBy: end
+    kind: string
+    regex: '(?i)not implemented|unimplemented|\btodo\b|\bstub\b'
+---
+id: js-mock-data-export
+language: javascript
+severity: error
+message: 假数据被导出到主路径（mockData / fakeData）
+note: |
+  测试目录与 __mocks__ 已排除；能扫到说明它在生产代码路径上。
+  Storybook 的 *.stories.* 也已排除。
+files:
+  - "**/*.js"
+  - "**/*.jsx"
+  - "**/*.mjs"
+  - "**/*.cjs"
+ignores:
+  - "**/*.test.*"
+  - "**/*.spec.*"
+  - "**/__mocks__/**"
+  - "**/*.stories.*"
+  - "**/fixtures/**"
+rule:
+  any:
+    - pattern: export const $NAME = $$$
+    - pattern: export let $NAME = $$$
+  regex: '(?i)\b(mockData|fakeData|dummyData|sampleData|stubData|mockUsers|fakeUsers)\b'
+---
+id: js-todo-placeholder-call
+language: javascript
+severity: error
+message: 有入口的半成品：只弹 TODO / 未实现提示
+note: 挂了入口但点下去只告诉用户「开发中」，属于用户可见的假功能。
+files:
+  - "**/*.js"
+  - "**/*.jsx"
+  - "**/*.mjs"
+  - "**/*.cjs"
+ignores:
+  - "**/*.test.*"
+  - "**/*.spec.*"
+  - "**/__mocks__/**"
+  - "**/*.stories.*"
+rule:
+  any:
+    - pattern: alert($MSG)
+    - pattern: window.alert($MSG)
+  has:
+    stopBy: end
+    kind: string
+    regex: '(?i)\btodo\b|not implemented|敬请期待|即将上线|coming soon|开发中|未实现'

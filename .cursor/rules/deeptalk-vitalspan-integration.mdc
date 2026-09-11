@@ -1,0 +1,67 @@
+---
+description: DeepTalk × VitalSpan 一体集成铁律（组件库 · 大屏 · 平台能力 · 工作区插件）
+alwaysApply: true
+---
+
+# DeepTalk × VitalSpan 一体集成铁律
+
+> 真源详述：`docs/api/vs-ai-spec/IRON-RULES.md` · 产品对接形态：`docs/api/vs-ai-spec/deeptalk-product/WORKSPACE-PLUGIN-CONTRACT.md` · 桌面包：`vs-ai-spec-deeptalk-test/`
+
+## 三层模型（产品最终形态）
+
+| 层 | 载体 | 职责 |
+|----|------|------|
+| **DeepTalk 插件** | `deeptalk-plugins/plugins/vitalspan/`（安装 zip） | `components.tools`（Agent wf2/wf3）· 可选工作区模板/视图/execTools |
+| **特殊工作区** | 用户新建 **VitalSpan BI** | `instanceConfig.vitalspan` · iframe 连接/列表/跳 5173 |
+| **VitalSpan 平台** | `:8000` API · `:5173` 前端 · DB | 组件库、大屏、渲染、preflight、鉴权 |
+
+对用户：**在 DeepTalk 做 BI，结果在 VitalSpan 可用**。本地 JSON 只是草稿，**不是交付**。
+
+## 一体模型（禁止再讲「两个无关工程」）
+
+| 层 | 路径/进程 | 职责 |
+|----|-----------|------|
+| **DeepTalk 集成项目** | 桌面包 `vs-ai-spec-deeptalk-test/` 或插件工作区 `examples/` | Agent 写组件/拼大屏 → **必须**调工具入库/保存 |
+| **VitalSpan 平台能力** | `:8000` API · `:5173` 前端 · DB | 组件库、大屏、渲染、样式注入、preflight、鉴权 |
+
+## 三条工作流（必须分开、禁止混任务）
+
+| 线 | 任务 | 平台落点 | **唯一完成证据** |
+|----|------|----------|------------------|
+| **② 组件库** | 新 html/d3 customViz | `ai_viz_artifacts` | **`artifactId=<uuid>`**（POST/PUT 成功） |
+| **③ 大屏** | layout 编排，复用库中 artifact | `dashboards.layout_json` | **`dashboardId`** + editor-save 200 |
+| **① 内置图** | `chartType` + chartConfig | layout 内嵌 | `POST /charts/validate` 200 |
+
+- ② **结束于** `artifactId`；同任务内**禁止**自动拼大屏（除非用户明确要求 ③）。
+- ③ **禁止**写组件 HTML；只填 `customVizConfig.artifactId`。
+- ① **不进**组件库。
+
+## 入库与样式（Agent 必守）
+
+1. **write_file / 保存磁盘 ≠ 入库 ≠ 打通**；无 uuid 禁止宣称「已上传/已完成/已对接」。
+2. ② 固定链：`validate-ai-viz-bundle.py` → `upload-ai-viz-artifact.py` → 终端 **`ok artifactId=...`**（或插件等价工具）。
+3. bundle `render` **必须**读 `(p && p.style) || {}`；禁止虚构 `getStyle()` / `.vs-cv-style`。
+4. d3 **必须** `host.vsCv.mount(`；禁止 `output/` 当交付目录。
+5. 图表盘「自定义」**仅**来自 DB `GET /ai-viz/artifacts`，无启动 seed；官方 `examples/` 是金样/验真，**upload 后才进库**。
+
+## HTTP 约束（两套执行面）
+
+| 执行面 | fetch :8000 |
+|--------|-------------|
+| Agent **components.tools**（Node） | ✅ |
+| 工作区 **iframe 视图** | ❌ → `pluginExec` / execTools；BI 编辑跳 **5173** |
+
+## 禁止说法（一律判错）
+
+| ❌ | ✅ |
+|----|-----|
+| 「规范包是外部手册，与项目无关」 | 「DeepTalk 集成项目 + VitalSpan 平台能力 = 一体产品」 |
+| 「组件项目目录里已完成」 | 「平台组件库已登记 `artifactId=...`」 |
+| 「保存在 output/ 符合规范」 | 「已 POST `:8000/api/v1/ai-viz/artifacts`」 |
+| 「可在扩展/工作区 iframe 内完成 BI 编辑」 | 「5173 看板通过 `artifactId` 引用」 |
+| 「对接 = sync integrations/vitalspan 源码」 | 「安装 vitalspan 插件 + 特殊工作区」 |
+
+## 任务路由
+
+- 改 DeepTalk 规范/提示词 → `docs/api/vs-ai-spec/` + 跑 `sync-vs-ai-spec-pack.ps1` 同步桌面包
+- 改插件/工作区 → `deeptalk-plugins/plugins/vitalspan/` + [SPECIAL-WORKSPACE-PLUGIN-TASK.md](docs/api/vs-ai-spec/deeptalk-product/SPECIAL-WORKSPACE-PLUGIN-TASK.md)

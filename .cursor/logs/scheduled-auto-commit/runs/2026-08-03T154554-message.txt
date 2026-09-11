@@ -1,0 +1,41 @@
+wip: [backend,fe,docs,tests,+3] 43f (+1617/-64) @ 2026-08-03 15:46 +0800
+
+Areas:
+  backend/     13 files (+312/-11)
+  fe/          13 files (+394/-37)
+  docs/        9 files (+506/-8)
+  tests/       3 files (+189/-5)
+  .cursor/     3 files (+36/-1)
+  scripts/     1 files (+178/-0)
+  _root/       1 files (+2/-2)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T151421-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T151421.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/.env.example
+M  backend/app/api/v1/dashboards.py
+M  backend/app/auth/middleware.py
+M  backend/app/core/config.py
+M  backend/app/dashboard/export_jobs.py
+M  backend/app/dashboard/export_jobs_schemas.py
+A  backend/app/dashboard/export_render.py
+A  backend/app/dashboard/export_snapshot.py
+A  backend/app/dashboard/export_token.py
+M  backend/app/dashboard/surface_kind.py
+M  backend/app/reports/scheduler/delivery_adapter.py
+M  backend/app/reports/scheduler/executor.py
+M  backend/pyproject.toml
+M  docker-compose.yml
+M  docs/arch.md
+M  docs/automate/prd/F08-RPT.md
+A  docs/feature-design/2026-08-03-report-center-delivery-closure.md
+A  docs/feature-truth/2026-08-03-report-center-delivery-recheck.md
+A  docs/feature-truth/2026-08-03-sync-consume-sql-truth-audit.md
+M  docs/features/report-center-manual-test-cases.md
+M  docs/services/reports.md
+M  docs/user-guide/ingestion-sync-jobs-how-to.md
+... and 18 more
+
+stat: 43 files changed, 1617 insertions(+), 64 deletions(-)
+branch: dev | scheduled-auto-commit

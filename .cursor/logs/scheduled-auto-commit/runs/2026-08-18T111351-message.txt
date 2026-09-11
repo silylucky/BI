@@ -1,0 +1,36 @@
+wip: [.cursor,docs] 40f (+737/-5) @ 2026-08-18 11:14 +0800
+
+Areas:
+  .cursor/     39 files (+524/-5)
+  docs/        1 files (+213/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T161342-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T164351-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T171417-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T174400-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T181534-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T184354-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T191436-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T194442-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T201359-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T204413-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T211357-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T214412-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T221410.json
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T224410.json
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T231410.json
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T234410.json
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T001410.json
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T004410.json
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T011410.json
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T014410.json
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T021410.json
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T024410.json
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T031410.json
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T034410.json
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T041410.json
+... and 15 more
+
+stat: 40 files changed, 737 insertions(+), 5 deletions(-)
+branch: dev | scheduled-auto-commit

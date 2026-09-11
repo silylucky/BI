@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="347dc7c8-base" x1="0" y1="0" x2="1920" y2="1080">
+      <stop stop-color="#042f2e"/>
+      <stop offset="0.5" stop-color="#115e59" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#115e59"/>
+    </linearGradient>
+    <radialGradient id="347dc7c8-glowL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(345.59999999999997 237.6) scale(672)">
+      <stop stop-color="#14b8a6" stop-opacity="0.15"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="347dc7c8-glowR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1574.3999999999999 777.6) scale(576)">
+      <stop stop-color="#2dd4bf" stop-opacity="0.12"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  <pattern id="347dc7c8-pat" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" stroke="#2dd4bf" stroke-width="0.5" opacity="0.1"/></pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#347dc7c8-base)"/>
+  <rect width="1920" height="1080" fill="url(#347dc7c8-glowL)"/>
+  <rect width="1920" height="1080" fill="url(#347dc7c8-glowR)"/>
+  <rect width="1920" height="1080" fill="url(#347dc7c8-pat)"/>
+  <circle cx="960" cy="496.8" r="200" fill="none" stroke="#2dd4bf" stroke-width="0.8" opacity="0.15"/>
+  <circle cx="960" cy="496.8" r="130" fill="none" stroke="#2dd4bf" stroke-width="0.5" opacity="0.1" stroke-dasharray="4 6"/>
+  <line x1="760" y1="496.8" x2="1160" y2="496.8" stroke="#2dd4bf" stroke-width="0.4" opacity="0.12"/>
+  <line x1="960" y1="296.8" x2="960" y2="696.8" stroke="#2dd4bf" stroke-width="0.4" opacity="0.12"/>
+  <circle cx="960" cy="496.8" r="320" fill="none" stroke="#2dd4bf" stroke-width="0.8" opacity="0.15"/>
+  <circle cx="960" cy="496.8" r="208" fill="none" stroke="#2dd4bf" stroke-width="0.5" opacity="0.1" stroke-dasharray="4 6"/>
+  <line x1="640" y1="496.8" x2="1280" y2="496.8" stroke="#2dd4bf" stroke-width="0.4" opacity="0.12"/>
+  <line x1="960" y1="176.8" x2="960" y2="816.8" stroke="#2dd4bf" stroke-width="0.4" opacity="0.12"/>
+  <g opacity="0.65" stroke="#2dd4bf" stroke-width="3" fill="none">
+  <path d="M16 88 V16 H88"/>
+  <path d="M1832 16 H1904 V88"/>
+  <path d="M1904 992 V1064 H1832"/>
+  <path d="M88 1064 H16 V992"/>
+</g>
+  <circle cx="960" cy="496.8" r="4" fill="#2dd4bf" opacity="0.5"/>
+  <rect x="0" y="80" width="3" height="920" fill="#2dd4bf" opacity="0.25"/>
+  <rect x="1917" y="80" width="3" height="920" fill="#2dd4bf" opacity="0.25"/>
+  <rect x="12" y="120" width="1" height="840" fill="#2dd4bf" opacity="0.125"/>
+  <rect x="1907" y="120" width="1" height="840" fill="#2dd4bf" opacity="0.125"/>
+</svg>

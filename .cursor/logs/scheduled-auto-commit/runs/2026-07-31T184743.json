@@ -1,0 +1,22 @@
+{
+  "startedAt": "2026-07-31T18:47:43+08:00",
+  "finishedAt": "2026-07-31T18:48:13+08:00",
+  "branch": "dev",
+  "commit": "14f7dbc0",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [backend,tests,fe,scripts,+4] 71f (+1850/-1289) @ 2026-07-31 18:...",
+  "messageBodyPreview": "Areas:\n  backend/     20 files (+953/-665)\n  tests/       18 files (+324/-297)\n  fe/          17 files (+303/-297)\n  scripts/     5 files (+183/-3)",
+  "filesChanged": 71,
+  "insertions": 1850,
+  "deletions": 1289,
+  "topDirs": { "backend": 20, "tests": 18, "fe": 17, "scripts": 5, ".cursor": 4, "docs": 4, "_root": 2, ".github": 1 },
+  "sampleFiles": [
+    "backend/app/core/crypto/sm2.py",
+    "backend/migrations/versions/0020_guomi_password_sm3_dev.py",
+    "tests/test_crypto_jwt_sm2.py",
+    "scripts/generate-jwt-sm2-keys.py",
+    "fe/src/pages/admin/system/orgs/OrgTreePage.tsx"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/"]
+}

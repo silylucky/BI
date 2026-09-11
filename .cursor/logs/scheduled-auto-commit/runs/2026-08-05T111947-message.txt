@@ -1,0 +1,37 @@
+wip: [fe,backend,docs] 44f (+1703/-291) @ 2026-08-05 11:20 +0800
+
+Areas:
+  fe/          35 files (+974/-86)
+  backend/     6 files (+402/-158)
+  docs/        3 files (+327/-47)
+
+Changed (up to 25):
+M  backend/app/dashboard/templates/presets.py
+A  backend/app/dashboard/templates/presets_de_dash.py
+M  backend/app/dashboard/templates/presets_gov.py
+M  backend/app/dashboard/templates/presets_gov_assets.py
+M  backend/app/dashboard/templates/presets_gov_theme.py
+M  backend/app/dashboard/templates/seed.py
+M  docs/automate/plans/2026-07-21-chart-per-type-verification.md
+A  docs/feature-truth/2026-08-05-chart-browser-walkthrough-log.md
+A  docs/feature-truth/2026-08-05-chart-catalog-full-de-truth-audit.md
+M  fe/package.json
+A  fe/public/template-assets/packs/de-dashboard-v1/README.md
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/dash-blank.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/dash-dual-kpi.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/dash-ops.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/dash-triple.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/gov-efficiency.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/gov-finance.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/gov-grid.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/gov-investment.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/gov-satisfaction.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/manifest.json
+A  fe/public/template-assets/packs/de-dashboard-v1/thumbs/dash-blank.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/thumbs/dash-dual-kpi.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/thumbs/dash-ops.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/thumbs/dash-triple.svg
+... and 19 more
+
+stat: 44 files changed, 1703 insertions(+), 291 deletions(-)
+branch: dev | scheduled-auto-commit

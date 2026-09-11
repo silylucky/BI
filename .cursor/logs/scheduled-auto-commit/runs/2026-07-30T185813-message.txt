@@ -1,0 +1,36 @@
+wip: [fe,.cursor] 233f (+11211/-22) @ 2026-07-30 18:58 +0800
+
+Areas:
+  fe/          230 files (+11160/-21)
+  .cursor/     3 files (+51/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T182812-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T182812.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  fe/package.json
+A  fe/public/template-assets/packs/gov-enterprise-v1/README.md
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-amber-aurora.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-amber-circuit.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-amber-command.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-amber-honeycomb.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-amber-hud-scan.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-amber-topbar-icons.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-crimson-aurora.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-crimson-circuit.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-crimson-command.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-crimson-honeycomb.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-crimson-hud-scan.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-crimson-topbar-icons.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-cyan-aurora.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-cyan-circuit.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-cyan-command.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-cyan-honeycomb.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-cyan-hud-scan.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-cyan-topbar-icons.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-emerald-aurora.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/dark/canvas-dark-emerald-circuit.svg
+... and 208 more
+
+stat: 233 files changed, 11211 insertions(+), 22 deletions(-)
+branch: dev | scheduled-auto-commit

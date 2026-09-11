@@ -1,0 +1,98 @@
+id: python-bare-except
+language: python
+severity: error
+message: 裸 except：会连 KeyboardInterrupt / SystemExit 一起吞掉
+note: |
+  裸 except 捕获 BaseException，导致进程无法被正常中断、真实故障被掩盖成「跑通了」。
+  至少写 except Exception，并按类型分支处理。
+files:
+  - "**/*.py"
+ignores:
+  - "**/test_*.py"
+  - "**/*_test.py"
+  - "**/tests/**"
+  - "**/conftest.py"
+rule:
+  kind: except_clause
+  regex: '\Aexcept\s*\*?\s*:'
+---
+id: python-swallowed-exception
+language: python
+severity: error
+message: 异常被吞掉：except 分支只有 pass / ...
+note: |
+  静默失败是最典型的假绿——上游以为成功了，实际什么都没做，也没有任何日志线索。
+  至少要 log 或重新抛出。
+  误报场景：确实要忽略的清理路径（如 best-effort close），此时应写明理由注释。
+files:
+  - "**/*.py"
+ignores:
+  - "**/test_*.py"
+  - "**/*_test.py"
+  - "**/tests/**"
+  - "**/conftest.py"
+rule:
+  kind: except_clause
+  has:
+    kind: block
+    regex: '\A(pass|\.\.\.)\z'
+---
+id: python-http-call-without-timeout
+language: python
+severity: error
+message: HTTP 调用没有设置 timeout
+note: |
+  requests 默认无超时，对端挂起会让调用线程永久阻塞，进而拖垮整个进程/worker 池。
+  这类缺口在测试环境完全看不出来，属于典型上线即炸。
+  只匹配 requests.<verb>(...)，不匹配已带 timeout= 或 **kwargs 透传的写法。
+files:
+  - "**/*.py"
+ignores:
+  - "**/test_*.py"
+  - "**/*_test.py"
+  - "**/tests/**"
+  - "**/conftest.py"
+rule:
+  kind: call
+  all:
+    - has:
+        field: function
+        kind: attribute
+        all:
+          - has:
+              field: object
+              kind: identifier
+              regex: '^requests$'
+          - has:
+              field: attribute
+              kind: identifier
+              regex: '^(get|post|put|patch|delete|head|options|request)$'
+    - has:
+        field: arguments
+        kind: argument_list
+        not:
+          has:
+            any:
+              - kind: keyword_argument
+                has:
+                  field: name
+                  regex: '^timeout$'
+              - kind: dictionary_splat
+---
+id: python-assert-in-production-path
+language: python
+severity: warning
+message: 用 assert 做生产校验（python -O 下会被整条删除）
+note: |
+  解释器带 -O 运行时 assert 语句被编译期移除，校验会静默消失，
+  于是「有校验」变成「没校验」。输入/权限校验要用显式 if + raise。
+  误报场景：内部不变量的自检断言，可接受——需人工判断。
+files:
+  - "**/*.py"
+ignores:
+  - "**/test_*.py"
+  - "**/*_test.py"
+  - "**/tests/**"
+  - "**/conftest.py"
+rule:
+  kind: assert_statement

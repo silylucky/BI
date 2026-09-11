@@ -1,0 +1,1521 @@
+{
+  "id": "borderless-decor-v1",
+  "version": 1,
+  "generatedAt": "2026-08-06",
+  "total": 100,
+  "defaultSize": [
+    480,
+    120
+  ],
+  "categories": {
+    "borderless-decor": {
+      "count": 100,
+      "defaultSize": [
+        480,
+        120
+      ]
+    }
+  },
+  "items": [
+    {
+      "id": "decor-arc-swoosh-coral",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-coral.svg",
+      "style": "arc-swoosh",
+      "palette": "coral",
+      "color": "#fb7185",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-swoosh",
+        "coral"
+      ]
+    },
+    {
+      "id": "decor-arc-swoosh-peach",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-peach.svg",
+      "style": "arc-swoosh",
+      "palette": "peach",
+      "color": "#fb923c",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-swoosh",
+        "peach"
+      ]
+    },
+    {
+      "id": "decor-arc-swoosh-orange",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-orange.svg",
+      "style": "arc-swoosh",
+      "palette": "orange",
+      "color": "#f97316",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-swoosh",
+        "orange"
+      ]
+    },
+    {
+      "id": "decor-arc-swoosh-gold",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-gold.svg",
+      "style": "arc-swoosh",
+      "palette": "gold",
+      "color": "#fbbf24",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-swoosh",
+        "gold"
+      ]
+    },
+    {
+      "id": "decor-arc-swoosh-amber",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-amber.svg",
+      "style": "arc-swoosh",
+      "palette": "amber",
+      "color": "#f59e0b",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-swoosh",
+        "amber"
+      ]
+    },
+    {
+      "id": "decor-arc-swoosh-cyan",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-cyan.svg",
+      "style": "arc-swoosh",
+      "palette": "cyan",
+      "color": "#22d3ee",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-swoosh",
+        "cyan"
+      ]
+    },
+    {
+      "id": "decor-arc-swoosh-cobalt",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-cobalt.svg",
+      "style": "arc-swoosh",
+      "palette": "cobalt",
+      "color": "#3b82f6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-swoosh",
+        "cobalt"
+      ]
+    },
+    {
+      "id": "decor-arc-swoosh-violet",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-violet.svg",
+      "style": "arc-swoosh",
+      "palette": "violet",
+      "color": "#8b5cf6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-swoosh",
+        "violet"
+      ]
+    },
+    {
+      "id": "decor-arc-swoosh-emerald",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-emerald.svg",
+      "style": "arc-swoosh",
+      "palette": "emerald",
+      "color": "#34d399",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-swoosh",
+        "emerald"
+      ]
+    },
+    {
+      "id": "decor-arc-swoosh-magenta",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-magenta.svg",
+      "style": "arc-swoosh",
+      "palette": "magenta",
+      "color": "#ec4899",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-swoosh",
+        "magenta"
+      ]
+    },
+    {
+      "id": "decor-arc-top-coral",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-coral.svg",
+      "style": "arc-top",
+      "palette": "coral",
+      "color": "#fb7185",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-top",
+        "coral"
+      ]
+    },
+    {
+      "id": "decor-arc-top-peach",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-peach.svg",
+      "style": "arc-top",
+      "palette": "peach",
+      "color": "#fb923c",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-top",
+        "peach"
+      ]
+    },
+    {
+      "id": "decor-arc-top-orange",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-orange.svg",
+      "style": "arc-top",
+      "palette": "orange",
+      "color": "#f97316",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-top",
+        "orange"
+      ]
+    },
+    {
+      "id": "decor-arc-top-gold",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-gold.svg",
+      "style": "arc-top",
+      "palette": "gold",
+      "color": "#fbbf24",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-top",
+        "gold"
+      ]
+    },
+    {
+      "id": "decor-arc-top-amber",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-amber.svg",
+      "style": "arc-top",
+      "palette": "amber",
+      "color": "#f59e0b",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-top",
+        "amber"
+      ]
+    },
+    {
+      "id": "decor-arc-top-cyan",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-cyan.svg",
+      "style": "arc-top",
+      "palette": "cyan",
+      "color": "#22d3ee",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-top",
+        "cyan"
+      ]
+    },
+    {
+      "id": "decor-arc-top-cobalt",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-cobalt.svg",
+      "style": "arc-top",
+      "palette": "cobalt",
+      "color": "#3b82f6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-top",
+        "cobalt"
+      ]
+    },
+    {
+      "id": "decor-arc-top-violet",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-violet.svg",
+      "style": "arc-top",
+      "palette": "violet",
+      "color": "#8b5cf6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-top",
+        "violet"
+      ]
+    },
+    {
+      "id": "decor-arc-top-emerald",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-emerald.svg",
+      "style": "arc-top",
+      "palette": "emerald",
+      "color": "#34d399",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-top",
+        "emerald"
+      ]
+    },
+    {
+      "id": "decor-arc-top-magenta",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-magenta.svg",
+      "style": "arc-top",
+      "palette": "magenta",
+      "color": "#ec4899",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "arc-top",
+        "magenta"
+      ]
+    },
+    {
+      "id": "decor-double-arc-coral",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-coral.svg",
+      "style": "double-arc",
+      "palette": "coral",
+      "color": "#fb7185",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "double-arc",
+        "coral"
+      ]
+    },
+    {
+      "id": "decor-double-arc-peach",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-peach.svg",
+      "style": "double-arc",
+      "palette": "peach",
+      "color": "#fb923c",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "double-arc",
+        "peach"
+      ]
+    },
+    {
+      "id": "decor-double-arc-orange",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-orange.svg",
+      "style": "double-arc",
+      "palette": "orange",
+      "color": "#f97316",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "double-arc",
+        "orange"
+      ]
+    },
+    {
+      "id": "decor-double-arc-gold",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-gold.svg",
+      "style": "double-arc",
+      "palette": "gold",
+      "color": "#fbbf24",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "double-arc",
+        "gold"
+      ]
+    },
+    {
+      "id": "decor-double-arc-amber",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-amber.svg",
+      "style": "double-arc",
+      "palette": "amber",
+      "color": "#f59e0b",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "double-arc",
+        "amber"
+      ]
+    },
+    {
+      "id": "decor-double-arc-cyan",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-cyan.svg",
+      "style": "double-arc",
+      "palette": "cyan",
+      "color": "#22d3ee",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "double-arc",
+        "cyan"
+      ]
+    },
+    {
+      "id": "decor-double-arc-cobalt",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-cobalt.svg",
+      "style": "double-arc",
+      "palette": "cobalt",
+      "color": "#3b82f6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "double-arc",
+        "cobalt"
+      ]
+    },
+    {
+      "id": "decor-double-arc-violet",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-violet.svg",
+      "style": "double-arc",
+      "palette": "violet",
+      "color": "#8b5cf6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "double-arc",
+        "violet"
+      ]
+    },
+    {
+      "id": "decor-double-arc-emerald",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-emerald.svg",
+      "style": "double-arc",
+      "palette": "emerald",
+      "color": "#34d399",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "double-arc",
+        "emerald"
+      ]
+    },
+    {
+      "id": "decor-double-arc-magenta",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-magenta.svg",
+      "style": "double-arc",
+      "palette": "magenta",
+      "color": "#ec4899",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "double-arc",
+        "magenta"
+      ]
+    },
+    {
+      "id": "decor-wave-soft-coral",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-coral.svg",
+      "style": "wave-soft",
+      "palette": "coral",
+      "color": "#fb7185",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "wave-soft",
+        "coral"
+      ]
+    },
+    {
+      "id": "decor-wave-soft-peach",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-peach.svg",
+      "style": "wave-soft",
+      "palette": "peach",
+      "color": "#fb923c",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "wave-soft",
+        "peach"
+      ]
+    },
+    {
+      "id": "decor-wave-soft-orange",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-orange.svg",
+      "style": "wave-soft",
+      "palette": "orange",
+      "color": "#f97316",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "wave-soft",
+        "orange"
+      ]
+    },
+    {
+      "id": "decor-wave-soft-gold",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-gold.svg",
+      "style": "wave-soft",
+      "palette": "gold",
+      "color": "#fbbf24",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "wave-soft",
+        "gold"
+      ]
+    },
+    {
+      "id": "decor-wave-soft-amber",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-amber.svg",
+      "style": "wave-soft",
+      "palette": "amber",
+      "color": "#f59e0b",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "wave-soft",
+        "amber"
+      ]
+    },
+    {
+      "id": "decor-wave-soft-cyan",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-cyan.svg",
+      "style": "wave-soft",
+      "palette": "cyan",
+      "color": "#22d3ee",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "wave-soft",
+        "cyan"
+      ]
+    },
+    {
+      "id": "decor-wave-soft-cobalt",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-cobalt.svg",
+      "style": "wave-soft",
+      "palette": "cobalt",
+      "color": "#3b82f6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "wave-soft",
+        "cobalt"
+      ]
+    },
+    {
+      "id": "decor-wave-soft-violet",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-violet.svg",
+      "style": "wave-soft",
+      "palette": "violet",
+      "color": "#8b5cf6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "wave-soft",
+        "violet"
+      ]
+    },
+    {
+      "id": "decor-wave-soft-emerald",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-emerald.svg",
+      "style": "wave-soft",
+      "palette": "emerald",
+      "color": "#34d399",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "wave-soft",
+        "emerald"
+      ]
+    },
+    {
+      "id": "decor-wave-soft-magenta",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-magenta.svg",
+      "style": "wave-soft",
+      "palette": "magenta",
+      "color": "#ec4899",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "wave-soft",
+        "magenta"
+      ]
+    },
+    {
+      "id": "decor-glow-streak-coral",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-coral.svg",
+      "style": "glow-streak",
+      "palette": "coral",
+      "color": "#fb7185",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "glow-streak",
+        "coral"
+      ]
+    },
+    {
+      "id": "decor-glow-streak-peach",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-peach.svg",
+      "style": "glow-streak",
+      "palette": "peach",
+      "color": "#fb923c",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "glow-streak",
+        "peach"
+      ]
+    },
+    {
+      "id": "decor-glow-streak-orange",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-orange.svg",
+      "style": "glow-streak",
+      "palette": "orange",
+      "color": "#f97316",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "glow-streak",
+        "orange"
+      ]
+    },
+    {
+      "id": "decor-glow-streak-gold",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-gold.svg",
+      "style": "glow-streak",
+      "palette": "gold",
+      "color": "#fbbf24",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "glow-streak",
+        "gold"
+      ]
+    },
+    {
+      "id": "decor-glow-streak-amber",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-amber.svg",
+      "style": "glow-streak",
+      "palette": "amber",
+      "color": "#f59e0b",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "glow-streak",
+        "amber"
+      ]
+    },
+    {
+      "id": "decor-glow-streak-cyan",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-cyan.svg",
+      "style": "glow-streak",
+      "palette": "cyan",
+      "color": "#22d3ee",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "glow-streak",
+        "cyan"
+      ]
+    },
+    {
+      "id": "decor-glow-streak-cobalt",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-cobalt.svg",
+      "style": "glow-streak",
+      "palette": "cobalt",
+      "color": "#3b82f6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "glow-streak",
+        "cobalt"
+      ]
+    },
+    {
+      "id": "decor-glow-streak-violet",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-violet.svg",
+      "style": "glow-streak",
+      "palette": "violet",
+      "color": "#8b5cf6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "glow-streak",
+        "violet"
+      ]
+    },
+    {
+      "id": "decor-glow-streak-emerald",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-emerald.svg",
+      "style": "glow-streak",
+      "palette": "emerald",
+      "color": "#34d399",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "glow-streak",
+        "emerald"
+      ]
+    },
+    {
+      "id": "decor-glow-streak-magenta",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-magenta.svg",
+      "style": "glow-streak",
+      "palette": "magenta",
+      "color": "#ec4899",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "glow-streak",
+        "magenta"
+      ]
+    },
+    {
+      "id": "decor-bow-deep-coral",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-coral.svg",
+      "style": "bow-deep",
+      "palette": "coral",
+      "color": "#fb7185",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "bow-deep",
+        "coral"
+      ]
+    },
+    {
+      "id": "decor-bow-deep-peach",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-peach.svg",
+      "style": "bow-deep",
+      "palette": "peach",
+      "color": "#fb923c",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "bow-deep",
+        "peach"
+      ]
+    },
+    {
+      "id": "decor-bow-deep-orange",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-orange.svg",
+      "style": "bow-deep",
+      "palette": "orange",
+      "color": "#f97316",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "bow-deep",
+        "orange"
+      ]
+    },
+    {
+      "id": "decor-bow-deep-gold",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-gold.svg",
+      "style": "bow-deep",
+      "palette": "gold",
+      "color": "#fbbf24",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "bow-deep",
+        "gold"
+      ]
+    },
+    {
+      "id": "decor-bow-deep-amber",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-amber.svg",
+      "style": "bow-deep",
+      "palette": "amber",
+      "color": "#f59e0b",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "bow-deep",
+        "amber"
+      ]
+    },
+    {
+      "id": "decor-bow-deep-cyan",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-cyan.svg",
+      "style": "bow-deep",
+      "palette": "cyan",
+      "color": "#22d3ee",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "bow-deep",
+        "cyan"
+      ]
+    },
+    {
+      "id": "decor-bow-deep-cobalt",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-cobalt.svg",
+      "style": "bow-deep",
+      "palette": "cobalt",
+      "color": "#3b82f6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "bow-deep",
+        "cobalt"
+      ]
+    },
+    {
+      "id": "decor-bow-deep-violet",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-violet.svg",
+      "style": "bow-deep",
+      "palette": "violet",
+      "color": "#8b5cf6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "bow-deep",
+        "violet"
+      ]
+    },
+    {
+      "id": "decor-bow-deep-emerald",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-emerald.svg",
+      "style": "bow-deep",
+      "palette": "emerald",
+      "color": "#34d399",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "bow-deep",
+        "emerald"
+      ]
+    },
+    {
+      "id": "decor-bow-deep-magenta",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-magenta.svg",
+      "style": "bow-deep",
+      "palette": "magenta",
+      "color": "#ec4899",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "bow-deep",
+        "magenta"
+      ]
+    },
+    {
+      "id": "decor-diamond-flare-coral",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-coral.svg",
+      "style": "diamond-flare",
+      "palette": "coral",
+      "color": "#fb7185",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "diamond-flare",
+        "coral"
+      ]
+    },
+    {
+      "id": "decor-diamond-flare-peach",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-peach.svg",
+      "style": "diamond-flare",
+      "palette": "peach",
+      "color": "#fb923c",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "diamond-flare",
+        "peach"
+      ]
+    },
+    {
+      "id": "decor-diamond-flare-orange",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-orange.svg",
+      "style": "diamond-flare",
+      "palette": "orange",
+      "color": "#f97316",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "diamond-flare",
+        "orange"
+      ]
+    },
+    {
+      "id": "decor-diamond-flare-gold",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-gold.svg",
+      "style": "diamond-flare",
+      "palette": "gold",
+      "color": "#fbbf24",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "diamond-flare",
+        "gold"
+      ]
+    },
+    {
+      "id": "decor-diamond-flare-amber",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-amber.svg",
+      "style": "diamond-flare",
+      "palette": "amber",
+      "color": "#f59e0b",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "diamond-flare",
+        "amber"
+      ]
+    },
+    {
+      "id": "decor-diamond-flare-cyan",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-cyan.svg",
+      "style": "diamond-flare",
+      "palette": "cyan",
+      "color": "#22d3ee",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "diamond-flare",
+        "cyan"
+      ]
+    },
+    {
+      "id": "decor-diamond-flare-cobalt",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-cobalt.svg",
+      "style": "diamond-flare",
+      "palette": "cobalt",
+      "color": "#3b82f6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "diamond-flare",
+        "cobalt"
+      ]
+    },
+    {
+      "id": "decor-diamond-flare-violet",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-violet.svg",
+      "style": "diamond-flare",
+      "palette": "violet",
+      "color": "#8b5cf6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "diamond-flare",
+        "violet"
+      ]
+    },
+    {
+      "id": "decor-diamond-flare-emerald",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-emerald.svg",
+      "style": "diamond-flare",
+      "palette": "emerald",
+      "color": "#34d399",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "diamond-flare",
+        "emerald"
+      ]
+    },
+    {
+      "id": "decor-diamond-flare-magenta",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-magenta.svg",
+      "style": "diamond-flare",
+      "palette": "magenta",
+      "color": "#ec4899",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "diamond-flare",
+        "magenta"
+      ]
+    },
+    {
+      "id": "decor-dotted-arc-coral",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-coral.svg",
+      "style": "dotted-arc",
+      "palette": "coral",
+      "color": "#fb7185",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "dotted-arc",
+        "coral"
+      ]
+    },
+    {
+      "id": "decor-dotted-arc-peach",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-peach.svg",
+      "style": "dotted-arc",
+      "palette": "peach",
+      "color": "#fb923c",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "dotted-arc",
+        "peach"
+      ]
+    },
+    {
+      "id": "decor-dotted-arc-orange",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-orange.svg",
+      "style": "dotted-arc",
+      "palette": "orange",
+      "color": "#f97316",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "dotted-arc",
+        "orange"
+      ]
+    },
+    {
+      "id": "decor-dotted-arc-gold",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-gold.svg",
+      "style": "dotted-arc",
+      "palette": "gold",
+      "color": "#fbbf24",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "dotted-arc",
+        "gold"
+      ]
+    },
+    {
+      "id": "decor-dotted-arc-amber",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-amber.svg",
+      "style": "dotted-arc",
+      "palette": "amber",
+      "color": "#f59e0b",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "dotted-arc",
+        "amber"
+      ]
+    },
+    {
+      "id": "decor-dotted-arc-cyan",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-cyan.svg",
+      "style": "dotted-arc",
+      "palette": "cyan",
+      "color": "#22d3ee",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "dotted-arc",
+        "cyan"
+      ]
+    },
+    {
+      "id": "decor-dotted-arc-cobalt",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-cobalt.svg",
+      "style": "dotted-arc",
+      "palette": "cobalt",
+      "color": "#3b82f6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "dotted-arc",
+        "cobalt"
+      ]
+    },
+    {
+      "id": "decor-dotted-arc-violet",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-violet.svg",
+      "style": "dotted-arc",
+      "palette": "violet",
+      "color": "#8b5cf6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "dotted-arc",
+        "violet"
+      ]
+    },
+    {
+      "id": "decor-dotted-arc-emerald",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-emerald.svg",
+      "style": "dotted-arc",
+      "palette": "emerald",
+      "color": "#34d399",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "dotted-arc",
+        "emerald"
+      ]
+    },
+    {
+      "id": "decor-dotted-arc-magenta",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-magenta.svg",
+      "style": "dotted-arc",
+      "palette": "magenta",
+      "color": "#ec4899",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "dotted-arc",
+        "magenta"
+      ]
+    },
+    {
+      "id": "decor-twin-swoosh-coral",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-coral.svg",
+      "style": "twin-swoosh",
+      "palette": "coral",
+      "color": "#fb7185",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "twin-swoosh",
+        "coral"
+      ]
+    },
+    {
+      "id": "decor-twin-swoosh-peach",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-peach.svg",
+      "style": "twin-swoosh",
+      "palette": "peach",
+      "color": "#fb923c",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "twin-swoosh",
+        "peach"
+      ]
+    },
+    {
+      "id": "decor-twin-swoosh-orange",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-orange.svg",
+      "style": "twin-swoosh",
+      "palette": "orange",
+      "color": "#f97316",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "twin-swoosh",
+        "orange"
+      ]
+    },
+    {
+      "id": "decor-twin-swoosh-gold",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-gold.svg",
+      "style": "twin-swoosh",
+      "palette": "gold",
+      "color": "#fbbf24",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "twin-swoosh",
+        "gold"
+      ]
+    },
+    {
+      "id": "decor-twin-swoosh-amber",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-amber.svg",
+      "style": "twin-swoosh",
+      "palette": "amber",
+      "color": "#f59e0b",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "twin-swoosh",
+        "amber"
+      ]
+    },
+    {
+      "id": "decor-twin-swoosh-cyan",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-cyan.svg",
+      "style": "twin-swoosh",
+      "palette": "cyan",
+      "color": "#22d3ee",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "twin-swoosh",
+        "cyan"
+      ]
+    },
+    {
+      "id": "decor-twin-swoosh-cobalt",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-cobalt.svg",
+      "style": "twin-swoosh",
+      "palette": "cobalt",
+      "color": "#3b82f6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "twin-swoosh",
+        "cobalt"
+      ]
+    },
+    {
+      "id": "decor-twin-swoosh-violet",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-violet.svg",
+      "style": "twin-swoosh",
+      "palette": "violet",
+      "color": "#8b5cf6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "twin-swoosh",
+        "violet"
+      ]
+    },
+    {
+      "id": "decor-twin-swoosh-emerald",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-emerald.svg",
+      "style": "twin-swoosh",
+      "palette": "emerald",
+      "color": "#34d399",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "twin-swoosh",
+        "emerald"
+      ]
+    },
+    {
+      "id": "decor-twin-swoosh-magenta",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-magenta.svg",
+      "style": "twin-swoosh",
+      "palette": "magenta",
+      "color": "#ec4899",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "twin-swoosh",
+        "magenta"
+      ]
+    },
+    {
+      "id": "decor-particle-trail-coral",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-coral.svg",
+      "style": "particle-trail",
+      "palette": "coral",
+      "color": "#fb7185",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "particle-trail",
+        "coral"
+      ]
+    },
+    {
+      "id": "decor-particle-trail-peach",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-peach.svg",
+      "style": "particle-trail",
+      "palette": "peach",
+      "color": "#fb923c",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "particle-trail",
+        "peach"
+      ]
+    },
+    {
+      "id": "decor-particle-trail-orange",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-orange.svg",
+      "style": "particle-trail",
+      "palette": "orange",
+      "color": "#f97316",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "particle-trail",
+        "orange"
+      ]
+    },
+    {
+      "id": "decor-particle-trail-gold",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-gold.svg",
+      "style": "particle-trail",
+      "palette": "gold",
+      "color": "#fbbf24",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "particle-trail",
+        "gold"
+      ]
+    },
+    {
+      "id": "decor-particle-trail-amber",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-amber.svg",
+      "style": "particle-trail",
+      "palette": "amber",
+      "color": "#f59e0b",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "particle-trail",
+        "amber"
+      ]
+    },
+    {
+      "id": "decor-particle-trail-cyan",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-cyan.svg",
+      "style": "particle-trail",
+      "palette": "cyan",
+      "color": "#22d3ee",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "particle-trail",
+        "cyan"
+      ]
+    },
+    {
+      "id": "decor-particle-trail-cobalt",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-cobalt.svg",
+      "style": "particle-trail",
+      "palette": "cobalt",
+      "color": "#3b82f6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "particle-trail",
+        "cobalt"
+      ]
+    },
+    {
+      "id": "decor-particle-trail-violet",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-violet.svg",
+      "style": "particle-trail",
+      "palette": "violet",
+      "color": "#8b5cf6",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "particle-trail",
+        "violet"
+      ]
+    },
+    {
+      "id": "decor-particle-trail-emerald",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-emerald.svg",
+      "style": "particle-trail",
+      "palette": "emerald",
+      "color": "#34d399",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "particle-trail",
+        "emerald"
+      ]
+    },
+    {
+      "id": "decor-particle-trail-magenta",
+      "category": "borderless-decor",
+      "path": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-magenta.svg",
+      "style": "particle-trail",
+      "palette": "magenta",
+      "color": "#ec4899",
+      "tags": [
+        "borderless",
+        "widget-bg",
+        "richtext",
+        "particle-trail",
+        "magenta"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+wip: [backend,fe,.cursor,tests] 20f (+526/-107) @ 2026-08-04 16:18 +0800
+
+Areas:
+  backend/     9 files (+269/-71)
+  fe/          7 files (+81/-35)
+  .cursor/     3 files (+51/-1)
+  tests/       1 files (+125/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T154751-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T154751.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/dashboard/export_jobs.py
+A  backend/app/dashboard/export_persistence.py
+M  backend/app/dashboard/export_token.py
+M  backend/app/ingestion/sync_consume.py
+M  backend/app/metadata/dataset/models.py
+M  backend/app/metadata/dataset/schemas.py
+M  backend/app/metadata/dataset/service.py
+M  backend/app/reports/scheduler/store.py
+A  backend/migrations/versions/0033_dataset_sync_lineage.py
+M  fe/src/components/dashboard/DashboardListCardPreview.test.tsx
+M  fe/src/components/dashboard/DashboardListCardPreview.tsx
+M  fe/src/components/dashboard/templates/TemplateCardPreview.tsx
+M  fe/src/components/dashboard/viz-components/VizComponentLivePreview.tsx
+M  fe/src/lib/listPreviewActivation.test.ts
+M  fe/src/lib/listPreviewActivation.ts
+M  fe/src/pages/admin/viz-components/VizComponentsHubPage.tsx
+M  tests/test_report_dashboard_schedule.py
+
+stat: 20 files changed, 526 insertions(+), 107 deletions(-)
+branch: dev | scheduled-auto-commit

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="canvas-navy-stripes-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#f0f2f5"/>
+      <stop offset="1" stop-color="#f0f5ff"/>
+    </linearGradient>
+    <radialGradient id="canvas-navy-stripes-glow" cx="50%" cy="0%" r="55%">
+      <stop stop-color="#1d39c4" stop-opacity="0.07"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="canvas-navy-stripes-dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.8" fill="#1d39c4" opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#canvas-navy-stripes-bg)"/>
+  <rect width="1920" height="1080" fill="url(#canvas-navy-stripes-glow)"/>
+  <pattern id="canvas-navy-stripes-stripes" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <line x1="0" y1="0" x2="0" y2="24" stroke="#1d39c4" stroke-width="1" opacity="0.05"/>
+    </pattern>
+    <rect width="1920" height="1080" fill="url(#canvas-navy-stripes-stripes)"/>
+  <rect width="1920" height="3" fill="#1d39c4" opacity="0.35"/>
+</svg>

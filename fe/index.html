@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>VitalSpan</title>
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var valid = ["light", "dark", "auto"];
+          var selected = saved && valid.indexOf(saved) >= 0 ? saved : "light";
+          var dark =
+            selected === "dark" ||
+            (selected === "auto" &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches);
+          var root = document.documentElement;
+          if (dark) {
+            root.classList.add("dark");
+            root.classList.remove("light");
+          } else {
+            root.classList.remove("dark");
+            root.classList.add("light");
+          }
+        } catch (e) {
+          /* ignore storage errors */
+        }
+      })();
+    </script>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --vs-brand-500: #465fff;
+        --vs-brand-600: #3641f5;
+        --vs-gray-50: #f9fafb;
+        --vs-gray-100: #f2f4f7;
+        --vs-gray-200: #e4e7ec;
+        --vs-gray-400: #98a2b3;
+        --vs-gray-500: #667085;
+        --vs-gray-700: #344054;
+        --vs-gray-900: #101828;
+        --vs-shadow-sm: 0 1px 3px 0 rgb(16 24 40 / 10%), 0 1px 2px -1px rgb(16 24 40 / 10%);
+        --vs-shadow-md: 0 4px 8px -2px rgb(16 24 40 / 10%), 0 2px 4px -2px rgb(16 24 40 / 6%);
+      }
+
+      html.dark {
+        --vs-gray-50: #101828;
+        --vs-gray-100: #1a2231;
+        --vs-gray-200: #344054;
+        --vs-gray-400: #98a2b3;
+        --vs-gray-500: #98a2b3;
+        --vs-gray-700: #e4e7ec;
+        --vs-gray-900: #f9fafb;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root:not(.dark):not(.light) {
+          --vs-gray-50: #101828;
+          --vs-gray-100: #1a2231;
+          --vs-gray-200: #344054;
+          --vs-gray-400: #98a2b3;
+          --vs-gray-500: #98a2b3;
+          --vs-gray-700: #e4e7ec;
+          --vs-gray-900: #f9fafb;
+        }
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body,
+      #root {
+        height: 100%;
+        min-height: 100%;
+      }
+
+      body {
+        margin: 0;
+        font-family: Outfit, system-ui, -apple-system, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      #vs-boot-splash {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background:
+          radial-gradient(ellipse 80% 60% at 50% -10%, rgb(70 95 255 / 12%), transparent 55%),
+          radial-gradient(ellipse 50% 40% at 100% 100%, rgb(70 95 255 / 8%), transparent 50%),
+          var(--vs-gray-50);
+        color: var(--vs-gray-500);
+      }
+
+      #vs-boot-splash::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(var(--vs-gray-200) 1px, transparent 1px);
+        background-size: 24px 24px;
+        opacity: 0.35;
+        mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 20%, transparent 75%);
+        pointer-events: none;
+      }
+
+      .vs-boot-card {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        padding: 2rem 2.5rem;
+        border-radius: 1rem;
+        border: 1px solid var(--vs-gray-200);
+        background: color-mix(in srgb, var(--vs-gray-50) 88%, white);
+        box-shadow: var(--vs-shadow-md);
+        backdrop-filter: blur(8px);
+      }
+
+      html.dark .vs-boot-card {
+        background: color-mix(in srgb, var(--vs-gray-100) 92%, transparent);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root:not(.dark):not(.light) .vs-boot-card {
+          background: color-mix(in srgb, var(--vs-gray-100) 92%, transparent);
+        }
+      }
+
+      .vs-boot-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .vs-boot-mark {
+        display: flex;
+        size: 2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.625rem;
+        background: linear-gradient(135deg, #7592ff 0%, var(--vs-brand-500) 48%, var(--vs-brand-600) 100%);
+        box-shadow: 0 8px 20px -6px rgb(70 95 255 / 45%), var(--vs-shadow-sm);
+      }
+
+      .vs-boot-mark svg {
+        display: block;
+        width: 1.375rem;
+        height: 1.375rem;
+        color: #fff;
+      }
+
+      .vs-boot-name {
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--vs-gray-900);
+      }
+
+      .vs-boot-status {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: var(--vs-gray-500);
+      }
+
+      .vs-boot-spinner {
+        width: 1rem;
+        height: 1rem;
+        border: 2px solid var(--vs-gray-200);
+        border-top-color: var(--vs-brand-500);
+        border-radius: 9999px;
+        animation: vs-boot-spin 0.7s linear infinite;
+      }
+
+      @keyframes vs-boot-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .vs-boot-spinner {
+          animation: none;
+          border-top-color: var(--vs-gray-400);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="vs-boot-splash" role="status" aria-live="polite" aria-busy="true">
+      <div class="vs-boot-card">
+        <div class="vs-boot-brand" aria-hidden="true">
+          <span class="vs-boot-mark">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" />
+            </svg>
+          </span>
+          <span class="vs-boot-name">VitalSpan</span>
+        </div>
+        <div class="vs-boot-status">
+          <span class="vs-boot-spinner" aria-hidden="true"></span>
+          <span id="vs-boot-status-text">正在加载，请稍候…</span>
+        </div>
+      </div>
+    </div>
+    <div id="root"></div>
+    <script>
+      window.__VS_BOOT__ = { mounted: false };
+
+      function vsBootFailureMessage(reason) {
+        if (!reason) return "未知错误";
+        if (typeof reason === "string") return reason;
+        if (reason.message) return String(reason.message);
+        return String(reason);
+      }
+
+      function vsBootSetStatus(message) {
+        if (window.__VS_BOOT__ && window.__VS_BOOT__.mounted) return;
+        var status = document.getElementById("vs-boot-status-text");
+        var splash = document.getElementById("vs-boot-splash");
+        if (status) status.textContent = message;
+        if (splash) splash.setAttribute("aria-busy", "false");
+      }
+
+      window.addEventListener(
+        "error",
+        function (event) {
+          if (window.__VS_BOOT__ && window.__VS_BOOT__.mounted) return;
+          var target = event.target;
+          if (
+            target &&
+            target.tagName === "SCRIPT" &&
+            target.src &&
+            target.src.indexOf("/src/main") !== -1
+          ) {
+            vsBootSetStatus("前端脚本加载失败，请确认已在 fe 目录运行 pnpm dev");
+            return;
+          }
+          if (event.message) {
+            vsBootSetStatus("应用加载失败：" + event.message);
+          }
+        },
+        true,
+      );
+
+      window.addEventListener("unhandledrejection", function (event) {
+        if (window.__VS_BOOT__ && window.__VS_BOOT__.mounted) return;
+        vsBootSetStatus("应用加载失败：" + vsBootFailureMessage(event.reason));
+      });
+
+      window.setTimeout(function () {
+        if (window.__VS_BOOT__ && !window.__VS_BOOT__.mounted) {
+          vsBootSetStatus("加载超时，请打开控制台查看错误后刷新页面");
+        }
+      }, 15000);
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

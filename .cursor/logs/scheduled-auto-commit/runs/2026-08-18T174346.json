@@ -1,0 +1,14 @@
+{
+  "startedAt": "2026-08-18T17:43:46+08:00",
+  "finishedAt": "2026-08-18T17:44:00+08:00",
+  "branch": "dev",
+  "outcome": "success",
+  "push": false,
+  "trigger": "loop_abort_recovery",
+  "commit": "5098f045",
+  "messageSubject": "wip: [fe,docs] 9f (+106/-16) @ 2026-08-18 17:44 +0800",
+  "filesChanged": 9,
+  "insertions": 106,
+  "deletions": 16,
+  "topDirs": { "fe": 8, "docs": 1 }
+}

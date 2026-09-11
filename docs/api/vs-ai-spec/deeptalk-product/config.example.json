@@ -1,0 +1,15 @@
+{
+  "vitalspan": {
+    "api_base": "http://127.0.0.1:8000/api/v1",
+    "fe_base": "http://127.0.0.1:5173/admin",
+    "vitalspan_root": "C:/Users/you/Desktop/VitalSpan",
+    "credential_env": {
+      "username": "VITALSPAN_USERNAME",
+      "password": "VITALSPAN_DEV_ADMIN_PASSWORD"
+    }
+  },
+  "agent": {
+    "spec_pack_dir": "vs-ai-spec",
+    "forbidden_delivery_dirs": ["output", "dist"]
+  }
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="canvas-rose-dots-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#f0f2f5"/>
+      <stop offset="1" stop-color="#fff0f6"/>
+    </linearGradient>
+    <radialGradient id="canvas-rose-dots-glow" cx="50%" cy="0%" r="55%">
+      <stop stop-color="#eb2f96" stop-opacity="0.07"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="canvas-rose-dots-dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.8" fill="#eb2f96" opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#canvas-rose-dots-bg)"/>
+  <rect width="1920" height="1080" fill="url(#canvas-rose-dots-glow)"/>
+  <rect width="1920" height="1080" fill="url(#canvas-rose-dots-dots)"/>
+  <rect width="1920" height="3" fill="#eb2f96" opacity="0.35"/>
+</svg>

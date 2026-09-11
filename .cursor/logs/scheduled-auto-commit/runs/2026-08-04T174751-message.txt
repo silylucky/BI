@@ -1,0 +1,39 @@
+wip: [fe,backend,docs,.cursor,+1] 31f (+899/-163) @ 2026-08-04 17:48 ...
+
+Areas:
+  fe/          18 files (+358/-85)
+  backend/     4 files (+6/-5)
+  docs/        3 files (+417/-65)
+  .cursor/     3 files (+60/-1)
+  tests/       3 files (+58/-7)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T171824-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T171824.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/dashboards.py
+M  backend/app/api/v1/reports/engine.py
+M  backend/app/api/v1/reports/prefab.py
+M  backend/app/dashboard/theme/service.py
+A  docs/feature-truth/2026-08-04-datasource-wizard-connectors-truth-audit.md
+M  docs/feature-truth/2026-08-04-report-center-p3-truth-audit.md
+M  docs/feature-truth/_generated-2026-08-03-matrix.json
+M  fe/src/lib/connector-taxonomy.test.ts
+M  fe/src/lib/connector-taxonomy.ts
+A  fe/src/lib/datasourceRoles.test.ts
+M  fe/src/lib/datasourceRoles.ts
+A  fe/src/lib/reportExportUtils.test.ts
+A  fe/src/lib/reportExportUtils.ts
+M  fe/src/pages/admin/datasources/DatasourceListPage.tsx
+M  fe/src/pages/admin/datasources/components/DatasourceFormWizard.tsx
+M  fe/src/pages/admin/datasources/components/datasource-form-constants.ts
+M  fe/src/pages/admin/ingestion/SyncJobFormPage.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobForm.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobsEmptyState.tsx
+M  fe/src/pages/admin/ingestion/ingestion.smoke.test.tsx
+M  fe/src/pages/admin/reports/components/ReportExportCard.smoke.test.tsx
+M  fe/src/pages/admin/reports/components/ReportExportCard.tsx
+... and 6 more
+
+stat: 31 files changed, 899 insertions(+), 163 deletions(-)
+branch: dev | scheduled-auto-commit

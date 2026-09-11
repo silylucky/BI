@@ -1,0 +1,23 @@
+wip: [fe,.cursor,docs] 12f (+717/-96) @ 2026-07-30 15:27 +0800
+
+Areas:
+  fe/          9 files (+564/-35)
+  .cursor/     2 files (+12/-2)
+  docs/        1 files (+141/-59)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T150353.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  docs/feature-truth/2026-07-30-component-style-per-type-truth-audit.md
+A  fe/src/components/charts/engine/d3/cartesian/renderBullet.test.ts
+A  fe/src/components/charts/engine/d3/cartesian/renderProgressBar.test.ts
+A  fe/src/components/charts/engine/d3/cartesian/renderStock.test.ts
+A  fe/src/components/charts/engine/d3/relation/renderQuadrant.test.ts
+A  fe/src/components/dashboard/chartStyleSections/ChartCompareStyleSections.integration.test.tsx
+A  fe/src/components/dashboard/viz-components/VizComponentChartPreviewShell.test.tsx
+A  fe/src/components/dashboard/viz-components/VizComponentChartPreviewShell.tsx
+M  fe/src/components/dashboard/viz-components/VizComponentLivePreview.tsx
+A  fe/src/components/dashboard/widgetRailStyleSections.test.tsx
+
+stat: 12 files changed, 717 insertions(+), 96 deletions(-)
+branch: dev | scheduled-auto-commit

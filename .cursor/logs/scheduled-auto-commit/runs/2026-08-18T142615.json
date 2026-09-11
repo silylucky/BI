@@ -1,0 +1,19 @@
+{
+  "startedAt": "2026-08-18T14:26:15+08:00",
+  "finishedAt": "2026-08-18T14:26:30+08:00",
+  "branch": "dev",
+  "outcome": "success",
+  "push": false,
+  "trigger": "loop_start_immediate",
+  "commit": "e7d0c42b",
+  "messageSubject": "wip: [fe,docs,backend,scripts,+1] 66f (+1484/-858) @ 2026-08-18 14:26 +0800",
+  "filesChanged": 66,
+  "insertions": 1484,
+  "deletions": 858,
+  "topDirs": { "fe": 45, "docs": 13, "backend": 5, "scripts": 2, "tests": 1 },
+  "sampleFiles": [
+    "fe/src/lib/sourceHealth.ts",
+    "backend/app/datasources/source_health.py",
+    "fe/src/pages/admin/reports/standardAnalysisValidation.ts"
+  ]
+}

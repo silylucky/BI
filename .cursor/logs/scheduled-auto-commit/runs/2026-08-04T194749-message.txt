@@ -1,0 +1,32 @@
+wip: [fe,backend,.cursor,scripts,+1] 19f (+1213/-560) @ 2026-08-04 19...
+
+Areas:
+  fe/          8 files (+524/-174)
+  backend/     6 files (+561/-385)
+  .cursor/     3 files (+52/-1)
+  scripts/     1 files (+25/-0)
+  tests/       1 files (+51/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T191827-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T191827.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/dashboard/templates/presets.py
+M  backend/app/dashboard/templates/presets_gov_assets.py
+M  backend/app/dashboard/templates/presets_gov_theme.py
+M  backend/app/dashboard/templates/seed.py
+M  backend/app/datasources/dialects/rest_api.py
+M  backend/app/ingestion/scheduler.py
+M  fe/src/components/dashboard/templates/templateLabels.test.ts
+M  fe/src/components/dashboard/templates/templateLabels.ts
+A  fe/src/pages/admin/reports/components/ReportExtensionPreview.tsx
+M  fe/src/pages/admin/reports/components/ReportMetricDatasetFields.tsx
+A  fe/src/pages/admin/reports/components/ReportMetricExtensionForm.tsx
+M  fe/src/pages/admin/reports/components/TemplateDetailPanel.tsx
+M  fe/src/pages/admin/reports/report-templates.smoke.test.tsx
+M  fe/src/pages/admin/reports/useReportTemplates.ts
+A  scripts/dev-up.ps1
+A  tests/test_rest_api_internal.py
+
+stat: 19 files changed, 1213 insertions(+), 560 deletions(-)
+branch: dev | scheduled-auto-commit

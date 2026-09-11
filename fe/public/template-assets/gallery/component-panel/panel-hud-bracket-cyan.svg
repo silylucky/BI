@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice">
+  <g transform="scale(0.4 0.375)">
+  
+  <defs>
+    <linearGradient id="fcc89d1e-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#0c4a6e" stop-opacity="0.25"/>
+      <stop offset="1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="#041016" fill-opacity="0.82"/>
+  <g opacity="0.85" stroke="#22d3ee" stroke-width="3" fill="none">
+  <path d="M4 60 V4 H60"/>
+  <path d="M740 4 H796 V60"/>
+  <path d="M796 420 V476 H740"/>
+  <path d="M60 476 H4 V420"/>
+</g>
+  <circle cx="32" cy="32" r="3" fill="#22d3ee" opacity="0.7"/>
+  <circle cx="768" cy="32" r="3" fill="#22d3ee" opacity="0.7"/>
+  <circle cx="32" cy="448" r="3" fill="#22d3ee" opacity="0.7"/>
+  <circle cx="768" cy="448" r="3" fill="#22d3ee" opacity="0.7"/>
+  <circle cx="400" cy="240" r="168" fill="none" stroke="#22d3ee" stroke-width="0.8" opacity="0.15"/>
+  <circle cx="400" cy="240" r="109.2" fill="none" stroke="#22d3ee" stroke-width="0.5" opacity="0.1" stroke-dasharray="4 6"/>
+  <line x1="232" y1="240" x2="568" y2="240" stroke="#22d3ee" stroke-width="0.4" opacity="0.12"/>
+  <line x1="400" y1="72" x2="400" y2="408" stroke="#22d3ee" stroke-width="0.4" opacity="0.12"/>
+  <polygon points="424.24871130596426,226 424.24871130596426,254 400,268 375.75128869403574,254 375.75128869403574,226 399.99999999999994,212" fill="none" stroke="#22d3ee" stroke-width="1.2" opacity="0.15"/>
+  <circle cx="400" cy="240" r="7" fill="#22d3ee" opacity="0.09"/>
+  <rect width="800" height="480" fill="url(#fcc89d1e-fade)" pointer-events="none"/>
+
+  </g>
+</svg>

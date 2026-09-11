@@ -1,0 +1,20 @@
+{
+  "chartConfig": {
+    "chartType": "bar",
+    "styleVariant": "default",
+    "mode": "sql",
+    "dataSourceId": null,
+    "sql": null,
+    "dimensions": [{ "field": "{{dimension_1}}", "label": "维度" }],
+    "metrics": [{ "field": "{{metric_1}}", "label": "指标" }],
+    "nativeBody": {
+      "dataBinding": { "status": "manual" },
+      "deStyle": {
+        "paletteId": "default",
+        "cartesian": { "barRadius": 6, "barWidthRatio": 0.6 },
+        "legend": { "show": true, "position": "bottom" },
+        "title": { "show": true, "color": "#1e293b", "fontSize": 16 }
+      }
+    }
+  }
+}

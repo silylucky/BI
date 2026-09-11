@@ -1,0 +1,78 @@
+---
+description: VitalSpan 生产交付红线（日志·多库·国密·弹性·观测·RBAC·迁移·测试）
+alwaysApply: true
+---
+
+# 生产交付红线
+
+> 与 `docs/arch.md` ADR 对齐。打包上传 → **release-package**；演示部署 → **deploy-dev**。门禁指针 @.cursor/rules/delivery.mdc。
+
+## 日志 · 观测（R2 · R17）
+
+- 结构化 JSON 日志；请求字段 **`traceId`**（`X-Trace-Id` 可透传）— 见 `backend-fastapi.mdc`
+- 按大小/时间滚动 + 保留策略；分类：请求 / 进程 / 作业；统一 mask；禁裸 `print` / 生产 `console.log`
+- **指标**：RED（量/错/延迟）或等价；有队列则监控积压；**有日志 ≠ 已观测**
+- 关键告警须有归属文档（`docs/services/` 运维节或 runbook）
+
+## 高可用 · 弹性（R3 · R16）
+
+- M1 以单机/compose 为主；HA 切换策略须在 arch 成文后再宣称多活
+- readiness / liveness 与健康检查 `/health` 分离职责
+- 出站 DB/HTTP/MQ **显式超时**；重试仅幂等路径 + 退避上限
+- API **限流/配额**（NFR 分期落地）；依赖失败快失败/降级，**禁止假成功**
+- 易重复写：幂等键或唯一约束 + **409**
+
+## 数据 · 迁移 · 种子 · 备份（R4 · R9 · R23）
+
+- 平台元库：**SQLite | MySQL 8+ | PostgreSQL**（ADR-07）；与业务分析库分离
+- **Alembic** `backend/migrations/`：每次 schema 变更版本化、可重放
+- **seed**：平台幂等与 demo 分离；`vs_official_*` / demo 数据**默认不进生产启动**
+- 默认开发管理员：`VITALSPAN_DEV_ADMIN_PASSWORD`；生产禁长期弱口令，须强制改密流程
+- 备份：`scripts/backup-databases.py`；恢复须保管 `keys-checklist.txt` 所列密钥（见 README）
+
+## 认证 · RBAC · 审计（R5 · R19）
+
+- 目标：LDAP + OAuth/OIDC + 本地（PRD 分期）；IdP 失败 **≠** 静默放行
+- M1：`Bearer` JWT；`Bearer dev` **仅开发环境**
+- 管理面 `/admin/*` 与 embed 公开路径分离；敏感写须审计（M7+）
+
+## 配置（R6）
+
+- 秘密与连接：`core.config.Settings`（pydantic-settings）；`CREDENTIAL_SM4_KEY` 等见 `backend/.env.example`
+- **禁止**用 env 开关业务/NFR/mock/前端功能；`VITALSPAN_ENV` 仅部署标识
+- 运行时业务配置进 DB + 管理面热改（分期）
+
+## 国密 · 密钥（R15 · R20 · 强制）
+
+| 用途 | 算法 | VitalSpan 锚点 |
+|------|------|----------------|
+| 凭证加密 | **SM4** | ADR-06 · `app/core/crypto/sm4.py` |
+| 登录摘要 | **SM3** | ADR-16 · `app/core/crypto/password.py` |
+| 会话 JWT | **SM2** | ADR-17 · `app/auth/jwt.py` |
+| 签名/非对称 | **SM2** | 新能力默认 SM2 |
+
+- 凭证/密码/JWT **仅**国密路径；统一经 `app/core/crypto/`；禁止业务散落 crypto SDK
+- 根密钥/DEK/凭证分档；API **不返回**明文密码；日志/API 脱敏
+
+## 异步作业（R21）
+
+- ingestion / 报表调度等：任务幂等；失败可重试 vs 死信可观测；关联 traceId
+- 禁 API 内无界长任务（除非 arch 允许 + 超时）
+
+## 测试门禁（R10 · R22）
+
+- 新域服务 / 路由：单测或 API smoke 含失败语义；合入前 CI / `make test` 须绿
+- **假绿零容忍**；契约优先 `docs/api/README.md`
+- 修 bug 前检索 `.agents/skills/bug-case-library/cases/`
+- 外部集成 smoke：跨项目端点 → **`$HOME/.dev`**（create-home-dev）；本项目 URL/走查 → 仓库 **`.dev`**（create-dev-config）；只引用变量名，密钥不入库
+
+## 文案 · UI · 地图（R7 · R8 · R24）
+
+- 用户可见文案人话；禁 PRD 编号/甲乙方进 UI
+- FE 先 `docs/ui/` + b-design-system skill；@.cursor/rules/fe-ui.mdc
+- 地图：**仅离线中国** — @.cursor/rules/geo-map-offline-china.mdc
+
+## 质量 · 合规（R25 · R26）
+
+- 单租户 BI（arch）；多租户若启用须防串租
+- 等保/i18n/SBOM 按合同与 arch 启用；外发制品 SBOM 跟 **release-package**

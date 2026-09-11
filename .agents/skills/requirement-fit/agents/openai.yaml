@@ -1,0 +1,5 @@
+interface:
+  display_name: "需求应标对标"
+  short_description: "招标/需求对照代码多维评分与方案"
+policy:
+  allow_implicit_invocation: true

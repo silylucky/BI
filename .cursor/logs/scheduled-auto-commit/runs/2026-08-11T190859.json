@@ -1,0 +1,24 @@
+{
+  "startedAt": "2026-08-11T19:08:59+08:00",
+  "finishedAt": "2026-08-11T19:09:35+08:00",
+  "branch": "dev",
+  "outcome": "success",
+  "push": false,
+  "commit": "66fbbac6",
+  "messageSubject": "wip: [fe,.cursor] 8f (+214/-68) @ 2026-08-11 19:09 +0800",
+  "messageBodyPreview": "Areas:\n  fe/          6 files (+210/-68)\n  .cursor/     2 files (+4/-0)\n\nKey: standard analysis UI polish, admin-layout-routes update",
+  "filesChanged": 8,
+  "insertions": 214,
+  "deletions": 68,
+  "topDirs": {
+    "fe": 6,
+    ".cursor": 2
+  },
+  "sampleFiles": [
+    "fe/src/pages/admin/reports/StandardAnalysisPage.tsx",
+    "fe/src/pages/admin/reports/components/StandardAnalysisResultPanel.tsx",
+    "fe/src/lib/admin-layout-routes.ts",
+    "fe/src/lib/admin-layout-routes.test.ts"
+  ],
+  "tick": 372
+}

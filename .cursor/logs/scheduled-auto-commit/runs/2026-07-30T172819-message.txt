@@ -1,0 +1,38 @@
+wip: [fe,backend,.cursor,docs] 31f (+1119/-610) @ 2026-07-30 17:28 +0800
+
+Areas:
+  fe/          21 files (+770/-490)
+  backend/     5 files (+135/-119)
+  .cursor/     3 files (+56/-1)
+  docs/        2 files (+158/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T165815-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T165815.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/dashboard/templates/presets_gov.py
+M  backend/app/dashboard/templates/presets_gov_screens.py
+M  backend/app/dashboard/templates/presets_gov_sql.py
+M  backend/app/dashboard/templates/seed.py
+M  backend/tests/test_presets_gov.py
+A  docs/root-first/2026-07-30-dashboard-save-dimensions-field.md
+A  docs/ux-critique/2026-07-30-viz-templates-gov-screens-backlog.md
+M  fe/src/components/dashboard/ChartEmbedShareActions.tsx
+M  fe/src/components/dashboard/DashboardBoardShareBody.tsx
+M  fe/src/components/dashboard/PublicShareLinkCard.tsx
+A  fe/src/components/dashboard/ShareIssuedUrlPanel.tsx
+M  fe/src/components/dashboard/dashboardCanvasMode.test.ts
+M  fe/src/components/dashboard/dashboardCanvasMode.ts
+M  fe/src/components/dashboard/screen/DataScreenSharePanel.tsx
+M  fe/src/components/dashboard/sharePageUi.ts
+M  fe/src/components/dashboard/stylePipeline.test.ts
+M  fe/src/components/dashboard/stylePipeline.ts
+M  fe/src/components/dashboard/templates/TemplateCardPreview.tsx
+M  fe/src/components/dashboard/templates/VizTemplateCard.tsx
+M  fe/src/components/dashboard/templates/templateLabels.ts
+M  fe/src/components/layout/admin-page-shell.tsx
+M  fe/src/layouts/AdminLayout.smoke.test.tsx
+... and 6 more
+
+stat: 31 files changed, 1119 insertions(+), 610 deletions(-)
+branch: dev | scheduled-auto-commit

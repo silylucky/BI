@@ -1,0 +1,19 @@
+{
+  "startedAt": "2026-08-04T18:49:41+08:00",
+  "finishedAt": "2026-08-04T18:50:05+08:00",
+  "branch": "dev",
+  "commit": "a0927fe4",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,backend,.cursor,tests] 33f (+610/-90) @ 2026-08-04 18:50 +0800",
+  "filesChanged": 33,
+  "insertions": 610,
+  "deletions": 90,
+  "topDirs": { "fe": 22, "backend": 6, ".cursor": 3, "tests": 2 },
+  "sampleFiles": [
+    "backend/app/ingestion/sync_source_table.py",
+    "fe/src/pages/admin/datasources/DatasourceFormPage.tsx",
+    "fe/src/components/charts/adapters/TablePaginationBar.test.tsx"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/", "data/artifacts/", "fe/.env.production.local"]
+}

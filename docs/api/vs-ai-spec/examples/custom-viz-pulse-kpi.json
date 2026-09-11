@@ -1,0 +1,49 @@
+{
+  "manifest": {
+    "id": "pulse-kpi-ribbon-v1",
+    "displayName": "脉冲 KPI 指标带",
+    "version": "1.0.0",
+    "entry": "index.html",
+    "fieldSlots": {
+      "dimensions": {
+        "min": 1,
+        "max": 1,
+        "label": "指标名称"
+      },
+      "metrics": {
+        "min": 1,
+        "max": 1,
+        "label": "指标数值"
+      }
+    },
+    "styleSchema": {
+      "type": "object",
+      "properties": {
+        "accentColor": {
+          "type": "string",
+          "format": "color"
+        },
+        "glowIntensity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "cardGap": {
+          "type": "number",
+          "minimum": 4,
+          "maximum": 32
+        }
+      }
+    },
+    "defaultStyle": {
+      "accentColor": "#38bdf8",
+      "glowIntensity": 40,
+      "cardGap": 12
+    },
+    "rendererHint": "vanilla",
+    "runtime": "html"
+  },
+  "files": {
+    "index.html": "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><style>html,body{margin:0;height:100%;background:transparent;color:var(--dashboard-text-primary,#e2e8f0);font-family:system-ui,sans-serif}#vs-cv-kpi{display:flex;gap:var(--vs-style-card-gap,12px);padding:12px;height:100%;box-sizing:border-box;align-items:stretch}.card{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:14px 10px;background:var(--dashboard-widget-surface,#1e293b);border:1px solid var(--dashboard-widget-border,#344054);border-radius:8px;min-width:0}.lbl{font-size:12px;color:var(--dashboard-text-muted,#98a2b3);margin-bottom:6px}.val{font-size:22px;font-weight:700;color:var(--vs-palette-0,var(--vs-style-accent-color,#38bdf8))}.hint{padding:12px;font-size:12px;color:var(--dashboard-text-muted,#98a2b3);text-align:center;width:100%}</style></head><body><div id=\"vs-cv-kpi\"></div><script>(function(){var host=document.currentScript&&document.currentScript.parentElement;function readPayload(){if(host&&host.vsCv&&host.vsCv.getPayload)return host.vsCv.getPayload();var n=(host||document).querySelector('.vs-cv-payload');if(!n||!n.textContent)return null;try{return JSON.parse(n.textContent)}catch(e){return null}}function bindingStatusOf(p){if(!p)return 'unbound';return p.bindingStatus||((p.rows&&p.rows.length)?'bound':'unbound')}function statusHint(p){var st=bindingStatusOf(p);if(st==='error')return(p&&p.error)||'数据加载失败';if(st==='empty')return'暂无数据';if(st==='unbound')return'请在右侧绑定数据集与字段';return null}function attachPayloadListener(render){render();if(host&&host.vsCv&&host.vsCv.onPayload){host.vsCv.onPayload(function(p){render(p)});return}if(host&&host.classList.contains('vs-custom-viz-host')){host.addEventListener('vs-cv-payload-update',function(e){render(e.detail||readPayload())})}}function attachLayoutListener(render){if(host&&host.vsCv&&host.vsCv.onLayout){host.vsCv.onLayout(function(){render(readPayload())});return}if(typeof ResizeObserver!=='undefined'&&host){new ResizeObserver(function(){render(readPayload())}).observe(host)}}function boot(render){if(host&&host.vsCv&&host.vsCv.mount){host.vsCv.mount(function(p){render(p)});return}attachPayloadListener(function(p){render(p||readPayload())});attachLayoutListener(function(){render(readPayload())})}function cardsFromPayload(p){var st=bindingStatusOf(p);if(st!=='bound'||!p||!p.rows||!p.rows.length)return null;var cols=p.columns||[];var di=0;var mi=cols.length>1?1:0;return p.rows.map(function(r){return{n:String(r[di]),v:String(r[mi])}})}function render(){var p=readPayload();var root=(host||document).querySelector('#vs-cv-kpi');if(!root)return;var hint=statusHint(p);var cards=cardsFromPayload(p);root.innerHTML='';if(hint||!cards){var msg=document.createElement('div');msg.className='hint';msg.textContent=hint||'暂无数据';root.appendChild(msg);return}cards.forEach(function(c){var el=document.createElement('div');el.className='card';var lbl=document.createElement('div');lbl.className='lbl';lbl.textContent=c.n;el.appendChild(lbl);var val=document.createElement('div');val.className='val';val.textContent=c.v;el.appendChild(val);root.appendChild(el)})}attachPayloadListener(render)})();</script></body></html>"
+  }
+}

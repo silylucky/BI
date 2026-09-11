@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vitalspan.local/schemas/tokens.schema.json",
+  "title": "ThemeTokensFile",
+  "description": "Shape of theme-tokens.json (recommended CSS/d3 tokens). Not enforced at artifact POST.",
+  "type": "object",
+  "required": ["version", "light", "dark"],
+  "properties": {
+    "version": { "type": "integer" },
+    "generatedBy": { "type": "string" },
+    "feAnchors": { "type": "array", "items": { "type": "string" } },
+    "note": { "type": "string" },
+    "light": { "type": "object" },
+    "dark": { "type": "object" }
+  }
+}

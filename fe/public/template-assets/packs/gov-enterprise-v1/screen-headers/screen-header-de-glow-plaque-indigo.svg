@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="100" viewBox="0 0 1920 100" preserveAspectRatio="none meet">
+  <rect width="1920" height="100" fill="#0f172a" fill-opacity="0.92"/>
+  <defs>
+    <filter id="2b120b70" x="-30%" y="-80%" width="160%" height="260%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+    <linearGradient id="2b120b70-hdr-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#6366f1" stop-opacity="0.16"/>
+      <stop offset="0.55" stop-color="#1e1b4b" stop-opacity="0.08"/>
+      <stop offset="1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="100" fill="url(#2b120b70-hdr-bg)"/>
+  <line x1="0" y1="99" x2="1920" y2="99" stroke="#6366f1" stroke-width="1" opacity="0.4"/>
+  <line x1="48" y1="99" x2="1872" y2="99" stroke="#6366f1" stroke-width="2.5" opacity="0.12"/>
+  <g filter="url(#2b120b70)" stroke="#6366f1" fill="none" stroke-linecap="square">
+    <path d="M712 52 H594 V34 H502" stroke-width="1.3" opacity="0.9"/>
+    <path d="M684 64 H562 V82 H472" stroke-width="1.1" opacity="0.75"/>
+    <path d="M648 44 H534" stroke-width="1" stroke-dasharray="5 4" opacity="0.55"/>
+    <path d="M616 74 H522 V60" stroke-width="0.9" opacity="0.65"/>
+    <circle cx="502" cy="34" r="2.8" fill="#6366f1" stroke="none" opacity="0.95"/>
+    <circle cx="472" cy="82" r="2.2" fill="#6366f1" stroke="none" opacity="0.85"/>
+    <circle cx="594" cy="52" r="2" fill="#6366f1" stroke="none" opacity="0.7"/>
+    <rect x="616" y="47" width="14" height="5" fill="#6366f1" opacity="0.55" stroke="none"/>
+    <rect x="568" y="68" width="10" height="4" fill="#6366f1" opacity="0.4" stroke="none"/>
+    <line x1="694" y1="30" x2="684" y2="38" stroke="#6366f1" stroke-width="0.7" opacity="0.45"/>
+    <line x1="687" y1="35" x2="677" y2="43" stroke="#6366f1" stroke-width="0.7" opacity="0.45"/>
+    <line x1="680" y1="40" x2="670" y2="48" stroke="#6366f1" stroke-width="0.7" opacity="0.45"/>
+    <line x1="673" y1="45" x2="663" y2="53" stroke="#6366f1" stroke-width="0.7" opacity="0.45"/>
+    <line x1="666" y1="50" x2="656" y2="58" stroke="#6366f1" stroke-width="0.7" opacity="0.45"/>
+  </g>
+  <g filter="url(#2b120b70)" stroke="#6366f1" fill="none" stroke-linecap="square">
+    <path d="M1208 52 H1326 V34 H1418" stroke-width="1.3" opacity="0.9"/>
+    <path d="M1236 64 H1358 V82 H1448" stroke-width="1.1" opacity="0.75"/>
+    <path d="M1272 44 H1386" stroke-width="1" stroke-dasharray="5 4" opacity="0.55"/>
+    <path d="M1304 74 H1398 V60" stroke-width="0.9" opacity="0.65"/>
+    <circle cx="1418" cy="34" r="2.8" fill="#6366f1" stroke="none" opacity="0.95"/>
+    <circle cx="1448" cy="82" r="2.2" fill="#6366f1" stroke="none" opacity="0.85"/>
+    <circle cx="1326" cy="52" r="2" fill="#6366f1" stroke="none" opacity="0.7"/>
+    <rect x="1290" y="47" width="14" height="5" fill="#6366f1" opacity="0.55" stroke="none"/>
+    <rect x="1338" y="68" width="10" height="4" fill="#6366f1" opacity="0.4" stroke="none"/>
+    <line x1="1226" y1="30" x2="1236" y2="38" stroke="#6366f1" stroke-width="0.7" opacity="0.45"/>
+    <line x1="1233" y1="35" x2="1243" y2="43" stroke="#6366f1" stroke-width="0.7" opacity="0.45"/>
+    <line x1="1240" y1="40" x2="1250" y2="48" stroke="#6366f1" stroke-width="0.7" opacity="0.45"/>
+    <line x1="1247" y1="45" x2="1257" y2="53" stroke="#6366f1" stroke-width="0.7" opacity="0.45"/>
+    <line x1="1254" y1="50" x2="1264" y2="58" stroke="#6366f1" stroke-width="0.7" opacity="0.45"/>
+  </g>
+  <g filter="url(#2b120b70)">
+    <rect x="750" y="16" width="420" height="62" fill="#6366f1" fill-opacity="0.08" stroke="#6366f1" stroke-width="1.4"/>
+    <line x1="762" y1="78" x2="1158" y2="78" stroke="#6366f1" stroke-width="2.5" opacity="0.85"/>
+    <line x1="880" y1="22" x2="1040" y2="22" stroke="#6366f1" stroke-width="0.8" opacity="0.35"/>
+  </g>
+  <path d="M960 46 L966 52 L960 58 L954 52 Z" fill="none" stroke="#6366f1" stroke-width="1.2" opacity="0.2"/>
+  <circle cx="960" cy="52" r="2" fill="#6366f1" opacity="0.2"/>
+</svg>

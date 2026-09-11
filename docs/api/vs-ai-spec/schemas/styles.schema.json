@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vitalspan.local/schemas/styles.schema.json",
+  "title": "CustomVizManifestStyleSchema",
+  "description": "JSON Schema fragment stored in manifest.styleSchema. Platform renders a form from properties.",
+  "type": "object",
+  "required": ["properties"],
+  "properties": {
+    "type": { "const": "object" },
+    "properties": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "object" }
+    }
+  }
+}

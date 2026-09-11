@@ -1,0 +1,38 @@
+wip: [fe,tests,backend,docs] 33f (+1022/-101) @ 2026-08-05 17:49 +0800
+
+Areas:
+  fe/          28 files (+877/-71)
+  tests/       2 files (+123/-0)
+  backend/     2 files (+2/-6)
+  docs/        1 files (+20/-24)
+
+Changed (up to 25):
+M  backend/app/ingestion/etl_seed.py
+M  backend/app/ingestion/sync_consume.py
+M  docs/feature-truth/2026-08-05-etl-default-auto-config-truth-audit.md
+M  fe/src/components/charts/engine/antv/spec/encodePie.test.ts
+M  fe/src/components/charts/engine/antv/spec/encodePie.ts
+A  fe/src/components/charts/engine/d3/radial/pieLabels.ts
+M  fe/src/components/charts/engine/d3/radial/renderPie.test.ts
+M  fe/src/components/charts/engine/d3/radial/renderPie.ts
+M  fe/src/components/dashboard/chartPaletteConfigFields.tsx
+M  fe/src/components/dashboard/chartPaletteDeParityFields.tsx
+M  fe/src/components/dashboard/chartStyleSections/ChartCommonStyleSections.tsx
+A  fe/src/components/dashboard/chartStyleSections/ChartPieLabelFields.tsx
+M  fe/src/components/dashboard/chartStyleSections/ChartTypeStyleSections.tsx
+M  fe/src/components/dashboard/deAttrSlider.tsx
+M  fe/src/components/dashboard/inspectorStyleWiring.test.ts
+M  fe/src/lib/appBasePath.ts
+M  fe/src/lib/applyChartDeStyleBlocks.ts
+M  fe/src/lib/chartDeStyle.ts
+M  fe/src/lib/chartDeStyleBlocks.ts
+M  fe/src/lib/chartStylePanelGates.ts
+M  fe/src/lib/chartTypeStyleProfiles.test.ts
+M  fe/src/lib/chartTypeStyleProfiles.ts
+M  fe/src/lib/dashboardTemplates.test.ts
+M  fe/src/lib/dashboardTemplates.ts
+M  fe/src/lib/templateEditSession.test.ts
+... and 8 more
+
+stat: 33 files changed, 1022 insertions(+), 101 deletions(-)
+branch: dev | scheduled-auto-commit

@@ -1,0 +1,35 @@
+wip: [fe,tests,docs,.cursor,+1] 22f (+678/-120) @ 2026-08-06 21:52 +0800
+
+Areas:
+  fe/          15 files (+399/-83)
+  tests/       4 files (+68/-23)
+  docs/        1 files (+123/-0)
+  .cursor/     1 files (+3/-7)
+  backend/     1 files (+85/-7)
+
+Changed (up to 25):
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/dashboard/export_render.py
+A  docs/feature-truth/2026-08-06-dashboard-scheduled-report-truth-audit.md
+M  fe/src/components/charts/engine/d3/cartesian/renderDualAxes.test.ts
+M  fe/src/components/charts/engine/d3/cartesian/renderDualAxes.ts
+M  fe/src/components/charts/engine/d3/cartesian/renderDualAxesColumn.ts
+M  fe/src/components/charts/engine/d3/types.ts
+M  fe/src/components/charts/engine/d3/views/buildRenderConfig.ts
+M  fe/src/components/charts/engine/plugins/plans/buildPlan.dualAxes.test.ts
+M  fe/src/components/charts/engine/plugins/plans/buildPlan.ts
+M  fe/src/components/dashboard/ChartFieldMultiSlot.tsx
+M  fe/src/components/dashboard/chartFieldSlots.test.ts
+M  fe/src/lib/chartFieldRules.ts
+M  fe/src/pages/admin/reports/components/DashboardSchedulePanel.tsx
+M  fe/src/pages/admin/reports/components/ScheduleActivationBanner.test.tsx
+M  fe/src/pages/admin/reports/components/ScheduleActivationBanner.tsx
+M  fe/src/pages/admin/reports/components/ScheduleFormFields.tsx
+M  fe/vite.config.ts
+M  tests/test_dash_rpt_r58.py
+M  tests/test_delivery_honesty_gate.py
+M  tests/test_m12_batch1_r238.py
+M  tests/test_report_dashboard_schedule.py
+
+stat: 22 files changed, 678 insertions(+), 120 deletions(-)
+branch: dev | scheduled-auto-commit

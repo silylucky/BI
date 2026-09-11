@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480" preserveAspectRatio="none meet">
+  <defs>
+    <linearGradient id="6e29cd82-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#0c4a6e" stop-opacity="0.25"/>
+      <stop offset="1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="#041016" fill-opacity="0.9"/>
+  <rect width="800" height="48" fill="#22d3ee" fill-opacity="0.12"/>
+  <line x1="0" y1="48" x2="800" y2="48" stroke="#22d3ee" stroke-width="1" opacity="0.4"/>
+  <polygon points="49.85640646055102,16 49.85640646055102,32 36,40 22.14359353944898,32 22.14359353944898,16.000000000000004 35.999999999999986,8" fill="none" stroke="#22d3ee" stroke-width="1.2" opacity="0.55"/>
+  <circle cx="36" cy="24" r="4" fill="#22d3ee" opacity="0.33"/>
+  <path d="M764 14 L774 24 L764 34 L754 24 Z" fill="none" stroke="#22d3ee" stroke-width="1.2" opacity="0.35"/>
+  <circle cx="764" cy="24" r="2" fill="#22d3ee" opacity="0.35"/>
+  <rect x="1" y="1" width="798" height="478" fill="none" stroke="#22d3ee" stroke-width="0.8" opacity="0.3"/>
+  <rect width="800" height="480" fill="url(#6e29cd82-fade)" pointer-events="none"/>
+</svg>

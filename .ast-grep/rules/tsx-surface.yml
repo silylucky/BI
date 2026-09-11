@@ -1,0 +1,58 @@
+id: tsx-noop-handler
+language: tsx
+severity: error
+message: 有入口的半成品：点了没反应（空 handler）
+note: 挂了按钮但 handler 为空 = 用户可见的假功能。
+ignores:
+  - "**/*.test.*"
+  - "**/*.spec.*"
+  - "**/__mocks__/**"
+  - "**/*.stories.*"
+rule:
+  any:
+    - pattern:
+        context: '<a onClick={() => {}} />'
+        selector: jsx_attribute
+    - pattern:
+        context: '<a onClick={() => {}}></a>'
+        selector: jsx_attribute
+    - pattern:
+        context: '<a onSubmit={() => {}} />'
+        selector: jsx_attribute
+---
+id: tsx-todo-alert
+language: tsx
+severity: error
+message: 有入口的半成品：handler 只弹 TODO / 未实现提示
+ignores:
+  - "**/*.test.*"
+  - "**/*.spec.*"
+  - "**/__mocks__/**"
+  - "**/*.stories.*"
+rule:
+  any:
+    - pattern: alert($MSG)
+    - pattern: console.log($MSG)
+  has:
+    stopBy: end
+    kind: string
+    regex: '(?i)todo|not implemented|敬请期待|即将上线|coming soon|开发中'
+---
+id: tsx-empty-href
+language: tsx
+severity: warning
+message: 死链接：href="#" 或 href=""
+note: 常见于「菜单挂了但页面没做」。与产品表面对账一起看。
+ignores:
+  - "**/*.test.*"
+  - "**/*.spec.*"
+  - "**/__mocks__/**"
+  - "**/*.stories.*"
+rule:
+  any:
+    - pattern:
+        context: '<a href="#" />'
+        selector: jsx_attribute
+    - pattern:
+        context: '<a href="" />'
+        selector: jsx_attribute

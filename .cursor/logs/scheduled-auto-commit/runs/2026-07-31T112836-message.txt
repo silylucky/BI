@@ -1,0 +1,37 @@
+wip: [fe,.cursor,docs] 32f (+1420/-647) @ 2026-07-31 11:28 +0800
+
+Areas:
+  fe/          27 files (+1210/-644)
+  .cursor/     3 files (+54/-1)
+  docs/        2 files (+156/-2)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T105818-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T105818.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  docs/user-guide/report-center-how-to.md
+A  docs/ux-critique/2026-07-31-report-center-post-align-backlog.md
+M  fe/src/components/dashboard/ChartEmbedShareActions.tsx
+M  fe/src/components/dashboard/DashboardBoardShareBody.tsx
+M  fe/src/components/dashboard/DashboardShareDialog.tsx
+M  fe/src/components/dashboard/PublicShareLinkCard.tsx
+A  fe/src/components/dashboard/ShareDialogSection.tsx
+M  fe/src/components/dashboard/ShareIssuedUrlPanel.tsx
+M  fe/src/components/dashboard/screen/DataScreenSharePanel.tsx
+M  fe/src/components/dashboard/sharePageUi.ts
+M  fe/src/components/dashboard/templates/TemplatePreviewFooter.tsx
+M  fe/src/components/dashboard/templates/VizTemplateCard.tsx
+M  fe/src/embed/embedShareLoop.test.tsx
+M  fe/src/pages/admin/dashboard/DashboardEditPage.tsx
+M  fe/src/pages/admin/dashboard/DashboardSharePage.smoke.test.tsx
+M  fe/src/pages/admin/reports/PrefabReportsPage.tsx
+M  fe/src/pages/admin/reports/ReportCenterPage.tsx
+M  fe/src/pages/admin/reports/ReportSchedulesPage.tsx
+M  fe/src/pages/admin/reports/components/PrefabBindingForm.tsx
+A  fe/src/pages/admin/reports/components/PrefabBindingsTable.tsx
+M  fe/src/pages/admin/reports/components/PrefabReportsEmptyPreview.tsx
+M  fe/src/pages/admin/reports/components/ReportExportCard.tsx
+... and 7 more
+
+stat: 32 files changed, 1420 insertions(+), 647 deletions(-)
+branch: dev | scheduled-auto-commit

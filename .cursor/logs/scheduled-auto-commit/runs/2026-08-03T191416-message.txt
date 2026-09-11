@@ -1,0 +1,39 @@
+wip: [fe,backend,.cursor,docs,+1] 28f (+721/-74) @ 2026-08-03 19:14 +...
+
+Areas:
+  fe/          20 files (+599/-69)
+  backend/     3 files (+36/-3)
+  .cursor/     3 files (+48/-1)
+  docs/        1 files (+1/-1)
+  tests/       1 files (+37/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T184424-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T184424.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/ingestion/sync_executor.py
+M  backend/app/ingestion/sync_fetch.py
+M  backend/app/main.py
+M  docs/automate/plans/2026-07-20-chart-component-acceptance.md
+M  fe/src/components/dashboard/ChartDataSlots.tsx
+A  fe/src/components/dashboard/ChartFieldMultiSlot.test.tsx
+A  fe/src/components/dashboard/ChartFieldMultiSlot.tsx
+M  fe/src/components/dashboard/chartFieldSlots.test.ts
+M  fe/src/components/dashboard/chartFieldSlots.ts
+M  fe/src/components/dashboard/chartPaletteLabelTooltipFields.tsx
+M  fe/src/components/dashboard/chartStyleSections/ChartCommonStyleSections.tsx
+M  fe/src/components/dashboard/useChartInspectorState.ts
+M  fe/src/lib/chartDeAxis/builders.ts
+M  fe/src/lib/chartDeAxis/catalog.test.ts
+M  fe/src/lib/chartDeAxis/catalog.ts
+M  fe/src/lib/chartDeAxis/types.ts
+M  fe/src/lib/chartDeStyle.test.ts
+M  fe/src/lib/chartDeStyle.ts
+M  fe/src/lib/chartFieldAssignment.test.ts
+M  fe/src/lib/chartFieldAssignment.ts
+M  fe/src/lib/resolveChartEncoding.test.ts
+M  fe/src/lib/resolveChartEncoding.ts
+... and 3 more
+
+stat: 28 files changed, 721 insertions(+), 74 deletions(-)
+branch: dev | scheduled-auto-commit

@@ -1,0 +1,13 @@
+{
+    "runId": "20260811-033018",
+    "tick": 346,
+    "startedAt": "2026-08-11T03:30:18+08:00",
+    "finishedAt": "2026-08-11T03:30:30+08:00",
+    "status": "skipped",
+    "branch": "dev",
+    "commit": null,
+    "message": "only excluded untracked",
+    "filesChanged": 0,
+    "insertions": 0,
+    "deletions": 0
+}

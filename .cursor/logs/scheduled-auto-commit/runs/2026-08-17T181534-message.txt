@@ -1,0 +1,41 @@
+wip: [fe,docs,backend,.cursor,+3] 46f (+1268/-137) @ 2026-08-17 18:15...
+
+Areas:
+  fe/          23 files (+520/-10)
+  docs/        12 files (+574/-70)
+  backend/     6 files (+137/-24)
+  .cursor/     2 files (+32/-32)
+  _root/       1 files (+3/-0)
+  vendor/      1 files (+1/-0)
+  tests/       1 files (+1/-1)
+
+Changed (up to 25):
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  .cursor/rules/geo-map-offline-china.mdc
+M  .gitmodules
+M  backend/app/reports/persistence/models.py
+M  backend/app/reports/persistence/standard_repo.py
+M  backend/app/reports/standard/schemas.py
+M  backend/app/reports/standard/snapshot.py
+M  backend/app/viz/builtin/map.py
+A  backend/migrations/versions/0050_standard_pack_dataset_retention.py
+M  docs/api/vs-ai-spec/README.md
+M  docs/api/vs-ai-spec/capability-manifest.json
+M  docs/api/vs-ai-spec/guides/D3-OPTIONAL.md
+M  docs/api/vs-ai-spec/guides/RENDERERS.md
+M  docs/arch.md
+M  docs/automate/evolution-state.md
+A  docs/automate/plans/2026-08-17-gis-map-chart-type-p0-p1.md
+A  docs/material/blueprints/2026-08-17-report-center-industry-audit.md
+A  docs/material/blueprints/2026-08-17-report-center-industry-blueprint.md
+M  docs/services/reports.md
+M  docs/services/viz.md
+M  docs/ui/layout.md
+M  fe/package.json
+M  fe/pnpm-lock.yaml
+M  fe/src/components/charts/chartCatalogBackendFieldRules.ts
+M  fe/src/components/charts/engine/d3/d3ViewRouter.tsx
+... and 21 more
+
+stat: 46 files changed, 1268 insertions(+), 137 deletions(-)
+branch: dev | scheduled-auto-commit

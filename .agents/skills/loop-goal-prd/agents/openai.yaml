@@ -1,0 +1,5 @@
+interface:
+  display_name: "PRD里程碑冲锋"
+  short_description: "plan+PRD+arch → go-fast；中断后说「继续」即可续跑"
+policy:
+  allow_implicit_invocation: true

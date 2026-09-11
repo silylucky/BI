@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480" preserveAspectRatio="none meet">
+  <defs>
+    <linearGradient id="12a8e25d-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#713f12" stop-opacity="0.25"/>
+      <stop offset="1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="#1a1408" fill-opacity="0.85"/>
+  <rect x="0" y="0" width="8" height="480" fill="#fbbf24" opacity="0.35"/>
+  <rect x="12" y="24" width="2" height="432" fill="#fbbf24" opacity="0.15"/>
+  <rect x="792" y="0" width="8" height="480" fill="#fbbf24" opacity="0.2"/>
+  <circle cx="4" cy="80" r="2" fill="#fbbf24" opacity="0.5"/>
+  <circle cx="4" cy="150" r="2" fill="#fbbf24" opacity="0.5"/>
+  <circle cx="4" cy="220" r="2" fill="#fbbf24" opacity="0.5"/>
+  <circle cx="4" cy="290" r="2" fill="#fbbf24" opacity="0.5"/>
+  <circle cx="4" cy="360" r="2" fill="#fbbf24" opacity="0.5"/>
+  <g opacity="0.45" stroke="#fbbf24" stroke-width="1.5" fill="none">
+  <path d="M20 44 V20 H44"/>
+  <path d="M756 20 H780 V44"/>
+  <path d="M780 436 V460 H756"/>
+  <path d="M44 460 H20 V436"/>
+</g>
+  <polygon points="752,426 755.2915974128379,435.4695048315003 765.3147912281321,435.6737620787507 757.3259164912529,441.7304951684997 760.2289935320946,451.3262379212493 752,445.6 743.7710064679054,451.3262379212493 746.6740835087471,441.7304951684997 738.6852087718678,435.6737620787507 748.7084025871621,435.4695048315003" fill="none" stroke="#fbbf24" stroke-width="1" opacity="0.4"/>
+  <rect width="800" height="480" fill="url(#12a8e25d-fade)" pointer-events="none"/>
+</svg>

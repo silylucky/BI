@@ -1,0 +1,50 @@
+id: jsx-noop-handler
+language: javascript
+severity: error
+message: 有入口的半成品：点了没反应（空 handler）
+note: |
+  挂了按钮但 handler 为空 = 用户可见的假功能。
+  .tsx 文件由 tsx-noop-handler 覆盖，本条管 .js / .jsx。
+files:
+  - "**/*.js"
+  - "**/*.jsx"
+  - "**/*.mjs"
+ignores:
+  - "**/*.test.*"
+  - "**/*.spec.*"
+  - "**/__mocks__/**"
+  - "**/*.stories.*"
+rule:
+  any:
+    - pattern:
+        context: '<a onClick={() => {}} />'
+        selector: jsx_attribute
+    - pattern:
+        context: '<a onClick={() => {}}></a>'
+        selector: jsx_attribute
+    - pattern:
+        context: '<a onSubmit={() => {}} />'
+        selector: jsx_attribute
+---
+id: jsx-empty-href
+language: javascript
+severity: warning
+message: 死链接：href="#" 或 href=""
+note: 常见于「菜单挂了但页面没做」。与产品表面对账一起看。
+files:
+  - "**/*.js"
+  - "**/*.jsx"
+  - "**/*.mjs"
+ignores:
+  - "**/*.test.*"
+  - "**/*.spec.*"
+  - "**/__mocks__/**"
+  - "**/*.stories.*"
+rule:
+  any:
+    - pattern:
+        context: '<a href="#" />'
+        selector: jsx_attribute
+    - pattern:
+        context: '<a href="" />'
+        selector: jsx_attribute

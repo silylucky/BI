@@ -1,0 +1,35 @@
+id: go-unimplemented-panic
+language: go
+severity: error
+message: 可激活 stub：panic 出未实现语义
+note: |
+  非测试主路径上的 panic("not implemented") 属于假绿——调用方看不出这条路走不通。
+  挂在 env / flag / profile=dev 后面也算。
+files:
+  - "**/*.go"
+ignores:
+  - "**/*_test.go"
+  - "**/vendor/**"
+rule:
+  pattern: panic($MSG)
+  has:
+    stopBy: end
+    kind: interpreted_string_literal
+    regex: '(?i)not implemented|unimplemented|todo|stub|coming soon'
+---
+id: go-nil-return-stub
+language: go
+severity: warning
+message: 疑似空实现：函数体只有一个 return nil
+note: |
+  只有 return nil 的导出函数常是占位。需人工判断——空实现有时是合法的 no-op adapter。
+files:
+  - "**/*.go"
+ignores:
+  - "**/*_test.go"
+  - "**/vendor/**"
+rule:
+  pattern: |
+    func $NAME($$$ARGS) error {
+      return nil
+    }

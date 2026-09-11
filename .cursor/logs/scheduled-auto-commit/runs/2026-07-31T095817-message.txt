@@ -1,0 +1,14 @@
+wip: [.cursor,docs] 4f (+264/-1) @ 2026-07-31 09:58 +0800
+
+Areas:
+  .cursor/     3 files (+27/-1)
+  docs/        1 files (+237/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T092817-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T092817.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+A  docs/feature-design/2026-07-30-report-dataease-land-design.md
+
+stat: 4 files changed, 264 insertions(+), 1 deletion(-)
+branch: dev | scheduled-auto-commit

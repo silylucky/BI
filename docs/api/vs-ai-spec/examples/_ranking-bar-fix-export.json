@@ -1,0 +1,94 @@
+{
+  "artifactId": "d44da522-f18c-4f87-973f-138167b830f4",
+  "manifest": {
+    "id": "ranking-bar-chart",
+    "displayName": "排名条形图",
+    "version": "1.0.0",
+    "entry": "index.html",
+    "fieldSlots": {
+      "dimensions": {
+        "min": 1,
+        "max": 1,
+        "label": "名称"
+      },
+      "metrics": {
+        "min": 1,
+        "max": 1,
+        "label": "数值"
+      }
+    },
+    "styleSchema": {
+      "type": "object",
+      "properties": {
+        "barColor": {
+          "type": "string",
+          "format": "color"
+        },
+        "top1Color": {
+          "type": "string",
+          "format": "color"
+        },
+        "top2Color": {
+          "type": "string",
+          "format": "color"
+        },
+        "top3Color": {
+          "type": "string",
+          "format": "color"
+        },
+        "showValues": {
+          "type": "boolean",
+          "default": true
+        },
+        "showRankBadge": {
+          "type": "boolean",
+          "default": true
+        },
+        "barHeight": {
+          "type": "number",
+          "minimum": 20,
+          "maximum": 60,
+          "default": 32
+        },
+        "barGap": {
+          "type": "number",
+          "minimum": 8,
+          "maximum": 30,
+          "default": 16
+        },
+        "animationDuration": {
+          "type": "number",
+          "minimum": 500,
+          "maximum": 3000,
+          "default": 1000
+        }
+      }
+    },
+    "defaultStyle": {
+      "barColor": "#3b82f6",
+      "top1Color": "#f59e0b",
+      "top2Color": "#94a3b8",
+      "top3Color": "#d97706",
+      "showValues": true,
+      "showRankBadge": true,
+      "barHeight": 32,
+      "barGap": 16,
+      "animationDuration": 1000
+    },
+    "runtime": "html",
+    "rendererHint": "canvas"
+  },
+  "status": "draft",
+  "contentHash": "dc338e512768dbdb703e45573bf3d179a655d365c6062337abb0d3af818677eb",
+  "warnings": [
+    {
+      "code": "AIVIZ_WARN_MOUNT_RECOMMENDED",
+      "message": "html runtime 建议使用 host.vsCv.mount(renderFn)，否则 resize 与样式更新可能不稳定"
+    },
+    {
+      "code": "AIVIZ_WARN_STYLE_COMPLIANCE",
+      "message": "bundle 未引用 payload.style 或 --vs-style-* / --vs-palette-*，且未提供有效 manifest.styleHooks；样式面板与看板配色可能不会生效"
+    }
+  ],
+  "styleComplianceTier": "partial"
+}

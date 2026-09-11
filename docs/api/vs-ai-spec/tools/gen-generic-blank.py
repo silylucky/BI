@@ -1,0 +1,199 @@
+#!/usr/bin/env python3
+"""Generate generic-blank-html/d3 example bundles (L3-ZeroRef)."""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+EXAMPLES = ROOT / "examples"
+
+# 数据壳层（勿删）：Agent 只改 renderBusiness；视觉样式不限，但绘图须用 encoding + 排序轴域
+DATA_HELPERS = (
+    "function resolveBoundColumns(p){var cols=p.columns||[];var enc=(p&&p.encoding)||{};"
+    "var dims=enc.dimensions||[];var metrics=enc.metrics||[];"
+    "var di=dims[0]?cols.indexOf(dims[0]):-1;var mi=metrics[0]?cols.indexOf(metrics[0]):-1;"
+    "if(di<0){di=cols.findIndex(function(c,i){return p.rows[0]&&typeof p.rows[0][i]==='string';});"
+    "if(di<0)di=0;}if(mi<0){mi=cols.findIndex(function(c,i){return i!==di&&p.rows[0]&&typeof p.rows[0][i]==='number';});"
+    "if(mi<0)mi=di===0?1:0;}return{dimIdx:di,metricIdx:mi,dimField:dims[0]||cols[di]||'',"
+    "metricField:metrics[0]||cols[mi]||''};}"
+    "function rowsToSeries(p,opts){opts=opts||{};if(!p||!p.rows||!p.rows.length)return[];"
+    "var bc=resolveBoundColumns(p);"
+    "var pts=p.rows.map(function(r){return{category:String(r[bc.dimIdx]!=null?r[bc.dimIdx]:''),"
+    "value:Number(r[bc.metricIdx])||0,row:r};}).filter(function(d){return!isNaN(d.value);});"
+    "if(opts.sort!==false){pts.sort(function(a,b){return a.category.localeCompare(b.category,undefined,{numeric:true});});}"
+    "return pts;}"
+    "function monotoneCurve(d3,smooth){if(!smooth||!d3.curveMonotoneX)return d3.curveLinear;"
+    "return d3.curveMonotoneX;}"
+)
+
+HTML_SHELL = (
+    '<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">'
+    '<meta name="viewport" content="width=device-width,initial-scale=1.0">'
+    "<style>html,body{margin:0;height:100%;overflow:hidden;background:transparent;"
+    "color:var(--dashboard-text-primary,#e2e8f0);font-family:system-ui,-apple-system,sans-serif}"
+    "#vs-cv-root{box-sizing:border-box;height:100%;padding:10px 12px;display:flex;"
+    "flex-direction:column;gap:8px;overflow:hidden}"
+    "#vs-cv-title{font-size:13px;font-weight:600;color:var(--dashboard-title-color,#f2f4f7)}"
+    "#vs-cv-canvas{flex:1;min-height:0;overflow:auto;position:relative;border:1px dashed "
+    "var(--dashboard-widget-border,#334155);border-radius:8px;"
+    "background:var(--dashboard-widget-surface,rgba(30,41,59,.35))}"
+    ".vs-cv-blank-hint{padding:24px 12px;text-align:center;font-size:12px;"
+    "color:var(--dashboard-text-muted,#64748b)}</style></head><body>"
+    '<div id="vs-cv-root"><div id="vs-cv-title"></div><div id="vs-cv-canvas"></div></div>'
+    "<script>(function(){var host=document.currentScript&&document.currentScript.parentElement;"
+    "function $(id){return host?host.querySelector('#'+id):null}"
+    "function hostVar(name,fallback){if(!host)return fallback;"
+    "var v=getComputedStyle(host).getPropertyValue(name).trim();return v||fallback}"
+    "function resolveStyle(p){var st=(p&&p.style)||{};"
+    "var palette=Array.isArray(st.paletteColors)?st.paletteColors.slice():[];"
+    "for(var i=palette.length;i<8;i++){var c=hostVar('--vs-palette-'+i,'');if(c)palette.push(c)}"
+    "return{accentColor:st.accentColor||palette[0]||hostVar('--vs-style-accent-color','#38bdf8'),"
+    "fontSize:Number(st.fontSize)||14,labelShow:st.labelShow!==false,"
+    "tooltipShow:st.tooltipShow!==false,"
+    "labelColor:st.labelColor||hostVar('--dashboard-text-primary','#e2e8f0'),"
+    "tooltipColor:st.tooltipColor||hostVar('--dashboard-text-primary','#e2e8f0'),"
+    "tooltipBg:st.tooltipBackground||'rgba(15,23,42,0.95)',"
+    "seriesGradient:st.seriesGradient===true,palette:palette}}"
+    + DATA_HELPERS
+    + "function bindingStatus(p){if(!p)return'unbound';"
+    "return p.bindingStatus||((p.rows&&p.rows.length)?'bound':'unbound')}"
+    "function statusHint(p){var st=bindingStatus(p);"
+    "if(st==='error')return(p&&p.error)||'数据加载失败';"
+    "if(st==='empty')return'暂无数据';"
+    "if(st==='unbound')return'请在右侧绑定数据集与字段';return null}"
+    "function clearEl(el){while(el&&el.firstChild)el.removeChild(el.firstChild)}"
+    "function renderBusiness(canvas,p,style){var hint=document.createElement('div');"
+    "hint.className='vs-cv-blank-hint';"
+    "hint.textContent='在此编写业务逻辑（只改 renderBusiness 函数）';"
+    "hint.style.color=style.accentColor;canvas.appendChild(hint)}"
+    "function render(p){p=p||{};var style=resolveStyle(p);var titleEl=$('vs-cv-title');"
+    "var canvas=$('vs-cv-canvas');if(!canvas)return;clearEl(canvas);"
+    "if(titleEl){if(style.title){titleEl.textContent=style.title;titleEl.style.display=''}"
+    "else{titleEl.style.display='none'}}"
+    "var hint=statusHint(p);if(hint){var msg=document.createElement('div');"
+    "msg.className='vs-cv-blank-hint';msg.textContent=hint;canvas.appendChild(msg);return}"
+    "renderBusiness(canvas,p,style)}"
+    "if(host&&host.vsCv&&host.vsCv.mount){host.vsCv.mount(render)}else{render({})}})();"
+    "</script></body></html>"
+)
+
+D3_SHELL = (
+    '<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">'
+    "<style>html,body{margin:0;height:100%;overflow:hidden;background:transparent;"
+    "color:var(--dashboard-text-primary,#e2e8f0);font-family:system-ui,sans-serif}"
+    "#vs-cv-root{box-sizing:border-box;height:100%;padding:8px 10px;display:flex;"
+    "flex-direction:column;gap:6px}#vs-cv-canvas{flex:1;min-height:0;position:relative}"
+    "#vs-cv-chart{width:100%;height:100%}"
+    "text{fill:var(--dashboard-chart-axis,#cbd5e1);font-size:11px}</style></head><body>"
+    '<div id="vs-cv-root"><div id="vs-cv-canvas"><svg id="vs-cv-chart"></svg></div></div>'
+    "<script>(function(){var host=document.currentScript&&document.currentScript.parentElement;"
+    "function $(id){return host?host.querySelector('#'+id):null}"
+    "function hostVar(name,fallback){if(!host)return fallback;"
+    "var v=getComputedStyle(host).getPropertyValue(name).trim();return v||fallback}"
+    "function resolveStyle(p){var st=(p&&p.style)||{};"
+    "var palette=Array.isArray(st.paletteColors)?st.paletteColors.slice():[];"
+    "for(var i=palette.length;i<8;i++){var c=hostVar('--vs-palette-'+i,'');if(c)palette.push(c)}"
+    "return{accentColor:st.accentColor||palette[0]||hostVar('--vs-style-accent-color','#2563eb'),"
+    "labelShow:st.labelShow!==false,tooltipShow:st.tooltipShow!==false,palette:palette}}"
+    + DATA_HELPERS
+    + "function bindingStatus(p){if(!p)return'unbound';"
+    "return p.bindingStatus||((p.rows&&p.rows.length)?'bound':'unbound')}"
+    "function statusHint(p){var st=bindingStatus(p);"
+    "if(st==='error')return(p&&p.error)||'数据加载失败';"
+    "if(st==='empty')return'暂无数据';"
+    "if(st==='unbound')return'请在右侧绑定数据集与字段';return null}"
+    "function renderBusiness(svg,p,style,d3){var layout=(p&&p.layout)||{};"
+    "var w=layout.width||320,h=layout.height||200;"
+    "svg.attr('width',w).attr('height',h).attr('viewBox','0 0 '+w+' '+h);"
+    "svg.append('text').attr('x',w/2).attr('y',h/2).attr('text-anchor','middle')"
+    ".attr('fill','var(--dashboard-text-muted,#64748b)').attr('font-size',12)"
+    ".text('在此编写业务逻辑（只改 renderBusiness）')}"
+    "function render(p){p=p||{};var style=resolveStyle(p);var vsCv=host&&host.vsCv;"
+    "var d3=vsCv&&vsCv.d3;var svgEl=$('vs-cv-chart');if(!svgEl||!d3)return;"
+    "var hint=statusHint(p);var svg=d3.select(svgEl);svg.selectAll('*').remove();"
+    "if(hint){var layout=(p&&p.layout)||{};var w=layout.width||320,h=layout.height||200;"
+    "svg.attr('width',w).attr('height',h).attr('viewBox','0 0 '+w+' '+h);"
+    "svg.append('text').attr('x',w/2).attr('y',h/2).attr('text-anchor','middle')"
+    ".attr('fill','var(--dashboard-text-muted,#64748b)').attr('font-size',12).text(hint);return}"
+    "renderBusiness(svg,p,style,d3)}"
+    "if(host&&host.vsCv&&host.vsCv.mount){host.vsCv.mount(render)}else{render({})}})();"
+    "</script></body></html>"
+)
+
+FIELD_SLOTS = {
+    "dimensions": {"min": 1, "max": 1, "label": "维度列"},
+    "metrics": {"min": 1, "max": 8, "label": "数值列"},
+}
+
+
+def main() -> None:
+    html_bundle = {
+        "manifest": {
+            "id": "generic-blank-html",
+            "displayName": "通用空画布 HTML",
+            "version": "1.0.0",
+            "entry": "index.html",
+            "runtime": "html",
+            "rendererHint": "html",
+            "fieldSlots": FIELD_SLOTS,
+            "styleSchema": {
+                "type": "object",
+                "x-styleSections": [{"title": "外观", "properties": ["fontSize", "accentColor"]}],
+                "properties": {
+                    "fontSize": {
+                        "type": "number",
+                        "title": "字号",
+                        "minimum": 10,
+                        "maximum": 24,
+                        "default": 14,
+                    },
+                    "accentColor": {
+                        "type": "string",
+                        "format": "color",
+                        "title": "强调色",
+                        "default": "#38bdf8",
+                    },
+                },
+            },
+            "defaultStyle": {"fontSize": 14, "accentColor": "#38bdf8"},
+        },
+        "files": {"index.html": HTML_SHELL},
+    }
+    d3_bundle = {
+        "manifest": {
+            "id": "generic-blank-d3",
+            "displayName": "通用空画布 D3",
+            "version": "1.0.0",
+            "entry": "index.html",
+            "runtime": "d3",
+            "rendererHint": "d3",
+            "fieldSlots": FIELD_SLOTS,
+            "styleSchema": {
+                "type": "object",
+                "x-styleSections": [{"title": "外观", "properties": ["accentColor"]}],
+                "properties": {
+                    "accentColor": {
+                        "type": "string",
+                        "format": "color",
+                        "title": "强调色",
+                        "default": "#2563eb",
+                    },
+                },
+            },
+            "defaultStyle": {"accentColor": "#2563eb"},
+        },
+        "files": {"index.html": D3_SHELL},
+    }
+    for name, bundle in (
+        ("generic-blank-html.json", html_bundle),
+        ("generic-blank-d3.json", d3_bundle),
+    ):
+        path = EXAMPLES / name
+        path.write_text(json.dumps(bundle, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"ok {path}")
+
+
+if __name__ == "__main__":
+    main()

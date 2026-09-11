@@ -1,0 +1,38 @@
+wip: [fe,.cursor,tests,docs] 33f (+1486/-201) @ 2026-07-31 15:28 +0800
+
+Areas:
+  fe/          28 files (+1126/-200)
+  .cursor/     3 files (+56/-1)
+  tests/       1 files (+82/-0)
+  docs/        1 files (+222/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T145846-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T145846.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+A  docs/feature-truth/2026-07-31-account-center-truth-audit.md
+M  fe/.env.example
+M  fe/src/lib/api.test.ts
+M  fe/src/lib/api.ts
+M  fe/src/lib/apiError.ts
+A  fe/src/lib/session.test.ts
+M  fe/src/lib/session.ts
+M  fe/src/pages/admin/account/AccountPreferencesPage.tsx
+M  fe/src/pages/admin/account/AccountProfilePage.smoke.test.tsx
+M  fe/src/pages/admin/account/AccountProfilePage.tsx
+M  fe/src/pages/admin/account/AccountSecurityPage.tsx
+M  fe/src/pages/admin/account/UserViewsSection.smoke.test.tsx
+M  fe/src/pages/admin/account/account-types.ts
+M  fe/src/pages/admin/account/components/AccountInfoCard.tsx
+M  fe/src/pages/admin/account/components/AccountProfileHero.tsx
+A  fe/src/pages/admin/account/components/AccountSecurityOverview.tsx
+M  fe/src/pages/admin/account/components/ChangePasswordSection.smoke.test.tsx
+M  fe/src/pages/admin/account/components/ChangePasswordSession.integration.test.tsx
+A  fe/src/pages/admin/account/components/DashboardPickerSelect.tsx
+A  fe/src/pages/admin/account/components/ProfileEditDialog.test.tsx
+M  fe/src/pages/admin/account/components/ProfileEditDialog.tsx
+A  fe/src/pages/admin/account/components/RoleDefaultViewCard.smoke.test.tsx
+... and 8 more
+
+stat: 33 files changed, 1486 insertions(+), 201 deletions(-)
+branch: dev | scheduled-auto-commit

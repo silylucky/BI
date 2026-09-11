@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;font-family:system-ui,-apple-system,sans-serif;background:transparent;overflow:hidden}
+#podium-container{
+  width:100%;height:100%;
+  --vs-scale:1;
+  padding:calc(12px * var(--vs-scale)) calc(16px * var(--vs-scale));
+  display:flex;flex-direction:column;overflow:hidden
+}
+.podium-area{
+  display:flex;align-items:flex-end;justify-content:center;
+  gap:calc(14px * var(--vs-scale));
+  flex-shrink:0;height:var(--podium-area-h,0px)
+}
+.podium-card{
+  display:flex;flex-direction:column;align-items:center;
+  width:32%;max-width:calc(180px * var(--vs-scale));
+  height:100%;justify-content:flex-end;
+  opacity:0;animation:vsRise .6s ease-out forwards
+}
+.podium-medal{
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-weight:800;color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.22);
+  margin-bottom:calc(6px * var(--vs-scale));
+  width:calc(40px * var(--vs-scale));height:calc(40px * var(--vs-scale));
+  font-size:calc(16px * var(--vs-scale));flex-shrink:0
+}
+.podium-card.first .podium-medal{
+  width:calc(50px * var(--vs-scale));height:calc(50px * var(--vs-scale));
+  font-size:calc(20px * var(--vs-scale))
+}
+.podium-name{
+  font-size:calc(13px * var(--vs-scale));font-weight:600;
+  color:var(--dashboard-text-primary,#1e293b);
+  max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  margin-bottom:calc(2px * var(--vs-scale));flex-shrink:0
+}
+.podium-value{
+  font-family:Consolas,Menlo,monospace;font-variant-numeric:tabular-nums;
+  font-size:calc(15px * var(--vs-scale));font-weight:700;
+  margin-bottom:calc(6px * var(--vs-scale));flex-shrink:0
+}
+.podium-base{
+  width:100%;border-radius:calc(8px * var(--vs-scale)) calc(8px * var(--vs-scale)) 0 0;
+  opacity:.92;flex:var(--base-flex,1) 1 0;min-height:calc(18px * var(--vs-scale))
+}
+.list-area{
+  flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;
+  margin-top:var(--list-gap,0px)
+}
+.list-row{
+  display:flex;align-items:center;
+  min-height:calc(30px * var(--vs-scale));
+  padding:calc(4px * var(--vs-scale));
+  border-bottom:1px dashed rgba(100,116,139,.18);
+  opacity:0;animation:vsFade .45s ease-out forwards
+}
+.row-rank{
+  width:calc(24px * var(--vs-scale));height:calc(24px * var(--vs-scale));
+  border-radius:calc(6px * var(--vs-scale));
+  display:flex;align-items:center;justify-content:center;
+  font-size:calc(11px * var(--vs-scale));font-weight:700;
+  background:rgba(100,116,139,.14);color:var(--dashboard-text-muted,#64748b);
+  margin-right:calc(8px * var(--vs-scale));flex-shrink:0
+}
+.row-name{
+  flex:1;min-width:0;font-size:calc(12px * var(--vs-scale));
+  color:var(--dashboard-text-primary,#1e293b);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis
+}
+.row-value{
+  font-family:Consolas,Menlo,monospace;font-variant-numeric:tabular-nums;
+  font-size:calc(12px * var(--vs-scale));font-weight:600;
+  margin-left:calc(8px * var(--vs-scale));flex-shrink:0
+}
+.empty-state{
+  display:flex;align-items:center;justify-content:center;
+  height:100%;min-height:calc(60px * var(--vs-scale));
+  color:#94a3b8;font-size:calc(13px * var(--vs-scale))
+}
+@keyframes vsRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes vsFade{from{opacity:0}to{opacity:1}}
+</style>
+</head>
+<body>
+<div id="podium-container">
+  <div id="podium-area" class="podium-area"></div>
+  <div id="list-area" class="list-area"></div>
+</div>
+<script>
+(function(){
+  var host=document.currentScript&&document.currentScript.parentElement;
+  var GOLD='#f59e0b',SILVER='#94a3b8',BRONZE='#d97706';
+  function str(st,k,d){return typeof st[k]==='string'?st[k]:d}
+  function num(st,k,d){var v=Number(st[k]);return isFinite(v)?v:d}
+  function bool(st,k,d){return typeof st[k]==='boolean'?st[k]:d}
+  function medalColor(st,rank){
+    if(rank===1)return str(st,'goldColor',GOLD);
+    if(rank===2)return str(st,'silverColor',SILVER);
+    return str(st,'bronzeColor',BRONZE);
+  }
+  function parseRows(p){
+    if(!p||p.bindingStatus!=='bound'||!p.rows||!p.rows.length)return[];
+    var out=[];
+    for(var i=0;i<p.rows.length;i++){
+      var row=p.rows[i];
+      var v=Number(row[1]);
+      if(!isNaN(v))out.push({name:String(row[0]),value:v});
+    }
+    out.sort(function(a,b){return b.value-a.value});
+    return out;
+  }
+  function formatValue(v){
+    if(v>=1e8)return(v/1e8).toFixed(1)+'亿';
+    if(v>=1e4)return(v/1e4).toFixed(1)+'万';
+    if(v>=1e3)return(v/1e3).toFixed(1)+'K';
+    return v.toLocaleString();
+  }
+  function layoutMetrics(p,st,headCount,restCount){
+    var layout=p.layout||{};
+    var W=Math.max(1,layout.width||(host&&host.clientWidth)||320);
+    var H=Math.max(1,layout.height||(host&&host.clientHeight)||240);
+    var scale=Math.min(W/380,H/340);
+    scale=Math.max(0.45,Math.min(scale,3));
+    var pad=Math.round(12*scale);
+    var gap=Math.round(8*scale);
+    var innerH=H-pad*2;
+    var showPodium=bool(st,'showPodium',true);
+    var podiumH=0;
+    if(showPodium&&headCount>0){
+      if(restCount===0)podiumH=innerH;
+      else{
+        var ratio=Math.max(0.28,Math.min(0.52,0.5-restCount*0.015));
+        podiumH=Math.round(innerH*ratio);
+      }
+    }
+    var listGap=(podiumH>0&&restCount>0)?gap:0;
+    return{scale:scale,podiumH:podiumH,listGap:listGap};
+  }
+  function applyLayout(container,pa,la,metrics){
+    container.style.setProperty('--vs-scale',String(metrics.scale));
+    pa.style.setProperty('--podium-area-h',metrics.podiumH+'px');
+    la.style.setProperty('--list-gap',metrics.listGap+'px');
+  }
+  function showHint(pa,la,text,metrics){
+    pa.innerHTML='';pa.style.display='none';
+    la.innerHTML='';
+    var d=document.createElement('div');
+    d.className='empty-state';d.textContent=text;
+    la.appendChild(d);
+    if(metrics)applyLayout(host.querySelector('#podium-container'),pa,la,metrics);
+  }
+  function render(p){
+    p=p||{};
+    var st=p.style||{};
+    var container=host&&host.querySelector('#podium-container');
+    var pa=host&&host.querySelector('#podium-area');
+    var la=host&&host.querySelector('#list-area');
+    if(!container||!pa||!la)return;
+    if(p.bindingStatus!=='bound'){
+      showHint(pa,la,'请在右侧绑定数据集与字段',layoutMetrics(p,st,0,0));
+      return;
+    }
+    var data=parseRows(p);
+    if(!data.length){
+      showHint(pa,la,'暂无数据',layoutMetrics(p,st,0,0));
+      return;
+    }
+    var showPodium=bool(st,'showPodium',true);
+    var showValues=bool(st,'showValues',true);
+    var anim=num(st,'animationDuration',800);
+    var accent=str(st,'accentColor','#3b82f6');
+    var displayCount=data.length;
+    var head=showPodium?data.slice(0,Math.min(3,displayCount)):[];
+    var rest=data.slice(head.length,displayCount);
+    var headCount=head.length;
+    var restCount=rest.length;
+    var metrics=layoutMetrics(p,st,headCount,restCount);
+    applyLayout(container,pa,la,metrics);
+    pa.innerHTML='';la.innerHTML='';
+    pa.style.display=headCount?'flex':'none';
+    var order=[1,0,2];
+    var baseFlex=[0.72,1,0.55];
+    var delay=0;
+    for(var k=0;k<order.length;k++){
+      var idx=order[k];
+      if(idx>=headCount)continue;
+      var item=head[idx];
+      var rank=idx+1;
+      var card=document.createElement('div');
+      card.className='podium-card'+(rank===1?' first':'');
+      card.style.animationDuration=(anim/1000)+'s';
+      card.style.animationDelay=delay+'ms';
+      card.style.setProperty('--base-flex',String(baseFlex[idx]));
+      delay+=120;
+      var medal=document.createElement('div');
+      medal.className='podium-medal';
+      medal.style.background=medalColor(st,rank);
+      medal.textContent=String(rank);
+      card.appendChild(medal);
+      var nm=document.createElement('div');
+      nm.className='podium-name';
+      nm.title=item.name;nm.textContent=item.name;
+      card.appendChild(nm);
+      if(showValues){
+        var pv=document.createElement('div');
+        pv.className='podium-value';
+        pv.style.color=medalColor(st,rank);
+        pv.textContent=formatValue(item.value);
+        card.appendChild(pv);
+      }
+      var base=document.createElement('div');
+      base.className='podium-base';
+      base.style.background=medalColor(st,rank);
+      card.appendChild(base);
+      pa.appendChild(card);
+    }
+    for(var i=0;i<rest.length;i++){
+      var item2=rest[i];
+      var rank2=headCount+i+1;
+      var row=document.createElement('div');
+      row.className='list-row';
+      row.style.animationDuration=(anim/1600)+'s';
+      row.style.animationDelay=(delay+i*45)+'ms';
+      var rk=document.createElement('span');
+      rk.className='row-rank';
+      rk.textContent=String(rank2);
+      row.appendChild(rk);
+      var nm2=document.createElement('span');
+      nm2.className='row-name';
+      nm2.title=item2.name;nm2.textContent=item2.name;
+      row.appendChild(nm2);
+      if(showValues){
+        var vv=document.createElement('span');
+        vv.className='row-value';
+        vv.style.color=accent;
+        vv.textContent=formatValue(item2.value);
+        row.appendChild(vv);
+      }
+      la.appendChild(row);
+    }
+  }
+  function boot(){
+    if(host&&host.vsCv&&host.vsCv.mount){
+      host.vsCv.mount(function(p){render(p)});
+      return;
+    }
+    var n=host&&host.querySelector('.vs-cv-payload');
+    var p=null;
+    if(n&&n.textContent){try{p=JSON.parse(n.textContent)}catch(e){}}
+    render(p||{});
+  }
+  boot();
+})();
+</script>
+</body>
+</html>

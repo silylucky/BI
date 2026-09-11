@@ -1,0 +1,19 @@
+{
+  "startedAt": "2026-08-17T02:19:17+08:00",
+  "finishedAt": "2026-08-17T02:19:38+08:00",
+  "branch": "dev",
+  "commit": "d3318e60",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [scripts,deploy] 3f (+216/-0) @ 2026-08-17 02:19 +0800",
+  "messageBodyPreview": "Areas:\n  scripts/     2 files (+154/-0)\n  deploy/      1 files (+62/-0)",
+  "filesChanged": 3,
+  "insertions": 216,
+  "deletions": 0,
+  "topDirs": { "scripts": 2, "deploy": 1 },
+  "sampleFiles": [
+    "deploy/remote_apply.sh",
+    "scripts/deploy_dev.ps1",
+    "scripts/deploy_dev.sh"
+  ]
+}

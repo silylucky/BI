@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-03T17:14:19+08:00",
+  "finishedAt": "2026-08-03T17:14:28+08:00",
+  "branch": "dev",
+  "commit": "7c581d22",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,docs,tests,backend,+3] 25f (+396/-32) @ 2026-08-03 17:14 +0800",
+  "filesChanged": 25,
+  "insertions": 396,
+  "deletions": 32,
+  "topDirs": { "fe": 6, "docs": 6, "tests": 4, "backend": 4, ".cursor": 3, ".dev": 1, "_root": 1 },
+  "sampleFiles": [
+    "fe/src/lib/appBasePath.ts",
+    "backend/app/dashboard/export_render.py",
+    "tests/test_g5_live_export.py",
+    "docs/feature-truth/2026-08-03-report-center-g5-visual-pdf-truth-audit.md"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/"]
+}

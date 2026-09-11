@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice">
+  <g transform="scale(0.16666666666666666 0.16666666666666666)">
+  
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1920" y2="1080">
+      <stop stop-color="#041016"/>
+      <stop offset="0.5" stop-color="#064e3b"/>
+      <stop offset="1" stop-color="#022c22"/>
+    </linearGradient>
+    <pattern id="hex" width="56" height="48" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
+      <path d="M28 0 L56 14 L56 42 L28 56 L0 42 L0 14 Z" fill="none" stroke="#34d399" stroke-width="0.4" opacity="0.1"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#base)"/>
+  <rect width="1920" height="1080" fill="url(#hex)"/>
+
+  </g>
+</svg>

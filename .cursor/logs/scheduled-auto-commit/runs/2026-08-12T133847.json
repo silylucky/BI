@@ -1,0 +1,15 @@
+{
+  "startedAt": "2026-08-12T13:38:47+08:00",
+  "finishedAt": "2026-08-12T13:39:20+08:00",
+  "branch": "dev",
+  "outcome": "success",
+  "push": false,
+  "commit": "efde53e7",
+  "messageSubject": "wip: [docs,tests,fe,.cursor,+1] 20f (+266/-163) @ 2026-08-12 13:39 +0800",
+  "messageBodyPreview": "Dataset chart config migration: chart_view schema, global_filters test, FE testHelpers, docs sync",
+  "filesChanged": 20,
+  "insertions": 266,
+  "deletions": 163,
+  "topDirs": { "docs": 6, "tests": 6, "fe": 5, ".cursor": 2, "backend": 1 },
+  "tick": 409
+}

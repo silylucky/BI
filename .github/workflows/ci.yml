@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DATABASE_URL: postgresql+psycopg://vitalspan:vitalspan@localhost:5432/vitalspan
+      JWT_SM2_PRIVATE_KEY: 3DA75A807474C867E8E5C60B3E4E32DC8D319D4447B9594D394E6D3BD8778D1F
+      JWT_SM2_PUBLIC_KEY: 1AE135607AEEB4D7722756BC8C736C79DE6E72452E1CF4DC32448C7393B290B946D1A7D2614DA4814F7AEDAEB92741DB46775298CDFE3D832AD5A44572ADD899
+      CREDENTIAL_SM4_KEY: 0123456789abcdef0123456789abcdef
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install backend
+        run: pip install -e ".[dev,connectors-ext]"
+      - name: Ruff
+        run: ruff check .
+      - name: Pytest
+        run: pytest -v
+
+  persistence-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      VITALSPAN_TEST_FORCE_SQLITE: "1"
+      DATABASE_URL: sqlite+pysqlite:///:memory:
+      JWT_SM2_PRIVATE_KEY: 3DA75A807474C867E8E5C60B3E4E32DC8D319D4447B9594D394E6D3BD8778D1F
+      JWT_SM2_PUBLIC_KEY: 1AE135607AEEB4D7722756BC8C736C79DE6E72452E1CF4DC32448C7393B290B946D1A7D2614DA4814F7AEDAEB92741DB46775298CDFE3D832AD5A44572ADD899
+      CREDENTIAL_SM4_KEY: 0123456789abcdef0123456789abcdef
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install backend
+        run: pip install -e "backend/.[dev,connectors-ext]"
+      - name: Alembic persistence gate
+        run: |
+          python -m pytest tests/test_persistence_contract.py tests/test_persistence_roundtrip.py tests/test_entity_physical_persistence.py tests/test_migrations.py::test_revision_directory_single_head_chain tests/test_migrations.py::test_alembic_heads_single_head -v
+
+  frontend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: fe
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: pnpm
+          cache-dependency-path: fe/pnpm-lock.yaml
+      - name: Install frontend
+        run: pnpm install --frozen-lockfile
+      - name: Test
+        run: pnpm test
+      - name: Build
+        run: pnpm build
+      - name: Design check
+        run: pnpm run check:design

@@ -1,0 +1,19 @@
+{
+  "startedAt": "2026-08-03T15:14:21+08:00",
+  "finishedAt": "2026-08-03T15:14:29+08:00",
+  "branch": "dev",
+  "commit": "323d10c2",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,.cursor] 6f (+91/-6) @ 2026-08-03 15:14 +0800",
+  "filesChanged": 6,
+  "insertions": 91,
+  "deletions": 6,
+  "topDirs": { "fe": 3, ".cursor": 3 },
+  "sampleFiles": [
+    "fe/src/lib/api.ts",
+    "fe/src/lib/api.test.ts",
+    "fe/src/pages/admin/ingestion/SyncJobHistoryPage.tsx"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/"]
+}

@@ -1,0 +1,25 @@
+wip: [fe,tests,backend] 14f (+537/-193) @ 2026-08-05 19:19 +0800
+
+Areas:
+  fe/          10 files (+415/-189)
+  tests/       2 files (+59/-4)
+  backend/     2 files (+63/-0)
+
+Changed (up to 25):
+M  backend/app/api/v1/ingestion/sync.py
+M  backend/app/ingestion/etl_rules.py
+M  fe/src/components/charts/engine/d3/radial/pieLabels.test.ts
+M  fe/src/components/charts/engine/d3/radial/pieLabels.ts
+M  fe/src/components/charts/engine/d3/radial/pieLayout.ts
+M  fe/src/components/charts/engine/d3/radial/renderPie.ts
+M  fe/src/pages/admin/ingestion/EtlRulesPage.tsx
+M  fe/src/pages/admin/ingestion/components/EtlRulesEditor.tsx
+M  fe/src/pages/admin/ingestion/components/SyncConsumeActionCard.tsx
+M  fe/src/pages/admin/ingestion/etlRuleSuggest.test.ts
+M  fe/src/pages/admin/ingestion/etlRuleSuggest.ts
+M  fe/src/pages/admin/ingestion/ingestion.smoke.test.tsx
+M  tests/test_etl_rules.py
+M  tests/test_ingestion_api.py
+
+stat: 14 files changed, 537 insertions(+), 193 deletions(-)
+branch: dev | scheduled-auto-commit

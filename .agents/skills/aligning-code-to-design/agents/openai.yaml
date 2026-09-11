@@ -1,0 +1,4 @@
+interface:
+  display_name: "设计对齐闭环"
+  short_description: "将已确认设计转为可追踪的审计、修复、测试与独立验收闭环"
+  default_prompt: "使用 $aligning-code-to-design 将已确认设计与当前仓库逐项对齐，并只依据可复验证据报告完成状态。"

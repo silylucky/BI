@@ -1,0 +1,38 @@
+wip: [fe,backend,tests,.cursor] 32f (+661/-67) @ 2026-08-05 10:49 +0800
+
+Areas:
+  fe/          24 files (+621/-59)
+  backend/     6 files (+36/-3)
+  tests/       1 files (+1/-1)
+  .cursor/     1 files (+3/-4)
+
+Changed (up to 25):
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/ingestion/scheduler.py
+M  backend/app/ingestion/sync_write.py
+M  backend/app/metadata/dataset/models.py
+M  backend/app/metadata/dataset/schemas.py
+M  backend/app/metadata/dataset/service.py
+A  backend/migrations/versions/0035_dataset_table_source_datasource.py
+M  fe/package.json
+A  fe/src/components/charts/chartCatalogFieldRuleWaivers.ts
+M  fe/src/components/charts/chartCatalogFieldRules.test.ts
+M  fe/src/components/charts/chartCatalogPlanAssertions.ts
+M  fe/src/components/charts/charts.smoke.test.tsx
+A  fe/src/components/charts/engine/antv/spec/encodeNonCartesian.test.ts
+M  fe/src/components/charts/engine/d3/core/axes.ts
+M  fe/src/components/charts/engine/d3/core/sceneGraph.ts
+A  fe/src/components/dashboard/ChartDataSlots.deParity.test.tsx
+M  fe/src/components/dashboard/ChartDataSlots.tsx
+A  fe/src/components/dashboard/chartFieldSlots.catalogGolden.test.ts
+M  fe/src/components/dashboard/chartFieldSlots.test.ts
+M  fe/src/components/dashboard/chartStyleSections/ChartCartesianStyleSections.tsx
+M  fe/src/components/dashboard/datasetFieldClassification.test.ts
+M  fe/src/components/dashboard/datasetFieldClassification.ts
+M  fe/src/components/dashboard/useChartInspectorState.ts
+M  fe/src/lib/chartExecuteProbe.ts
+M  fe/src/lib/datasetChartBinding.ts
+... and 7 more
+
+stat: 32 files changed, 661 insertions(+), 67 deletions(-)
+branch: dev | scheduled-auto-commit

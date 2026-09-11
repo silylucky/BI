@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-04T16:18:16+08:00",
+  "finishedAt": "2026-08-04T16:18:38+08:00",
+  "branch": "dev",
+  "commit": "90c0bc38",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [backend,fe,.cursor,tests] 20f (+526/-107) @ 2026-08-04 16:18 +0800",
+  "filesChanged": 20,
+  "insertions": 526,
+  "deletions": 107,
+  "topDirs": { "backend": 9, "fe": 7, ".cursor": 3, "tests": 1 },
+  "sampleFiles": [
+    "backend/app/dashboard/export_persistence.py",
+    "backend/migrations/versions/0033_dataset_sync_lineage.py",
+    "fe/src/lib/listPreviewActivation.ts",
+    "fe/src/pages/admin/viz-components/VizComponentsHubPage.tsx"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/", "data/artifacts/", "fe/.env.production.local"]
+}

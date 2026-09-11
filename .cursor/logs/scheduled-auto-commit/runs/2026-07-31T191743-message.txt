@@ -1,0 +1,39 @@
+wip: [fe,backend,docs,tests,+1] 134f (+2638/-1254) @ 2026-07-31 19:17...
+
+Areas:
+  fe/          118 files (+1991/-1041)
+  backend/     6 files (+145/-146)
+  docs/        4 files (+336/-4)
+  tests/       3 files (+57/-7)
+  .cursor/     3 files (+65/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T184743-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T184743.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/ingestion/sync.py
+M  backend/app/api/v1/roles.py
+M  backend/app/auth/roles/service.py
+M  backend/app/dashboard/templates/presets_gov_assets.py
+M  backend/app/dashboard/templates/presets_gov_theme.py
+M  backend/app/dashboard/templates/seed.py
+M  docs/api/README.md
+A  docs/material/product-reviewer/2026-07-31-ingestion-sync-jobs.md
+A  docs/material/product-reviewer/2026-07-31-system-admin-r3.md
+M  docs/services/datasources.md
+M  fe/public/template-assets/packs/gov-enterprise-v1/README.md
+M  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/light/canvas-light-cloud-card-float.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/light/canvas-light-cloud-clean-header.svg
+M  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/light/canvas-light-cloud-corner-fold.svg
+M  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/light/canvas-light-cloud-dot-matrix.svg
+M  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/light/canvas-light-cloud-header-band.svg
+M  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/light/canvas-light-cloud-ribbon.svg
+M  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/light/canvas-light-cloud-watermark.svg
+M  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/light/canvas-light-frost-card-float.svg
+A  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/light/canvas-light-frost-clean-header.svg
+M  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/light/canvas-light-frost-corner-fold.svg
+M  fe/public/template-assets/packs/gov-enterprise-v1/backgrounds/light/canvas-light-frost-dot-matrix.svg
+... and 109 more
+
+stat: 135 files changed, 2638 insertions(+), 1254 deletions(-)
+branch: dev | scheduled-auto-commit

@@ -1,0 +1,26 @@
+wip: [fe,backend,docs,.cursor] 14f (+746/-21) @ 2026-08-07 00:53 +0800
+
+Areas:
+  fe/          8 files (+293/-7)
+  backend/     3 files (+159/-1)
+  docs/        2 files (+291/-6)
+  .cursor/     1 files (+3/-7)
+
+Changed (up to 25):
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/views/models.py
+A  backend/app/views/user_override_repo.py
+A  backend/migrations/versions/0038_view_user_override_persistence.py
+A  docs/feature-truth/2026-08-07-system-admin-truth-audit.md
+M  docs/material/product-reviewer/2026-07-31-system-admin-r3.md
+M  fe/src/pages/admin/system/SystemAdminHomePage.tsx
+M  fe/src/pages/admin/system/audit/audit.smoke.test.tsx
+M  fe/src/pages/admin/system/grants/grants.smoke.test.tsx
+M  fe/src/pages/admin/system/orgs/orgs.smoke.test.tsx
+M  fe/src/pages/admin/system/rls/RlsRoleBindingPanel.smoke.test.tsx
+M  fe/src/pages/admin/system/roles/roles.smoke.test.tsx
+M  fe/src/pages/admin/system/system-admin.smoke.test.tsx
+M  fe/src/pages/admin/system/users/users.smoke.test.tsx
+
+stat: 14 files changed, 746 insertions(+), 21 deletions(-)
+branch: dev | scheduled-auto-commit

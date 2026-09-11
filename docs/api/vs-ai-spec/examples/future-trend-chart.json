@@ -1,0 +1,181 @@
+{
+  "manifest": {
+    "id": "future-trend-chart",
+    "displayName": "未来趋势图",
+    "version": "1.2.3",
+    "entry": "index.html",
+    "runtime": "html",
+    "rendererHint": "canvas",
+    "fieldSlots": {
+      "dimensions": {
+        "min": 1,
+        "max": 1,
+        "label": "时间维度",
+        "expect": "date"
+      },
+      "metrics": {
+        "min": 1,
+        "max": 3,
+        "label": "数值指标"
+      }
+    },
+    "styleSchema": {
+      "type": "object",
+      "x-styleSections": [
+        {
+          "title": "图表布局",
+          "properties": [
+            "chartPaddingTop",
+            "chartPaddingBottom",
+            "chartPaddingLeft",
+            "chartPaddingRight",
+            "labelShow",
+            "labelFontSize",
+            "tooltipFontSize"
+          ]
+        }
+      ],
+      "properties": {
+        "accentColor": {
+          "type": "string",
+          "format": "color",
+          "title": "主题色",
+          "default": "#00d4ff"
+        },
+        "secondaryColor": {
+          "type": "string",
+          "format": "color",
+          "title": "辅助色",
+          "default": "#7c3aed"
+        },
+        "lineWidth": {
+          "type": "number",
+          "title": "线条粗细",
+          "minimum": 1,
+          "maximum": 8,
+          "default": 3
+        },
+        "glowIntensity": {
+          "type": "number",
+          "title": "发光强度",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.8
+        },
+        "showArea": {
+          "type": "boolean",
+          "title": "显示面积填充",
+          "default": true
+        },
+        "showParticles": {
+          "type": "boolean",
+          "title": "显示粒子效果",
+          "default": true
+        },
+        "showGrid": {
+          "type": "boolean",
+          "title": "显示网格背景",
+          "default": true
+        },
+        "showScanLine": {
+          "type": "boolean",
+          "title": "显示扫描线",
+          "default": true
+        },
+        "pointSize": {
+          "type": "number",
+          "title": "数据点大小",
+          "minimum": 0,
+          "maximum": 16,
+          "default": 6
+        },
+        "animationDuration": {
+          "type": "number",
+          "title": "动画时长(ms)",
+          "minimum": 500,
+          "maximum": 5000,
+          "default": 2000
+        },
+        "curveType": {
+          "type": "string",
+          "title": "曲线类型",
+          "enum": [
+            "smooth",
+            "straight"
+          ],
+          "default": "smooth"
+        },
+        "chartPaddingTop": {
+          "type": "number",
+          "title": "上边距",
+          "minimum": 0,
+          "maximum": 80,
+          "default": 30
+        },
+        "chartPaddingBottom": {
+          "type": "number",
+          "title": "下边距",
+          "minimum": 0,
+          "maximum": 80,
+          "default": 45
+        },
+        "chartPaddingLeft": {
+          "type": "number",
+          "title": "左边距",
+          "minimum": 0,
+          "maximum": 100,
+          "default": 55
+        },
+        "chartPaddingRight": {
+          "type": "number",
+          "title": "右边距",
+          "minimum": 0,
+          "maximum": 80,
+          "default": 40
+        },
+        "labelShow": {
+          "type": "boolean",
+          "title": "显示轴标签",
+          "default": true
+        },
+        "labelFontSize": {
+          "type": "number",
+          "title": "轴标签字号",
+          "minimum": 8,
+          "maximum": 16,
+          "default": 11
+        },
+        "tooltipFontSize": {
+          "type": "number",
+          "title": "提示框字号",
+          "minimum": 10,
+          "maximum": 18,
+          "default": 12
+        }
+      }
+    },
+    "defaultStyle": {
+      "accentColor": "#00d4ff",
+      "secondaryColor": "#7c3aed",
+      "lineWidth": 3,
+      "glowIntensity": 0.8,
+      "showArea": true,
+      "showParticles": true,
+      "showGrid": true,
+      "showScanLine": true,
+      "pointSize": 6,
+      "animationDuration": 2000,
+      "curveType": "smooth",
+      "chartPaddingTop": 30,
+      "chartPaddingBottom": 45,
+      "chartPaddingLeft": 55,
+      "chartPaddingRight": 40,
+      "labelShow": true,
+      "labelFontSize": 11,
+      "tooltipFontSize": 12
+    }
+  },
+  "files": {
+    "index.html": "<!DOCTYPE html><html lang=\"zh-CN\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\"><style>*{margin:0;padding:0;box-sizing:border-box}html,body{height:100%;overflow:hidden;background:transparent;color:var(--dashboard-text-primary,#e2e8f0);font-family:system-ui,-apple-system,sans-serif}#container{width:100%;height:100%;position:relative}canvas{display:block;width:100%;height:100%}#tooltip{position:absolute;padding:8px 12px;pointer-events:none;opacity:0;transition:opacity .15s;z-index:100;background:var(--vs-tt-bg,rgba(15,23,42,.95));color:var(--vs-tt-color,var(--dashboard-text-primary,#e2e8f0));border:1px solid var(--dashboard-widget-border,#334155);border-radius:6px;font-size:calc(var(--vs-tt-fs,12)*1px);box-shadow:0 4px 12px rgba(0,0,0,.25)}#tooltip .tt-value{font-size:calc(var(--vs-tt-fs,12)*1.4px);font-weight:700;margin-bottom:2px;color:var(--vs-tt-color,var(--dashboard-text-primary,#e2e8f0))}#tooltip .tt-label{font-size:calc(var(--vs-tt-fs,12)*1px);opacity:.75;color:var(--dashboard-text-secondary,#94a3b8)}#tooltip.show{opacity:1}</style></head><body><div id=\"container\"><canvas id=\"cv\"></canvas><div id=\"tooltip\"><div class=\"tt-value\"></div><div class=\"tt-label\"></div></div></div><script>(function(){var host=document.currentScript&&document.currentScript.parentElement;var DEFAULTS={accentColor:\"#00d4ff\",secondaryColor:\"#7c3aed\",lineWidth:3,glowIntensity:.8,showArea:true,showParticles:true,showGrid:true,showScanLine:true,pointSize:6,animationDuration:2000,curveType:\"smooth\",chartPaddingTop:30,chartPaddingRight:40,chartPaddingBottom:45,chartPaddingLeft:55,labelFontSize:11,labelShow:true,tooltipFontSize:12};var STYLE=DEFAULTS,PAYLOAD=null,DATA=[],animProgress=0,entranceAnimId=null,ambientAnimId=null,animStart=0,hoverIdx=-1,particles=[],scanLineTime=0;var canvas,ctx,container,tooltip,ttValue,ttLabel,dpr=1,W=0,H=0;var padding={top:30,right:40,bottom:45,left:55},chartW=0,chartH=0,chartX=0,chartY=0,initialized=false;function $$(id){return document.getElementById(id)}function hostVar(name,fallback){if(!host)return fallback;var v=getComputedStyle(host).getPropertyValue(name).trim();return v||fallback;}function readPayload(){if(host&&host.vsCv&&host.vsCv.getPayload){var p=host.vsCv.getPayload();return p||null;}var n=(host||document).querySelector(\".vs-cv-payload\");if(!n||!n.textContent)return null;try{return JSON.parse(n.textContent)}catch(e){return null}}function resolveStyle(p){var st=(p&&p.style)||{};var out={};for(var k in DEFAULTS)out[k]=st[k]!=null?st[k]:DEFAULTS[k];var palette=[];if(Array.isArray(st.paletteColors))palette=st.paletteColors.slice();else for(var i=0;i<8;i++){var c=hostVar(\"--vs-palette-\"+i,\"\");if(c)palette.push(c)}if(palette[0]&&!st.accentColor)out.accentColor=palette[0];if(palette[1]&&!st.secondaryColor)out.secondaryColor=palette[1];out._palette=palette;out._labelShow=out.labelShow!==false;out._labelColor=st.labelColor||hostVar(\"--dashboard-text-secondary\",\"#94a3b8\");out._labelFontSize=Number(out.labelFontSize)||11;out._gridColor=hostVar(\"--dashboard-chart-grid\",\"#334155\");out._textPrimary=st.labelColor||hostVar(\"--dashboard-text-primary\",\"#e2e8f0\");out._tooltipShow=st.tooltipShow!==false;out._tooltipColor=st.tooltipColor||hostVar(\"--dashboard-text-primary\",\"#e2e8f0\");out._tooltipBg=st.tooltipBackground||hostVar(\"--dashboard-widget-surface\",\"rgba(15,23,42,0.95)\");out._tooltipFontSize=Number(out.tooltipFontSize)||12;return out;}function applyTooltipStyle(){if(!tooltip)return;tooltip.style.setProperty(\"--vs-tt-bg\",STYLE._tooltipBg);tooltip.style.setProperty(\"--vs-tt-color\",STYLE._tooltipColor);tooltip.style.setProperty(\"--vs-tt-fs\",String(STYLE._tooltipFontSize));tooltip.style.display=STYLE._tooltipShow?\"\":\"none\";}function parsePayload(payload){var helpers=host&&host.vsCv&&host.vsCv.helpers;if(helpers&&helpers.parseCategorySeries){var parsed=helpers.parseCategorySeries(payload,3);if(!parsed||!parsed.points.length)return [];return parsed.points.map(function(p){return{time:p.category,values:p.values,index:p.sourceIndex}});}if(!payload||!payload.rows||!payload.rows.length)return[];var cols=payload.columns||[];if(cols.length<2)return[];var dimIdx=0,metricIdxs=[];for(var c=1;c<cols.length&&metricIdxs.length<3;c++)metricIdxs.push(c);var DATE=/^(?:\\d{4}[-/]\\d{1,2}[-/]\\d{1,2})/;function sortKey(v){var s=String(v??\"\");if(DATE.test(s)){var t=Date.parse(s);if(!isNaN(t))return t}return null}var data=[];for(var i=0;i<payload.rows.length;i++){var row=payload.rows[i],values=[];for(var mi=0;mi<metricIdxs.length;mi++){var raw=row[metricIdxs[mi]],num=raw==null||raw===\"\"?NaN:Number(raw);values.push(isNaN(num)?null:num)}if(values.some(function(v){return v!=null}))data.push({time:String(row[dimIdx]??\"\"),values:values,index:i,sortKey:sortKey(row[dimIdx])});}data.sort(function(a,b){if(a.sortKey!=null&&b.sortKey!=null)return a.sortKey-b.sortKey;if(a.sortKey!=null)return -1;if(b.sortKey!=null)return 1;return a.index-b.index});return data;}function hexToRgba(hex,a){if(!hex||hex.charAt(0)!==\"#\")return\"rgba(148,163,184,\"+a+\")\";var h=hex.length===4?(\"#\"+hex[1]+hex[1]+hex[2]+hex[2]+hex[3]+hex[3]):hex;var r=parseInt(h.slice(1,3),16),g=parseInt(h.slice(3,5),16),b=parseInt(h.slice(5,7),16);return\"rgba(\"+r+\",\"+g+\",\"+b+\",\"+a+\")\";}function lerpColor(c1,c2,t){var p=function(c){return[parseInt(c.slice(1,3),16),parseInt(c.slice(3,5),16),parseInt(c.slice(5,7),16)]};var a=p(c1),b=p(c2);return\"#\"+[0,1,2].map(function(i){return(\"0\"+Math.round(a[i]+(b[i]-a[i])*t).toString(16)).slice(-2)}).join(\"\");}function metricColor(idx){if(STYLE._palette&&STYLE._palette[idx])return STYLE._palette[idx];if(idx===0)return STYLE.accentColor;if(idx===1)return STYLE.secondaryColor;return lerpColor(STYLE.accentColor,STYLE.secondaryColor,.5);}function formatMetric(v){var helpers=host&&host.vsCv&&host.vsCv.helpers;if(helpers&&helpers.formatMetricCompact)return helpers.formatMetricCompact(v);if(v==null||isNaN(v))return \"\";if(v>=1e6)return (v/1e6).toFixed(1)+\"M\";if(v>=1e3)return (v/1e3).toFixed(1)+\"K\";return v%1===0?String(v):v.toFixed(1);}function placeTooltip(clientX,clientY){var helpers=host&&host.vsCv&&host.vsCv.helpers;if(helpers&&helpers.placeTooltipNearPointer&&container&&tooltip){helpers.placeTooltipNearPointer(container,tooltip,clientX,clientY);return;}var cRect=container.getBoundingClientRect();var lx=clientX-cRect.left,ly=clientY-cRect.top;var tw=tooltip.offsetWidth||140,th=tooltip.offsetHeight||52;var left=Math.min(Math.max(lx+12,8),Math.max(8,W-tw-8));var top=Math.min(Math.max(ly-th-12,8),Math.max(8,H-th-8));tooltip.style.left=left+\"px\";tooltip.style.top=top+\"px\";}function syncChartPadding(){padding.top=Number(STYLE.chartPaddingTop)||0;padding.right=Number(STYLE.chartPaddingRight)||0;padding.bottom=Number(STYLE.chartPaddingBottom)||0;padding.left=Number(STYLE.chartPaddingLeft)||0;}function resize(){dpr=window.devicePixelRatio||1;var c=$$(\"container\");W=c.clientWidth;H=c.clientHeight;canvas.width=W*dpr;canvas.height=H*dpr;canvas.style.width=W+\"px\";canvas.style.height=H+\"px\";ctx.setTransform(dpr,0,0,dpr,0,0);syncChartPadding();chartX=padding.left;chartY=padding.top;chartW=Math.max(0,W-padding.left-padding.right);chartH=Math.max(0,H-padding.top-padding.bottom);}function calcDataRange(metricIdx){if(!DATA.length)return{min:0,max:100};var all=[];for(var i=0;i<DATA.length;i++){var v=DATA[i].values[metricIdx];if(v!=null)all.push(v)}if(!all.length)return{min:0,max:100};var min=Math.min.apply(null,all),max=Math.max.apply(null,all),range=max-min;if(range===0){min-=10;max+=10}else{min-=range*.1;max+=range*.1}return{min:Math.max(0,min),max:max};}function mapX(idx,total){return total<=1?chartX+chartW/2:chartX+(idx/(total-1))*chartW}function mapY(value,range){return chartY+chartH-((value-range.min)/(range.max-range.min))*chartH}function catmullRom2bezier(pts){var result=[];for(var i=0;i<pts.length-1;i++){var p0=pts[i===0?0:i-1],p1=pts[i],p2=pts[i+1],p3=pts[i+2]||p2;result.push({cp1:{x:p1.x+(p2.x-p0.x)/6,y:p1.y+(p2.y-p0.y)/6},cp2:{x:p2.x-(p3.x-p1.x)/6,y:p2.y-(p3.y-p1.y)/6},end:{x:p2.x,y:p2.y}});}return result;}function strokePath(linePts){ctx.beginPath();ctx.moveTo(linePts[0].x,linePts[0].y);if(STYLE.curveType===\"smooth\"){var b=catmullRom2bezier(linePts);for(var i=0;i<b.length;i++)ctx.bezierCurveTo(b[i].cp1.x,b[i].cp1.y,b[i].cp2.x,b[i].cp2.y,b[i].end.x,b[i].end.y)}else for(var j=1;j<linePts.length;j++)ctx.lineTo(linePts[j].x,linePts[j].y);}function drawGrid(){if(!STYLE.showGrid)return;ctx.strokeStyle=hexToRgba(STYLE.accentColor,.08);ctx.lineWidth=.5;var gridSize=40;ctx.beginPath();for(var x=chartX;x<=chartX+chartW;x+=gridSize){ctx.moveTo(x,chartY);ctx.lineTo(x,chartY+chartH)}for(var y=chartY;y<=chartY+chartH;y+=gridSize){ctx.moveTo(chartX,y);ctx.lineTo(chartX+chartW,y)}ctx.stroke();ctx.strokeStyle=hexToRgba(STYLE._gridColor,.5);ctx.strokeRect(chartX,chartY,chartW,chartH);}function drawScanLine(){if(!STYLE.showScanLine||!DATA.length)return;scanLineTime+=.6;if(scanLineTime>chartH+100)scanLineTime=-20;var y=chartY+(scanLineTime%(chartH+120))-20;if(y<chartY||y>chartY+chartH)return;var g=ctx.createLinearGradient(0,y-4,0,y+4);g.addColorStop(0,hexToRgba(STYLE.accentColor,0));g.addColorStop(.5,hexToRgba(STYLE.accentColor,.12));g.addColorStop(1,hexToRgba(STYLE.accentColor,0));ctx.fillStyle=g;ctx.fillRect(chartX,y-4,chartW,8);}function drawGlowLine(linePts,color){if(linePts.length<2)return;var lw=STYLE.lineWidth,alpha=STYLE.glowIntensity;for(var layer=0;layer<3;layer++){ctx.strokeStyle=hexToRgba(color,alpha*(.15/(layer+1)));ctx.lineWidth=lw+layer*6;ctx.lineCap=\"round\";ctx.lineJoin=\"round\";strokePath(linePts);ctx.stroke();}ctx.strokeStyle=color;ctx.lineWidth=Math.max(1.5,lw);ctx.lineCap=\"round\";ctx.lineJoin=\"round\";strokePath(linePts);ctx.stroke();}function drawArea(linePts,color){if(!STYLE.showArea||linePts.length<2)return;var g=ctx.createLinearGradient(0,chartY,0,chartY+chartH);g.addColorStop(0,hexToRgba(color,.25*STYLE.glowIntensity));g.addColorStop(.5,hexToRgba(color,.08*STYLE.glowIntensity));g.addColorStop(1,hexToRgba(color,0));ctx.fillStyle=g;ctx.beginPath();ctx.moveTo(linePts[0].x,chartY+chartH);ctx.lineTo(linePts[0].x,linePts[0].y);if(STYLE.curveType===\"smooth\"){var b=catmullRom2bezier(linePts);for(var i=0;i<b.length;i++)ctx.bezierCurveTo(b[i].cp1.x,b[i].cp1.y,b[i].cp2.x,b[i].cp2.y,b[i].end.x,b[i].end.y)}else for(var j=1;j<linePts.length;j++)ctx.lineTo(linePts[j].x,linePts[j].y);ctx.lineTo(linePts[linePts.length-1].x,chartY+chartH);ctx.closePath();ctx.fill();}function drawPoints(linePts,color){var ps=STYLE.pointSize;if(ps<=0)return;for(var i=0;i<linePts.length;i++){var p=linePts[i],size=i===hoverIdx?ps*1.8:ps;ctx.beginPath();ctx.arc(p.x,p.y,size,0,Math.PI*2);ctx.fillStyle=STYLE._textPrimary;ctx.fill();ctx.strokeStyle=color;ctx.lineWidth=1.5;ctx.stroke();}}function genParticles(linePts){if(!STYLE.showParticles)return;var count=Math.floor(linePts.length*4),c0=metricColor(0);while(particles.length<count)particles.push({x:linePts[0].x,y:linePts[0].y,r:1+Math.random()*2,a:.5,life:.5+Math.random()*.5,age:Math.random()});if(particles.length>count)particles=particles.slice(0,count);for(var i=0;i<particles.length;i++){var pt=particles[i];pt.age+=.008;if(pt.age>=pt.life){pt.age=0;var lp=linePts[Math.floor(Math.random()*linePts.length)];pt.x=lp.x+(Math.random()-.5)*30;pt.y=lp.y+(Math.random()-.5)*30}ctx.beginPath();ctx.arc(pt.x,pt.y,pt.r,0,Math.PI*2);ctx.fillStyle=hexToRgba(c0,pt.a*STYLE.glowIntensity*.7);ctx.fill();}}function drawAxisLabels(range){if(!STYLE._labelShow)return;ctx.fillStyle=STYLE._labelColor;ctx.font=STYLE._labelFontSize+\"px system-ui,sans-serif\";ctx.textAlign=\"right\";ctx.textBaseline=\"middle\";for(var i=0;i<=5;i++){var value=range.max-(i/5)*(range.max-range.min),y=chartY+(i/5)*chartH;var label=value>=1e6?(value/1e6).toFixed(1)+\"M\":value>=1e3?(value/1e3).toFixed(1)+\"K\":value.toFixed(0);ctx.fillText(label,chartX-10,y);ctx.strokeStyle=hexToRgba(STYLE._gridColor,.35);ctx.beginPath();ctx.moveTo(chartX,y);ctx.lineTo(chartX+chartW,y);ctx.stroke();}if(!DATA.length)return;ctx.textAlign=\"center\";ctx.textBaseline=\"top\";var step=Math.max(1,Math.ceil(DATA.length/8));for(var j=0;j<DATA.length;j+=step){var lbl=String(DATA[j].time);if(lbl.length>8)lbl=lbl.slice(0,7)+\"…\";ctx.fillText(lbl,mapX(j,DATA.length),chartY+chartH+10);}}function drawEndpointLabel(linePts,color){if(!STYLE._labelShow||linePts.length<2)return;var last=linePts[linePts.length-1],val=DATA[DATA.length-1].values[0];var text=val>=1e6?(val/1e6).toFixed(1)+\"M\":val>=1e3?(val/1e3).toFixed(1)+\"K\":String(Math.round(val));ctx.font=\"bold \"+STYLE._labelFontSize+\"px system-ui,sans-serif\";ctx.fillStyle=STYLE._textPrimary;ctx.textAlign=\"left\";ctx.textBaseline=\"middle\";ctx.fillText(text,last.x+10,last.y);}function drawEmpty(msg){ctx.fillStyle=STYLE._labelColor||hostVar(\"--dashboard-text-muted\",\"#64748b\");ctx.font=\"14px system-ui,sans-serif\";ctx.textAlign=\"center\";ctx.textBaseline=\"middle\";ctx.fillText(msg||\"请在右侧绑定数据集\",W/2,H/2);}function renderFrame(){ctx.clearRect(0,0,W,H);if(!DATA.length){drawEmpty(PAYLOAD&&PAYLOAD.bindingStatus===\"unbound\"?\"请绑定时间维度与指标\":null);return}drawGrid();for(var m=0;m<DATA[0].values.length;m++){var range=calcDataRange(m),color=metricColor(m),linePts=[],visible=[];for(var i=0;i<DATA.length;i++)linePts.push({x:mapX(i,DATA.length),y:mapY(DATA[i].values[m],range)});var limit=animProgress*DATA.length;for(var k=0;k<linePts.length;k++){if(k<limit){var baseY=chartY+chartH,t=Math.min(1,limit-k);visible.push({x:linePts[k].x,y:baseY+(linePts[k].y-baseY)*Math.max(0,t)})}}if(visible.length>=2){drawArea(visible,color);drawGlowLine(visible,color)}if(visible.length>=1){drawPoints(visible,color);if(m===0)drawEndpointLabel(visible,color)}if(m===0&&visible.length>=2)genParticles(visible);}drawScanLine();drawAxisLabels(calcDataRange(0));}function needsAmbientLoop(){return DATA.length>0&&(STYLE.showScanLine||STYLE.showParticles);}function stopAllAnimations(){if(entranceAnimId){cancelAnimationFrame(entranceAnimId);entranceAnimId=null;}if(ambientAnimId){cancelAnimationFrame(ambientAnimId);ambientAnimId=null;}}function startAmbientLoop(){if(ambientAnimId||!needsAmbientLoop())return;function loop(){renderFrame();ambientAnimId=requestAnimationFrame(loop);}ambientAnimId=requestAnimationFrame(loop);}function animateEntrance(now){if(!animStart)animStart=now;var dur=STYLE.animationDuration||2000,elapsed=now-animStart;animProgress=1-Math.pow(1-Math.min(1,elapsed/dur),3);renderFrame();if(animProgress<1){entranceAnimId=requestAnimationFrame(animateEntrance);}else{entranceAnimId=null;animProgress=1;renderFrame();startAmbientLoop();}}function restartAnimation(){stopAllAnimations();animStart=0;animProgress=0;particles=[];scanLineTime=0;if(!DATA.length){renderFrame();return;}entranceAnimId=requestAnimationFrame(animateEntrance);}function onMouseMove(e){if(!DATA.length||!STYLE._tooltipShow||animProgress<0.98)return;var rect=canvas.getBoundingClientRect(),mx=e.clientX-rect.left,my=e.clientY-rect.top;var helpers=host&&host.vsCv&&host.vsCv.helpers,pick=helpers&&helpers.pickNearestPoint?helpers.pickNearestPoint:null;var closest=-1,distMin=36;for(var m=0;m<(DATA[0].values.length||1);m++){var range=calcDataRange(m),candidates=[];for(var i=0;i<DATA.length;i++){if(DATA[i].values[m]==null)continue;candidates.push({x:mapX(i,DATA.length),y:mapY(DATA[i].values[m],range),idx:i});}if(pick&&candidates.length){var near=pick(mx,my,candidates,distMin);if(near>=0){closest=candidates[near].idx;break}}else{for(var j=0;j<candidates.length;j++){var d=Math.hypot(mx-candidates[j].x,my-candidates[j].y);if(d<distMin){distMin=d;closest=candidates[j].idx}}if(closest>=0)break;}}if(closest!==hoverIdx){hoverIdx=closest;renderFrame()}if(closest>=0){var d=DATA[closest],parts=[];for(var j=0;j<d.values.length;j++){if(d.values[j]!=null)parts.push(formatMetric(d.values[j]))}ttValue.textContent=parts.join(\" · \");ttLabel.textContent=String(d.time);placeTooltip(e.clientX,e.clientY);tooltip.classList.add(\"show\");}else tooltip.classList.remove(\"show\");}function setupOnce(){if(initialized)return;initialized=true;canvas=$$(\"cv\");ctx=canvas.getContext(\"2d\");container=$$(\"container\");tooltip=$$(\"tooltip\");ttValue=tooltip.querySelector(\".tt-value\");ttLabel=tooltip.querySelector(\".tt-label\");canvas.addEventListener(\"mousemove\",onMouseMove);canvas.addEventListener(\"mouseleave\",function(){hoverIdx=-1;tooltip.classList.remove(\"show\");renderFrame()});window.addEventListener(\"resize\",function(){resize();restartAnimation()});}function renderFromPayload(p){PAYLOAD=p||readPayload();STYLE=resolveStyle(PAYLOAD);applyTooltipStyle();setupOnce();resize();DATA=PAYLOAD&&PAYLOAD.rows&&PAYLOAD.rows.length?parsePayload(PAYLOAD):[];restartAnimation();}if(host&&host.vsCv&&host.vsCv.mount){host.vsCv.mount(function(p){renderFromPayload(p||readPayload())});}else{renderFromPayload(readPayload());}})();</script></body></html>"
+  }
+}

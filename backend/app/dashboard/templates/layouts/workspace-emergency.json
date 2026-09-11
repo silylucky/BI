@@ -1,0 +1,1103 @@
+{
+  "name": "应急指挥调度中心",
+  "slug": "workspace-gov-emergency-command",
+  "surfaceKind": "data-screen",
+  "layoutJson": {
+    "version": 2,
+    "canvas": {
+      "width": 1920,
+      "height": 1080
+    },
+    "widgets": [
+      {
+        "id": "2e3eced4-fb3a-475e-960a-070d5471d885",
+        "type": "text",
+        "title": "数据大屏标题",
+        "x": 52,
+        "y": 10,
+        "width": 1828,
+        "height": 109,
+        "order": 0,
+        "hidden": null,
+        "locked": null,
+        "chartRef": null,
+        "parentTabsId": null,
+        "tabPaneId": null,
+        "chartConfig": null,
+        "filterConfig": null,
+        "textConfig": {
+          "content": "<p style=\"text-align: center\"><span style=\"font-size: 48px; line-height: 1.4; font-family: SimSun, serif\">应急指挥调度中心</span></p>",
+          "variant": "html",
+          "datasetId": null,
+          "dimensionField": null,
+          "metricField": null,
+          "screenStyle": null,
+          "widgetStyle": {
+            "background": null,
+            "backgroundImage": "/template-assets/packs/gov-enterprise-v1/screen-headers/screen-header-de-circuit-sym-cyan.svg",
+            "backgroundShow": true,
+            "backgroundMode": "image",
+            "framePresetId": null,
+            "frameColor": null,
+            "frameOpacity": null,
+            "opacity": null,
+            "backgroundImageOpacity": 1.0,
+            "backgroundImageFit": "widthFit",
+            "backgroundImagePosition": "center",
+            "backdropBlur": null,
+            "borderRadius": null,
+            "borderRadiusTopLeft": null,
+            "borderRadiusTopRight": null,
+            "borderRadiusBottomLeft": null,
+            "borderRadiusBottomRight": null,
+            "radiusMode": null,
+            "padding": null,
+            "paddingTop": null,
+            "paddingRight": null,
+            "paddingBottom": null,
+            "paddingLeft": null,
+            "paddingMode": null,
+            "borderColor": null,
+            "borderWidth": null,
+            "borderStyle": null,
+            "borderEnabled": null
+          }
+        },
+        "mediaConfig": null,
+        "tabsConfig": null,
+        "customVizConfig": null,
+        "componentRef": null
+      },
+      {
+        "id": "617b5f9d-2e46-4c26-a9ea-39ea009f0bbb",
+        "type": "text",
+        "title": "时钟",
+        "x": 1579,
+        "y": 10,
+        "width": 301,
+        "height": 109,
+        "order": 1,
+        "hidden": null,
+        "locked": null,
+        "chartRef": null,
+        "parentTabsId": null,
+        "tabPaneId": null,
+        "chartConfig": null,
+        "filterConfig": null,
+        "textConfig": {
+          "content": "__vs_screen_clock__",
+          "variant": "plain",
+          "datasetId": null,
+          "dimensionField": null,
+          "metricField": null,
+          "screenStyle": {
+            "clock": {
+              "color": "#ffffff",
+              "fontSize": 15,
+              "showWeekday": true,
+              "showSeconds": true
+            }
+          },
+          "widgetStyle": {
+            "background": null,
+            "backgroundImage": null,
+            "backgroundShow": true,
+            "backgroundMode": null,
+            "framePresetId": null,
+            "frameColor": null,
+            "frameOpacity": null,
+            "opacity": 0.0,
+            "backgroundImageOpacity": null,
+            "backgroundImageFit": null,
+            "backgroundImagePosition": null,
+            "backdropBlur": null,
+            "borderRadius": null,
+            "borderRadiusTopLeft": null,
+            "borderRadiusTopRight": null,
+            "borderRadiusBottomLeft": null,
+            "borderRadiusBottomRight": null,
+            "radiusMode": null,
+            "padding": null,
+            "paddingTop": null,
+            "paddingRight": null,
+            "paddingBottom": null,
+            "paddingLeft": null,
+            "paddingMode": null,
+            "borderColor": null,
+            "borderWidth": null,
+            "borderStyle": null,
+            "borderEnabled": null
+          }
+        },
+        "mediaConfig": null,
+        "tabsConfig": null,
+        "customVizConfig": null,
+        "componentRef": null
+      },
+      {
+        "id": "63c7de6b-264b-4cdc-97f9-a57b0d42c105",
+        "type": "chart",
+        "title": "事件分类",
+        "x": 52,
+        "y": 119,
+        "width": 545,
+        "height": 327,
+        "order": 2,
+        "hidden": null,
+        "locked": null,
+        "chartRef": null,
+        "parentTabsId": null,
+        "tabPaneId": null,
+        "chartConfig": {
+          "chartType": "bar",
+          "styleVariant": "default",
+          "dataSourceId": "__demo:sample_db__",
+          "bindingId": null,
+          "chartId": "63c7de6b-264b-4cdc-97f9-a57b0d42c105",
+          "mode": "dataset",
+          "sql": null,
+          "schema": null,
+          "table": null,
+          "configId": "d769b018-4fc9-46ea-a055-45c67ec6a318",
+          "datasetId": "demo-sales-wide",
+          "nativeBody": {
+            "deStyle": {
+              "seriesGradient": true,
+              "label": {
+                "show": true,
+                "color": "#94a3b8",
+                "fontSize": 11
+              },
+              "legend": {
+                "show": true,
+                "color": "#94a3b8",
+                "fontSize": 11,
+                "hAlign": "right",
+                "vAlign": "top",
+                "position": "top",
+                "orient": "vertical"
+              },
+              "title": {
+                "color": "#f1f5f9",
+                "fontSize": 13,
+                "fontWeight": 600
+              },
+              "paletteId": "custom",
+              "seriesColor": [
+                {
+                  "name": "series-0",
+                  "color": "#fb7185"
+                },
+                {
+                  "name": "series-1",
+                  "color": "#f43f5e"
+                },
+                {
+                  "name": "series-2",
+                  "color": "#fda4af"
+                },
+                {
+                  "name": "series-3",
+                  "color": "#fbbf24"
+                },
+                {
+                  "name": "series-4",
+                  "color": "#94a3b8"
+                },
+                {
+                  "name": "series-5",
+                  "color": "#64748b"
+                }
+              ]
+            },
+            "deFeatures": {
+              "showLabel": true
+            }
+          },
+          "index": null,
+          "dimensions": [
+            {
+              "field": "province",
+              "label": null
+            }
+          ],
+          "metrics": [
+            {
+              "field": "amount",
+              "label": null
+            }
+          ],
+          "axes": {
+            "xAxis": [
+              {
+                "field": "province",
+                "label": null
+              }
+            ],
+            "yAxis": [
+              {
+                "field": "amount",
+                "label": null
+              }
+            ]
+          },
+          "filters": [],
+          "timeRange": null
+        },
+        "filterConfig": null,
+        "textConfig": null,
+        "mediaConfig": null,
+        "tabsConfig": null,
+        "customVizConfig": null,
+        "componentRef": null
+      },
+      {
+        "id": "f95632b2-7c77-4baa-950d-745ae9f3d488",
+        "type": "chart",
+        "title": "区域态势",
+        "x": 613,
+        "y": 119,
+        "width": 806,
+        "height": 629,
+        "order": 3,
+        "hidden": null,
+        "locked": null,
+        "chartRef": null,
+        "parentTabsId": null,
+        "tabPaneId": null,
+        "chartConfig": {
+          "chartType": "map",
+          "styleVariant": "default",
+          "dataSourceId": "__demo:sample_db__",
+          "bindingId": null,
+          "chartId": "f95632b2-7c77-4baa-950d-745ae9f3d488",
+          "mode": "dataset",
+          "sql": null,
+          "schema": null,
+          "table": null,
+          "configId": "7f223c7d-28cf-48dc-b877-cc9568f09023",
+          "datasetId": "demo-gov-region-service",
+          "nativeBody": {
+            "deStyle": {
+              "seriesGradient": true,
+              "label": {
+                "show": true,
+                "color": "#94a3b8",
+                "fontSize": 11
+              },
+              "legend": {
+                "show": true,
+                "color": "#94a3b8",
+                "fontSize": 11
+              },
+              "title": {
+                "color": "#f1f5f9",
+                "fontSize": 13,
+                "fontWeight": 600
+              },
+              "geo": {
+                "mapArea": "china",
+                "visualMap": true,
+                "areaColor": "#fb718522",
+                "borderColor": "#fb7185",
+                "emphasisColor": "#fb718555",
+                "areaMapping": [
+                  {
+                    "id": "38cff460-7b5b-40ed-b1e9-1777a41b5988",
+                    "from": "安徽省",
+                    "to": "安徽省"
+                  },
+                  {
+                    "id": "5bb95ec9-dfb1-4c79-82cd-283dd7276738",
+                    "from": "北京市",
+                    "to": "北京市"
+                  },
+                  {
+                    "id": "92a45f13-120e-4404-b7c2-5b2312614082",
+                    "from": "重庆市",
+                    "to": "重庆市"
+                  },
+                  {
+                    "id": "6e636fad-68a3-4bdc-aa0e-b13f1ea734ae",
+                    "from": "福建省",
+                    "to": "福建省"
+                  },
+                  {
+                    "id": "c3c80ab2-9f2c-4f42-a892-d77b33c93b9a",
+                    "from": "甘肃省",
+                    "to": "甘肃省"
+                  },
+                  {
+                    "id": "7de52c38-7c2e-45c5-9cce-fcb854c82a10",
+                    "from": "广东省",
+                    "to": "广东省"
+                  },
+                  {
+                    "id": "0cd2f3cf-7bdd-4eaf-8549-4d93513619a9",
+                    "from": "广西壮族自治区",
+                    "to": "广西壮族自治区"
+                  },
+                  {
+                    "id": "81493495-650b-48a5-9253-ac5b4485755d",
+                    "from": "贵州省",
+                    "to": "贵州省"
+                  },
+                  {
+                    "id": "8e900259-383b-49ef-a02c-c8324794b565",
+                    "from": "海南省",
+                    "to": "海南省"
+                  },
+                  {
+                    "id": "d3b9159a-5d06-4d6a-9eec-f6542f6dce97",
+                    "from": "河北省",
+                    "to": "河北省"
+                  },
+                  {
+                    "id": "ae4d1900-c6b5-47c7-a664-94b5c932e3b8",
+                    "from": "河南省",
+                    "to": "河南省"
+                  },
+                  {
+                    "id": "90fa2408-aad9-49f0-a56d-2c42693e4d81",
+                    "from": "黑龙江省",
+                    "to": "黑龙江省"
+                  },
+                  {
+                    "id": "c34730f1-93e9-43f6-b714-e137c98c92aa",
+                    "from": "湖北省",
+                    "to": "湖北省"
+                  },
+                  {
+                    "id": "f15863f5-8ab5-4b27-9a36-736f03e6ebe2",
+                    "from": "湖南省",
+                    "to": "湖南省"
+                  },
+                  {
+                    "id": "cbb0238a-9aba-4206-bcdd-42cf1746ace1",
+                    "from": "吉林省",
+                    "to": "吉林省"
+                  },
+                  {
+                    "id": "b76ea47b-6504-4d64-bb63-e0aaedd7295b",
+                    "from": "江苏省",
+                    "to": "江苏省"
+                  },
+                  {
+                    "id": "529fa7c4-ddb7-467f-8e45-7fdd216f6fe4",
+                    "from": "江西省",
+                    "to": "江西省"
+                  },
+                  {
+                    "id": "c3968b70-23fd-479a-b25b-d53bd19d5aff",
+                    "from": "辽宁省",
+                    "to": "辽宁省"
+                  },
+                  {
+                    "id": "75409d4b-a13f-4ced-a863-89a752ebf3b4",
+                    "from": "山东省",
+                    "to": "山东省"
+                  },
+                  {
+                    "id": "c08d95e5-c6d6-4be4-9cf8-471ff026e12a",
+                    "from": "山西省",
+                    "to": "山西省"
+                  },
+                  {
+                    "id": "d0860493-4d6e-4348-b7fa-fdfd01d7919b",
+                    "from": "陕西省",
+                    "to": "陕西省"
+                  },
+                  {
+                    "id": "b65d8e59-07df-4e04-9ead-edc2dd624795",
+                    "from": "上海市",
+                    "to": "上海市"
+                  },
+                  {
+                    "id": "320b7368-11a4-49aa-8751-a814f43fdf74",
+                    "from": "四川省",
+                    "to": "四川省"
+                  },
+                  {
+                    "id": "aa1b3509-5989-43b9-b3c4-190569eeb37b",
+                    "from": "天津市",
+                    "to": "天津市"
+                  },
+                  {
+                    "id": "3fdec53a-86c7-4a6d-87df-679b0b660f20",
+                    "from": "云南省",
+                    "to": "云南省"
+                  },
+                  {
+                    "id": "b1ace25e-995f-41c2-876e-990118752428",
+                    "from": "浙江省",
+                    "to": "浙江省"
+                  }
+                ],
+                "bubbleEffect": true,
+                "bubbleEffectType": "ripple",
+                "bubbleEffectColor": "#70faba"
+              },
+              "paletteId": "night",
+              "paletteColors": [
+                "#84adff",
+                "#53b1fd",
+                "#6ce9a6",
+                "#fdb022",
+                "#f670c7",
+                "#9b8afb",
+                "#38bdf8",
+                "#fda29b",
+                "#a4bcfd"
+              ]
+            }
+          },
+          "index": null,
+          "dimensions": [
+            {
+              "field": "province",
+              "label": null
+            },
+            {
+              "field": "city",
+              "label": null
+            },
+            {
+              "field": "district",
+              "label": null
+            }
+          ],
+          "metrics": [
+            {
+              "field": "service_volume",
+              "label": null
+            }
+          ],
+          "axes": {
+            "xAxis": [
+              {
+                "field": "province",
+                "label": null
+              }
+            ],
+            "yAxis": [
+              {
+                "field": "service_volume",
+                "label": null
+              }
+            ],
+            "drill": [
+              {
+                "field": "city",
+                "label": null
+              },
+              {
+                "field": "district",
+                "label": null
+              }
+            ]
+          },
+          "filters": [],
+          "timeRange": null
+        },
+        "filterConfig": null,
+        "textConfig": null,
+        "mediaConfig": null,
+        "tabsConfig": null,
+        "customVizConfig": null,
+        "componentRef": null
+      },
+      {
+        "id": "8a978c8c-1485-42f7-8a8a-73d9b7f4d795",
+        "type": "chart",
+        "title": "满意度监测",
+        "x": 1444,
+        "y": 119,
+        "width": 436,
+        "height": 446,
+        "order": 4,
+        "hidden": null,
+        "locked": null,
+        "chartRef": null,
+        "parentTabsId": null,
+        "tabPaneId": null,
+        "chartConfig": {
+          "chartType": "line",
+          "styleVariant": "default",
+          "dataSourceId": "__demo:sample_db__",
+          "bindingId": null,
+          "chartId": "8a978c8c-1485-42f7-8a8a-73d9b7f4d795",
+          "mode": "dataset",
+          "sql": null,
+          "schema": null,
+          "table": null,
+          "configId": "d769b018-4fc9-46ea-a055-45c67ec6a318",
+          "datasetId": "demo-sales-wide",
+          "nativeBody": {
+            "deStyle": {
+              "seriesGradient": true,
+              "label": {
+                "show": false,
+                "color": "#94a3b8",
+                "fontSize": 11
+              },
+              "legend": {
+                "show": true,
+                "color": "#94a3b8",
+                "fontSize": 11
+              },
+              "title": {
+                "color": "#f1f5f9",
+                "fontSize": 13,
+                "fontWeight": 600
+              },
+              "paletteId": "custom",
+              "seriesColor": [
+                {
+                  "name": "series-0",
+                  "color": "#fb7185"
+                },
+                {
+                  "name": "series-1",
+                  "color": "#f43f5e"
+                },
+                {
+                  "name": "series-2",
+                  "color": "#fda4af"
+                },
+                {
+                  "name": "series-3",
+                  "color": "#fbbf24"
+                },
+                {
+                  "name": "series-4",
+                  "color": "#94a3b8"
+                },
+                {
+                  "name": "series-5",
+                  "color": "#64748b"
+                }
+              ]
+            },
+            "deFeatures": {
+              "showLabel": false
+            }
+          },
+          "index": null,
+          "dimensions": [
+            {
+              "field": "sale_date",
+              "label": null
+            }
+          ],
+          "metrics": [
+            {
+              "field": "amount",
+              "label": null
+            }
+          ],
+          "axes": {
+            "xAxis": [
+              {
+                "field": "sale_date",
+                "label": null
+              }
+            ],
+            "yAxis": [
+              {
+                "field": "amount",
+                "label": null
+              }
+            ]
+          },
+          "filters": [],
+          "timeRange": null
+        },
+        "filterConfig": null,
+        "textConfig": null,
+        "mediaConfig": null,
+        "tabsConfig": null,
+        "customVizConfig": null,
+        "componentRef": null
+      },
+      {
+        "id": "32147f06-77b0-4456-a8ce-535855228c5b",
+        "type": "chart",
+        "title": "支出结构",
+        "x": 1444,
+        "y": 584,
+        "width": 436,
+        "height": 418,
+        "order": 5,
+        "hidden": null,
+        "locked": null,
+        "chartRef": null,
+        "parentTabsId": null,
+        "tabPaneId": null,
+        "chartConfig": {
+          "chartType": "pie",
+          "styleVariant": "default",
+          "dataSourceId": "__demo:sample_db__",
+          "bindingId": null,
+          "chartId": "32147f06-77b0-4456-a8ce-535855228c5b",
+          "mode": "dataset",
+          "sql": null,
+          "schema": null,
+          "table": null,
+          "configId": "fd118df4-bde7-49f5-9a83-22f8ac177d87",
+          "datasetId": "demo-gov-budget",
+          "nativeBody": {
+            "deStyle": {
+              "seriesGradient": true,
+              "label": {
+                "show": true,
+                "color": "#94a3b8",
+                "fontSize": 11
+              },
+              "legend": {
+                "show": true,
+                "color": "#94a3b8",
+                "fontSize": 11,
+                "icon": "rect"
+              },
+              "title": {
+                "color": "#f1f5f9",
+                "fontSize": 13,
+                "fontWeight": 600
+              },
+              "paletteId": "clarity",
+              "radar": {
+                "radiusPercent": 87
+              },
+              "paletteColors": [
+                "#0ba5ec",
+                "#36bffa",
+                "#53b1fd",
+                "#2e90fa",
+                "#465fff",
+                "#12b76a",
+                "#4ade80",
+                "#667085",
+                "#98a2b3"
+              ]
+            },
+            "deFeatures": {
+              "showLabel": true
+            }
+          },
+          "index": null,
+          "dimensions": [
+            {
+              "field": "category",
+              "label": null
+            }
+          ],
+          "metrics": [
+            {
+              "field": "spent_amount",
+              "label": null
+            }
+          ],
+          "axes": {
+            "xAxis": [
+              {
+                "field": "category",
+                "label": null
+              }
+            ],
+            "yAxis": [
+              {
+                "field": "spent_amount",
+                "label": null
+              }
+            ]
+          },
+          "filters": [],
+          "timeRange": null
+        },
+        "filterConfig": null,
+        "textConfig": null,
+        "mediaConfig": null,
+        "tabsConfig": null,
+        "customVizConfig": null,
+        "componentRef": null
+      },
+      {
+        "id": "b9f69f84-f6b5-42a4-8c53-4efb7cf25f69",
+        "type": "chart",
+        "title": "网格待办",
+        "x": 52,
+        "y": 446,
+        "width": 545,
+        "height": 556,
+        "order": 6,
+        "hidden": null,
+        "locked": null,
+        "chartRef": null,
+        "parentTabsId": null,
+        "tabPaneId": null,
+        "chartConfig": {
+          "chartType": "table-info",
+          "styleVariant": "default",
+          "dataSourceId": "__demo:sample_db__",
+          "bindingId": null,
+          "chartId": "b9f69f84-f6b5-42a4-8c53-4efb7cf25f69",
+          "mode": "dataset",
+          "sql": null,
+          "schema": null,
+          "table": null,
+          "configId": "c8669b9e-35b9-4f95-9e43-a5b5fb405856",
+          "datasetId": "demo-gov-grid-stats",
+          "nativeBody": {
+            "deStyle": {
+              "seriesGradient": true,
+              "label": {
+                "show": true,
+                "color": "#94a3b8",
+                "fontSize": 11
+              },
+              "legend": {
+                "show": false,
+                "color": "#94a3b8",
+                "fontSize": 11
+              },
+              "title": {
+                "color": "#f1f5f9",
+                "fontSize": 13,
+                "fontWeight": 600
+              },
+              "paletteId": "custom",
+              "seriesColor": [
+                {
+                  "name": "series-0",
+                  "color": "#fb7185"
+                },
+                {
+                  "name": "series-1",
+                  "color": "#f43f5e"
+                },
+                {
+                  "name": "series-2",
+                  "color": "#fda4af"
+                },
+                {
+                  "name": "series-3",
+                  "color": "#fbbf24"
+                },
+                {
+                  "name": "series-4",
+                  "color": "#94a3b8"
+                },
+                {
+                  "name": "series-5",
+                  "color": "#64748b"
+                }
+              ]
+            },
+            "deTableStyle": {
+              "headerBg": "#061c25",
+              "columnWidthMode": "auto",
+              "wordWrap": false,
+              "headerFg": "#f2f4f7",
+              "bodyFg": "#f2f4f7",
+              "paginationFontSize": 9,
+              "headerFontSize": 12,
+              "bodyFontSize": 10,
+              "bodyBg": "#0a131e",
+              "borderColor": "#0a141f"
+            }
+          },
+          "index": null,
+          "dimensions": [
+            {
+              "field": "grid_name",
+              "label": null
+            }
+          ],
+          "metrics": [
+            {
+              "field": "event_count",
+              "label": null
+            },
+            {
+              "field": "resolved_count",
+              "label": null
+            }
+          ],
+          "axes": {
+            "xAxis": [
+              {
+                "field": "grid_name",
+                "label": null
+              },
+              {
+                "field": "event_count",
+                "label": null
+              },
+              {
+                "field": "resolved_count",
+                "label": null
+              }
+            ]
+          },
+          "filters": [],
+          "timeRange": null
+        },
+        "filterConfig": null,
+        "textConfig": null,
+        "mediaConfig": null,
+        "tabsConfig": null,
+        "customVizConfig": null,
+        "componentRef": null
+      },
+      {
+        "id": "a7f3eb5f-9095-4fa8-9d40-c736d5dd4449",
+        "type": "chart",
+        "title": "趋势",
+        "x": 613,
+        "y": 748,
+        "width": 787,
+        "height": 254,
+        "order": 7,
+        "hidden": null,
+        "locked": null,
+        "chartRef": null,
+        "parentTabsId": null,
+        "tabPaneId": null,
+        "chartConfig": {
+          "chartType": "area",
+          "styleVariant": "default",
+          "dataSourceId": "__demo:sample_db__",
+          "bindingId": null,
+          "chartId": "a7f3eb5f-9095-4fa8-9d40-c736d5dd4449",
+          "mode": "dataset",
+          "sql": null,
+          "schema": null,
+          "table": null,
+          "configId": "d769b018-4fc9-46ea-a055-45c67ec6a318",
+          "datasetId": "demo-sales-wide",
+          "nativeBody": {
+            "deStyle": {
+              "legend": {
+                "show": true,
+                "position": "bottom",
+                "hAlign": "center",
+                "vAlign": "bottom"
+              },
+              "paletteId": "default",
+              "paletteColors": [
+                "#465fff",
+                "#7a5af8",
+                "#12b76a",
+                "#0ba5ec",
+                "#ee46bc",
+                "#f79009",
+                "#2e90fa",
+                "#15b79e",
+                "#6172f3"
+              ],
+              "title": {
+                "color": "#f2f4f7"
+              },
+              "label": {
+                "show": false
+              },
+              "cartesian": {
+                "lineSmooth": true
+              }
+            },
+            "deFeatures": {
+              "showLabel": false
+            }
+          },
+          "index": null,
+          "dimensions": [
+            {
+              "field": "product_name",
+              "label": null
+            }
+          ],
+          "metrics": [
+            {
+              "field": "amount",
+              "label": null
+            }
+          ],
+          "axes": {
+            "xAxis": [
+              {
+                "field": "product_name",
+                "label": null
+              }
+            ],
+            "yAxis": [
+              {
+                "field": "amount",
+                "label": null
+              }
+            ]
+          },
+          "filters": [],
+          "timeRange": null
+        },
+        "filterConfig": null,
+        "textConfig": null,
+        "mediaConfig": null,
+        "tabsConfig": null,
+        "customVizConfig": null,
+        "componentRef": null
+      }
+    ],
+    "globalFilters": [],
+    "styleConfig": {
+      "widgetGap": 8,
+      "canvasBackground": "#1a0509",
+      "colorScheme": "dark",
+      "themeAccent": null,
+      "fontFamily": null,
+      "gapPreset": "md",
+      "pixelGutter": 5,
+      "scaleMode": null,
+      "canvasBackgroundImage": "/template-assets/packs/gov-enterprise-v1/panels/panel-de-frame-cyan.svg",
+      "canvasBackgroundImageFit": null,
+      "canvasBackgroundImagePosition": null,
+      "canvasBackgroundCustom": true,
+      "canvasDecorPresetId": "custom",
+      "refreshIntervalSec": null,
+      "defaultQueryLimit": null,
+      "widgetStyle": {
+        "background": "rgba(15, 23, 42, 0.52)",
+        "backgroundImage": null,
+        "backgroundShow": true,
+        "backgroundMode": null,
+        "framePresetId": null,
+        "frameColor": null,
+        "frameOpacity": null,
+        "opacity": 0.8,
+        "backgroundImageOpacity": null,
+        "backgroundImageFit": null,
+        "backgroundImagePosition": null,
+        "backdropBlur": 6.0,
+        "borderRadius": 10,
+        "borderRadiusTopLeft": null,
+        "borderRadiusTopRight": null,
+        "borderRadiusBottomLeft": null,
+        "borderRadiusBottomRight": null,
+        "radiusMode": null,
+        "padding": 12,
+        "paddingTop": null,
+        "paddingRight": null,
+        "paddingBottom": null,
+        "paddingLeft": null,
+        "paddingMode": null,
+        "borderColor": "#fb718566",
+        "borderWidth": 1,
+        "borderStyle": "solid",
+        "borderEnabled": false
+      },
+      "paletteId": "custom",
+      "paletteColors": [
+        "#fb7185",
+        "#f43f5e",
+        "#fda4af",
+        "#fbbf24",
+        "#94a3b8",
+        "#64748b"
+      ],
+      "paletteOpacity": null,
+      "seriesGradient": true,
+      "depthVisual": null,
+      "chartLabelShow": null,
+      "chartLabelStyle": {
+        "fontSize": null,
+        "color": "#94a3b8"
+      },
+      "tooltipShow": null,
+      "chartTooltipStyle": null,
+      "tableColorStyle": null,
+      "titleStyle": {
+        "show": null,
+        "fontSize": 14,
+        "color": "#f1f5f9",
+        "fontWeight": 600,
+        "fontStyle": null,
+        "align": null,
+        "letterSpacing": null,
+        "shadow": true
+      },
+      "filterChromeStyle": {
+        "titlePosition": null,
+        "titleColor": "#94a3b8"
+      },
+      "filterControlStyle": null,
+      "numberFormat": null,
+      "actionIconColor": null,
+      "drillLevelColors": null,
+      "dialogStyle": {
+        "background": "#1d2939",
+        "fontColor": "#ececed"
+      },
+      "chrome": null,
+      "themeVariants": {
+        "light": {
+          "canvasBackground": "#ffffff",
+          "canvasBackgroundImageFit": null,
+          "canvasBackgroundImagePosition": null,
+          "canvasBackgroundImage": null,
+          "canvasBackgroundCustom": null,
+          "canvasDecorPresetId": null,
+          "themeAccent": null,
+          "widgetStyle": {
+            "background": "#ffffff",
+            "borderColor": "#e4e7ec",
+            "borderWidth": null,
+            "borderStyle": null,
+            "borderEnabled": null,
+            "opacity": null
+          },
+          "titleStyle": {
+            "color": "#1d2939"
+          },
+          "dialogStyle": {
+            "background": "#ffffff",
+            "fontColor": "#344054"
+          },
+          "filterChromeStyle": {
+            "titlePosition": null,
+            "titleColor": "#475467"
+          }
+        },
+        "dark": {
+          "canvasBackground": "#1a0509",
+          "canvasBackgroundImageFit": null,
+          "canvasBackgroundImagePosition": null,
+          "canvasBackgroundImage": "/template-assets/packs/gov-enterprise-v1/panels/panel-de-frame-cyan.svg",
+          "canvasBackgroundCustom": true,
+          "canvasDecorPresetId": "custom",
+          "themeAccent": null,
+          "widgetStyle": {
+            "background": "rgba(15, 23, 42, 0.52)",
+            "borderColor": "#fb718566",
+            "borderWidth": 1,
+            "borderStyle": "solid",
+            "borderEnabled": false,
+            "opacity": 0.8
+          },
+          "titleStyle": {
+            "color": "#f1f5f9"
+          },
+          "dialogStyle": {
+            "background": "#1d2939",
+            "fontColor": "#ececed"
+          },
+          "filterChromeStyle": {
+            "titlePosition": null,
+            "titleColor": "#94a3b8"
+          }
+        }
+      },
+      "surfaceKind": "data-screen",
+      "screenPlaylist": null
+    },
+    "demoPackage": null
+  }
+}

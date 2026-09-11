@@ -1,0 +1,5 @@
+interface:
+  display_name: "方案八维评"
+  short_description: "规划/技术方案打分与改造建议"
+policy:
+  allow_implicit_invocation: true

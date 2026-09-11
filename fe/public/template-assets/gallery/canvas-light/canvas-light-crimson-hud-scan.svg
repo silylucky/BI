@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice">
+  
+  <g transform="scale(0.16666666666666666 0.16666666666666666)">
+  
+  <defs>
+    <linearGradient id="b0c20e7d-base" x1="0" y1="0" x2="1920" y2="1080">
+      <stop stop-color="#e8e6e6"/>
+      <stop offset="0.32" stop-color="#c4b3b3"/>
+      <stop offset="0.68" stop-color="#e3c8c8"/>
+      <stop offset="1" stop-color="#d49f9f"/>
+    </linearGradient>
+    <radialGradient id="b0c20e7d-glowL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(345.59999999999997 237.6) scale(729.6)">
+      <stop stop-color="#ef4444" stop-opacity="0.32"/>
+      <stop offset="0.55" stop-color="#773234" stop-opacity="0.20800000000000002"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b0c20e7d-glowR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1574.3999999999999 777.6) scale(614.4)">
+      <stop stop-color="#f87171" stop-opacity="0.272"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  <pattern id="b0c20e7d-pat" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" stroke="#f87171" stroke-width="0.5" opacity="0.28"/></pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#b0c20e7d-base)"/>
+  <rect width="1920" height="1080" fill="url(#b0c20e7d-glowL)"/>
+  <rect width="1920" height="1080" fill="url(#b0c20e7d-glowR)"/>
+  <rect width="1920" height="1080" fill="url(#b0c20e7d-pat)"/>
+  <circle cx="960" cy="496.8" r="200" fill="none" stroke="#f87171" stroke-width="0.8" opacity="0.32"/>
+  <circle cx="960" cy="496.8" r="130" fill="none" stroke="#f87171" stroke-width="0.5" opacity="0.28" stroke-dasharray="4 6"/>
+  <line x1="760" y1="496.8" x2="1160" y2="496.8" stroke="#f87171" stroke-width="0.4" opacity="0.25"/>
+  <line x1="960" y1="296.8" x2="960" y2="696.8" stroke="#f87171" stroke-width="0.4" opacity="0.25"/>
+  <circle cx="960" cy="496.8" r="320" fill="none" stroke="#f87171" stroke-width="0.8" opacity="0.32"/>
+  <circle cx="960" cy="496.8" r="208" fill="none" stroke="#f87171" stroke-width="0.5" opacity="0.28" stroke-dasharray="4 6"/>
+  <line x1="640" y1="496.8" x2="1280" y2="496.8" stroke="#f87171" stroke-width="0.4" opacity="0.25"/>
+  <line x1="960" y1="176.8" x2="960" y2="816.8" stroke="#f87171" stroke-width="0.4" opacity="0.25"/>
+  <g opacity="0.78" stroke="#f87171" stroke-width="3" fill="none">
+  <path d="M16 88 V16 H88"/>
+  <path d="M1832 16 H1904 V88"/>
+  <path d="M1904 992 V1064 H1832"/>
+  <path d="M88 1064 H16 V992"/>
+</g>
+  <circle cx="960" cy="496.8" r="4" fill="#f87171" opacity="0.60"/>
+  <rect x="0" y="80" width="3" height="920" fill="#f87171" opacity="0.53"/>
+  <rect x="1917" y="80" width="3" height="920" fill="#f87171" opacity="0.53"/>
+  <rect x="12" y="120" width="1" height="840" fill="#f87171" opacity="0.26"/>
+  <rect x="1907" y="120" width="1" height="840" fill="#f87171" opacity="0.26"/>
+
+  </g>
+</svg>

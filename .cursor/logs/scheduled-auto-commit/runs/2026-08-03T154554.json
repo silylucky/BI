@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-03T15:45:54+08:00",
+  "finishedAt": "2026-08-03T15:46:04+08:00",
+  "branch": "dev",
+  "commit": "7dc1b7cf",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [backend,fe,docs,tests,+3] 43f (+1617/-64) @ 2026-08-03 15:46 +0800",
+  "filesChanged": 43,
+  "insertions": 1617,
+  "deletions": 64,
+  "topDirs": { "backend": 13, "fe": 13, "docs": 9, "tests": 3, ".cursor": 3, "scripts": 1, "_root": 1 },
+  "sampleFiles": [
+    "backend/app/dashboard/export_snapshot.py",
+    "fe/src/pages/export/DashboardExportSnapshotPage.tsx",
+    "docs/feature-design/2026-08-03-report-center-delivery-closure.md",
+    "tests/test_dashboard_visual_export.py"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/"]
+}

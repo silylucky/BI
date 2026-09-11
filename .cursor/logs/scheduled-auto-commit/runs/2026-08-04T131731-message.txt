@@ -1,0 +1,38 @@
+wip: [fe,.cursor,docs,tests] 32f (+1303/-22) @ 2026-08-04 13:17 +0800
+
+Areas:
+  fe/          26 files (+668/-21)
+  .cursor/     3 files (+60/-1)
+  docs/        2 files (+433/-0)
+  tests/       1 files (+142/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T124713-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-04T124713.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+A  docs/feature-truth/2026-08-04-map-advanced-tab-truth-audit.md
+A  docs/feature-truth/2026-08-04-sync-dataset-isolation-truth-audit.md
+M  fe/src/components/charts/ChartRenderer.tsx
+M  fe/src/components/charts/engine/d3/geo/renderChoropleth.test.ts
+M  fe/src/components/charts/engine/d3/geo/renderChoropleth.ts
+M  fe/src/components/charts/engine/d3/types.ts
+M  fe/src/components/charts/engine/d3/views/buildRenderConfig.ts
+M  fe/src/components/charts/engine/types.ts
+M  fe/src/components/dashboard/ChartAdvancedPanel.tsx
+M  fe/src/components/dashboard/ChartEditRail.tsx
+M  fe/src/components/dashboard/ChartInspectorProvider.tsx
+M  fe/src/components/dashboard/DashboardLayoutPreview.tsx
+M  fe/src/components/dashboard/DashboardWidget.tsx
+M  fe/src/components/dashboard/chartAdvancedSections.tsx
+M  fe/src/components/dashboard/chartInspectorContext.ts
+M  fe/src/components/dashboard/dashboard-edit/DashboardCanvasWidgetRenderer.tsx
+M  fe/src/components/dashboard/dashboard-edit/DashboardEditCanvas.tsx
+M  fe/src/components/dashboard/dashboardFilterUtils.test.ts
+M  fe/src/components/dashboard/dashboardFilterUtils.ts
+M  fe/src/components/dashboard/dashboardWidgetExecuteKey.ts
+A  fe/src/components/dashboard/useChartLinkageState.test.ts
+A  fe/src/components/dashboard/useChartLinkageState.ts
+... and 7 more
+
+stat: 32 files changed, 1303 insertions(+), 22 deletions(-)
+branch: dev | scheduled-auto-commit

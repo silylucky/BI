@@ -1,0 +1,36 @@
+wip: [fe,.cursor] 30f (+477/-130) @ 2026-07-30 18:28 +0800
+
+Areas:
+  fe/          27 files (+429/-129)
+  .cursor/     3 files (+48/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T175830-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T175830.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  fe/src/components/charts/engine/d3/geo/renderChoropleth.test.ts
+M  fe/src/components/charts/engine/d3/geo/renderChoropleth.ts
+M  fe/src/components/charts/engine/d3/types.ts
+M  fe/src/components/charts/engine/d3/views/D3GeoMapView.tsx
+M  fe/src/components/charts/engine/d3/views/buildRenderConfig.ts
+A  fe/src/components/charts/engine/geo/geoRegionFillStyle.ts
+A  fe/src/components/charts/engine/geo/geoSurfaceColors.test.ts
+M  fe/src/components/charts/engine/geo/geoSurfaceColors.ts
+A  fe/src/components/charts/engine/geo/geoZoomControls.ts
+M  fe/src/components/dashboard/ChartGeoStylePanel.tsx
+A  fe/src/components/dashboard/chartStyleSections/ChartMapBasicStyleSection.tsx
+M  fe/src/components/dashboard/chartStyleSections/ChartStyleSection.tsx
+M  fe/src/components/dashboard/templates/TemplateCardPreview.test.tsx
+M  fe/src/components/dashboard/templates/TemplateCardPreview.tsx
+M  fe/src/components/dashboard/templates/TemplatePreviewFooter.tsx
+M  fe/src/components/dashboard/templates/VizTemplateCard.tsx
+M  fe/src/components/dashboard/templates/templateLabels.ts
+M  fe/src/components/dashboard/viz-components/ComponentCardPreview.tsx
+M  fe/src/components/dashboard/viz-components/ComponentPayloadPreview.tsx
+M  fe/src/components/dashboard/viz-components/VizComponentCard.tsx
+M  fe/src/components/dashboard/viz-components/VizComponentChartPreviewShell.test.tsx
+M  fe/src/components/dashboard/viz-components/VizComponentChartPreviewShell.tsx
+... and 5 more
+
+stat: 30 files changed, 477 insertions(+), 130 deletions(-)
+branch: dev | scheduled-auto-commit

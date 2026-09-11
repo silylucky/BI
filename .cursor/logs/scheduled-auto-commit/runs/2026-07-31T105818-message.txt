@@ -1,0 +1,39 @@
+wip: [fe,docs,.cursor,backend,+1] 40f (+1656/-1039) @ 2026-07-31 10:5...
+
+Areas:
+  fe/          29 files (+1415/-1032)
+  docs/        4 files (+133/-6)
+  .cursor/     3 files (+54/-1)
+  backend/     2 files (+4/-0)
+  tests/       2 files (+50/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T102851-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T102851.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/.env.example
+M  backend/app/reports/dev_seed.py
+M  docs/features/report-center-manual-test-cases.md
+A  docs/ui/page-style-sync/2026-07-31-dataset-list-sync-matrix.md
+A  docs/ui/page-style-sync/2026-07-31-dataset-list-sync-receipt.md
+M  docs/user-guide/report-center-how-to.md
+M  fe/src/components/dashboard/DashboardBoardShareBody.tsx
+A  fe/src/components/dashboard/DashboardShareDialog.tsx
+M  fe/src/components/dashboard/chartStyleFields.tsx
+M  fe/src/components/dashboard/screen/DataScreenSharePanel.tsx
+M  fe/src/components/dashboard/sharePageUi.ts
+M  fe/src/components/dashboard/widgetSurfaceStyleFields.tsx
+A  fe/src/lib/scheduleSourceMeta.test.ts
+A  fe/src/lib/scheduleSourceMeta.ts
+M  fe/src/pages/admin/dashboard/DashboardEditPage.tsx
+M  fe/src/pages/admin/dashboard/DashboardSharePage.smoke.test.tsx
+M  fe/src/pages/admin/dashboard/DashboardSharePage.tsx
+M  fe/src/pages/admin/datasets/DatasetListPage.tsx
+M  fe/src/pages/admin/reports/PrefabReportsPage.tsx
+M  fe/src/pages/admin/reports/ReportCenterPage.tsx
+M  fe/src/pages/admin/reports/ReportSchedulesPage.tsx
+M  fe/src/pages/admin/reports/ReportViewPage.tsx
+... and 15 more
+
+stat: 40 files changed, 1656 insertions(+), 1039 deletions(-)
+branch: dev | scheduled-auto-commit

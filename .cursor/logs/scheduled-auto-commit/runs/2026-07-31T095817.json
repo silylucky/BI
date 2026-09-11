@@ -1,0 +1,14 @@
+{
+  "startedAt": "2026-07-31T09:58:17+08:00",
+  "finishedAt": "2026-07-31T09:58:20+08:00",
+  "branch": "dev",
+  "commit": "14e78a6a",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [.cursor,docs] 4f (+264/-1) @ 2026-07-31 09:58 +0800",
+  "filesChanged": 4,
+  "insertions": 264,
+  "deletions": 1,
+  "topDirs": { ".cursor": 3, "docs": 1 },
+  "excludedPaths": [".tmp/", "data/backups/"]
+}

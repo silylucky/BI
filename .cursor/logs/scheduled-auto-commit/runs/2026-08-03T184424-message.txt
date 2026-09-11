@@ -1,0 +1,27 @@
+wip: [fe,.cursor] 17f (+358/-120) @ 2026-08-03 18:44 +0800
+
+Areas:
+  fe/          14 files (+302/-119)
+  .cursor/     3 files (+56/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T181420-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T181420.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  fe/src/components/charts/engine/d3/table/D3TableView.tsx
+A  fe/src/components/charts/engine/d3/table/TablePivotGrid.test.tsx
+M  fe/src/components/charts/engine/d3/table/TablePivotGrid.tsx
+M  fe/src/components/charts/engine/d3/table/buildTableModel.test.ts
+M  fe/src/components/charts/engine/d3/views/buildRenderConfig.ts
+M  fe/src/components/dashboard/ChartTableStylePanel.tsx
+M  fe/src/components/dashboard/chartStyleSections/ChartCommonStyleSections.tsx
+M  fe/src/components/dashboard/chartStyleSections/ChartLiquidLabelFields.tsx
+M  fe/src/components/dashboard/chartStyleSections/ChartTypeStyleSections.tsx
+M  fe/src/lib/chartDeTableStyle.ts
+M  fe/src/lib/chartTableInspector.test.ts
+M  fe/src/lib/chartTableInspector.ts
+M  fe/src/pages/admin/datasets/DatasetTablePicker.tsx
+M  fe/src/pages/admin/system/users/UserManageSheet.tsx
+
+stat: 17 files changed, 358 insertions(+), 120 deletions(-)
+branch: dev | scheduled-auto-commit

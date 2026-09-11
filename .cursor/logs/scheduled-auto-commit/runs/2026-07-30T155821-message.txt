@@ -1,0 +1,42 @@
+wip: [backend,tests,docs,fe,+4] 49f (+1510/-176) @ 2026-07-30 15:58 +...
+
+Areas:
+  backend/     14 files (+332/-65)
+  tests/       10 files (+200/-6)
+  docs/        9 files (+142/-13)
+  fe/          6 files (+217/-32)
+  scripts/     5 files (+437/-0)
+  .cursor/     3 files (+44/-3)
+  .agents/     1 files (+1/-0)
+  _root/       1 files (+137/-57)
+
+Changed (up to 25):
+M  .agents/skills/bug-case-library/cases/fe-dashboard-layout-roundtrip-drift.md
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T152718-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-30T152718.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  README.md
+M  backend/.env.example
+M  backend/app/auth/bootstrap_root.py
+M  backend/app/auth/login/service.py
+M  backend/app/auth/password/service.py
+M  backend/app/core/config.py
+A  backend/app/core/crypto/__init__.py
+A  backend/app/core/crypto/credentials.py
+A  backend/app/core/crypto/fernet.py
+A  backend/app/core/crypto/password.py
+A  backend/app/core/crypto/provider.py
+A  backend/app/core/crypto/sm4.py
+M  backend/app/datasources/credentials.py
+M  backend/app/ingestion/models.py
+M  backend/pyproject.toml
+M  docs/arch.md
+M  docs/automate/plans/2026-07-17-data-screen-phase25-requirements.md
+M  docs/automate/prd/F07-DASH.md
+M  docs/automate/prd/F15-NFR.md
+M  docs/feature-design/2026-07-29-data-screen-master-gap-fill.md
+M  docs/feature-design/2026-07-29-data-screen-wave-b-gap-fill.md
+... and 24 more
+
+stat: 49 files changed, 1510 insertions(+), 176 deletions(-)
+branch: dev | scheduled-auto-commit

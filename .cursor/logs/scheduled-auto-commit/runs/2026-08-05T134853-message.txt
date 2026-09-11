@@ -1,0 +1,37 @@
+wip: [fe,backend,docs] 266f (+19967/-285) @ 2026-08-05 13:49 +0800
+
+Areas:
+  fe/          254 files (+19573/-175)
+  backend/     10 files (+105/-25)
+  docs/        2 files (+289/-85)
+
+Changed (up to 25):
+M  backend/app/dashboard/templates/presets.py
+M  backend/app/dashboard/templates/presets_gov_assets.py
+M  backend/app/dashboard/templates/presets_gov_screens.py
+M  backend/app/dashboard/templates/presets_gov_theme.py
+M  backend/app/dashboard/templates/seed.py
+M  backend/app/ingestion/analytics_datasource.py
+M  backend/app/metadata/dataset/service.py
+A  backend/data/artifacts/dashboard-export/04f9abd1-2832-4e06-b941-53f76f23511f/a309ccbcbf11485494b904b3f7c88215.pdf
+A  backend/data/artifacts/dashboard-export/219bc3a4-86db-47af-b816-661cf5c34ea8/015c0dc8a5a9417cad29a208b7473f7c.pdf
+A  backend/data/artifacts/dashboard-export/27c612f5-2e80-4dff-94cd-d84ec8aed91e/c6d74c7977ea4896931339a73730e7c4.pdf
+M  docs/deliverable-gate/2026-08-05-report-center-graduation.md
+A  docs/feature-truth/2026-08-05-report-center-full-truth-audit.md
+M  fe/package.json
+A  fe/public/template-assets/catalog.html
+A  fe/public/template-assets/packs/borderless-decor-v1/README.md
+A  fe/public/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-amber.svg
+A  fe/public/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-cobalt.svg
+A  fe/public/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-coral.svg
+A  fe/public/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-cyan.svg
+A  fe/public/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-emerald.svg
+A  fe/public/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-gold.svg
+A  fe/public/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-magenta.svg
+A  fe/public/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-orange.svg
+A  fe/public/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-peach.svg
+A  fe/public/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-violet.svg
+... and 241 more
+
+stat: 266 files changed, 19967 insertions(+), 285 deletions(-)
+branch: dev | scheduled-auto-commit

@@ -1,0 +1,85 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "北京" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[116.0, 39.5], [117.0, 39.5], [117.0, 40.5], [116.0, 40.5], [116.0, 39.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "上海" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[121.0, 31.0], [122.0, 31.0], [122.0, 32.0], [121.0, 32.0], [121.0, 31.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "广东" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[113.0, 22.0], [115.0, 22.0], [115.0, 24.0], [113.0, 24.0], [113.0, 22.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "浙江" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[120.0, 29.0], [121.5, 29.0], [121.5, 30.5], [120.0, 30.5], [120.0, 29.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "江苏" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[118.5, 31.5], [120.0, 31.5], [120.0, 33.0], [118.5, 33.0], [118.5, 31.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "四川" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[103.0, 29.5], [105.0, 29.5], [105.0, 31.5], [103.0, 31.5], [103.0, 29.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "湖北" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[113.5, 29.5], [115.5, 29.5], [115.5, 31.5], [113.5, 31.5], [113.5, 29.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "山东" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[117.0, 35.5], [119.0, 35.5], [119.0, 37.5], [117.0, 37.5], [117.0, 35.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "河南" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[113.0, 33.5], [115.0, 33.5], [115.0, 35.5], [113.0, 35.5], [113.0, 33.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "福建" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[117.5, 24.5], [119.0, 24.5], [119.0, 26.5], [117.5, 26.5], [117.5, 24.5]]]
+      }
+    }
+  ]
+}

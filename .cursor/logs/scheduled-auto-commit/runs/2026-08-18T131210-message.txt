@@ -1,0 +1,30 @@
+wip: [.cursor,fe,docs,backend,+2] 16f (+821/-43) @ 2026-08-18 13:12 +...
+
+Areas:
+  .cursor/     6 files (+145/-7)
+  fe/          4 files (+75/-12)
+  docs/        2 files (+399/-0)
+  backend/     2 files (+37/-2)
+  tests/       1 files (+162/-21)
+  .agents/     1 files (+3/-1)
+
+Changed (up to 25):
+M  .agents/skills/bug-case-library/cases/dataset-orphan-after-sync-job-delete.md
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T111351-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T114335-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T121335-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T121335.json
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-18T124333.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/metadata/dataset/cleanup.py
+M  backend/app/metadata/dataset/service.py
+A  docs/feature-truth/2026-08-18-customviz-dataset-binding-truth-audit.md
+A  docs/feature-truth/2026-08-18-dataset-sync-cleanup-truth-audit.md
+M  fe/src/components/dashboard/pixelCanvas/tabInsertResolver.test.ts
+M  fe/src/components/dashboard/pixelCanvas/tabInsertResolver.ts
+M  fe/src/pages/admin/dashboard/DashboardEditPage.tsx
+M  fe/src/pages/admin/datasets/dataset-form.smoke.test.tsx
+M  tests/test_dataset_sync_cleanup.py
+
+stat: 16 files changed, 821 insertions(+), 43 deletions(-)
+branch: dev | scheduled-auto-commit

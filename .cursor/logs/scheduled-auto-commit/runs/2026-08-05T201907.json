@@ -1,0 +1,8 @@
+﻿{
+    "runId":  "2026-08-05T201907",
+    "branch":  "dev",
+    "startedAt":  "2026-08-05T20:19:07+08:00",
+    "reason":  "no_staged_changes",
+    "finishedAt":  "2026-08-05T20:19:07+08:00",
+    "status":  "skipped"
+}

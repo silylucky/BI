@@ -1,0 +1,38 @@
+wip: [fe,.agents,.cursor,docs] 32f (+559/-426) @ 2026-08-17 16:43 +0800
+
+Areas:
+  fe/          27 files (+489/-414)
+  .agents/     2 files (+38/-1)
+  .cursor/     2 files (+26/-5)
+  docs/        1 files (+6/-6)
+
+Changed (up to 25):
+M  .agents/skills/bug-case-library/SKILL.md
+A  .agents/skills/bug-case-library/cases/fe-pie-outside-label-clip.md
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T161320.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  docs/ui/layout.md
+M  fe/src/components/charts/engine/d3/radial/pieLabels.test.ts
+M  fe/src/components/charts/engine/d3/radial/pieLabels.ts
+M  fe/src/components/charts/engine/d3/radial/pieLayout.test.ts
+M  fe/src/components/charts/engine/d3/radial/pieLayout.ts
+M  fe/src/components/charts/engine/d3/radial/renderPie.ts
+M  fe/src/components/dashboard/DashboardListCard.tsx
+M  fe/src/components/dashboard/WidgetBackgroundImageFitFields.tsx
+M  fe/src/components/dashboard/hubCardUi.ts
+M  fe/src/components/dashboard/templates/VizTemplateCard.tsx
+M  fe/src/components/dashboard/viz-components/VizComponentCard.tsx
+M  fe/src/components/layout/app-sidebar.tsx
+M  fe/src/config/nav-manifest.tsx
+M  fe/src/lib/reportCenterNav.test.ts
+M  fe/src/lib/widgetBackgroundImageFit.test.ts
+M  fe/src/lib/widgetBackgroundImageFit.ts
+M  fe/src/pages/admin/reports/ReportCenterPage.tsx
+M  fe/src/pages/admin/reports/ReportSchedulesPage.tsx
+M  fe/src/pages/admin/reports/ReportTemplatesPage.tsx
+A  fe/src/pages/admin/reports/StandardAnalysisConfigPage.tsx
+D  fe/src/pages/admin/reports/StandardAnalysisConfigRedirect.tsx
+... and 7 more
+
+stat: 32 files changed, 559 insertions(+), 426 deletions(-)
+branch: dev | scheduled-auto-commit

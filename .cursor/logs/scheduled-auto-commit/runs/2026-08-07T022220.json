@@ -1,0 +1,34 @@
+﻿{
+    "messageSubject":  "wip: [fe,docs,tests,backend,+2] 17f (+299/-27) @ 2026-08-07 02:22 +0800",
+    "branch":  "dev",
+    "finishedAt":  "2026-08-07T02:22:38+08:00",
+    "topDirs":  {
+                    "backend":  1,
+                    ".github":  1,
+                    ".cursor":  1,
+                    "tests":  2,
+                    "fe":  7,
+                    "docs":  5
+                },
+    "sampleFiles":  [
+                        ".cursor/logs/scheduled-auto-commit/state.json",
+                        ".github/workflows/ci.yml",
+                        "backend/app/dashboard/global_filters/service.py",
+                        "docs/api/README.md",
+                        "docs/arch.md",
+                        "docs/services/dashboard.md",
+                        "docs/services/integration.md",
+                        "docs/services/reports.md",
+                        "fe/e2e/persistence/dashboard-save.spec.ts",
+                        "fe/playwright.persistence.config.ts"
+                    ],
+    "startedAt":  "2026-08-07T02:21:41+08:00",
+    "insertions":  299,
+    "deletions":  27,
+    "filesChanged":  17,
+    "runId":  "2026-08-07T022220",
+    "outcome":  "success",
+    "commit":  "0ca7ad98",
+    "messageBodyPreview":  "Areas:\r\n  fe/          7 files (+139/-1)\r\n  docs/        5 files (+9/-6)\r\n  tests/       2 files (+117/-1)\r\n  backend/     1 files (+8/-12)\r\n  .github/     1 files (+23/-0)\r\n  .cursor/     1 files (+3/-7)\r\n\r\nChanged (up to 25):\r\nM  .cursor/logs/scheduled-auto-commit/state.json\r\nM  .github/workflows/ci.yml\r\nM  backend/app/dashboard/global_filters/service.py\r\nM  docs/api/README.md\r\nM  docs/arch.md\r\nM  docs/services/dashboard.md\r\nM  docs/services/integration.md\r\nM  docs/services/reports.md\r\nA  fe/e",
+    "push":  false
+}

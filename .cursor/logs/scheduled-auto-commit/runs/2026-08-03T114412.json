@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-03T11:44:12+08:00",
+  "finishedAt": "2026-08-03T11:44:20+08:00",
+  "branch": "dev",
+  "commit": "0f4eb011",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,.cursor] 19f (+335/-176) @ 2026-08-03 11:44 +0800",
+  "filesChanged": 19,
+  "insertions": 335,
+  "deletions": 176,
+  "topDirs": { "fe": 16, ".cursor": 3 },
+  "sampleFiles": [
+    "fe/src/components/dashboard/viz-components/CreateVizComponentDialog.test.tsx",
+    "fe/src/pages/admin/datasources/DatasourceDetailPage.tsx",
+    "fe/src/lib/vizComponentDefaults.ts",
+    "fe/src/layouts/AdminLayout.tsx"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/"]
+}

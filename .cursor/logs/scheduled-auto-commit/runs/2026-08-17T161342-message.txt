@@ -1,0 +1,41 @@
+wip: [fe,backend,.cursor,docs,+3] 110f (+3058/-2659) @ 2026-08-17 16:...
+
+Areas:
+  fe/          77 files (+1216/-985)
+  backend/     22 files (+1606/-1579)
+  .cursor/     4 files (+50/-4)
+  docs/        2 files (+8/-9)
+  tests/       2 files (+94/-1)
+  scripts/     2 files (+83/-79)
+  deploy/      1 files (+1/-2)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T021917-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T125551-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-17T125551.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/dashboard/export_render.py
+M  backend/app/dashboard/templates/layouts/industrial-park-screen.json
+M  backend/app/dashboard/templates/layouts/workspace-community.json
+M  backend/app/dashboard/templates/layouts/workspace-digital-cockpit.json
+M  backend/app/dashboard/templates/layouts/workspace-eco.json
+M  backend/app/dashboard/templates/layouts/workspace-efficiency.json
+M  backend/app/dashboard/templates/layouts/workspace-emergency.json
+M  backend/app/dashboard/templates/layouts/workspace-finance.json
+M  backend/app/dashboard/templates/layouts/workspace-grid.json
+D  backend/app/dashboard/templates/layouts/workspace-investment.json
+M  backend/app/dashboard/templates/layouts/workspace-satisfaction.json
+M  backend/app/dashboard/templates/layouts/workspace-smart-city.json
+M  backend/app/dashboard/templates/presets_exported.py
+M  backend/app/dashboard/templates/seed.py
+M  backend/app/dashboard/workspace_instances/seed.py
+M  backend/app/reports/standard/capabilities.py
+M  backend/app/reports/standard/dataset_binding.py
+M  backend/app/reports/standard/errors.py
+M  backend/app/reports/standard/schemas.py
+M  backend/app/reports/standard/service.py
+M  backend/tests/test_builtin_template_demo_encodings.py
+... and 85 more
+
+stat: 110 files changed, 3058 insertions(+), 2659 deletions(-)
+branch: dev | scheduled-auto-commit

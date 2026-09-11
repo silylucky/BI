@@ -1,0 +1,31 @@
+wip: [backend,fe,.cursor,docker] 19f (+1379/-295) @ 2026-07-31 13:28 ...
+
+Areas:
+  backend/     9 files (+861/-198)
+  fe/          6 files (+329/-96)
+  .cursor/     3 files (+27/-1)
+  docker/      1 files (+162/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T125816-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T125816.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/.env.example
+M  backend/app/core/config.py
+M  backend/app/dashboard/templates/demo_datasource.py
+A  backend/app/dashboard/templates/official_demo_sql.py
+M  backend/app/dashboard/templates/presets.py
+M  backend/app/dashboard/templates/presets_gov_sql.py
+A  backend/app/dashboard/templates/presets_official_gallery.py
+M  backend/app/dashboard/templates/seed.py
+M  backend/app/main.py
+M  docker/demo-mysql/tables.sql
+M  fe/src/lib/dashboardTemplates.ts
+M  fe/src/pages/admin/reports/ReportSchedulesPage.tsx
+M  fe/src/pages/admin/reports/components/ScheduleHistoryTable.tsx
+M  fe/src/pages/admin/reports/components/ScheduleListTable.tsx
+A  fe/src/pages/admin/reports/components/SchedulePageOverview.tsx
+M  fe/src/pages/admin/reports/report-schedules.smoke.test.tsx
+
+stat: 19 files changed, 1379 insertions(+), 295 deletions(-)
+branch: dev | scheduled-auto-commit

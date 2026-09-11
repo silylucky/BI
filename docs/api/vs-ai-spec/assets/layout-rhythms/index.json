@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "description": "Layout Rhythm Contract (LRC) — 通用排版契约，非成品大屏",
+  "recommended": [
+    "rhythm-hero-stack",
+    "rhythm-cv-stage",
+    "rhythm-split-focus",
+    "rhythm-balanced-grid",
+    "rhythm-minimal"
+  ],
+  "legacyNote": "layout-templates/de-* 为参考金样；wf3 默认 rhythm + blocks",
+  "rhythms": [
+    {
+      "id": "rhythm-hero-stack",
+      "name": "主区堆叠",
+      "surfaceKind": "data-screen",
+      "description": "可选 KPI 带 + 主区 + 辅区；metrics 可空（0 KPI）"
+    },
+    {
+      "id": "rhythm-cv-stage",
+      "name": "组件舞台",
+      "surfaceKind": "data-screen",
+      "description": "无 KPI 带；1～2 大 customViz + 可选辅区"
+    },
+    {
+      "id": "rhythm-split-focus",
+      "name": "侧栏聚焦",
+      "surfaceKind": "data-screen",
+      "description": "侧栏栈 + 中央主图（地图/cv/折线）"
+    },
+    {
+      "id": "rhythm-balanced-grid",
+      "name": "四象限",
+      "surfaceKind": "data-screen",
+      "description": "2×2 均分，无默认 KPI 行"
+    },
+    {
+      "id": "rhythm-minimal",
+      "name": "极简",
+      "surfaceKind": "dashboard",
+      "description": "1～3 块 + 留白；可 1 cv 槽"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+wip: [fe,.agents,backend,.cursor] 15f (+312/-38) @ 2026-08-06 19:13 +...
+
+Areas:
+  fe/          10 files (+205/-27)
+  .agents/     2 files (+73/-0)
+  backend/     2 files (+31/-4)
+  .cursor/     1 files (+3/-7)
+
+Changed (up to 25):
+A  .agents/skills/bug-case-library/cases/be-dashboard-canvas-bg-data-url-limit.md
+A  .agents/skills/bug-case-library/cases/fe-webpage-insert-backgroundImage-crash.md
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/dashboard/schemas.py
+A  backend/tests/test_dashboard_image_data_url_limit.py
+M  fe/src/components/dashboard/WidgetBackgroundImageFitFields.tsx
+M  fe/src/components/dashboard/WidgetBackgroundImagePicker.tsx
+M  fe/src/components/dashboard/imageSourceUtils.ts
+M  fe/src/components/dashboard/widgetSurfaceStyleFields.tsx
+M  fe/src/lib/apiError.ts
+A  fe/src/lib/collectDashboardImageUrls.test.ts
+M  fe/src/lib/collectDashboardImageUrls.ts
+M  fe/src/pages/admin/reports/components/ReportMetricDatasetFields.tsx
+M  fe/src/pages/admin/reports/components/ReportMetricExtensionForm.tsx
+M  fe/src/pages/admin/reports/report-templates.smoke.test.tsx
+
+stat: 15 files changed, 312 insertions(+), 38 deletions(-)
+branch: dev | scheduled-auto-commit

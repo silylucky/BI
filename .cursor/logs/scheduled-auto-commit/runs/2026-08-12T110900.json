@@ -1,0 +1,15 @@
+{
+  "startedAt": "2026-08-12T11:09:00+08:00",
+  "finishedAt": "2026-08-12T11:09:35+08:00",
+  "branch": "dev",
+  "outcome": "success",
+  "push": false,
+  "commit": "fff8b254",
+  "messageSubject": "wip: [backend,fe,docs,.cursor,+1] 16f (+756/-13) @ 2026-08-12 11:09 +...",
+  "messageBodyPreview": "Dataset transform rules: backend model/service/API, migration 0045, FE panel, tests",
+  "filesChanged": 16,
+  "insertions": 756,
+  "deletions": 13,
+  "topDirs": { "backend": 7, "fe": 4, "docs": 2, ".cursor": 2, "tests": 1 },
+  "tick": 404
+}

@@ -1,0 +1,16 @@
+wip: [fe,.cursor] 6f (+91/-6) @ 2026-08-03 15:14 +0800
+
+Areas:
+  fe/          3 files (+31/-5)
+  .cursor/     3 files (+60/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T144441-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T144441.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  fe/src/lib/api.test.ts
+M  fe/src/lib/api.ts
+M  fe/src/pages/admin/ingestion/SyncJobHistoryPage.tsx
+
+stat: 6 files changed, 91 insertions(+), 6 deletions(-)
+branch: dev | scheduled-auto-commit

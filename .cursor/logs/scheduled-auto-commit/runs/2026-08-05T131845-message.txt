@@ -1,0 +1,39 @@
+wip: [fe,docs,backend,tests,+1] 356f (+13690/-474) @ 2026-08-05 13:18...
+
+Areas:
+  fe/          344 files (+13099/-398)
+  docs/        4 files (+222/-31)
+  backend/     4 files (+215/-4)
+  tests/       3 files (+120/-41)
+  .agents/     1 files (+34/-0)
+
+Changed (up to 25):
+A  .agents/skills/bug-case-library/cases/fe-cartesian-multi-dim-axis-labels.md
+M  backend/app/api/v1/ingestion/sync.py
+M  backend/app/ingestion/etl_templates.py
+M  backend/app/ingestion/sync_consume.py
+M  backend/app/ingestion/target_table_guard.py
+M  docs/api/README.md
+A  docs/deliverable-gate/2026-08-05-report-center-graduation.md
+M  docs/feature-truth/2026-08-04-sync-dataset-isolation-truth-audit.md
+M  docs/user-guide/ingestion-sync-jobs-how-to.md
+M  fe/package.json
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-amber-band.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-amber-dots.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-amber-mesh.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-amber-stripes.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-blue-band.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-blue-dots.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-blue-mesh.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-blue-stripes.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-coral-band.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-coral-dots.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-coral-mesh.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-coral-stripes.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-cyan-band.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-cyan-dots.svg
+A  fe/public/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-cyan-mesh.svg
+... and 331 more
+
+stat: 356 files changed, 13690 insertions(+), 474 deletions(-)
+branch: dev | scheduled-auto-commit

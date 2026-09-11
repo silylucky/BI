@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "description": "DeepTalk VitalSpan 意图路由（规则引擎，非 LLM）",
+  "rules": [
+    {
+      "match": ["流向", "sankey", "桑基", "de-kpi-flow-wall", "de_map_flow"],
+      "workflow": "1",
+      "chartType": "sankey",
+      "reason": "流向/链路用内置 sankey（wf1），禁止 customViz 仿地图"
+    },
+    {
+      "match": ["地图", "choropleth", "省界", "gis-map", "gis"],
+      "workflow": "1",
+      "chartType": "gis-map",
+      "reason": "地图用内置 gis-map 或 choropleth（wf1），禁止在线瓦片 customViz"
+    },
+    {
+      "match": ["关系图", "graph", "力导向", "dagre"],
+      "workflow": "1",
+      "chartType": "graph",
+      "reason": "关系图用内置 graph（wf1）"
+    },
+    {
+      "match": ["矩形树", "treemap", "树图", "treemap图"],
+      "workflow": "1",
+      "chartType": "treemap",
+      "reason": "矩形树图用内置 treemap（wf1），禁止 customViz 文本列表仿制"
+    },
+    {
+      "match": ["圆角矩形树", "circle-packing", "circle packing", "打包图"],
+      "workflow": "1",
+      "chartType": "circle-packing",
+      "reason": "圆角矩形树/打包图用内置 circle-packing（wf1）"
+    },
+    {
+      "match": ["饼图", "pie", "donut", "环形图", "玫瑰图", "pie-rose"],
+      "workflow": "1",
+      "chartType": "pie",
+      "reason": "饼图/环形图用内置 pie（wf1）"
+    },
+    {
+      "match": ["漏斗", "funnel", "转化漏斗"],
+      "workflow": "1",
+      "chartType": "funnel",
+      "reason": "漏斗图用内置 funnel（wf1）"
+    },
+    {
+      "match": ["词云", "word-cloud", "wordcloud", "word cloud"],
+      "workflow": "1",
+      "chartType": "word-cloud",
+      "reason": "词云用内置 word-cloud（wf1）"
+    },
+    {
+      "match": ["旭日", "sunburst", "sun burst"],
+      "workflow": "1",
+      "chartType": "sunburst",
+      "reason": "旭日图用内置 sunburst（wf1）"
+    },
+    {
+      "match": ["热力", "heatmap", "heat-map", "heat map"],
+      "workflow": "1",
+      "chartType": "heatmap",
+      "reason": "热力图用内置 heatmap（wf1）"
+    },
+    {
+      "match": ["散点", "scatter", "气泡图"],
+      "workflow": "1",
+      "chartType": "scatter",
+      "reason": "散点/气泡图用内置 scatter（wf1）"
+    },
+    {
+      "match": ["雷达", "radar"],
+      "workflow": "1",
+      "chartType": "radar",
+      "reason": "雷达图用内置 radar（wf1）"
+    },
+    {
+      "match": ["仪表盘", "gauge", "仪表图"],
+      "workflow": "1",
+      "chartType": "gauge",
+      "reason": "仪表盘用内置 gauge（wf1）"
+    },
+    {
+      "match": ["水球", "liquid", "水位图"],
+      "workflow": "1",
+      "chartType": "liquid",
+      "reason": "水球图用内置 liquid（wf1）"
+    },
+    {
+      "match": ["柱状图", "条形图", "bar chart", "bar-chart"],
+      "workflow": "1",
+      "chartType": "bar",
+      "reason": "标准柱/条形图用内置 bar（wf1）"
+    },
+    {
+      "match": ["折线图", "line chart", "line-chart", "面积图", "area chart"],
+      "workflow": "1",
+      "chartType": "line",
+      "reason": "标准折线/面积图用内置 line/area（wf1）；炫丽动态趋势走 wf2 generic-blank-d3"
+    },
+    {
+      "match": ["排名", "ranking", "排行榜"],
+      "workflow": "2",
+      "runtime": "html",
+      "paradigm": "P1-cartesian",
+      "reason": "排名 customViz（wf2）；起盘 generic-blank-html；ranking-bar 金样仅参考"
+    },
+    {
+      "match": ["趋势", "trend", "动态趋势"],
+      "workflow": "2",
+      "runtime": "d3",
+      "paradigm": "P1-cartesian",
+      "reason": "炫丽趋势 customViz（wf2）；起盘 generic-blank-d3；trend-line 金样仅参考"
+    },
+    {
+      "match": ["滚动表", "明细表", "scrolling-table", "多维明细"],
+      "workflow": "2",
+      "runtime": "html",
+      "paradigm": "P2-multi-column-detail",
+      "reason": "多维明细（wf2）；起盘 generic-blank-html 并改 fieldSlots；scrolling-table 金样仅参考"
+    },
+    {
+      "match": ["kpi", "指标卡", "六边形", "hex"],
+      "workflow": "2",
+      "runtime": "html",
+      "reason": "KPI/开放画布用 generic-blank-html（wf2）"
+    }
+  ]
+}

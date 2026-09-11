@@ -1,23 +1,29 @@
-# Secrets
-backend/.env
-.env
-
-# Python
-backend/.venv/
 __pycache__/
-*.py[cod]
-
-# Node.js
+.env
+backend/.env
+fe/.env
+*.pyc
+.venv/
 node_modules/
-frontend/node_modules/
-frontend/dist/
-frontend/tsconfig.tsbuildinfo
+fe/dist/
+fe/.vite/
+.pytest_cache/
+*.egg-info/
+.ruff_cache/
+.worktrees/
+.arch-inspect/
+.dev/secrets.env
+.dev/walkthrough/
+.dev/baselines/
+.codegraph/
+.evidence/
 
-# Runtime state and generated files
-backend/data/
+# 本地临时文件与运行产物（禁止入库）
+.tmp/
+fe/.tmp/
+data/backups/
+data/artifacts/
+backend/data/artifacts/
+fe/.env.production.local
 
-# IDE and OS
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
+.worktrees/

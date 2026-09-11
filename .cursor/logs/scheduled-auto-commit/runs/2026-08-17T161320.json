@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-17T16:13:20+08:00",
+  "finishedAt": "2026-08-17T16:13:45+08:00",
+  "branch": "dev",
+  "commit": "fe81826e",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,backend,.cursor,docs,+3] 110f (+3058/-2659) @ 2026-08-17 16:13 +0800",
+  "messageBodyPreview": "Areas: fe/ 77, backend/ 22, .cursor/ 4, docs/ 2, tests/ 2, scripts/ 2, deploy/ 1",
+  "filesChanged": 110,
+  "insertions": 3058,
+  "deletions": 2659,
+  "topDirs": { "fe": 77, "backend": 22, ".cursor": 4, "docs": 2, "tests": 2, "scripts": 2, "deploy": 1 },
+  "sampleFiles": [
+    "fe/src/pages/admin/reports/ReportCenterPage.tsx",
+    "backend/app/reports/standard/service.py",
+    "fe/src/pages/admin/reports/components/ReportCenterTabNav.tsx"
+  ],
+  "notes": "loop restarted with notify_on_output; excluded data/dashboard-thumbnails"
+}

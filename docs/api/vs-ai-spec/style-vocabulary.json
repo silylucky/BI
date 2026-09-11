@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "generatedBy": "scripts/export-vs-ai-spec.py",
+  "globalStyleFields": [
+    "paletteId",
+    "paletteColors",
+    "paletteOpacity",
+    "seriesGradient",
+    "depthVisual",
+    "seriesColor",
+    "title",
+    "legend",
+    "label",
+    "tooltip",
+    "background",
+    "border",
+    "remark"
+  ],
+  "rendererFamilies": {
+    "cartesian": {
+      "wired": true,
+      "fields": ["cartesian.barWidthRatio", "cartesian.barRadius", "cartesian.lineWidth", "cartesian.pointSize", "cartesian.areaOpacity", "cartesian.lineSmooth", "axis"]
+    },
+    "radial": {
+      "wired": true,
+      "fields": ["pie.innerRadiusPercent", "pie.outerRadiusPercent", "pie.padAngle", "pie.mergeOthers", "pie.topN"]
+    },
+    "geo": {
+      "wired": true,
+      "fields": ["geo.visualMap", "geo.roam", "geo.labelShow", "geo3d.quality"]
+    },
+    "quota": {
+      "wired": true,
+      "fields": ["gauge", "liquid", "kpiIndicator"]
+    }
+  },
+  "byChartType": {
+    "bar": { "sections": ["axis", "cartesianShape", "background", "palette", "title", "remark", "legend", "label", "tooltip"], "wired": true },
+    "line": { "sections": ["axis", "cartesianShape", "background", "palette", "title", "remark", "legend", "label", "tooltip"], "wired": true },
+    "pie": { "sections": ["pieShape", "background", "title", "remark", "legend", "label", "tooltip"], "wired": true },
+    "map": { "sections": ["background", "mapBasic", "title", "geo", "remark"], "wired": true },
+    "gis-map": {
+      "sections": ["background", "title", "remark"],
+      "nativeBody": ["gisProject"],
+      "wired": true
+    },
+    "kpi": { "sections": ["background", "palette", "title", "label", "kpiIndicator"], "wired": true }
+  },
+  "customViz": {
+    "wired": true,
+    "note": "样式由 bundle manifest.styleSchema + defaultStyle 定义；支持 AI 自由声明新样式键，见 guides/STYLE-SCHEMA.md"
+  }
+}

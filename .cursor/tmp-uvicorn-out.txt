@@ -1,0 +1,21 @@
+{"timestamp": "2026-08-26T07:43:25.137581+00:00", "level": "INFO", "logger": "app.main", "message": "template_assets_mounted path=/template-assets dir=C:\\Users\\30381\\Desktop\\VitalSpan\\fe\\public\\template-assets"}
+{"timestamp": "2026-08-26T07:43:25.606718+00:00", "level": "INFO", "logger": "app.main", "message": "demo_datasets_seed_ok inserted=1"}
+{"timestamp": "2026-08-26T07:43:25.745007+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Adding job tentatively -- it will be properly scheduled when the scheduler starts"}
+{"timestamp": "2026-08-26T07:43:25.748023+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Adding job tentatively -- it will be properly scheduled when the scheduler starts"}
+{"timestamp": "2026-08-26T07:43:25.754389+00:00", "level": "INFO", "logger": "app.main", "message": "report_dev_seed_ok {'datasource': 0, 'equipment': 0, 'template': 0, 'standard': 1, 'schedule': 0, 'dimensions': 0, 'dataSourceId': '00e7438c-33ac-4239-88a5-af28ecdece19', 'catalogNodeId': '7e5bcd8e-1f36-491e-8247-7d91d585a165'}"}
+{"timestamp": "2026-08-26T07:43:25.756389+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Adding job tentatively -- it will be properly scheduled when the scheduler starts"}
+{"timestamp": "2026-08-26T07:43:25.760412+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Adding job tentatively -- it will be properly scheduled when the scheduler starts"}
+{"timestamp": "2026-08-26T07:43:25.761917+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Added job \"reconcile_stale_running_runs\" to job store \"default\""}
+{"timestamp": "2026-08-26T07:43:25.762535+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Added job \"run_job\" to job store \"default\""}
+{"timestamp": "2026-08-26T07:43:25.762785+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Scheduler started"}
+{"timestamp": "2026-08-26T07:43:25.762868+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Removed job std-snap-s1"}
+{"timestamp": "2026-08-26T07:43:25.762868+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Removed job std-snap-equipment-overview"}
+{"timestamp": "2026-08-26T07:43:25.765872+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Adding job tentatively -- it will be properly scheduled when the scheduler starts"}
+{"timestamp": "2026-08-26T07:43:25.767871+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Adding job tentatively -- it will be properly scheduled when the scheduler starts"}
+{"timestamp": "2026-08-26T07:43:25.767871+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Adding job tentatively -- it will be properly scheduled when the scheduler starts"}
+{"timestamp": "2026-08-26T07:43:25.768988+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Added job \"_tick_execute\" to job store \"default\""}
+{"timestamp": "2026-08-26T07:43:25.768988+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Added job \"_capture_pack\" to job store \"default\""}
+{"timestamp": "2026-08-26T07:43:25.768988+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Added job \"_capture_pack\" to job store \"default\""}
+{"timestamp": "2026-08-26T07:43:25.768988+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Scheduler started"}
+{"timestamp": "2026-08-26T07:43:25.778024+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Scheduler has been shut down"}
+{"timestamp": "2026-08-26T07:43:25.778024+00:00", "level": "INFO", "logger": "apscheduler.scheduler", "message": "Scheduler has been shut down"}

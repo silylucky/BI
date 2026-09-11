@@ -1,0 +1,41 @@
+wip: [fe,backend,.cursor,docs,+3] 36f (+699/-104) @ 2026-07-31 14:58 ...
+
+Areas:
+  fe/          18 files (+374/-74)
+  backend/     11 files (+199/-24)
+  .cursor/     3 files (+56/-1)
+  docs/        1 files (+1/-1)
+  tests/       1 files (+9/-3)
+  _root/       1 files (+2/-1)
+  scripts/     1 files (+58/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T142823-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T142823.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  README.md
+M  backend/app/dashboard/demo_instances/seed.py
+M  backend/app/dashboard/demo_package/status.py
+M  backend/app/dashboard/service.py
+M  backend/app/dashboard/templates/demo_datasource.py
+M  backend/app/datasources/service.py
+M  backend/app/main.py
+A  backend/app/metadata/dataset/demo_seed.py
+M  backend/app/metadata/dataset/errors.py
+M  backend/app/metadata/dataset/schemas.py
+M  backend/app/metadata/dataset/service.py
+M  backend/tests/test_demo_package_status.py
+M  docs/services/datasources.md
+M  fe/src/components/README.md
+M  fe/src/components/dashboard/DashboardListCard.test.tsx
+A  fe/src/components/layout/admin-page-shell.test.tsx
+M  fe/src/components/layout/admin-page-shell.tsx
+M  fe/src/components/layout/list-page-kit.tsx
+M  fe/src/lib/demoPackage.test.ts
+M  fe/src/lib/demoPackage.ts
+M  fe/src/lib/demoPackageStatus.ts
+M  fe/src/lib/templateDemoData.test.ts
+... and 11 more
+
+stat: 36 files changed, 699 insertions(+), 104 deletions(-)
+branch: dev | scheduled-auto-commit

@@ -1,0 +1,10 @@
+wip: [d] 1f (+284/-0) @ 2026-08-09 17:10 +0800
+
+Areas:
+  docs/        1 files (+284/-0)
+
+Changed (up to 25):
+A  docs/material/code-reviewer/2026-08-09-full-repo-review.md
+
+stat: 1 file changed, 284 insertions(+)
+branch: dev | scheduled-auto-commit

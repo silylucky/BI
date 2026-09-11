@@ -1,0 +1,20 @@
+wip: [fe,.cursor] 10f (+643/-256) @ 2026-08-07 00:22 +0800
+
+Areas:
+  fe/          9 files (+640/-249)
+  .cursor/     1 files (+3/-7)
+
+Changed (up to 25):
+M  .cursor/logs/scheduled-auto-commit/state.json
+A  fe/src/components/layout/system-admin-header-button.tsx
+M  fe/src/layouts/AdminLayout.smoke.test.tsx
+M  fe/src/layouts/AdminLayout.tsx
+M  fe/src/pages/admin/system/grants/GrantsPage.tsx
+M  fe/src/pages/admin/system/grants/grants.smoke.test.tsx
+M  fe/src/pages/admin/system/grants/useGrantsPage.ts
+M  fe/src/pages/admin/system/rls/RlsAdminPage.tsx
+M  fe/src/pages/admin/system/rls/rls.smoke.test.tsx
+M  fe/src/pages/admin/system/roles/RoleProfileFormFields.tsx
+
+stat: 10 files changed, 643 insertions(+), 256 deletions(-)
+branch: dev | scheduled-auto-commit

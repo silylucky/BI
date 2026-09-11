@@ -1,0 +1,24 @@
+flowchart TB
+  subgraph client [客户端]
+    Web[控制台]
+    Embed[嵌入展现]
+  end
+  subgraph api [API 服务]
+    Auth[身份与权限]
+    Biz[业务能力域]
+  end
+  subgraph data [数据层]
+    Meta[平台元数据]
+    Store[托管分析库]
+  end
+  subgraph ext [外部]
+    Src[业务数据源]
+    Bus[数据交换总线]
+  end
+  Web --> Auth
+  Embed --> Auth
+  Auth --> Biz
+  Biz --> Meta
+  Biz --> Store
+  Biz --> Src
+  Biz --> Bus

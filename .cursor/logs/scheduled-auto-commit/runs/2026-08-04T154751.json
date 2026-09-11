@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-04T15:47:51+08:00",
+  "finishedAt": "2026-08-04T15:48:12+08:00",
+  "branch": "dev",
+  "commit": "b3cac1e2",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,.cursor] 20f (+401/-44) @ 2026-08-04 15:48 +0800",
+  "filesChanged": 20,
+  "insertions": 401,
+  "deletions": 44,
+  "topDirs": { "fe": 17, ".cursor": 3 },
+  "sampleFiles": [
+    "fe/src/lib/adminHeavyRenderSuspend.ts",
+    "fe/src/lib/routePrefetch.ts",
+    "fe/src/components/layout/AdminNavPerfTracker.tsx",
+    "fe/src/hooks/useAdminHeavyRenderSuspended.ts"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/", "fe/.env.production.local"]
+}

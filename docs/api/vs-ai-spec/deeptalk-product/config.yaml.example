@@ -1,0 +1,35 @@
+# VitalSpan 本地联调配置（开发备用）
+
+> **产品交付**使用插件 + 工作区 `instanceConfig.vitalspan`（见 [WORKSPACE-PLUGIN-CONTRACT.md](./WORKSPACE-PLUGIN-CONTRACT.md)）。  
+> 本文件供 sync 到 `integrations/vitalspan/config.yaml` 或 CI 使用；**勿**作为客户对接说明。
+
+复制为 `config.yaml`；生产凭据走密钥管理，勿提交明文密码。
+
+```yaml
+vitalspan:
+  api_base: http://127.0.0.1:8000/api/v1
+  fe_base: http://127.0.0.1:5173/admin
+  # 全量 preflight / 金样 scaffold 需要 VitalSpan 仓根
+  vitalspan_root: C:/Users/you/Desktop/VitalSpan
+  credential_env:
+    username: VITALSPAN_USERNAME
+    password: VITALSPAN_DEV_ADMIN_PASSWORD
+
+agent:
+  spec_pack_dir: vs-ai-spec
+  forbidden_delivery_dirs:
+    - output
+    - dist
+```
+
+DeepTalk 工作区插件侧等效字段写入 `instanceConfig.vitalspan`（无 token）：
+
+```json
+{
+  "mode": "demo",
+  "apiBaseUrl": "http://127.0.0.1:8000/api/v1",
+  "feAdminUrl": "http://127.0.0.1:5173/admin"
+}
+```
+
+凭据由 execTools / Agent 工具进程读 `VITALSPAN_USERNAME` · `VITALSPAN_DEV_ADMIN_PASSWORD` 环境变量。

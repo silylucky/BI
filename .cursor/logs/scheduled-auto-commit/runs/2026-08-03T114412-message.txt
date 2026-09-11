@@ -1,0 +1,29 @@
+wip: [fe,.cursor] 19f (+335/-176) @ 2026-08-03 11:44 +0800
+
+Areas:
+  fe/          16 files (+308/-175)
+  .cursor/     3 files (+27/-1)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T111417-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T111417.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  fe/src/components/dashboard/ChartPickerPopover.tsx
+A  fe/src/components/dashboard/viz-components/CreateVizComponentDialog.test.tsx
+M  fe/src/components/dashboard/viz-components/CreateVizComponentDialog.tsx
+M  fe/src/components/datasources/SchemaBrowser.tsx
+M  fe/src/layouts/AdminLayout.tsx
+M  fe/src/lib/admin-layout-routes.test.ts
+M  fe/src/lib/admin-layout-routes.ts
+M  fe/src/lib/vizComponentDefaults.test.ts
+M  fe/src/lib/vizComponentDefaults.ts
+M  fe/src/pages/admin/datasources/DatasourceDetailPage.tsx
+M  fe/src/pages/admin/datasources/components/DatasourceDetailPanel.tsx
+M  fe/src/pages/admin/ingestion/EtlRulesPage.tsx
+M  fe/src/pages/admin/ingestion/SyncJobFormPage.tsx
+D  fe/src/pages/admin/viz-templates/DemoPackageStatusHint.tsx
+M  fe/src/pages/admin/viz-templates/VizTemplatesHubPage.tsx
+M  fe/src/pages/admin/viz-templates/viz-templates.smoke.test.tsx
+
+stat: 19 files changed, 335 insertions(+), 176 deletions(-)
+branch: dev | scheduled-auto-commit

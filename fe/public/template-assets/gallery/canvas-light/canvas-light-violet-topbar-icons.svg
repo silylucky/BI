@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice">
+  
+  <g transform="scale(0.16666666666666666 0.16666666666666666)">
+  
+  <defs>
+    <linearGradient id="bec93010-base" x1="0" y1="0" x2="1920" y2="1080">
+      <stop stop-color="#e8e7ea"/>
+      <stop offset="0.32" stop-color="#bdb3cb"/>
+      <stop offset="0.68" stop-color="#d5c9e8"/>
+      <stop offset="1" stop-color="#b7a3db"/>
+    </linearGradient>
+    <radialGradient id="bec93010-glowL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(345.59999999999997 237.6) scale(729.6)">
+      <stop stop-color="#8b5cf6" stop-opacity="0.32"/>
+      <stop offset="0.55" stop-color="#554084" stop-opacity="0.20800000000000002"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bec93010-glowR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1574.3999999999999 777.6) scale(614.4)">
+      <stop stop-color="#a78bfa" stop-opacity="0.272"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bec93010-base)"/>
+  <rect width="1920" height="1080" fill="url(#bec93010-glowL)"/>
+  <rect width="1920" height="1080" fill="url(#bec93010-glowR)"/>
+  <defs>
+    <linearGradient id="bec93010-hdr" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#a78bfa" stop-opacity="0.71"/>
+      <stop offset="1" stop-opacity="0.00"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="72" fill="url(#bec93010-hdr)"/>
+  <line x1="0" y1="72" x2="1920" y2="72" stroke="#a78bfa" stroke-width="1" opacity="0.54"/>
+  <line x1="48" y1="72" x2="1872" y2="72" stroke="#a78bfa" stroke-width="2" opacity="0.32"/>
+  <path d="M158 36 L150 31.2 L150 40.8 Z" fill="#a78bfa" fill-opacity="0.45" stroke="#a78bfa" stroke-width="0.8" opacity="0.54"/><path d="M162 36 L170 31.2 L170 40.8 Z" fill="#a78bfa" fill-opacity="0.45" stroke="#a78bfa" stroke-width="0.8" opacity="0.54"/>
+  <path d="M214 36 L206 31.2 L206 40.8 Z" fill="#a78bfa" fill-opacity="0.45" stroke="#a78bfa" stroke-width="0.8" opacity="0.54"/><path d="M218 36 L226 31.2 L226 40.8 Z" fill="#a78bfa" fill-opacity="0.45" stroke="#a78bfa" stroke-width="0.8" opacity="0.54"/>
+  <path d="M270 36 L262 31.2 L262 40.8 Z" fill="#a78bfa" fill-opacity="0.45" stroke="#a78bfa" stroke-width="0.8" opacity="0.54"/><path d="M274 36 L282 31.2 L282 40.8 Z" fill="#a78bfa" fill-opacity="0.45" stroke="#a78bfa" stroke-width="0.8" opacity="0.54"/>
+  <path d="M326 36 L318 31.2 L318 40.8 Z" fill="#a78bfa" fill-opacity="0.45" stroke="#a78bfa" stroke-width="0.8" opacity="0.54"/><path d="M330 36 L338 31.2 L338 40.8 Z" fill="#a78bfa" fill-opacity="0.45" stroke="#a78bfa" stroke-width="0.8" opacity="0.54"/>
+  <path d="M382 36 L374 31.2 L374 40.8 Z" fill="#a78bfa" fill-opacity="0.45" stroke="#a78bfa" stroke-width="0.8" opacity="0.54"/><path d="M386 36 L394 31.2 L394 40.8 Z" fill="#a78bfa" fill-opacity="0.45" stroke="#a78bfa" stroke-width="0.8" opacity="0.54"/>
+  <path d="M438 36 L430 31.2 L430 40.8 Z" fill="#a78bfa" fill-opacity="0.45" stroke="#a78bfa" stroke-width="0.8" opacity="0.54"/><path d="M442 36 L450 31.2 L450 40.8 Z" fill="#a78bfa" fill-opacity="0.45" stroke="#a78bfa" stroke-width="0.8" opacity="0.54"/>
+  <path d="M494 36 L486 31.2 L486 40.8 Z" fill="#a78bfa" fill-opacity="0.45" stroke="#a78bfa" stroke-width="0.8" opacity="0.54"/><path d="M498 36 L506 31.2 L506 40.8 Z" fill="#a78bfa" fill-opacity="0.45" stroke="#a78bfa" stroke-width="0.8" opacity="0.54"/>
+  <g opacity="0.62" stroke="#a78bfa" stroke-width="1.5" fill="none">
+  <path d="M40 120 V88 H72"/>
+  <path d="M1848 88 H1880 V120"/>
+  <path d="M1880 1008 V1040 H1848"/>
+  <path d="M72 1040 H40 V1008"/>
+</g>
+  <rect x="60" y="100" width="1800" height="920" fill="none" stroke="#a78bfa" stroke-width="0.5" opacity="0.32" rx="2"/>
+  <path d="M948 561.6 L900 532.8000000000001 L900 590.4 Z" fill="#a78bfa" fill-opacity="0.22" stroke="#a78bfa" stroke-width="0.8" opacity="0.28"/><path d="M972 561.6 L1020 532.8000000000001 L1020 590.4 Z" fill="#a78bfa" fill-opacity="0.22" stroke="#a78bfa" stroke-width="0.8" opacity="0.28"/>
+  <polygon points="90.39230484541326,1014 90.39230484541326,1026 80,1032 69.60769515458674,1026 69.60769515458674,1014 79.99999999999999,1008" fill="none" stroke="#a78bfa" stroke-width="1.2" opacity="0.46"/>
+  <circle cx="80" cy="1020" r="3" fill="#a78bfa" opacity="0.38"/>
+  <path d="M120 1008 L132 1020 L120 1032 L108 1020 Z" fill="none" stroke="#a78bfa" stroke-width="1.2" opacity="0.46"/>
+  <circle cx="120" cy="1020" r="2" fill="#a78bfa" opacity="0.46"/>
+  <path d="M160 1008 L168.4 1016.4 L168.4 1024.8 Q160 1030.8 151.6 1024.8 L151.6 1016.4 Z" fill="none" stroke="#a78bfa" stroke-width="1.2" opacity="0.46"/>
+
+  </g>
+</svg>

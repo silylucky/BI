@@ -1,0 +1,14 @@
+{
+  "startedAt": "2026-07-31T17:58:33+08:00",
+  "finishedAt": "2026-07-31T18:04:47+08:00",
+  "branch": "dev",
+  "commit": "4473f78b",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,backend,.cursor,tests] 42f (+1621/-771) @ 2026-07-31 17:58 +...",
+  "filesChanged": 42,
+  "insertions": 1621,
+  "deletions": 771,
+  "topDirs": { "fe": 33, "backend": 5, ".cursor": 3, "tests": 1 },
+  "excludedPaths": [".tmp/", "data/backups/"]
+}

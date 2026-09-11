@@ -1,0 +1,702 @@
+[
+  {
+    "id": "decor-arc-swoosh-coral",
+    "label": "arc swoosh coral",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-coral.svg",
+    "style": "arc-swoosh",
+    "palette": "coral"
+  },
+  {
+    "id": "decor-arc-swoosh-peach",
+    "label": "arc swoosh peach",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-peach.svg",
+    "style": "arc-swoosh",
+    "palette": "peach"
+  },
+  {
+    "id": "decor-arc-swoosh-orange",
+    "label": "arc swoosh orange",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-orange.svg",
+    "style": "arc-swoosh",
+    "palette": "orange"
+  },
+  {
+    "id": "decor-arc-swoosh-gold",
+    "label": "arc swoosh gold",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-gold.svg",
+    "style": "arc-swoosh",
+    "palette": "gold"
+  },
+  {
+    "id": "decor-arc-swoosh-amber",
+    "label": "arc swoosh amber",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-amber.svg",
+    "style": "arc-swoosh",
+    "palette": "amber"
+  },
+  {
+    "id": "decor-arc-swoosh-cyan",
+    "label": "arc swoosh cyan",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-cyan.svg",
+    "style": "arc-swoosh",
+    "palette": "cyan"
+  },
+  {
+    "id": "decor-arc-swoosh-cobalt",
+    "label": "arc swoosh cobalt",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-cobalt.svg",
+    "style": "arc-swoosh",
+    "palette": "cobalt"
+  },
+  {
+    "id": "decor-arc-swoosh-violet",
+    "label": "arc swoosh violet",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-violet.svg",
+    "style": "arc-swoosh",
+    "palette": "violet"
+  },
+  {
+    "id": "decor-arc-swoosh-emerald",
+    "label": "arc swoosh emerald",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-emerald.svg",
+    "style": "arc-swoosh",
+    "palette": "emerald"
+  },
+  {
+    "id": "decor-arc-swoosh-magenta",
+    "label": "arc swoosh magenta",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-swoosh-magenta.svg",
+    "style": "arc-swoosh",
+    "palette": "magenta"
+  },
+  {
+    "id": "decor-arc-top-coral",
+    "label": "arc top coral",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-coral.svg",
+    "style": "arc-top",
+    "palette": "coral"
+  },
+  {
+    "id": "decor-arc-top-peach",
+    "label": "arc top peach",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-peach.svg",
+    "style": "arc-top",
+    "palette": "peach"
+  },
+  {
+    "id": "decor-arc-top-orange",
+    "label": "arc top orange",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-orange.svg",
+    "style": "arc-top",
+    "palette": "orange"
+  },
+  {
+    "id": "decor-arc-top-gold",
+    "label": "arc top gold",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-gold.svg",
+    "style": "arc-top",
+    "palette": "gold"
+  },
+  {
+    "id": "decor-arc-top-amber",
+    "label": "arc top amber",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-amber.svg",
+    "style": "arc-top",
+    "palette": "amber"
+  },
+  {
+    "id": "decor-arc-top-cyan",
+    "label": "arc top cyan",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-cyan.svg",
+    "style": "arc-top",
+    "palette": "cyan"
+  },
+  {
+    "id": "decor-arc-top-cobalt",
+    "label": "arc top cobalt",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-cobalt.svg",
+    "style": "arc-top",
+    "palette": "cobalt"
+  },
+  {
+    "id": "decor-arc-top-violet",
+    "label": "arc top violet",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-violet.svg",
+    "style": "arc-top",
+    "palette": "violet"
+  },
+  {
+    "id": "decor-arc-top-emerald",
+    "label": "arc top emerald",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-emerald.svg",
+    "style": "arc-top",
+    "palette": "emerald"
+  },
+  {
+    "id": "decor-arc-top-magenta",
+    "label": "arc top magenta",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-arc-top-magenta.svg",
+    "style": "arc-top",
+    "palette": "magenta"
+  },
+  {
+    "id": "decor-double-arc-coral",
+    "label": "double arc coral",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-coral.svg",
+    "style": "double-arc",
+    "palette": "coral"
+  },
+  {
+    "id": "decor-double-arc-peach",
+    "label": "double arc peach",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-peach.svg",
+    "style": "double-arc",
+    "palette": "peach"
+  },
+  {
+    "id": "decor-double-arc-orange",
+    "label": "double arc orange",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-orange.svg",
+    "style": "double-arc",
+    "palette": "orange"
+  },
+  {
+    "id": "decor-double-arc-gold",
+    "label": "double arc gold",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-gold.svg",
+    "style": "double-arc",
+    "palette": "gold"
+  },
+  {
+    "id": "decor-double-arc-amber",
+    "label": "double arc amber",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-amber.svg",
+    "style": "double-arc",
+    "palette": "amber"
+  },
+  {
+    "id": "decor-double-arc-cyan",
+    "label": "double arc cyan",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-cyan.svg",
+    "style": "double-arc",
+    "palette": "cyan"
+  },
+  {
+    "id": "decor-double-arc-cobalt",
+    "label": "double arc cobalt",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-cobalt.svg",
+    "style": "double-arc",
+    "palette": "cobalt"
+  },
+  {
+    "id": "decor-double-arc-violet",
+    "label": "double arc violet",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-violet.svg",
+    "style": "double-arc",
+    "palette": "violet"
+  },
+  {
+    "id": "decor-double-arc-emerald",
+    "label": "double arc emerald",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-emerald.svg",
+    "style": "double-arc",
+    "palette": "emerald"
+  },
+  {
+    "id": "decor-double-arc-magenta",
+    "label": "double arc magenta",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-double-arc-magenta.svg",
+    "style": "double-arc",
+    "palette": "magenta"
+  },
+  {
+    "id": "decor-wave-soft-coral",
+    "label": "wave soft coral",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-coral.svg",
+    "style": "wave-soft",
+    "palette": "coral"
+  },
+  {
+    "id": "decor-wave-soft-peach",
+    "label": "wave soft peach",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-peach.svg",
+    "style": "wave-soft",
+    "palette": "peach"
+  },
+  {
+    "id": "decor-wave-soft-orange",
+    "label": "wave soft orange",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-orange.svg",
+    "style": "wave-soft",
+    "palette": "orange"
+  },
+  {
+    "id": "decor-wave-soft-gold",
+    "label": "wave soft gold",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-gold.svg",
+    "style": "wave-soft",
+    "palette": "gold"
+  },
+  {
+    "id": "decor-wave-soft-amber",
+    "label": "wave soft amber",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-amber.svg",
+    "style": "wave-soft",
+    "palette": "amber"
+  },
+  {
+    "id": "decor-wave-soft-cyan",
+    "label": "wave soft cyan",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-cyan.svg",
+    "style": "wave-soft",
+    "palette": "cyan"
+  },
+  {
+    "id": "decor-wave-soft-cobalt",
+    "label": "wave soft cobalt",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-cobalt.svg",
+    "style": "wave-soft",
+    "palette": "cobalt"
+  },
+  {
+    "id": "decor-wave-soft-violet",
+    "label": "wave soft violet",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-violet.svg",
+    "style": "wave-soft",
+    "palette": "violet"
+  },
+  {
+    "id": "decor-wave-soft-emerald",
+    "label": "wave soft emerald",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-emerald.svg",
+    "style": "wave-soft",
+    "palette": "emerald"
+  },
+  {
+    "id": "decor-wave-soft-magenta",
+    "label": "wave soft magenta",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-wave-soft-magenta.svg",
+    "style": "wave-soft",
+    "palette": "magenta"
+  },
+  {
+    "id": "decor-glow-streak-coral",
+    "label": "glow streak coral",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-coral.svg",
+    "style": "glow-streak",
+    "palette": "coral"
+  },
+  {
+    "id": "decor-glow-streak-peach",
+    "label": "glow streak peach",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-peach.svg",
+    "style": "glow-streak",
+    "palette": "peach"
+  },
+  {
+    "id": "decor-glow-streak-orange",
+    "label": "glow streak orange",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-orange.svg",
+    "style": "glow-streak",
+    "palette": "orange"
+  },
+  {
+    "id": "decor-glow-streak-gold",
+    "label": "glow streak gold",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-gold.svg",
+    "style": "glow-streak",
+    "palette": "gold"
+  },
+  {
+    "id": "decor-glow-streak-amber",
+    "label": "glow streak amber",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-amber.svg",
+    "style": "glow-streak",
+    "palette": "amber"
+  },
+  {
+    "id": "decor-glow-streak-cyan",
+    "label": "glow streak cyan",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-cyan.svg",
+    "style": "glow-streak",
+    "palette": "cyan"
+  },
+  {
+    "id": "decor-glow-streak-cobalt",
+    "label": "glow streak cobalt",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-cobalt.svg",
+    "style": "glow-streak",
+    "palette": "cobalt"
+  },
+  {
+    "id": "decor-glow-streak-violet",
+    "label": "glow streak violet",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-violet.svg",
+    "style": "glow-streak",
+    "palette": "violet"
+  },
+  {
+    "id": "decor-glow-streak-emerald",
+    "label": "glow streak emerald",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-emerald.svg",
+    "style": "glow-streak",
+    "palette": "emerald"
+  },
+  {
+    "id": "decor-glow-streak-magenta",
+    "label": "glow streak magenta",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-glow-streak-magenta.svg",
+    "style": "glow-streak",
+    "palette": "magenta"
+  },
+  {
+    "id": "decor-bow-deep-coral",
+    "label": "bow deep coral",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-coral.svg",
+    "style": "bow-deep",
+    "palette": "coral"
+  },
+  {
+    "id": "decor-bow-deep-peach",
+    "label": "bow deep peach",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-peach.svg",
+    "style": "bow-deep",
+    "palette": "peach"
+  },
+  {
+    "id": "decor-bow-deep-orange",
+    "label": "bow deep orange",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-orange.svg",
+    "style": "bow-deep",
+    "palette": "orange"
+  },
+  {
+    "id": "decor-bow-deep-gold",
+    "label": "bow deep gold",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-gold.svg",
+    "style": "bow-deep",
+    "palette": "gold"
+  },
+  {
+    "id": "decor-bow-deep-amber",
+    "label": "bow deep amber",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-amber.svg",
+    "style": "bow-deep",
+    "palette": "amber"
+  },
+  {
+    "id": "decor-bow-deep-cyan",
+    "label": "bow deep cyan",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-cyan.svg",
+    "style": "bow-deep",
+    "palette": "cyan"
+  },
+  {
+    "id": "decor-bow-deep-cobalt",
+    "label": "bow deep cobalt",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-cobalt.svg",
+    "style": "bow-deep",
+    "palette": "cobalt"
+  },
+  {
+    "id": "decor-bow-deep-violet",
+    "label": "bow deep violet",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-violet.svg",
+    "style": "bow-deep",
+    "palette": "violet"
+  },
+  {
+    "id": "decor-bow-deep-emerald",
+    "label": "bow deep emerald",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-emerald.svg",
+    "style": "bow-deep",
+    "palette": "emerald"
+  },
+  {
+    "id": "decor-bow-deep-magenta",
+    "label": "bow deep magenta",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-bow-deep-magenta.svg",
+    "style": "bow-deep",
+    "palette": "magenta"
+  },
+  {
+    "id": "decor-diamond-flare-coral",
+    "label": "diamond flare coral",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-coral.svg",
+    "style": "diamond-flare",
+    "palette": "coral"
+  },
+  {
+    "id": "decor-diamond-flare-peach",
+    "label": "diamond flare peach",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-peach.svg",
+    "style": "diamond-flare",
+    "palette": "peach"
+  },
+  {
+    "id": "decor-diamond-flare-orange",
+    "label": "diamond flare orange",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-orange.svg",
+    "style": "diamond-flare",
+    "palette": "orange"
+  },
+  {
+    "id": "decor-diamond-flare-gold",
+    "label": "diamond flare gold",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-gold.svg",
+    "style": "diamond-flare",
+    "palette": "gold"
+  },
+  {
+    "id": "decor-diamond-flare-amber",
+    "label": "diamond flare amber",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-amber.svg",
+    "style": "diamond-flare",
+    "palette": "amber"
+  },
+  {
+    "id": "decor-diamond-flare-cyan",
+    "label": "diamond flare cyan",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-cyan.svg",
+    "style": "diamond-flare",
+    "palette": "cyan"
+  },
+  {
+    "id": "decor-diamond-flare-cobalt",
+    "label": "diamond flare cobalt",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-cobalt.svg",
+    "style": "diamond-flare",
+    "palette": "cobalt"
+  },
+  {
+    "id": "decor-diamond-flare-violet",
+    "label": "diamond flare violet",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-violet.svg",
+    "style": "diamond-flare",
+    "palette": "violet"
+  },
+  {
+    "id": "decor-diamond-flare-emerald",
+    "label": "diamond flare emerald",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-emerald.svg",
+    "style": "diamond-flare",
+    "palette": "emerald"
+  },
+  {
+    "id": "decor-diamond-flare-magenta",
+    "label": "diamond flare magenta",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-diamond-flare-magenta.svg",
+    "style": "diamond-flare",
+    "palette": "magenta"
+  },
+  {
+    "id": "decor-dotted-arc-coral",
+    "label": "dotted arc coral",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-coral.svg",
+    "style": "dotted-arc",
+    "palette": "coral"
+  },
+  {
+    "id": "decor-dotted-arc-peach",
+    "label": "dotted arc peach",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-peach.svg",
+    "style": "dotted-arc",
+    "palette": "peach"
+  },
+  {
+    "id": "decor-dotted-arc-orange",
+    "label": "dotted arc orange",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-orange.svg",
+    "style": "dotted-arc",
+    "palette": "orange"
+  },
+  {
+    "id": "decor-dotted-arc-gold",
+    "label": "dotted arc gold",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-gold.svg",
+    "style": "dotted-arc",
+    "palette": "gold"
+  },
+  {
+    "id": "decor-dotted-arc-amber",
+    "label": "dotted arc amber",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-amber.svg",
+    "style": "dotted-arc",
+    "palette": "amber"
+  },
+  {
+    "id": "decor-dotted-arc-cyan",
+    "label": "dotted arc cyan",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-cyan.svg",
+    "style": "dotted-arc",
+    "palette": "cyan"
+  },
+  {
+    "id": "decor-dotted-arc-cobalt",
+    "label": "dotted arc cobalt",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-cobalt.svg",
+    "style": "dotted-arc",
+    "palette": "cobalt"
+  },
+  {
+    "id": "decor-dotted-arc-violet",
+    "label": "dotted arc violet",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-violet.svg",
+    "style": "dotted-arc",
+    "palette": "violet"
+  },
+  {
+    "id": "decor-dotted-arc-emerald",
+    "label": "dotted arc emerald",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-emerald.svg",
+    "style": "dotted-arc",
+    "palette": "emerald"
+  },
+  {
+    "id": "decor-dotted-arc-magenta",
+    "label": "dotted arc magenta",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-dotted-arc-magenta.svg",
+    "style": "dotted-arc",
+    "palette": "magenta"
+  },
+  {
+    "id": "decor-twin-swoosh-coral",
+    "label": "twin swoosh coral",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-coral.svg",
+    "style": "twin-swoosh",
+    "palette": "coral"
+  },
+  {
+    "id": "decor-twin-swoosh-peach",
+    "label": "twin swoosh peach",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-peach.svg",
+    "style": "twin-swoosh",
+    "palette": "peach"
+  },
+  {
+    "id": "decor-twin-swoosh-orange",
+    "label": "twin swoosh orange",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-orange.svg",
+    "style": "twin-swoosh",
+    "palette": "orange"
+  },
+  {
+    "id": "decor-twin-swoosh-gold",
+    "label": "twin swoosh gold",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-gold.svg",
+    "style": "twin-swoosh",
+    "palette": "gold"
+  },
+  {
+    "id": "decor-twin-swoosh-amber",
+    "label": "twin swoosh amber",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-amber.svg",
+    "style": "twin-swoosh",
+    "palette": "amber"
+  },
+  {
+    "id": "decor-twin-swoosh-cyan",
+    "label": "twin swoosh cyan",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-cyan.svg",
+    "style": "twin-swoosh",
+    "palette": "cyan"
+  },
+  {
+    "id": "decor-twin-swoosh-cobalt",
+    "label": "twin swoosh cobalt",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-cobalt.svg",
+    "style": "twin-swoosh",
+    "palette": "cobalt"
+  },
+  {
+    "id": "decor-twin-swoosh-violet",
+    "label": "twin swoosh violet",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-violet.svg",
+    "style": "twin-swoosh",
+    "palette": "violet"
+  },
+  {
+    "id": "decor-twin-swoosh-emerald",
+    "label": "twin swoosh emerald",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-emerald.svg",
+    "style": "twin-swoosh",
+    "palette": "emerald"
+  },
+  {
+    "id": "decor-twin-swoosh-magenta",
+    "label": "twin swoosh magenta",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-twin-swoosh-magenta.svg",
+    "style": "twin-swoosh",
+    "palette": "magenta"
+  },
+  {
+    "id": "decor-particle-trail-coral",
+    "label": "particle trail coral",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-coral.svg",
+    "style": "particle-trail",
+    "palette": "coral"
+  },
+  {
+    "id": "decor-particle-trail-peach",
+    "label": "particle trail peach",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-peach.svg",
+    "style": "particle-trail",
+    "palette": "peach"
+  },
+  {
+    "id": "decor-particle-trail-orange",
+    "label": "particle trail orange",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-orange.svg",
+    "style": "particle-trail",
+    "palette": "orange"
+  },
+  {
+    "id": "decor-particle-trail-gold",
+    "label": "particle trail gold",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-gold.svg",
+    "style": "particle-trail",
+    "palette": "gold"
+  },
+  {
+    "id": "decor-particle-trail-amber",
+    "label": "particle trail amber",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-amber.svg",
+    "style": "particle-trail",
+    "palette": "amber"
+  },
+  {
+    "id": "decor-particle-trail-cyan",
+    "label": "particle trail cyan",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-cyan.svg",
+    "style": "particle-trail",
+    "palette": "cyan"
+  },
+  {
+    "id": "decor-particle-trail-cobalt",
+    "label": "particle trail cobalt",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-cobalt.svg",
+    "style": "particle-trail",
+    "palette": "cobalt"
+  },
+  {
+    "id": "decor-particle-trail-violet",
+    "label": "particle trail violet",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-violet.svg",
+    "style": "particle-trail",
+    "palette": "violet"
+  },
+  {
+    "id": "decor-particle-trail-emerald",
+    "label": "particle trail emerald",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-emerald.svg",
+    "style": "particle-trail",
+    "palette": "emerald"
+  },
+  {
+    "id": "decor-particle-trail-magenta",
+    "label": "particle trail magenta",
+    "url": "/template-assets/packs/borderless-decor-v1/items/decor-particle-trail-magenta.svg",
+    "style": "particle-trail",
+    "palette": "magenta"
+  }
+]

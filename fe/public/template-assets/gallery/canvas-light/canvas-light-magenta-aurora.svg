@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice">
+  
+  <g transform="scale(0.16666666666666666 0.16666666666666666)">
+  
+  <defs>
+    <linearGradient id="9668df2b-base" x1="0" y1="0" x2="1920" y2="1080">
+      <stop stop-color="#e8e6e8"/>
+      <stop offset="0.32" stop-color="#c5b2bb"/>
+      <stop offset="0.68" stop-color="#e4c7d4"/>
+      <stop offset="1" stop-color="#d59eb7"/>
+    </linearGradient>
+    <radialGradient id="9668df2b-glowL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(345.59999999999997 237.6) scale(729.6)">
+      <stop stop-color="#ec4899" stop-opacity="0.32"/>
+      <stop offset="0.55" stop-color="#763358" stop-opacity="0.20800000000000002"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="9668df2b-glowR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1574.3999999999999 777.6) scale(614.4)">
+      <stop stop-color="#f472b6" stop-opacity="0.272"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  <pattern id="9668df2b-pat" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" stroke="#f472b6" stroke-width="0.4" opacity="0.22"/></pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#9668df2b-base)"/>
+  <rect width="1920" height="1080" fill="url(#9668df2b-glowL)"/>
+  <rect width="1920" height="1080" fill="url(#9668df2b-glowR)"/>
+  <rect width="1920" height="1080" fill="url(#9668df2b-pat)" opacity="0.72"/>
+  <g opacity="0.54" stroke="#f472b6" stroke-width="1.5" fill="none">
+  <path d="M32 72 V32 H72"/>
+  <path d="M1848 32 H1888 V72"/>
+  <path d="M1888 1008 V1048 H1848"/>
+  <path d="M72 1048 H32 V1008"/>
+</g>
+  <path d="M0 885.5999999999999 C384 820.8 672 972 960 907.1999999999999 C1248 842.4 1574.3999999999999 993.6 1920 928.8 L1920 1080 L0 1080 Z" fill="#f472b6" fill-opacity="0.46"/>
+  <path d="M0 950.4 C480 885.5999999999999 768 1036.8 1056 972 C1382.3999999999999 907.1999999999999 1689.6 1058.4 1920 993.6 L1920 1080 L0 1080 Z" fill="#ec4899" fill-opacity="0.29"/>
+  <path d="M955.2 194.4 L936 182.88 L936 205.92000000000002 Z" fill="#f472b6" fill-opacity="0.53" stroke="#f472b6" stroke-width="0.8" opacity="0.62"/><path d="M964.8 194.4 L984 182.88 L984 205.92000000000002 Z" fill="#f472b6" fill-opacity="0.53" stroke="#f472b6" stroke-width="0.8" opacity="0.62"/>
+  <circle cx="960" cy="486" r="120" fill="none" stroke="#f472b6" stroke-width="0.8" opacity="0.22"/>
+  <circle cx="960" cy="486" r="66" fill="none" stroke="#f472b6" stroke-width="0.5" opacity="0.16"/>
+  <circle cx="1080" cy="486" r="2.5" fill="#f472b6" opacity="0.22"/>
+  <circle cx="900" cy="381.6" r="2" fill="#f472b6" opacity="0.18"/>
+
+  </g>
+</svg>

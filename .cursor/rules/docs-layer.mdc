@@ -1,0 +1,43 @@
+---
+description: VitalSpan 文档分层与编辑边界
+globs:
+  - "docs/**/*.md"
+alwaysApply: false
+---
+
+# 文档编辑边界
+
+> 同步评估流程：@.cursor/rules/prd-sync.mdc
+
+## 各层职责
+
+| 路径 | 谁改 | 内容 |
+|------|------|------|
+| `docs/srs/` | 人工 / SRS 流程 | 需求合同、附录、分期 |
+| `docs/automate/goal.md` | `create-evolution-goal` | 产品方向与边界 |
+| `docs/automate/prd*.md` | 人工 + 演化对账 | 功能验收真理源 |
+| `docs/automate/plan.md` | `create-evolution-plan` | 活跃里程碑与实施展开 |
+| `docs/automate/plan.archive.md` | 人工归档 | M1–M13 全量映射（只读参考） |
+| `docs/arch.md` | 架构变更时 | 技术决策、目录、环境变量 |
+| `docs/api/` | 随实现补充 | HTTP 路由登记簿 |
+| `docs/services/` | 随域落地补充 | 后端域职责、边界、依赖 |
+| `docs/mock/` | stub/mock 变更时 | 非测试主路径占位诚实清单 |
+| `docs/ui/layout.md` · `docs/ui/anchor.md` | IA/壳层变更时 | 单应用 + Embed 路由与导航；页面组件锚点 |
+| `docs/README.md` | 索引变更时 | 文档真理源分层索引 |
+| `docs/superpowers/` | 演化轮次产出 | design/spec/plan 归档 |
+
+## 禁止
+
+- 在 PRD 写 SRS 级新需求而不回流 `docs/srs/`
+- 在 `plan.md` 堆功能细则（细则在 PRD 分片 + plan 实施展开）
+- 在 `arch.md` 重复 PRD 验收条款
+- 在 `docs/services/` 写 HTTP schema（→ `docs/api/`）
+- 在 `docs/api/` 写业务流程叙事（→ `docs/services/` 或 SRS）
+
+## 交叉引用
+
+- SRS §8 → `docs/automate/plan.md` / `plan.archive.md`
+- PRD 分片 → `goal_ref`、代码锚点
+- API → `docs/arch.md` §5
+- 域附录 → `docs/services/README.md` 索引
+- 入口：`docs/srs/README.md`、`docs/automate/prd.md`

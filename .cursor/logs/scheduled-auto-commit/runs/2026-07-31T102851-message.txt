@@ -1,0 +1,39 @@
+wip: [fe,backend,.cursor,tests,+1] 50f (+1853/-166) @ 2026-07-31 10:2...
+
+Areas:
+  fe/          30 files (+943/-134)
+  backend/     14 files (+683/-26)
+  .cursor/     3 files (+29/-1)
+  tests/       2 files (+195/-0)
+  docs/        1 files (+3/-5)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T095817-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-07-31T095817.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/dashboards.py
+M  backend/app/api/v1/reports/__init__.py
+M  backend/app/core/config.py
+A  backend/app/dashboard/export_jobs.py
+A  backend/app/dashboard/export_jobs_schemas.py
+M  backend/app/dashboard/schemas.py
+M  backend/app/main.py
+A  backend/app/reports/dev_seed.py
+M  backend/app/reports/scheduler/delivery.py
+M  backend/app/reports/scheduler/delivery_adapter.py
+M  backend/app/reports/scheduler/executor.py
+A  backend/app/reports/scheduler/recipients.py
+M  backend/app/reports/scheduler/schemas.py
+M  backend/app/reports/scheduler/service.py
+M  docs/feature-design/2026-07-30-report-dataease-land-design.md
+M  fe/src/components/dashboard/canvasBackgroundPipeline.test.ts
+M  fe/src/components/dashboard/chartStyleFields.tsx
+M  fe/src/components/dashboard/chartStyleSections/ChartCommonStyleSections.tsx
+M  fe/src/components/dashboard/dashboardCanvasBackgroundPanel.tsx
+M  fe/src/components/dashboard/dashboardConfigPanels.tsx
+M  fe/src/components/dashboard/dashboardStyleConfig.ts
+M  fe/src/components/dashboard/imageSourceField.tsx
+... and 25 more
+
+stat: 50 files changed, 1853 insertions(+), 166 deletions(-)
+branch: dev | scheduled-auto-commit

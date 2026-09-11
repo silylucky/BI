@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-08-03T17:44:17+08:00",
+  "finishedAt": "2026-08-03T17:44:26+08:00",
+  "branch": "dev",
+  "commit": "e6d8d024",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,docs,backend,.cursor,+2] 46f (+1133/-241) @ 2026-08-03 17:44...",
+  "filesChanged": 46,
+  "insertions": 1133,
+  "deletions": 241,
+  "topDirs": { "fe": 27, "docs": 7, "backend": 7, ".cursor": 3, "scripts": 1, "tests": 1 },
+  "sampleFiles": [
+    "fe/src/lib/syncConsumePaths.ts",
+    "backend/app/ingestion/etl_templates.py",
+    "docs/feature-truth/2026-08-03-sync-consume-dataset-truth-audit.md",
+    "fe/src/pages/admin/ingestion/components/SyncJobForm.tsx"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/"]
+}

@@ -1,0 +1,157 @@
+/* Playwright PDF capture: header + canvas print styles */
+.export-snapshot-root {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.export-snapshot-header {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+/* full_page：单页连续快照，禁止把画布整块推到下一页 */
+.export-layout-full-page {
+  min-height: auto !important;
+}
+
+.export-layout-full-page .export-snapshot-header,
+.export-layout-full-page .export-mode-banner,
+.export-layout-full-page .export-snapshot-body,
+.export-layout-full-page .export-snapshot-body > *,
+.export-layout-full-page [data-export-widget-shell] {
+  break-inside: auto !important;
+  page-break-inside: auto !important;
+  break-before: auto !important;
+  page-break-before: auto !important;
+  break-after: auto !important;
+  page-break-after: auto !important;
+}
+
+.export-layout-full-page [data-export-widget-shell] {
+  min-height: 0 !important;
+}
+
+.export-mode-banner,
+.export-section-banner {
+  margin: 0 0 12px;
+  border: 1px solid rgb(59 130 246 / 0.35);
+  border-radius: 8px;
+  background: rgb(239 246 255 / 0.95);
+  padding: 10px 14px;
+  color: #1e3a8a;
+}
+
+.export-section-banner--detail {
+  border-color: rgb(16 185 129 / 0.35);
+  background: rgb(236 253 245 / 0.95);
+  color: #065f46;
+}
+
+.export-mode-banner strong,
+.export-section-banner strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.export-mode-banner p,
+.export-section-banner p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.export-snapshot-body {
+  break-inside: auto;
+}
+
+.export-combined-detail {
+  break-before: page;
+  page-break-before: always;
+  margin-top: 8px;
+  padding-top: 8px;
+}
+
+.export-per-widget-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.export-widget-page {
+  break-before: page;
+  page-break-before: always;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  min-height: 72vh;
+  padding: 12px 0 24px;
+}
+
+.export-widget-page-enlarged {
+  min-height: 92vh;
+  padding: 16px 0 28px;
+}
+
+.export-widget-page:first-child,
+.export-combined-detail .export-widget-page-enlarged:first-child {
+  break-before: auto;
+  page-break-before: auto;
+}
+
+.export-widget-page-label {
+  margin: 0 0 10px;
+  border-left: 3px solid #3b82f6;
+  padding-left: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.export-widget-page-enlarged .export-widget-page-label {
+  border-left-color: #10b981;
+  color: #047857;
+  font-size: 14px;
+}
+
+.export-widget-enlarged-canvas {
+  min-height: 84vh;
+  width: 100%;
+}
+
+@media print {
+  .export-snapshot-root {
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  .export-mode-banner,
+  .export-section-banner {
+    color: #1e3a8a !important;
+  }
+
+  .export-section-banner--detail {
+    color: #065f46 !important;
+  }
+
+  .export-snapshot-body {
+    page-break-inside: auto;
+  }
+
+  .export-layout-per-widget .export-snapshot-body,
+  .export-layout-combined .export-snapshot-body {
+    page-break-inside: auto;
+  }
+
+  .export-layout-per-widget .export-snapshot-body > *,
+  .export-layout-combined .export-snapshot-body > * {
+    page-break-inside: avoid;
+  }
+
+  .export-widget-page-label {
+    color: #1e40af !important;
+  }
+
+  .export-widget-page-enlarged .export-widget-page-label {
+    color: #047857 !important;
+  }
+}

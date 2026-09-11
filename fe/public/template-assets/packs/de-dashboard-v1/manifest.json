@@ -1,0 +1,407 @@
+{
+  "packId": "de-dashboard-v1",
+  "publicPrefix": "/template-assets/packs/de-dashboard-v1",
+  "assets": [
+    {
+      "slug": "dash-blank",
+      "theme": "blue",
+      "layout": "blank",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/dash-blank.svg",
+      "thumb": "/template-assets/packs/de-dashboard-v1/thumbs/dash-blank.svg"
+    },
+    {
+      "slug": "dash-dual-kpi",
+      "theme": "blue",
+      "layout": "kpi-dual",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/dash-dual-kpi.svg",
+      "thumb": "/template-assets/packs/de-dashboard-v1/thumbs/dash-dual-kpi.svg"
+    },
+    {
+      "slug": "dash-triple",
+      "theme": "violet",
+      "layout": "triple",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/dash-triple.svg",
+      "thumb": "/template-assets/packs/de-dashboard-v1/thumbs/dash-triple.svg"
+    },
+    {
+      "slug": "dash-ops",
+      "theme": "teal",
+      "layout": "ops",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/dash-ops.svg",
+      "thumb": "/template-assets/packs/de-dashboard-v1/thumbs/dash-ops.svg"
+    },
+    {
+      "slug": "gov-efficiency",
+      "theme": "blue",
+      "layout": "kpi-dual",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/gov-efficiency.svg",
+      "thumb": "/template-assets/packs/de-dashboard-v1/thumbs/gov-efficiency.svg"
+    },
+    {
+      "slug": "gov-satisfaction",
+      "theme": "violet",
+      "layout": "triple",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/gov-satisfaction.svg",
+      "thumb": "/template-assets/packs/de-dashboard-v1/thumbs/gov-satisfaction.svg"
+    },
+    {
+      "slug": "gov-finance",
+      "theme": "green",
+      "layout": "ops",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/gov-finance.svg",
+      "thumb": "/template-assets/packs/de-dashboard-v1/thumbs/gov-finance.svg"
+    },
+    {
+      "slug": "gov-investment",
+      "theme": "indigo",
+      "layout": "geo-bar",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/gov-investment.svg",
+      "thumb": "/template-assets/packs/de-dashboard-v1/thumbs/gov-investment.svg"
+    },
+    {
+      "slug": "gov-grid",
+      "theme": "slate",
+      "layout": "grid-ops",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/gov-grid.svg",
+      "thumb": "/template-assets/packs/de-dashboard-v1/thumbs/gov-grid.svg"
+    }
+  ],
+  "variants": [
+    {
+      "slug": "canvas-blue-dots",
+      "theme": "blue",
+      "variant": "dots",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-blue-dots.svg"
+    },
+    {
+      "slug": "canvas-blue-stripes",
+      "theme": "blue",
+      "variant": "stripes",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-blue-stripes.svg"
+    },
+    {
+      "slug": "canvas-blue-mesh",
+      "theme": "blue",
+      "variant": "mesh",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-blue-mesh.svg"
+    },
+    {
+      "slug": "canvas-blue-band",
+      "theme": "blue",
+      "variant": "band",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-blue-band.svg"
+    },
+    {
+      "slug": "canvas-indigo-dots",
+      "theme": "indigo",
+      "variant": "dots",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-indigo-dots.svg"
+    },
+    {
+      "slug": "canvas-indigo-stripes",
+      "theme": "indigo",
+      "variant": "stripes",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-indigo-stripes.svg"
+    },
+    {
+      "slug": "canvas-indigo-mesh",
+      "theme": "indigo",
+      "variant": "mesh",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-indigo-mesh.svg"
+    },
+    {
+      "slug": "canvas-indigo-band",
+      "theme": "indigo",
+      "variant": "band",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-indigo-band.svg"
+    },
+    {
+      "slug": "canvas-green-dots",
+      "theme": "green",
+      "variant": "dots",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-green-dots.svg"
+    },
+    {
+      "slug": "canvas-green-stripes",
+      "theme": "green",
+      "variant": "stripes",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-green-stripes.svg"
+    },
+    {
+      "slug": "canvas-green-mesh",
+      "theme": "green",
+      "variant": "mesh",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-green-mesh.svg"
+    },
+    {
+      "slug": "canvas-green-band",
+      "theme": "green",
+      "variant": "band",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-green-band.svg"
+    },
+    {
+      "slug": "canvas-violet-dots",
+      "theme": "violet",
+      "variant": "dots",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-violet-dots.svg"
+    },
+    {
+      "slug": "canvas-violet-stripes",
+      "theme": "violet",
+      "variant": "stripes",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-violet-stripes.svg"
+    },
+    {
+      "slug": "canvas-violet-mesh",
+      "theme": "violet",
+      "variant": "mesh",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-violet-mesh.svg"
+    },
+    {
+      "slug": "canvas-violet-band",
+      "theme": "violet",
+      "variant": "band",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-violet-band.svg"
+    },
+    {
+      "slug": "canvas-teal-dots",
+      "theme": "teal",
+      "variant": "dots",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-teal-dots.svg"
+    },
+    {
+      "slug": "canvas-teal-stripes",
+      "theme": "teal",
+      "variant": "stripes",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-teal-stripes.svg"
+    },
+    {
+      "slug": "canvas-teal-mesh",
+      "theme": "teal",
+      "variant": "mesh",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-teal-mesh.svg"
+    },
+    {
+      "slug": "canvas-teal-band",
+      "theme": "teal",
+      "variant": "band",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-teal-band.svg"
+    },
+    {
+      "slug": "canvas-slate-dots",
+      "theme": "slate",
+      "variant": "dots",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-slate-dots.svg"
+    },
+    {
+      "slug": "canvas-slate-stripes",
+      "theme": "slate",
+      "variant": "stripes",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-slate-stripes.svg"
+    },
+    {
+      "slug": "canvas-slate-mesh",
+      "theme": "slate",
+      "variant": "mesh",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-slate-mesh.svg"
+    },
+    {
+      "slug": "canvas-slate-band",
+      "theme": "slate",
+      "variant": "band",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-slate-band.svg"
+    },
+    {
+      "slug": "canvas-orange-dots",
+      "theme": "orange",
+      "variant": "dots",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-orange-dots.svg"
+    },
+    {
+      "slug": "canvas-orange-stripes",
+      "theme": "orange",
+      "variant": "stripes",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-orange-stripes.svg"
+    },
+    {
+      "slug": "canvas-orange-mesh",
+      "theme": "orange",
+      "variant": "mesh",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-orange-mesh.svg"
+    },
+    {
+      "slug": "canvas-orange-band",
+      "theme": "orange",
+      "variant": "band",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-orange-band.svg"
+    },
+    {
+      "slug": "canvas-rose-dots",
+      "theme": "rose",
+      "variant": "dots",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-rose-dots.svg"
+    },
+    {
+      "slug": "canvas-rose-stripes",
+      "theme": "rose",
+      "variant": "stripes",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-rose-stripes.svg"
+    },
+    {
+      "slug": "canvas-rose-mesh",
+      "theme": "rose",
+      "variant": "mesh",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-rose-mesh.svg"
+    },
+    {
+      "slug": "canvas-rose-band",
+      "theme": "rose",
+      "variant": "band",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-rose-band.svg"
+    },
+    {
+      "slug": "canvas-amber-dots",
+      "theme": "amber",
+      "variant": "dots",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-amber-dots.svg"
+    },
+    {
+      "slug": "canvas-amber-stripes",
+      "theme": "amber",
+      "variant": "stripes",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-amber-stripes.svg"
+    },
+    {
+      "slug": "canvas-amber-mesh",
+      "theme": "amber",
+      "variant": "mesh",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-amber-mesh.svg"
+    },
+    {
+      "slug": "canvas-amber-band",
+      "theme": "amber",
+      "variant": "band",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-amber-band.svg"
+    },
+    {
+      "slug": "canvas-cyan-dots",
+      "theme": "cyan",
+      "variant": "dots",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-cyan-dots.svg"
+    },
+    {
+      "slug": "canvas-cyan-stripes",
+      "theme": "cyan",
+      "variant": "stripes",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-cyan-stripes.svg"
+    },
+    {
+      "slug": "canvas-cyan-mesh",
+      "theme": "cyan",
+      "variant": "mesh",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-cyan-mesh.svg"
+    },
+    {
+      "slug": "canvas-cyan-band",
+      "theme": "cyan",
+      "variant": "band",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-cyan-band.svg"
+    },
+    {
+      "slug": "canvas-navy-dots",
+      "theme": "navy",
+      "variant": "dots",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-navy-dots.svg"
+    },
+    {
+      "slug": "canvas-navy-stripes",
+      "theme": "navy",
+      "variant": "stripes",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-navy-stripes.svg"
+    },
+    {
+      "slug": "canvas-navy-mesh",
+      "theme": "navy",
+      "variant": "mesh",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-navy-mesh.svg"
+    },
+    {
+      "slug": "canvas-navy-band",
+      "theme": "navy",
+      "variant": "band",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-navy-band.svg"
+    },
+    {
+      "slug": "canvas-lime-dots",
+      "theme": "lime",
+      "variant": "dots",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-lime-dots.svg"
+    },
+    {
+      "slug": "canvas-lime-stripes",
+      "theme": "lime",
+      "variant": "stripes",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-lime-stripes.svg"
+    },
+    {
+      "slug": "canvas-lime-mesh",
+      "theme": "lime",
+      "variant": "mesh",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-lime-mesh.svg"
+    },
+    {
+      "slug": "canvas-lime-band",
+      "theme": "lime",
+      "variant": "band",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-lime-band.svg"
+    },
+    {
+      "slug": "canvas-coral-dots",
+      "theme": "coral",
+      "variant": "dots",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-coral-dots.svg"
+    },
+    {
+      "slug": "canvas-coral-stripes",
+      "theme": "coral",
+      "variant": "stripes",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-coral-stripes.svg"
+    },
+    {
+      "slug": "canvas-coral-mesh",
+      "theme": "coral",
+      "variant": "mesh",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-coral-mesh.svg"
+    },
+    {
+      "slug": "canvas-coral-band",
+      "theme": "coral",
+      "variant": "band",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-coral-band.svg"
+    },
+    {
+      "slug": "canvas-gold-dots",
+      "theme": "gold",
+      "variant": "dots",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-gold-dots.svg"
+    },
+    {
+      "slug": "canvas-gold-stripes",
+      "theme": "gold",
+      "variant": "stripes",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-gold-stripes.svg"
+    },
+    {
+      "slug": "canvas-gold-mesh",
+      "theme": "gold",
+      "variant": "mesh",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-gold-mesh.svg"
+    },
+    {
+      "slug": "canvas-gold-band",
+      "theme": "gold",
+      "variant": "band",
+      "background": "/template-assets/packs/de-dashboard-v1/backgrounds/variants/canvas-gold-band.svg"
+    }
+  ]
+}

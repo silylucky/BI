@@ -1,0 +1,48 @@
+# 全球 PMTiles 外部瓦片服务（独立于 VitalSpan 进程）
+# 归档只读挂载到 /srv；Caddy 运行时数据走 /config（容器可写层）
+{
+	auto_https off
+}
+
+:8080 {
+	root * /srv
+
+	@options method OPTIONS
+	handle @options {
+		header Access-Control-Allow-Origin "{http.request.header.Origin}"
+		header Access-Control-Allow-Methods "GET, HEAD, OPTIONS"
+		header Access-Control-Allow-Headers "Range, If-Match, If-None-Match"
+		header Access-Control-Expose-Headers "Content-Length, Content-Range, ETag, Accept-Ranges"
+		respond 204
+	}
+
+	handle /health {
+		respond "ok" 200
+	}
+
+	handle / {
+		respond "VitalSpan PMTiles 外部瓦片服务运行中。请直接访问 .pmtiles 归档，例如：/planet-z15-20260817.pmtiles（MapLibre 经 HTTP Range 读取，不是网页首页）。" 200
+	}
+
+	handle {
+		file_server
+	}
+
+	# 本地开发：Vite 默认 host=127.0.0.1，Origin 可能是 localhost 或 127.0.0.1，须回显请求 Origin
+	@dev_origin header_regexp Origin ^https?://(localhost|127\.0\.0\.1)(:\d+)?$
+	header @dev_origin {
+		Access-Control-Allow-Origin "{http.request.header.Origin}"
+		Access-Control-Allow-Methods "GET, HEAD, OPTIONS"
+		Access-Control-Allow-Headers "Range, If-Match, If-None-Match"
+		Access-Control-Expose-Headers "Content-Length, Content-Range, ETag, Accept-Ranges"
+	}
+
+	# 生产/演示：与 PMTILES_CORS_ORIGIN 完全一致时放行
+	@configured_origin header Origin {env.PMTILES_CORS_ORIGIN}
+	header @configured_origin {
+		Access-Control-Allow-Origin "{env.PMTILES_CORS_ORIGIN}"
+		Access-Control-Allow-Methods "GET, HEAD, OPTIONS"
+		Access-Control-Allow-Headers "Range, If-Match, If-None-Match"
+		Access-Control-Expose-Headers "Content-Length, Content-Range, ETag, Accept-Ranges"
+	}
+}

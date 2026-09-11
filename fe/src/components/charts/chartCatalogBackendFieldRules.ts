@@ -1,0 +1,72 @@
+/** Backend catalog fieldRule 快照 — 真理源 `backend/app/viz/builtin/*.py` */
+export type BackendFieldRule = {
+  minDimensions: number;
+  maxDimensions: number;
+  minMetrics: number;
+  maxMetrics: number;
+  note?: string;
+};
+
+export const BACKEND_CATALOG_FIELD_RULES: Record<string, BackendFieldRule> = {
+  gauge: { minDimensions: 0, maxDimensions: 0, minMetrics: 1, maxMetrics: 1 },
+  liquid: { minDimensions: 0, maxDimensions: 0, minMetrics: 1, maxMetrics: 1 },
+  kpi: { minDimensions: 0, maxDimensions: 1, minMetrics: 1, maxMetrics: 1 },
+  table: { minDimensions: 0, maxDimensions: 8, minMetrics: 0, maxMetrics: 8 },
+  "table-info": { minDimensions: 0, maxDimensions: 8, minMetrics: 0, maxMetrics: 8 },
+  "table-normal": { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+  "table-pivot": { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+  "t-heatmap": { minDimensions: 2, maxDimensions: 2, minMetrics: 1, maxMetrics: 1 },
+  line: { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+  area: { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+  "area-stack": { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+  timeline: { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+  bar: { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+  "bar-stack": { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+  "percentage-bar-stack": { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+  "bar-group": { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+  "bar-group-stack": { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+  waterfall: { minDimensions: 1, maxDimensions: 1, minMetrics: 1, maxMetrics: 1 },
+  "bar-horizontal": { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+  "bar-stack-horizontal": { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+  "percentage-bar-stack-horizontal": {
+    minDimensions: 1,
+    maxDimensions: 8,
+    minMetrics: 1,
+    maxMetrics: 8,
+  },
+  "bar-range": { minDimensions: 1, maxDimensions: 1, minMetrics: 2, maxMetrics: 2 },
+  "bidirectional-bar": { minDimensions: 1, maxDimensions: 1, minMetrics: 2, maxMetrics: 2 },
+  "progress-bar": { minDimensions: 1, maxDimensions: 1, minMetrics: 2, maxMetrics: 2 },
+  "stock-line": { minDimensions: 1, maxDimensions: 1, minMetrics: 4, maxMetrics: 4 },
+  "bullet-graph": { minDimensions: 1, maxDimensions: 1, minMetrics: 2, maxMetrics: 3 },
+  pie: { minDimensions: 1, maxDimensions: 1, minMetrics: 1, maxMetrics: 1 },
+  "pie-donut": { minDimensions: 1, maxDimensions: 1, minMetrics: 1, maxMetrics: 1 },
+  "pie-rose": { minDimensions: 1, maxDimensions: 1, minMetrics: 1, maxMetrics: 1 },
+  "pie-donut-rose": { minDimensions: 1, maxDimensions: 1, minMetrics: 1, maxMetrics: 1 },
+  radar: { minDimensions: 1, maxDimensions: 1, minMetrics: 1, maxMetrics: 1 },
+  treemap: { minDimensions: 1, maxDimensions: 1, minMetrics: 1, maxMetrics: 1 },
+  "word-cloud": { minDimensions: 1, maxDimensions: 1, minMetrics: 1, maxMetrics: 1 },
+  wordCloud: { minDimensions: 1, maxDimensions: 1, minMetrics: 1, maxMetrics: 1 },
+  map: { minDimensions: 1, maxDimensions: 3, minMetrics: 1, maxMetrics: 1 },
+  "map-3d": { minDimensions: 1, maxDimensions: 3, minMetrics: 1, maxMetrics: 1 },
+  "gis-map": {
+    minDimensions: 0,
+    maxDimensions: 3,
+    minMetrics: 0,
+    maxMetrics: 1,
+    note: "底图无需字段；可选经纬度散点叠加",
+  },
+  heatmap: { minDimensions: 2, maxDimensions: 2, minMetrics: 1, maxMetrics: 1 },
+  scatter: { minDimensions: 1, maxDimensions: 2, minMetrics: 1, maxMetrics: 2 },
+  quadrant: { minDimensions: 1, maxDimensions: 2, minMetrics: 2, maxMetrics: 2 },
+  funnel: { minDimensions: 1, maxDimensions: 1, minMetrics: 1, maxMetrics: 1 },
+  sankey: { minDimensions: 2, maxDimensions: 2, minMetrics: 1, maxMetrics: 1 },
+  "circle-packing": { minDimensions: 1, maxDimensions: 1, minMetrics: 1, maxMetrics: 1 },
+  "multi-scatter": { minDimensions: 1, maxDimensions: 2, minMetrics: 2, maxMetrics: 4 },
+  graph: { minDimensions: 2, maxDimensions: 2, minMetrics: 0, maxMetrics: 1 },
+  combo: { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+  "chart-mix": { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+  "chart-mix-group": { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+  "chart-mix-stack": { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+  "chart-mix-dual-line": { minDimensions: 1, maxDimensions: 8, minMetrics: 1, maxMetrics: 8 },
+};

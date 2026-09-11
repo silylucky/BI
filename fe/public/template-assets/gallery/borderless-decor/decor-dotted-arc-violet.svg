@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice">
+  <g transform="scale(0.6666666666666666 1.5)">
+  
+  <defs>
+    <linearGradient id="722a2d06-h" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0"/>
+      <stop offset="42%" stop-color="#8b5cf6" stop-opacity="0.95"/>
+      <stop offset="58%" stop-color="#8b5cf6" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="722a2d06-v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="722a2d06-g" x="-20%" y="-40%" width="140%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <path d="M32 88 Q240 34 448 88" fill="none" stroke="url(#722a2d06-h)" stroke-width="2" stroke-dasharray="6 5" filter="url(#722a2d06-g)"/>
+  <path d="M32 88 Q240 34 448 88 L448 120 L32 120 Z" fill="url(#722a2d06-v)" opacity="0.28"/>
+
+  </g>
+</svg>

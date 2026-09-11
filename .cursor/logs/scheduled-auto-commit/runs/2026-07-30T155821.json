@@ -1,0 +1,30 @@
+{
+  "startedAt": "2026-07-30T15:58:21+08:00",
+  "finishedAt": "2026-07-30T15:58:23+08:00",
+  "branch": "dev",
+  "commit": "4d12797d",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [backend,tests,docs,fe,+4] 49f (+1510/-176) @ 2026-07-30 15:58 +0800",
+  "messageBodyPreview": "Areas:\n  backend/    14 files\n  tests/      10 files\n  docs/        9 files\n  fe/          6 files",
+  "filesChanged": 49,
+  "insertions": 1510,
+  "deletions": 176,
+  "topDirs": {
+    "backend": 14,
+    "tests": 10,
+    "docs": 9,
+    "fe": 6,
+    "scripts": 5,
+    ".cursor": 3,
+    ".agents": 1,
+    "_root": 1
+  },
+  "sampleFiles": [
+    "backend/app/core/crypto/sm4.py",
+    "scripts/migrate-credentials-to-sm4.py",
+    "tests/test_crypto_sm4.py",
+    "fe/src/components/auth/require-auth.test.tsx"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/"]
+}

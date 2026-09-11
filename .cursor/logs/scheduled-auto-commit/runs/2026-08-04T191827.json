@@ -1,0 +1,19 @@
+{
+  "startedAt": "2026-08-04T19:18:27+08:00",
+  "finishedAt": "2026-08-04T19:19:10+08:00",
+  "branch": "dev",
+  "commit": "f9394476",
+  "outcome": "success",
+  "push": false,
+  "messageSubject": "wip: [fe,backend,.cursor,docs] 20f (+564/-84) @ 2026-08-04 19:19 +0800",
+  "filesChanged": 20,
+  "insertions": 564,
+  "deletions": 84,
+  "topDirs": { "fe": 10, "backend": 6, ".cursor": 3, "docs": 1 },
+  "sampleFiles": [
+    "fe/src/components/charts/engine/d3/table/VitalSpanTable.tsx",
+    "backend/app/sample_api/internal.py",
+    "docs/feature-truth/2026-08-04-report-center-ux-truth-audit.md"
+  ],
+  "excludedPaths": [".tmp/", "data/backups/", "data/artifacts/", "fe/.env.production.local"]
+}

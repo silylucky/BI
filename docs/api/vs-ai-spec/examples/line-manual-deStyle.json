@@ -1,0 +1,17 @@
+{
+  "chartConfig": {
+    "chartType": "line",
+    "styleVariant": "default",
+    "dimensions": [{ "field": "{{dimension_1}}", "label": "时间" }],
+    "metrics": [{ "field": "{{metric_1}}", "label": "数值" }],
+    "nativeBody": {
+      "dataBinding": { "status": "manual" },
+      "deStyle": {
+        "paletteId": "default",
+        "cartesian": { "smooth": true, "showSymbol": true },
+        "legend": { "show": true, "position": "bottom" },
+        "title": { "show": true, "color": "#1e293b", "fontSize": 16 }
+      }
+    }
+  }
+}

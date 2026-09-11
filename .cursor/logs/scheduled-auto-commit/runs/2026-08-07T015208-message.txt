@@ -1,0 +1,40 @@
+wip: [backend,fe,tests,.agents,+2] 89f (+3313/-715) @ 2026-08-07 01:5...
+
+Areas:
+  backend/     45 files (+2321/-562)
+  fe/          29 files (+441/-84)
+  tests/       10 files (+459/-59)
+  .agents/     3 files (+82/-0)
+  docs/        1 files (+7/-3)
+  .cursor/     1 files (+3/-7)
+
+Changed (up to 25):
+M  .agents/skills/bug-case-library/SKILL.md
+A  .agents/skills/bug-case-library/cases/fe-export-snapshot-401-login-redirect.md
+A  .agents/skills/bug-case-library/cases/fe-text-widget-commit-drops-widget-style.md
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/dashboards.py
+M  backend/app/auth/middleware.py
+M  backend/app/core/config.py
+A  backend/app/dashboard/editor_save_schemas.py
+M  backend/app/dashboard/export_snapshot.py
+M  backend/app/dashboard/global_filters/service.py
+M  backend/app/dashboard/layout_migration.py
+M  backend/app/dashboard/schemas.py
+M  backend/app/dashboard/service.py
+M  backend/app/datasources/dialects/rest_api.py
+M  backend/app/datasources/schemas.py
+M  backend/app/governance/acl.py
+M  backend/app/governance/catalog/cat01/service.py
+M  backend/app/governance/catalog/cat02/service.py
+M  backend/app/governance/catalog/cat03/service.py
+M  backend/app/governance/catalog/cat05/service.py
+M  backend/app/governance/catalog/cat06/service.py
+M  backend/app/governance/catalog/classification/service.py
+A  backend/app/governance/catalog/gov_config_store.py
+M  backend/app/governance/openapi/service.py
+A  backend/app/governance/persistence/gov_repo.py
+... and 64 more
+
+stat: 89 files changed, 3313 insertions(+), 715 deletions(-)
+branch: dev | scheduled-auto-commit

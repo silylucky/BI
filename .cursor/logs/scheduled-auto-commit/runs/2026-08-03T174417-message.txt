@@ -1,0 +1,40 @@
+wip: [fe,docs,backend,.cursor,+2] 46f (+1133/-241) @ 2026-08-03 17:44...
+
+Areas:
+  fe/          27 files (+639/-160)
+  docs/        7 files (+63/-13)
+  backend/     7 files (+205/-1)
+  .cursor/     3 files (+61/-1)
+  scripts/     1 files (+147/-66)
+  tests/       1 files (+18/-0)
+
+Changed (up to 25):
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T171419-message.txt
+A  .cursor/logs/scheduled-auto-commit/runs/2026-08-03T171419.json
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/ingestion/sync.py
+M  backend/app/core/config.py
+A  backend/app/ingestion/analytics_datasource.py
+A  backend/app/ingestion/etl_templates.py
+M  backend/app/main.py
+M  backend/app/query/dataset/execute_config.py
+M  backend/app/query/executor.py
+M  docs/api/README.md
+M  docs/automate/plans/2026-07-21-chart-per-type-verification.md
+M  docs/automate/prd/F16-DATA.md
+A  docs/feature-truth/2026-08-03-sync-consume-dataset-truth-audit.md
+M  docs/feature-truth/_generated-2026-08-03-3d-table.md
+M  docs/services/ingestion.md
+M  docs/user-guide/ingestion-sync-jobs-how-to.md
+M  fe/src/components/charts/chartCatalogPlanAssertions.ts
+M  fe/src/components/charts/engine/applyChartStyleChain.test.ts
+A  fe/src/components/charts/engine/d3/radial/renderLiquid.test.ts
+M  fe/src/components/charts/engine/d3/radial/renderLiquid.ts
+M  fe/src/components/charts/engine/plugins/plans/buildPlan.quota.test.ts
+M  fe/src/components/charts/engine/plugins/plans/buildPlan.ts
+M  fe/src/components/dashboard/DashboardQuickCreateDialog.tsx
+M  fe/src/components/dashboard/chartStyleSections/ChartCommonStyleSections.tsx
+... and 21 more
+
+stat: 46 files changed, 1133 insertions(+), 241 deletions(-)
+branch: dev | scheduled-auto-commit

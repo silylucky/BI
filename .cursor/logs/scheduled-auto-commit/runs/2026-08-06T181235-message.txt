@@ -1,0 +1,39 @@
+wip: [fe,backend,tests,docs,+1] 1500f (+69211/-7541) @ 2026-08-06 18:...
+
+Areas:
+  fe/          1478 files (+68733/-7432)
+  backend/     12 files (+206/-26)
+  tests/       5 files (+181/-2)
+  docs/        4 files (+88/-74)
+  .cursor/     1 files (+3/-7)
+
+Changed (up to 25):
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/ingestion/sync.py
+M  backend/app/auth/middleware.py
+A  backend/app/core/template_assets.py
+M  backend/app/dashboard/templates/presets_gov_assets.py
+M  backend/app/ingestion/etl_seed.py
+M  backend/app/ingestion/models.py
+M  backend/app/ingestion/source_resolver.py
+M  backend/app/ingestion/sync_sql_builder.py
+A  backend/app/ingestion/sync_table_ref.py
+M  backend/app/main.py
+M  backend/app/viz/builtin/_helpers.py
+A  backend/migrations/versions/0037_sync_job_source_schema.py
+M  docs/api/README.md
+M  docs/feature-truth/_generated-2026-08-03-matrix.json
+M  docs/material/chart-style-audit/2026-08-03-full-matrix.md
+M  docs/services/auth.md
+M  fe/public/template-assets/catalog.html
+A  fe/public/template-assets/gallery/README.md
+A  fe/public/template-assets/gallery/borderless-decor/decor-arc-swoosh-amber.svg
+A  fe/public/template-assets/gallery/borderless-decor/decor-arc-swoosh-cobalt.svg
+A  fe/public/template-assets/gallery/borderless-decor/decor-arc-swoosh-coral.svg
+A  fe/public/template-assets/gallery/borderless-decor/decor-arc-swoosh-cyan.svg
+A  fe/public/template-assets/gallery/borderless-decor/decor-arc-swoosh-emerald.svg
+A  fe/public/template-assets/gallery/borderless-decor/decor-arc-swoosh-gold.svg
+... and 1475 more
+
+stat: 1500 files changed, 69211 insertions(+), 7541 deletions(-)
+branch: dev | scheduled-auto-commit

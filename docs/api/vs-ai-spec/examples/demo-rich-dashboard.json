@@ -1,0 +1,117 @@
+{
+  "name": "运营看板（内置图 + 自定义组件）",
+  "description": "仪表板混排示例（surfaceKind=dashboard，1440 画布）：4 内置图 + 1 customViz",
+  "layoutJson": {
+    "version": 2,
+    "canvas": { "width": 1440, "height": 1080 },
+    "widgets": [
+      {
+        "id": "a1000001-0001-4001-8001-000000000001",
+        "type": "chart",
+        "title": "销售对比",
+        "x": 48,
+        "y": 48,
+        "width": 660,
+        "height": 320,
+        "order": 0,
+        "chartConfig": {
+          "chartType": "bar",
+          "styleVariant": "default",
+          "chartId": "a1000001-0001-4001-8001-000000000001",
+          "nativeBody": {
+            "dataBinding": { "status": "manual" },
+            "deStyle": {
+              "paletteColors": ["#38bdf8", "#818cf8"],
+              "cartesian": { "barRadius": 6 },
+              "legend": { "show": true, "position": "bottom" },
+              "title": { "show": true, "color": "#1e293b", "fontSize": 16 }
+            }
+          }
+        }
+      },
+      {
+        "id": "a1000002-0002-4002-8002-000000000002",
+        "type": "chart",
+        "title": "趋势走势",
+        "x": 732,
+        "y": 48,
+        "width": 660,
+        "height": 320,
+        "order": 1,
+        "chartConfig": {
+          "chartType": "line",
+          "styleVariant": "default",
+          "chartId": "a1000002-0002-4002-8002-000000000002",
+          "nativeBody": {
+            "dataBinding": { "status": "manual" },
+            "deStyle": {
+              "paletteId": "default",
+              "cartesian": { "smooth": true, "showSymbol": true },
+              "legend": { "show": true, "position": "bottom" }
+            }
+          }
+        }
+      },
+      {
+        "id": "a1000003-0003-4003-8003-000000000003",
+        "type": "chart",
+        "title": "结构占比",
+        "x": 48,
+        "y": 392,
+        "width": 420,
+        "height": 320,
+        "order": 2,
+        "chartConfig": {
+          "chartType": "pie",
+          "styleVariant": "default",
+          "chartId": "a1000003-0003-4003-8003-000000000003",
+          "nativeBody": {
+            "dataBinding": { "status": "manual" },
+            "deStyle": {
+              "legend": { "show": true, "position": "right" }
+            }
+          }
+        }
+      },
+      {
+        "id": "a1000004-0004-4004-8004-000000000004",
+        "type": "chart",
+        "title": "核心指标",
+        "x": 492,
+        "y": 392,
+        "width": 420,
+        "height": 320,
+        "order": 3,
+        "chartConfig": {
+          "chartType": "kpi",
+          "styleVariant": "default",
+          "chartId": "a1000004-0004-4004-8004-000000000004",
+          "nativeBody": {
+            "dataBinding": { "status": "manual" },
+            "deStyle": { "paletteId": "default" }
+          }
+        }
+      },
+      {
+        "id": "a1000005-0005-4005-8005-000000000005",
+        "type": "customViz",
+        "title": "动态趋势图",
+        "x": 936,
+        "y": 392,
+        "width": 456,
+        "height": 320,
+        "order": 4,
+        "customVizConfig": {
+          "artifactId": "b440025e-62ba-4adf-b4e4-d5f5527736cd",
+          "dataBinding": { "status": "manual" }
+        }
+      }
+    ],
+    "globalFilters": [],
+    "styleConfig": {
+      "surfaceKind": "dashboard",
+      "colorScheme": "light",
+      "scaleMode": "canvas"
+    }
+  }
+}

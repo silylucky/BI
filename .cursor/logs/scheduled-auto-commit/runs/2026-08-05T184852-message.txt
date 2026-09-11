@@ -1,0 +1,33 @@
+wip: [f] 24f (+726/-412) @ 2026-08-05 18:48 +0800
+
+Areas:
+  fe/          24 files (+726/-412)
+
+Changed (up to 25):
+M  fe/src/components/charts/engine/applyChartStyleChain.ts
+M  fe/src/components/charts/engine/d3/applyD3Style.ts
+M  fe/src/components/charts/engine/d3/radial/pieLabels.test.ts
+M  fe/src/components/charts/engine/d3/radial/pieLabels.ts
+M  fe/src/components/charts/engine/d3/radial/renderPie.ts
+M  fe/src/components/charts/engine/plugins/plans/buildPlan.pie.test.ts
+M  fe/src/components/charts/engine/plugins/plans/buildPlan.ts
+M  fe/src/lib/applyChartDeStyleBlocks.test.ts
+M  fe/src/lib/applyChartDeStyleBlocks.ts
+M  fe/src/lib/chartDeStyle.ts
+M  fe/src/lib/chartDeStyleBlocks.ts
+M  fe/src/lib/defaultPieChartDeStyle.ts
+A  fe/src/pages/admin/datasources/components/ConnectionFormField.tsx
+M  fe/src/pages/admin/datasources/components/DatasourceConnectionForm.tsx
+M  fe/src/pages/admin/datasources/components/DatasourceTypeField.tsx
+M  fe/src/pages/admin/datasources/components/GenericConnectionFields.tsx
+M  fe/src/pages/admin/ingestion/components/EtlColumnField.tsx
+A  fe/src/pages/admin/ingestion/components/EtlFormField.tsx
+M  fe/src/pages/admin/ingestion/components/EtlRuleCard.tsx
+M  fe/src/pages/admin/ingestion/components/EtlRulesEditor.tsx
+A  fe/src/pages/admin/ingestion/components/SyncFormField.tsx
+M  fe/src/pages/admin/ingestion/components/SyncJobForm.tsx
+M  fe/src/pages/admin/ingestion/components/SyncSourceTableSelect.tsx
+M  fe/src/pages/admin/ingestion/ingestion.smoke.test.tsx
+
+stat: 24 files changed, 726 insertions(+), 412 deletions(-)
+branch: dev | scheduled-auto-commit

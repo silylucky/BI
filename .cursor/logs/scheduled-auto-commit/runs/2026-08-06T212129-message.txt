@@ -1,0 +1,39 @@
+wip: [fe,docs,backend,tests,+1] 28f (+920/-336) @ 2026-08-06 21:21 +0800
+
+Areas:
+  fe/          20 files (+803/-309)
+  docs/        4 files (+66/-20)
+  backend/     2 files (+23/-0)
+  tests/       1 files (+25/-0)
+  .cursor/     1 files (+3/-7)
+
+Changed (up to 25):
+M  .cursor/logs/scheduled-auto-commit/state.json
+M  backend/app/api/v1/reports/__init__.py
+M  backend/app/dashboard/export_render.py
+M  docs/api/README.md
+M  docs/automate/prd/F08-RPT.md
+A  docs/services/reports-dashboard-schedule-walkthrough.md
+M  docs/services/reports.md
+M  fe/src/components/dashboard/DashboardShareDialog.tsx
+M  fe/src/config/nav-manifest.tsx
+M  fe/src/layouts/AdminLayout.smoke.test.tsx
+M  fe/src/lib/resolve-nav.test.ts
+M  fe/src/pages/admin/reports/ReportCenterPage.tsx
+M  fe/src/pages/admin/reports/ReportSchedulesPage.tsx
+M  fe/src/pages/admin/reports/ReportTemplatesPage.tsx
+M  fe/src/pages/admin/reports/components/DashboardSchedulePanel.tsx
+M  fe/src/pages/admin/reports/components/ReportCenterOverview.tsx
+A  fe/src/pages/admin/reports/components/ReportCenterScheduleHub.tsx
+A  fe/src/pages/admin/reports/components/ScheduleExportHealthAlert.tsx
+M  fe/src/pages/admin/reports/components/ScheduleFormFields.tsx
+M  fe/src/pages/admin/reports/components/SchedulePageOverview.tsx
+A  fe/src/pages/admin/reports/components/SchedulePrecheckPanel.test.tsx
+A  fe/src/pages/admin/reports/components/SchedulePrecheckPanel.tsx
+M  fe/src/pages/admin/reports/report-center.smoke.test.tsx
+M  fe/src/pages/admin/reports/report-schedules.smoke.test.tsx
+M  fe/src/pages/export/DashboardExportSnapshotPage.smoke.test.tsx
+... and 3 more
+
+stat: 28 files changed, 920 insertions(+), 336 deletions(-)
+branch: dev | scheduled-auto-commit
